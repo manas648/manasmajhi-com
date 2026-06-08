@@ -137,11 +137,8 @@ export default function ElsewherePage() {
                 />
               </div>
               <div className="mt-3 px-0.5">
-                <p className="text-sm leading-snug text-foreground">
+                <p className="text-sm leading-snug text-muted-foreground">
                   {photo.caption}
-                </p>
-                <p className="text-xs text-muted-foreground mt-1">
-                  {photo.location}
                 </p>
               </div>
             </div>
