@@ -9,9 +9,15 @@ export const metadata: Metadata = {
 
 const photos = [
   {
+    src: "/elsewhere/phi-phi-sunset.jpg",
+    alt: "Longtail boats at sunset, Phi Phi Islands",
+    caption: "The last light over Phi Phi. The boats knew before we did.",
+    width: 1170,
+    height: 1170,
+  },
+  {
     src: "/elsewhere/kolsai-lake.jpg",
     alt: "Kolsai Lake, Kazakhstan",
-    location: "Kolsai Lakes, Kazakhstan",
     caption: "The best operating system is no Wi-Fi.",
     width: 1600,
     height: 1200,
@@ -19,7 +25,6 @@ const photos = [
   {
     src: "/elsewhere/horse-rider.jpg",
     alt: "Horse rider on the Kazakhstan steppe",
-    location: "Kazakhstan",
     caption: "On the steppe, nobody asks what you do for a living.",
     width: 3725,
     height: 3022,
@@ -27,7 +32,6 @@ const photos = [
   {
     src: "/elsewhere/charyn-valley.jpg",
     alt: "Charyn Canyon Valley of Castles, Kazakhstan",
-    location: "Charyn Canyon, Kazakhstan",
     caption: "Red rocks. Zero bandwidth. Peak clarity.",
     width: 870,
     height: 645,
@@ -35,7 +39,6 @@ const photos = [
   {
     src: "/elsewhere/shymbulak-snow.jpg",
     alt: "Shymbulak ski resort above Almaty",
-    location: "Shymbulak, Kazakhstan — 3,200m",
     caption: "The altitude makes everything feel achievable.",
     width: 1237,
     height: 1280,
@@ -43,7 +46,6 @@ const photos = [
   {
     src: "/elsewhere/charyn-canyon.jpg",
     alt: "Charyn Canyon, Kazakhstan",
-    location: "Charyn Canyon, Kazakhstan",
     caption: "Standing at the edge helps with perspective. On most things.",
     width: 1200,
     height: 1600,
@@ -51,7 +53,6 @@ const photos = [
   {
     src: "/elsewhere/almaty-cafe.jpg",
     alt: "Street café, Almaty",
-    location: "Almaty, Kazakhstan",
     caption: "The meeting happened. The city carried on.",
     width: 4032,
     height: 3024,
@@ -59,7 +60,6 @@ const photos = [
   {
     src: "/elsewhere/medeu-arena.jpg",
     alt: "Medeu ice skating arena, Almaty",
-    location: "Medeu, Almaty, Kazakhstan",
     caption: "Soviet ambition carved in stone. Some ideas outlast the ideology.",
     width: 1600,
     height: 1200,
@@ -67,10 +67,30 @@ const photos = [
   {
     src: "/elsewhere/almaty-tv-tower.jpg",
     alt: "Almaty TV Tower panorama",
-    location: "Almaty, Kazakhstan",
     caption: "Every city looks manageable from a distance.",
     width: 866,
     height: 649,
+  },
+  {
+    src: "/elsewhere/goa-speedboat.jpg",
+    alt: "Manas Majhi on a speedboat in Goa",
+    caption: "White shirt, no agenda. Sometimes the best strategy is no strategy.",
+    width: 1170,
+    height: 780,
+  },
+  {
+    src: "/elsewhere/startup-event.jpg",
+    alt: "Manas Majhi at a startup event",
+    caption: "The room had energy. The pocket square had opinions.",
+    width: 900,
+    height: 1170,
+  },
+  {
+    src: "/elsewhere/whiteboard-session.jpg",
+    alt: "Manas Majhi at a whiteboard, July 2022",
+    caption: "July '22. Five clients. One whiteboard. The whole thesis in one diagram.",
+    width: 960,
+    height: 1280,
   },
 ];
 
