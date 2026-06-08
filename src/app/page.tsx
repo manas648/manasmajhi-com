@@ -79,30 +79,47 @@ export default function HomePage() {
       {/* Hero */}
       <section className="pt-24 pb-20 md:pt-32 md:pb-28 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="max-w-3xl">
-            <p className="section-label mb-6">Manas Majhi</p>
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.1] mb-6 text-balance">
-              Opportunity
-              <br />
-              <span className="text-muted-foreground">Shapes Outcomes.</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-10 max-w-2xl">
-              Exploring how people, technology, and systems create human potential.
-            </p>
-            <div className="flex flex-wrap items-center gap-4">
-              <Link
-                href="/start-here"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-foreground text-background font-medium hover:bg-foreground/90 transition-colors"
-              >
-                Start reading
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link
-                href="/writing"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border font-medium hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
-              >
-                All essays
-              </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr,auto] gap-12 lg:gap-20 items-start">
+            {/* Text */}
+            <div className="max-w-2xl">
+              <p className="section-label mb-6">Manas Majhi</p>
+              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.1] mb-6 text-balance">
+                Opportunity
+                <br />
+                <span className="text-muted-foreground">Shapes Outcomes.</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-10 max-w-2xl">
+                Exploring how people, technology, and systems create human potential.
+              </p>
+              <div className="flex flex-wrap items-center gap-4">
+                <Link
+                  href="/start-here"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-foreground text-background font-medium hover:bg-foreground/90 transition-colors"
+                >
+                  Start reading
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="/writing"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border font-medium hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
+                >
+                  All writing
+                </Link>
+              </div>
+            </div>
+
+            {/* Headshot */}
+            <div className="hidden lg:block shrink-0">
+              <div className="w-64 xl:w-72 overflow-hidden rounded-3xl shadow-2xl">
+                <Image
+                  src="/headshot.jpg"
+                  alt="Manas Majhi"
+                  width={376}
+                  height={550}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
+              </div>
             </div>
           </div>
 

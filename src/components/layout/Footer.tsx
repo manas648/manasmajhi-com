@@ -15,6 +15,7 @@ const footerLinks = {
   Connect: [
     { href: "/about", label: "About" },
     { href: "/work", label: "Work" },
+    { href: "/elsewhere", label: "Elsewhere" },
     { href: "/newsletter", label: "Newsletter" },
     { href: "/timeline", label: "Timeline" },
   ],
