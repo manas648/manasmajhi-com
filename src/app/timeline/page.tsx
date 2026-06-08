@@ -8,10 +8,10 @@ export const metadata: Metadata = {
 
 const timeline: TimelineItem[] = [
   {
-    year: "Kalahandi",
-    title: "Origin",
+    year: "Origin",
+    title: "Kalahandi, Odisha",
     description:
-      "Born and raised in Kalahandi, Odisha — one of India's most underserved districts. Attended a government Odia-medium school with no internet access, no mentors, and no clear path forward. The gap between talent and opportunity was not abstract. It was lived.",
+      "Born and raised in Kalahandi — one of India's most underserved districts. The gap between talent and opportunity was not abstract here. It was lived, daily, by everyone around me. That gap became the question I've spent my career trying to answer.",
     location: "Kalahandi, Odisha",
     type: "origin",
   },
@@ -19,39 +19,31 @@ const timeline: TimelineItem[] = [
     year: "Education",
     title: "Government School",
     description:
-      "Educated entirely in Odia medium. The constraint became a teacher: I learned to find information without infrastructure, to move without a map, and to build conviction without validation.",
+      "Educated entirely in Odia medium, with no internet access, no mentors, and no obvious path forward. The constraint became a teacher. I learned to find information without infrastructure, to move without a map, and to build conviction without external validation. Those skills never left.",
     location: "Odisha, India",
     type: "education",
   },
   {
-    year: "Early Career",
-    title: "Entering Recruitment",
+    year: "Education",
+    title: "Engineering",
     description:
-      "Discovered executive search — a field where understanding people, systems, and markets creates measurable value. Started placing talent and rapidly realized that hiring, done well, is one of the highest-leverage activities in any organization.",
+      "Left Odisha for New Delhi to study engineering — the first step out, and proof that geography is not destiny. The move was disorienting and clarifying in equal measure. It confirmed what I had suspected: the world rewards people who show up prepared to learn.",
+    location: "New Delhi, India",
+    type: "education",
+  },
+  {
+    year: "Early Career",
+    title: "Barclays · American Express · Synpulse",
+    description:
+      "Built foundational experience across global financial institutions and management consulting. Barclays. American Express. Synpulse Management Consulting. Each role sharpened a different edge — systems thinking, client delivery, and how large organisations actually make decisions. The pattern I kept seeing: the best organisations win on people, and most organisations don't hire well enough to know it.",
     location: "India",
     type: "career",
-  },
-  {
-    year: "Scale",
-    title: "Global Clients",
-    description:
-      "Built a track record working with global organizations on high-stakes hiring. 25+ C-suite and VP placements. 30–45 day average time-to-fill against a 65–90 day industry median. 90%+ offer acceptance rate. The system was working.",
-    location: "Global",
-    type: "career",
-  },
-  {
-    year: "Leverage",
-    title: "Upwork & Distribution",
-    description:
-      "Used Upwork as a distribution channel to reach international clients — an early lesson in how platforms democratize access. This was opportunity creation in practice: reaching buyers I had no relationship with, purely through quality of work.",
-    location: "Remote",
-    type: "milestone",
   },
   {
     year: "Company",
     title: "Majhi Group",
     description:
-      "Founded Majhi Group — a retained executive search firm. The thesis: the hiring system for senior leaders is broken in a specific, measurable way. We built a different system. Retained model. 20–25% fee. Exclusivity. 90-day guarantee. Weekly status reports. Quality over speed.",
+      "Founded Majhi Group — a retained executive search firm built on a single thesis: the hiring system for senior leaders is broken in a specific, measurable way, and a better system is possible. Retained model. 20–25% of total CTC. Exclusivity. 90-day guarantee. Weekly status reports. 25+ C-suite and VP placements. 30–45 day average close versus a 65–90 day industry median. Quality over speed — every time.",
     location: "India",
     type: "company",
   },
@@ -59,7 +51,7 @@ const timeline: TimelineItem[] = [
     year: "Infrastructure",
     title: "Majhi OS",
     description:
-      "Started building Majhi OS — autonomous hiring operations infrastructure. The insight: most recruiting software helps teams send outreach and track candidates. Nobody owns what happens when the hiring system fails. Majhi OS detects failing mandates before they collapse, and recovers them autonomously.",
+      "Started building Majhi OS — autonomous hiring operations infrastructure. The insight: most recruiting software helps teams send outreach and track candidates. Nobody owns what happens when the hiring system fails. Majhi OS detects failing mandates before they collapse, launches recovery sequences autonomously, and gives leadership real-time visibility into hiring health. The category is new. The problem is not.",
     location: "India",
     type: "company",
   },
@@ -67,7 +59,7 @@ const timeline: TimelineItem[] = [
     year: "Now",
     title: "Writing",
     description:
-      "This site. A growing library of long-form essays on opportunity, India, technology, and human potential. Writing is how I think. The essays are the actual work of trying to understand things that matter — for the person I was at 22, looking for maps.",
+      "This site. A growing library of essays on opportunity, India, technology, and human potential. Writing is how I think out loud — and how I stay honest about what I actually believe. Every essay is written for the person I was at 22, in Kalahandi, looking for maps.",
     type: "writing",
   },
 ];
