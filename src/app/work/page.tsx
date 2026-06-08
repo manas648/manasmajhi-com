@@ -70,7 +70,7 @@ export default function WorkPage() {
             ))}
           </div>
 
-          <div className="p-6 rounded-2xl border-dashed-accent bg-accent/5">
+          <div className="p-6 rounded-2xl border-dashed-accent bg-accent/5 mb-8">
             <p className="font-serif text-lg italic mb-2">
               "41 days. $275K search. Two firms failed in 60+ days. That's not
               luck. That's a different system."
@@ -78,6 +78,17 @@ export default function WorkPage() {
             <p className="text-sm text-muted-foreground">
               Case study: Alternatives Investment Director placement
             </p>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <Link
+              href="https://www.majhigroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-border text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+            >
+              majhigroup.com <ExternalLink className="w-3.5 h-3.5" />
+            </Link>
           </div>
         </div>
 
