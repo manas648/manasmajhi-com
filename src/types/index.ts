@@ -32,7 +32,8 @@ export type EssayCategory =
   | "odisha"
   | "travel"
   | "entrepreneurship"
-  | "philosophy";
+  | "philosophy"
+  | "hiring";
 
 export const CATEGORY_LABELS: Record<EssayCategory, string> = {
   opportunity: "Opportunity",
@@ -42,6 +43,7 @@ export const CATEGORY_LABELS: Record<EssayCategory, string> = {
   travel: "Travel",
   entrepreneurship: "Entrepreneurship",
   philosophy: "Philosophy",
+  hiring: "Hiring",
 };
 
 export const CATEGORY_IMAGES: Record<EssayCategory, string> = {
@@ -52,13 +54,14 @@ export const CATEGORY_IMAGES: Record<EssayCategory, string> = {
   travel: "/categories/travel.jpg",
   entrepreneurship: "/categories/entrepreneurship.jpg",
   philosophy: "/categories/philosophy.jpg",
+  hiring: "/categories/hiring.jpg",
 };
 
 export const CATEGORY_DESCRIPTIONS: Record<EssayCategory, string> = {
   opportunity:
     "On how opportunity shapes lives, societies, and the arc of human progress.",
   "future-of-work":
-    "AI, hiring, leadership, and how the nature of work is being transformed.",
+    "AI, automation, and how the nature of work is being transformed.",
   india:
     "Infrastructure, technology, policy, and the making of a new India.",
   odisha:
@@ -69,6 +72,8 @@ export const CATEGORY_DESCRIPTIONS: Record<EssayCategory, string> = {
     "Building things, executing with conviction, and thinking long-term.",
   philosophy:
     "On learning, identity, perspective, and the examined life.",
+  hiring:
+    "Why executive hiring fails, what better looks like, and the infrastructure that fixes it.",
 };
 
 export interface Collection {

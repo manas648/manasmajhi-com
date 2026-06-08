@@ -39,8 +39,7 @@ export function truncate(text: string, maxLength: number): string {
 
 export const SITE_URL = "https://manasmajhi.com";
 export const SITE_NAME = "Manas Majhi";
-export const SITE_TAGLINE =
-  "Exploring Opportunity, Systems, Technology & Human Potential";
+export const SITE_TAGLINE = "Opportunity Shapes Outcomes";
 export const SITE_DESCRIPTION =
   "Essays on opportunity, human potential, India, technology, and the systems that shape our lives. By Manas Majhi.";
 export const AUTHOR_NAME = "Manas Majhi";
