@@ -17,14 +17,6 @@ const photos = [
     height: 1200,
   },
   {
-    src: "/elsewhere/phi-phi-overlook.jpg",
-    alt: "Phi Phi Islands, Thailand",
-    location: "Koh Phi Phi, Thailand — 2019",
-    caption: "The view from the top is always worth the climb.",
-    width: 591,
-    height: 625,
-  },
-  {
     src: "/elsewhere/horse-rider.jpg",
     alt: "Horse rider on the Kazakhstan steppe",
     location: "Kazakhstan",
@@ -39,14 +31,6 @@ const photos = [
     caption: "Red rocks. Zero bandwidth. Peak clarity.",
     width: 870,
     height: 645,
-  },
-  {
-    src: "/elsewhere/phi-phi-sunset.jpg",
-    alt: "Sunset at Koh Phi Phi, Thailand",
-    location: "Koh Phi Phi, Thailand — 2019",
-    caption: "The sun sets the same way everywhere. Only the audience changes.",
-    width: 591,
-    height: 635,
   },
   {
     src: "/elsewhere/shymbulak-snow.jpg",
@@ -65,14 +49,6 @@ const photos = [
     height: 1600,
   },
   {
-    src: "/elsewhere/goa-speedboat.jpg",
-    alt: "Speedboat on the Mandovi river, Goa",
-    location: "Morjim, Goa — February 2022",
-    caption: "Sunday yachting. Sometimes the agenda is just 'go.'",
-    width: 591,
-    height: 625,
-  },
-  {
     src: "/elsewhere/almaty-cafe.jpg",
     alt: "Street café, Almaty",
     location: "Almaty, Kazakhstan",
@@ -87,14 +63,6 @@ const photos = [
     caption: "Soviet ambition carved in stone. Some ideas outlast the ideology.",
     width: 1600,
     height: 1200,
-  },
-  {
-    src: "/elsewhere/phi-phi-longtail.jpg",
-    alt: "Long-tail boats at Koh Phi Phi, Thailand",
-    location: "Koh Phi Phi, Thailand — 2019",
-    caption: "The long-tail boats didn't care about my to-do list.",
-    width: 591,
-    height: 635,
   },
   {
     src: "/elsewhere/almaty-tv-tower.jpg",
@@ -117,8 +85,7 @@ export default function ElsewherePage() {
             Elsewhere
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Dispatches from the road. Kazakhstan, Thailand, India — and wherever
-            the work takes me next.
+            Dispatches from the road. Sea and sky — and wherever the work takes me next.
           </p>
         </div>
 
