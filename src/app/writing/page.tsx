@@ -6,9 +6,9 @@ import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Essays",
+  title: "Writing",
   description:
-    "All essays on opportunity, human potential, India, technology, and the systems that shape lives.",
+    "All writing on opportunity, human potential, India, technology, and the systems that shape lives.",
 };
 
 const categories: EssayCategory[] = [
@@ -44,7 +44,7 @@ export default function EssaysPage() {
           {categories.map((cat) => (
             <Link
               key={cat}
-              href={`/essays/${cat}`}
+              href={`/writing/${cat}`}
               className="px-4 py-2 rounded-full border border-border text-sm text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-all"
             >
               {CATEGORY_LABELS[cat]}
@@ -54,7 +54,7 @@ export default function EssaysPage() {
 
         {essays.length === 0 ? (
           <div className="py-20 text-center text-muted-foreground">
-            <p className="font-serif text-2xl mb-4">Essays coming soon.</p>
+            <p className="font-serif text-2xl mb-4">Writing coming soon.</p>
             <p>Upload your MDX files to{" "}
               <code className="text-sm bg-muted px-2 py-1 rounded">
                 content/essays/
@@ -77,7 +77,7 @@ export default function EssaysPage() {
                       </p>
                     </div>
                     <Link
-                      href={`/essays/${cat}`}
+                      href={`/writing/${cat}`}
                       className="hidden sm:inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
                       All in {CATEGORY_LABELS[cat]}{" "}

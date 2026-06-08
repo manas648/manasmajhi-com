@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [ogUrl],
     },
     alternates: {
-      canonical: `${SITE_URL}/essays/${slug}`,
+      canonical: `${SITE_URL}/writing/${slug}`,
     },
   };
 }
@@ -95,7 +95,7 @@ export default async function EssayPage({ params }: Props) {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${SITE_URL}/essays/${slug}`,
+      "@id": `${SITE_URL}/writing/${slug}`,
     },
   };
 
@@ -113,7 +113,7 @@ export default async function EssayPage({ params }: Props) {
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 mb-8">
               <Link
-                href="/essays"
+                href="/writing"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
@@ -121,7 +121,7 @@ export default async function EssayPage({ params }: Props) {
               </Link>
               <span className="text-border">/</span>
               <Link
-                href={`/essays/${essay.category}`}
+                href={`/writing/${essay.category}`}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 {CATEGORY_LABELS[essay.category]}
@@ -179,7 +179,7 @@ export default async function EssayPage({ params }: Props) {
             <hr className="border-border mb-10" />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {prev && (
-                <Link href={`/essays/${prev.slug}`} className="group">
+                <Link href={`/writing/${prev.slug}`} className="group">
                   <div className="p-5 rounded-2xl border border-border hover:border-accent/40 transition-all">
                     <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
                       <ArrowLeft className="w-3.5 h-3.5" />
@@ -193,7 +193,7 @@ export default async function EssayPage({ params }: Props) {
               )}
               {next && (
                 <Link
-                  href={`/essays/${next.slug}`}
+                  href={`/writing/${next.slug}`}
                   className="group sm:ml-auto text-right"
                 >
                   <div className="p-5 rounded-2xl border border-border hover:border-accent/40 transition-all">
@@ -211,13 +211,13 @@ export default async function EssayPage({ params }: Props) {
           </div>
         </div>
 
-        {/* Related essays */}
+        {/* Related writing */}
         {related.length > 0 && (
           <section className="px-6 lg:px-8 pb-20 bg-muted/30">
             <div className="max-w-7xl mx-auto pt-16">
               <p className="section-label mb-3">Continue Reading</p>
               <h2 className="font-serif text-2xl font-medium mb-8">
-                Related essays
+                Related writing
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {related.map((r) => (
@@ -236,7 +236,7 @@ export default async function EssayPage({ params }: Props) {
               Enjoyed this essay?
             </h2>
             <p className="text-muted-foreground mb-8">
-              Get new essays delivered to your inbox. Written when there's
+              Get new writing delivered to your inbox. Written when there's
               something worth saying.
             </p>
             <NewsletterForm />

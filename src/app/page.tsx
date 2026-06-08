@@ -20,28 +20,28 @@ const collections = [
     label: "Primary Collection",
     title: "Opportunity",
     description: CATEGORY_DESCRIPTIONS["opportunity"],
-    href: "/essays/opportunity",
+    href: "/writing/opportunity",
   },
   {
     id: "india" as EssayCategory,
     label: "Country",
     title: "India",
     description: CATEGORY_DESCRIPTIONS["india"],
-    href: "/essays/india",
+    href: "/writing/india",
   },
   {
     id: "future-of-work" as EssayCategory,
     label: "Technology",
     title: "Future of Work",
     description: CATEGORY_DESCRIPTIONS["future-of-work"],
-    href: "/essays/future-of-work",
+    href: "/writing/future-of-work",
   },
   {
     id: "philosophy" as EssayCategory,
     label: "Thinking",
     title: "Philosophy",
     description: CATEGORY_DESCRIPTIONS["philosophy"],
-    href: "/essays/philosophy",
+    href: "/writing/philosophy",
   },
 ];
 
@@ -56,13 +56,13 @@ const readingPaths = [
     title: "India Path",
     description: "India's moment and what it means.",
     essays: ["indias-ai-opportunity", "indias-greatest-asset-is-its-people"],
-    href: "/essays/india",
+    href: "/writing/india",
   },
   {
     title: "AI Path",
     description: "Technology and human potential.",
     essays: ["ai-and-human-potential"],
-    href: "/essays/future-of-work",
+    href: "/writing/future-of-work",
   },
 ];
 
@@ -98,7 +98,7 @@ export default function HomePage() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/essays"
+                href="/writing"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border font-medium hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
               >
                 All essays
@@ -143,7 +143,7 @@ export default function HomePage() {
         <section className="px-6 lg:px-8 pb-20">
           <div className="max-w-7xl mx-auto">
             <p className="section-label mb-6">Featured Essay</p>
-            <Link href={`/essays/${heroEssay.slug}`} className="group block">
+            <Link href={`/writing/${heroEssay.slug}`} className="group block">
               <div className="relative rounded-3xl overflow-hidden border border-border bg-gradient-to-br from-muted/50 to-background p-8 md:p-12 lg:p-16">
                 <div className="max-w-3xl">
                   <div className="essay-meta mb-4">
@@ -178,7 +178,7 @@ export default function HomePage() {
               </h2>
             </div>
             <Link
-              href="/essays"
+              href="/writing"
               className="hidden md:inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               View all topics <ArrowRight className="w-3.5 h-3.5" />
@@ -260,7 +260,7 @@ export default function HomePage() {
                 </h2>
               </div>
               <Link
-                href="/essays"
+                href="/writing"
                 className="hidden md:inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 All essays <ArrowRight className="w-3.5 h-3.5" />
@@ -273,7 +273,7 @@ export default function HomePage() {
             </div>
             <div className="mt-8 md:hidden">
               <Link
-                href="/essays"
+                href="/writing"
                 className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 All essays <ArrowRight className="w-3.5 h-3.5" />

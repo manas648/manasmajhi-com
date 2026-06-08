@@ -3,14 +3,14 @@ import Link from "next/link";
 const footerLinks = {
   Reading: [
     { href: "/start-here", label: "Start Here" },
-    { href: "/essays", label: "All Essays" },
+    { href: "/writing", label: "All Writing" },
     { href: "/frameworks", label: "Frameworks" },
   ],
   Topics: [
-    { href: "/essays/opportunity", label: "Opportunity" },
-    { href: "/essays/india", label: "India" },
-    { href: "/essays/future-of-work", label: "Future of Work" },
-    { href: "/essays/philosophy", label: "Philosophy" },
+    { href: "/writing/opportunity", label: "Opportunity" },
+    { href: "/writing/india", label: "India" },
+    { href: "/writing/future-of-work", label: "Future of Work" },
+    { href: "/writing/philosophy", label: "Philosophy" },
   ],
   Connect: [
     { href: "/about", label: "About" },

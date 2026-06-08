@@ -44,7 +44,7 @@ export function CategoryPage({ category }: CategoryPageProps) {
               {CATEGORY_DESCRIPTIONS[category]}
             </p>
             <p className="mt-4 text-sm text-white/50">
-              {essays.length} {essays.length === 1 ? "essay" : "essays"}
+              {essays.length} {essays.length === 1 ? "piece" : "pieces"}
             </p>
           </div>
         </div>
@@ -56,7 +56,7 @@ export function CategoryPage({ category }: CategoryPageProps) {
           {essays.length === 0 ? (
             <div className="py-20 text-center text-muted-foreground">
               <p className="font-serif text-2xl mb-2">
-                No essays yet in this collection.
+                Nothing here yet.
               </p>
               <p className="text-sm">Check back soon.</p>
             </div>

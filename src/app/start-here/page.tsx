@@ -144,7 +144,7 @@ export default function StartHerePage() {
                       pathEssays.map((essay) => (
                         <Link
                           key={essay!.slug}
-                          href={`/essays/${essay!.slug}`}
+                          href={`/writing/${essay!.slug}`}
                           className="flex items-start gap-2 text-sm group"
                         >
                           <ArrowRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-accent mt-0.5 shrink-0 transition-colors" />
