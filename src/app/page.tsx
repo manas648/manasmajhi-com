@@ -110,15 +110,21 @@ export default function HomePage() {
 
             {/* Headshot */}
             <div className="hidden lg:block shrink-0">
-              <div className="relative">
-                {/* Ambient glow */}
-                <div className="absolute inset-0 rounded-full bg-amber-200/50 dark:bg-amber-700/20 blur-3xl scale-[1.6]" />
-                {/* Circle frame with subtle golden ring */}
+              <div className="relative flex items-center justify-center">
+                {/* Ambient glow — oval to match frame */}
                 <div
-                  className="relative w-56 xl:w-64 h-56 xl:h-64 rounded-full overflow-hidden"
+                  className="absolute bg-amber-200/50 dark:bg-amber-700/20 blur-3xl"
+                  style={{ width: "320px", height: "400px", borderRadius: "50%" }}
+                />
+                {/* Portrait oval: head to pocket */}
+                <div
+                  className="relative overflow-hidden"
                   style={{
+                    width: "260px",
+                    height: "330px",
+                    borderRadius: "50%",
                     boxShadow:
-                      "0 0 0 1.5px rgba(196,155,72,0.35), 0 0 0 6px rgba(196,155,72,0.08), 0 24px 60px rgba(0,0,0,0.13)",
+                      "0 0 0 1.5px rgba(196,155,72,0.35), 0 0 0 7px rgba(196,155,72,0.08), 0 28px 64px rgba(0,0,0,0.14)",
                   }}
                 >
                   <Image
@@ -126,8 +132,8 @@ export default function HomePage() {
                     alt="Manas Majhi"
                     width={376}
                     height={550}
-                    className="w-full h-full object-cover scale-110"
-                    style={{ objectPosition: "center 12%" }}
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: "center 5%" }}
                     priority
                   />
                 </div>
