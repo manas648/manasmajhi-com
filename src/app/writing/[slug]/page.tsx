@@ -85,17 +85,34 @@ export default async function EssayPage({ params }: Props) {
     description: essay.excerpt,
     author: {
       "@type": "Person",
+      "@id": `${SITE_URL}/#person`,
       name: "Manas Majhi",
+      alternateName: ["Manas Ranjan Majhi", "Maanas Ranjan Majhi"],
       url: SITE_URL,
+      sameAs: [
+        "https://www.linkedin.com/in/manasmajhi",
+        "https://twitter.com/manasmajhi",
+        "https://majhigroup.com",
+      ],
     },
     datePublished: essay.date,
+    dateModified: essay.date,
     publisher: {
       "@type": "Person",
+      "@id": `${SITE_URL}/#person`,
       name: "Manas Majhi",
+      url: SITE_URL,
     },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${SITE_URL}/writing/${slug}`,
+    },
+    url: `${SITE_URL}/writing/${slug}`,
+    isPartOf: {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      name: "Manas Majhi",
+      url: SITE_URL,
     },
   };
 

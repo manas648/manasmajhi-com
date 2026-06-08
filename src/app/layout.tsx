@@ -24,6 +24,12 @@ export const metadata: Metadata = {
   publisher: AUTHOR_NAME,
   keywords: [
     "Manas Majhi",
+    "Manas Ranjan Majhi",
+    "Maanas Ranjan Majhi",
+    "Majhi Group",
+    "Majhi OS",
+    "executive search",
+    "hiring infrastructure",
     "opportunity",
     "essays",
     "India",
@@ -76,6 +82,63 @@ export const metadata: Metadata = {
   },
 };
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${SITE_URL}/#person`,
+  name: "Manas Majhi",
+  alternateName: ["Manas Ranjan Majhi", "Maanas Ranjan Majhi"],
+  url: SITE_URL,
+  image: `${SITE_URL}/headshot.jpg`,
+  jobTitle: "Founder",
+  description:
+    "Manas Majhi is the founder of Majhi Group (executive search) and Majhi OS (autonomous hiring operations infrastructure). Writer on opportunity, India, and systems that shape human potential.",
+  worksFor: [
+    {
+      "@type": "Organization",
+      name: "Majhi Group",
+      url: "https://majhigroup.com",
+    },
+    {
+      "@type": "Organization",
+      name: "Majhi OS",
+      url: "https://majhi.tech",
+    },
+  ],
+  sameAs: [
+    "https://www.linkedin.com/in/manasmajhi",
+    "https://twitter.com/manasmajhi",
+    "https://instagram.com/manas.majhi56",
+    "https://majhigroup.com",
+    "https://majhi.tech",
+  ],
+  knowsAbout: [
+    "Executive Search",
+    "Hiring Operations",
+    "Opportunity and Human Potential",
+    "India and Odisha Development",
+    "Entrepreneurship",
+  ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  url: SITE_URL,
+  name: "Manas Majhi",
+  description: SITE_DESCRIPTION,
+  author: { "@id": `${SITE_URL}/#person` },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${SITE_URL}/writing?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -95,6 +158,14 @@ export default function RootLayout({
           type="application/rss+xml"
           title={`${SITE_NAME} RSS Feed`}
           href="/rss.xml"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body className="min-h-screen antialiased">
