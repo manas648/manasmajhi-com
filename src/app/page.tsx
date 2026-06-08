@@ -79,7 +79,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="pt-24 pb-20 md:pt-32 md:pb-28 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr,auto] gap-12 lg:gap-20 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr,auto] gap-12 lg:gap-20 items-center">
             {/* Text */}
             <div className="max-w-2xl">
               <p className="section-label mb-6">Manas Majhi</p>
@@ -110,15 +110,27 @@ export default function HomePage() {
 
             {/* Headshot */}
             <div className="hidden lg:block shrink-0">
-              <div className="w-64 xl:w-72 overflow-hidden rounded-3xl shadow-2xl">
-                <Image
-                  src="/headshot.jpg"
-                  alt="Manas Majhi"
-                  width={376}
-                  height={550}
-                  className="w-full h-auto object-cover"
-                  priority
-                />
+              <div className="relative">
+                {/* Ambient glow */}
+                <div className="absolute inset-0 rounded-full bg-amber-200/50 dark:bg-amber-700/20 blur-3xl scale-[1.6]" />
+                {/* Circle frame with subtle golden ring */}
+                <div
+                  className="relative w-56 xl:w-64 h-56 xl:h-64 rounded-full overflow-hidden"
+                  style={{
+                    boxShadow:
+                      "0 0 0 1.5px rgba(196,155,72,0.35), 0 0 0 6px rgba(196,155,72,0.08), 0 24px 60px rgba(0,0,0,0.13)",
+                  }}
+                >
+                  <Image
+                    src="/headshot.jpg"
+                    alt="Manas Majhi"
+                    width={376}
+                    height={550}
+                    className="w-full h-full object-cover scale-110"
+                    style={{ objectPosition: "center 12%" }}
+                    priority
+                  />
+                </div>
               </div>
             </div>
           </div>
