@@ -140,6 +140,12 @@ export default function AboutPage() {
           >
             See my work
           </Link>
+          <Link
+            href="/recognition"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+          >
+            Awards &amp; Recognition
+          </Link>
         </div>
       </div>
     </div>
