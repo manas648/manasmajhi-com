@@ -46,9 +46,28 @@ export function Nav() {
           {/* Logo */}
           <Link
             href="/"
-            className="font-serif text-lg font-medium tracking-tight hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2.5 hover:opacity-75 transition-opacity"
           >
-            Manas Majhi
+            {/* Mark */}
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <rect
+                width="28"
+                height="28"
+                rx="6"
+                style={{ fill: "hsl(var(--foreground))" }}
+              />
+              <path
+                d="M7.5 20V9L14 16.5 20.5 9V20"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                style={{ stroke: "hsl(var(--background))" }}
+              />
+            </svg>
+            {/* Wordmark */}
+            <span className="font-serif text-sm font-bold tracking-[0.18em] uppercase">
+              Manas Majhi
+            </span>
           </Link>
 
           {/* Desktop nav */}
