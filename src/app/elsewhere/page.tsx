@@ -92,6 +92,20 @@ const photos = [
     width: 960,
     height: 1280,
   },
+  {
+    src: "/elsewhere/thailand-ferry.jpg",
+    alt: "Manas Majhi on a ferry between Thai islands",
+    caption: "Somewhere between islands, watching Thailand disappear behind us.",
+    width: 1170,
+    height: 920,
+  },
+  {
+    src: "/elsewhere/punjab-festival.jpg",
+    alt: "Manas Majhi at a Punjabi cultural festival",
+    caption: "Front row. Bhangra happening behind. Priorities sorted.",
+    width: 1170,
+    height: 1166,
+  },
 ];
 
 export default function ElsewherePage() {
