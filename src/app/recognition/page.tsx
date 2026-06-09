@@ -36,6 +36,13 @@ const awards = [
     body: "Indian Achievers' Forum",
     href: "https://www.business-standard.com/content/press-releases-ani/manas-ranjan-majhi-director-of-majhi-group-honoured-with-the-indian-achievers-award-2022-122062000539_1.html",
   },
+  {
+    year: "2022",
+    rank: "Advisory Board Member",
+    title: "Customer Experience Certificate Program Advisory Board",
+    body: "Ithaca College · Zschool",
+    href: null,
+  },
 ];
 
 const media = [
@@ -117,38 +124,53 @@ export default function RecognitionPage() {
 
         {/* Awards */}
         <div className="space-y-px">
-          {awards.map((award) => (
-            <a
-              key={`${award.year}-${award.title}`}
-              href={award.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-start justify-between gap-6 py-8 border-b border-border hover:border-foreground/20 transition-colors"
-            >
-              <div className="flex items-start gap-6">
-                {/* Year */}
-                <span className="shrink-0 w-12 text-xs uppercase tracking-widest text-muted-foreground pt-1">
-                  {award.year}
-                </span>
-                {/* Content */}
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">
-                    {award.rank}
-                  </p>
-                  <h2 className="font-serif text-2xl font-medium group-hover:text-muted-foreground transition-colors">
-                    {award.title}
-                  </h2>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    {award.body}
-                  </p>
+          {awards.map((award) => {
+            const inner = (
+              <>
+                <div className="flex items-start gap-6">
+                  {/* Year */}
+                  <span className="shrink-0 w-12 text-xs uppercase tracking-widest text-muted-foreground pt-1">
+                    {award.year}
+                  </span>
+                  {/* Content */}
+                  <div>
+                    <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">
+                      {award.rank}
+                    </p>
+                    <h2 className="font-serif text-2xl font-medium group-hover:text-muted-foreground transition-colors">
+                      {award.title}
+                    </h2>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      {award.body}
+                    </p>
+                  </div>
                 </div>
+                {award.href && (
+                  <span className="shrink-0 text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all duration-150 pt-2">
+                    →
+                  </span>
+                )}
+              </>
+            );
+            return award.href ? (
+              <a
+                key={`${award.year}-${award.title}`}
+                href={award.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-start justify-between gap-6 py-8 border-b border-border hover:border-foreground/20 transition-colors"
+              >
+                {inner}
+              </a>
+            ) : (
+              <div
+                key={`${award.year}-${award.title}`}
+                className="group flex items-start justify-between gap-6 py-8 border-b border-border"
+              >
+                {inner}
               </div>
-              {/* Arrow */}
-              <span className="shrink-0 text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all duration-150 pt-2">
-                →
-              </span>
-            </a>
-          ))}
+            );
+          })}
         </div>
 
         {/* Footer note */}
