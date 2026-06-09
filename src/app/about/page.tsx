@@ -45,6 +45,7 @@ const jsonLd = {
       "https://twitter.com/manasmajhi",
       "https://majhigroup.com",
       "https://majhi.tech",
+      "https://www.wikidata.org/wiki/Q140134809",
     ],
     knowsAbout: [
       "Executive Search",

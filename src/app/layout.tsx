@@ -111,6 +111,7 @@ const personSchema = {
     "https://instagram.com/manas.majhi56",
     "https://majhigroup.com",
     "https://majhi.tech",
+    "https://www.wikidata.org/wiki/Q140134809",
   ],
   knowsAbout: [
     "Executive Search",
