@@ -1,26 +1,84 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About Manas Majhi",
   description:
-    "Manas Majhi — from Kalahandi, Odisha to executive search and autonomous hiring infrastructure. The story behind the writing.",
+    "Manas Majhi (Manas Ranjan Majhi) — founder of Majhi Group and Majhi OS. From Kalahandi, Odisha to executive search and autonomous hiring infrastructure.",
+  keywords: [
+    "Manas Majhi",
+    "Manas Ranjan Majhi",
+    "Maanas Ranjan Majhi",
+    "Majhi Group founder",
+    "Majhi OS founder",
+    "executive search India",
+    "hiring infrastructure",
+  ],
+  alternates: {
+    canonical: `${SITE_URL}/about`,
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": `${SITE_URL}/about`,
+  mainEntity: {
+    "@type": "Person",
+    "@id": `${SITE_URL}/#person`,
+    name: "Manas Majhi",
+    alternateName: ["Manas Ranjan Majhi", "Maanas Ranjan Majhi"],
+    url: SITE_URL,
+    image: `${SITE_URL}/headshot.jpg`,
+    jobTitle: "Founder",
+    birthPlace: "Kalahandi, Odisha, India",
+    description:
+      "Manas Majhi (also known as Manas Ranjan Majhi) is the founder of Majhi Group, a retained executive search firm, and Majhi OS, autonomous hiring operations infrastructure. He writes on opportunity, India, technology, and systems that shape human potential.",
+    worksFor: [
+      { "@type": "Organization", name: "Majhi Group", url: "https://majhigroup.com" },
+      { "@type": "Organization", name: "Majhi OS", url: "https://majhi.tech" },
+    ],
+    sameAs: [
+      "https://www.linkedin.com/in/manasmajhi",
+      "https://twitter.com/manasmajhi",
+      "https://majhigroup.com",
+      "https://majhi.tech",
+    ],
+    knowsAbout: [
+      "Executive Search",
+      "Hiring Operations Infrastructure",
+      "Opportunity and Human Potential",
+      "India and Odisha",
+      "Entrepreneurship",
+      "Technology",
+    ],
+  },
 };
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen px-6 lg:px-8 py-20">
-      <div className="max-w-3xl mx-auto">
-        {/* Header */}
-        <div className="mb-16">
-          <p className="section-label mb-4">About</p>
-          <h1 className="font-serif text-5xl md:text-6xl font-medium tracking-tight mb-6">
-            Talent is abundant.
-            <br />
-            <span className="text-muted-foreground">Opportunity is not.</span>
-          </h1>
-        </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="min-h-screen px-6 lg:px-8 py-20">
+        <div className="max-w-3xl mx-auto">
+          {/* Header */}
+          <div className="mb-16">
+            <p className="section-label mb-4">About</p>
+            <h1 className="font-serif text-5xl md:text-6xl font-medium tracking-tight mb-4">
+              Talent is abundant.
+              <br />
+              <span className="text-muted-foreground">Opportunity is not.</span>
+            </h1>
+            <p className="text-sm text-muted-foreground mt-4">
+              <span className="font-medium text-foreground">Manas Ranjan Majhi</span>
+              {" "}· Founder, Majhi Group & Majhi OS · Kalahandi, Odisha
+            </p>
+          </div>
 
         {/* Story */}
         <div className="prose-essay space-y-8 font-sans text-base leading-relaxed">
@@ -120,34 +178,35 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* Links */}
-        <div className="mt-16 flex flex-wrap gap-6">
-          <Link
-            href="/start-here"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-foreground text-background font-medium hover:bg-foreground/90 transition-colors"
-          >
-            Start reading <ArrowRight className="w-4 h-4" />
-          </Link>
-          <Link
-            href="/timeline"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-          >
-            View timeline
-          </Link>
-          <Link
-            href="/work"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-          >
-            See my work
-          </Link>
-          <Link
-            href="/recognition"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-          >
-            Awards &amp; Recognition
-          </Link>
+          {/* Links */}
+          <div className="mt-16 flex flex-wrap gap-6">
+            <Link
+              href="/start-here"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-foreground text-background font-medium hover:bg-foreground/90 transition-colors"
+            >
+              Start reading <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/timeline"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+            >
+              View timeline
+            </Link>
+            <Link
+              href="/work"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+            >
+              See my work
+            </Link>
+            <Link
+              href="/recognition"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+            >
+              Awards &amp; Recognition
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
