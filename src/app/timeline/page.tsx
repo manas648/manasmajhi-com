@@ -48,6 +48,14 @@ const timeline: TimelineItem[] = [
     type: "company",
   },
   {
+    year: "2022",
+    title: "Ithaca College Advisory Board",
+    description:
+      "Appointed by invitation to the Advisory Board for the Customer Experience Certificate Program at Ithaca College, in partnership with Zschool. Board membership is by invitation only, based on personal and professional accomplishment. A recognition that the work being built at Majhi Group had earned a seat at the table with a diverse, senior network of executives linking industry with academia.",
+    location: "Ithaca College · Zschool",
+    type: "milestone",
+  },
+  {
     year: "Infrastructure",
     title: "Majhi OS",
     description:
