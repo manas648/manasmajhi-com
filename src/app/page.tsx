@@ -88,8 +88,11 @@ export default function HomePage() {
                 <br />
                 <span className="text-muted-foreground">Shapes Outcomes.</span>
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-10 max-w-2xl">
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-4 max-w-2xl">
                 Exploring how people, technology, and systems create human potential.
+              </p>
+              <p className="text-sm text-muted-foreground mb-10">
+                A growing community of thousands of readers across India and beyond.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <Link
