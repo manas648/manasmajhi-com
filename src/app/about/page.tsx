@@ -81,6 +81,44 @@ export default function AboutPage() {
             </p>
           </div>
 
+          {/* Social proof */}
+          <div className="mb-20 flex flex-wrap gap-10 sm:gap-16">
+            {[
+              {
+                stat: "64K+",
+                label: "Majhi Group",
+                sub: "LinkedIn followers",
+                href: "https://www.linkedin.com/company/majhi-group/",
+              },
+              {
+                stat: "19K+",
+                label: "Startup Talentscape",
+                sub: "Newsletter subscribers",
+                href: "https://www.linkedin.com/newsletters/startup-talentscape-7091974829532180481/",
+              },
+              {
+                stat: "6K+",
+                label: "Manas Majhi",
+                sub: "LinkedIn followers",
+                href: "https://www.linkedin.com/in/manasmajhi",
+              },
+            ].map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+              >
+                <p className="font-serif text-4xl font-medium group-hover:text-muted-foreground transition-colors">
+                  {item.stat}
+                </p>
+                <p className="text-sm font-medium mt-1">{item.label}</p>
+                <p className="text-xs text-muted-foreground">{item.sub}</p>
+              </a>
+            ))}
+          </div>
+
         {/* Story */}
         <div className="prose-essay space-y-8 font-sans text-base leading-relaxed">
           <p className="text-xl text-muted-foreground leading-relaxed">
