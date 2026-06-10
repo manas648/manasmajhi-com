@@ -9,6 +9,7 @@ const footerLinks = {
   Topics: [
     { href: "/writing/opportunity", label: "Opportunity" },
     { href: "/writing/india", label: "India" },
+    { href: "/writing/odisha", label: "Odisha" },
     { href: "/writing/future-of-work", label: "Future of Work" },
     { href: "/writing/philosophy", label: "Philosophy" },
   ],

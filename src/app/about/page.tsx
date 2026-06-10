@@ -122,28 +122,34 @@ export default function AboutPage() {
         {/* Story */}
         <div className="prose-essay space-y-8 font-sans text-base leading-relaxed">
           <p className="text-xl text-muted-foreground leading-relaxed">
-            I grew up in Kalahandi — one of Odisha's most underserved districts.
-            Not as a hardship story. As a lens.
+            I grew up in Kalahandi, in the southwestern corner of Odisha —
+            where the Eastern Ghats meet dense forest and the rivers run through
+            valleys most of India will never see.
           </p>
 
           <p>
-            Kalahandi taught me something that no MBA program teaches: the
-            distance between talent and opportunity is not small. It is vast.
-            And it is not evenly distributed. Some people are born near the
-            door. Others are born miles away from it, without a map.
+            The place shaped something specific in me: a particular stubbornness,
+            a tendency to treat problems as problems worth solving, a patience
+            with the gap between where things are and where they could be.
+            Kalahandi produces that in people. I did not know it at the time.
+            I know it now.
           </p>
 
           <p>
-            I attended a government Odia-medium school. No internet. No
-            connections. No mentors who had done what I wanted to do. What I had
-            was curiosity, stubbornness, and an unreasonable belief that the gap
-            between where I was and where I wanted to be could be crossed.
+            I attended a government Odia-medium school. Lessons in Odia from
+            beginning to end — the language I dreamed in, teachers who showed up
+            and treated curiosity as its own reward. What I built there was a
+            habit of figuring things out without the infrastructure that makes
+            figuring things out easy. That habit is the foundation of everything
+            I've done since.
           </p>
 
           <p>
-            It could. But only because I found access — to information, to
-            people, to systems that rewarded effort. That experience is the
-            foundation of everything I write and build.
+            That experience is the origin of the question I've spent my career on:
+            what does it take to move from where you are to where you're capable
+            of going? The distance between talent and opportunity is not small.
+            It is vast. And it is not evenly distributed. Understanding that
+            distance — and what closes it — is what I write and build around.
           </p>
 
           <hr className="border-border my-10" />

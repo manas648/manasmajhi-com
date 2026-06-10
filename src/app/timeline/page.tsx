@@ -11,7 +11,7 @@ const timeline: TimelineItem[] = [
     year: "Origin",
     title: "Kalahandi, Odisha",
     description:
-      "Born and raised in Kalahandi — one of India's most underserved districts. The gap between talent and opportunity was not abstract here. It was lived, daily, by everyone around me. That gap became the question I've spent my career trying to answer.",
+      "Born and raised in Kalahandi, in the southwestern corner of Odisha — where the Eastern Ghats meet dense forest and rivers the rest of India rarely sees. The landscape, the people, the particular stubbornness required to operate there: these shaped the question I've spent my career on. What does it take to move from where you are to where you're capable of going?",
     location: "Kalahandi, Odisha",
     type: "origin",
   },
@@ -19,7 +19,7 @@ const timeline: TimelineItem[] = [
     year: "Education",
     title: "Government School",
     description:
-      "Educated entirely in Odia medium, with no internet access, no mentors, and no obvious path forward. The constraint became a teacher. I learned to find information without infrastructure, to move without a map, and to build conviction without external validation. Those skills never left.",
+      "Educated entirely in Odia — lessons in the language I dreamed in, teachers who showed up and treated the classroom as a serious place. The school had no computer lab, no library worth the name. What it built instead was a self-directed curiosity that did not wait for permission or infrastructure to operate. The habit of sitting with a question until you find the answer yourself. Those skills never left.",
     location: "Odisha, India",
     type: "education",
   },
