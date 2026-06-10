@@ -121,6 +121,20 @@ const personSchema = {
     "India and Odisha Development",
     "Entrepreneurship",
   ],
+  hasOccupation: [
+    {
+      "@type": "Occupation",
+      name: "Executive Search Consultant",
+      description: "Retained executive search for VP and C-suite leaders",
+      occupationLocation: { "@type": "Country", name: "India" },
+    },
+    {
+      "@type": "Occupation",
+      name: "Technology Entrepreneur",
+      description: "Founder building autonomous hiring operations infrastructure",
+      occupationLocation: { "@type": "Country", name: "India" },
+    },
+  ],
 };
 
 const websiteSchema = {

@@ -78,11 +78,18 @@ export default async function EssayPage({ params }: Props) {
   const related = getRelatedEssays(essay, 3);
   const { prev, next } = getAdjacentEssays(slug);
 
-  const jsonLd = {
+  const ogImage = `${SITE_URL}/api/og?title=${encodeURIComponent(essay.title)}&category=${encodeURIComponent(CATEGORY_LABELS[essay.category])}`;
+
+  const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${SITE_URL}/writing/${slug}`,
     headline: essay.title,
     description: essay.excerpt,
+    image: ogImage,
+    inLanguage: "en",
+    keywords: essay.tags.join(", "),
+    articleSection: CATEGORY_LABELS[essay.category],
     author: {
       "@type": "Person",
       "@id": `${SITE_URL}/#person`,
@@ -93,6 +100,9 @@ export default async function EssayPage({ params }: Props) {
         "https://www.linkedin.com/in/manasmajhi",
         "https://twitter.com/manasmajhi",
         "https://majhigroup.com",
+        "https://majhi.tech",
+        "https://www.wikidata.org/wiki/Q140134809",
+        "https://www.crunchbase.com/person/manas-majhi",
       ],
     },
     datePublished: essay.date,
@@ -116,11 +126,40 @@ export default async function EssayPage({ params }: Props) {
     },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Essays",
+        item: `${SITE_URL}/writing`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: CATEGORY_LABELS[essay.category],
+        item: `${SITE_URL}/writing/${essay.category}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: essay.title,
+        item: `${SITE_URL}/writing/${slug}`,
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <article className="min-h-screen">
