@@ -46,6 +46,7 @@ const jsonLd = {
       "https://majhigroup.com",
       "https://majhi.tech",
       "https://www.wikidata.org/wiki/Q140134809",
+      "https://www.crunchbase.com/person/manas-majhi",
     ],
     knowsAbout: [
       "Executive Search",

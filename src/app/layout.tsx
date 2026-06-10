@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [
       {
-        url: `${SITE_URL}/og.png`,
+        url: `${SITE_URL}/api/og?title=Opportunity+Shapes+Outcomes`,
         width: 1200,
         height: 630,
         alt: SITE_NAME,
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     creator: AUTHOR_TWITTER,
     title: `${SITE_NAME} — ${SITE_TAGLINE}`,
     description: SITE_DESCRIPTION,
-    images: [`${SITE_URL}/og.png`],
+    images: [`${SITE_URL}/api/og?title=Opportunity+Shapes+Outcomes`],
   },
   alternates: {
     canonical: SITE_URL,
@@ -112,6 +112,7 @@ const personSchema = {
     "https://majhigroup.com",
     "https://majhi.tech",
     "https://www.wikidata.org/wiki/Q140134809",
+    "https://www.crunchbase.com/person/manas-majhi",
   ],
   knowsAbout: [
     "Executive Search",
