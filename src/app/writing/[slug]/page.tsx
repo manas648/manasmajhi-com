@@ -10,7 +10,7 @@ import {
 import { CATEGORY_LABELS } from "@/types";
 import { formatDate, SITE_URL, SITE_NAME } from "@/lib/utils";
 import { EssayCard } from "@/components/essay/EssayCard";
-import { NewsletterForm } from "@/components/ui/NewsletterForm";
+import { AuthorCard } from "@/components/essay/AuthorCard";
 import type { Metadata } from "next";
 
 interface Props {
@@ -179,6 +179,7 @@ export default async function EssayPage({ params }: Props) {
             )}
 
             <hr className="border-border" />
+            <AuthorCard slug={slug} />
           </div>
         </header>
 
@@ -245,20 +246,6 @@ export default async function EssayPage({ params }: Props) {
           </section>
         )}
 
-        {/* Newsletter CTA */}
-        <section className="px-6 lg:px-8 py-20">
-          <div className="max-w-lg mx-auto text-center">
-            <p className="section-label mb-4">Newsletter</p>
-            <h2 className="font-serif text-3xl font-medium mb-4">
-              Enjoyed this essay?
-            </h2>
-            <p className="text-muted-foreground mb-8">
-              Get new writing delivered to your inbox. Written when there's
-              something worth saying.
-            </p>
-            <NewsletterForm />
-          </div>
-        </section>
       </article>
     </>
   );
