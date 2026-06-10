@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 const AUTHOR_PHOTOS = [
-  "/author/photo-1.jpg",
-  "/author/photo-2.jpg",
-  "/author/photo-3.jpg",
-  "/author/photo-4.jpg",
+  "/author/manas-majhi-1.jpg",
+  "/author/manas-majhi-2.jpg",
+  "/author/manas-majhi-3.jpg",
+  "/author/manas-majhi-4.jpg",
 ];
 
 // Deterministic per-post: same slug always picks same photo
