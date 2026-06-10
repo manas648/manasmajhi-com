@@ -13,7 +13,6 @@ const navLinks = [
   { href: "/frameworks", label: "Frameworks" },
   { href: "/elsewhere", label: "Elsewhere" },
   { href: "/about", label: "About" },
-  { href: "/newsletter", label: "Newsletter" },
 ];
 
 export function Nav() {

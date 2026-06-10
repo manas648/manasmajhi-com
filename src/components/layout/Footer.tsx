@@ -17,7 +17,6 @@ const footerLinks = {
     { href: "/work", label: "Work" },
     { href: "/elsewhere", label: "Elsewhere" },
     { href: "/recognition", label: "Recognition" },
-    { href: "/newsletter", label: "Newsletter" },
     { href: "/timeline", label: "Timeline" },
   ],
 };
