@@ -231,7 +231,7 @@ export default async function EssayPage({ params }: Props) {
         </div>
 
         {/* Hiring CTA */}
-        {essay.category === "hiring" && (
+        {(essay.category === "hiring" || (essay.category === "future-of-work" && essay.tags.includes("Majhi OS"))) && (
           <div className="px-6 lg:px-8 pb-16">
             <div className="max-w-3xl mx-auto">
               {essay.tags.includes("Majhi OS") ? (
