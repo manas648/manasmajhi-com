@@ -141,6 +141,13 @@ const photos = [
     width: 1170,
     height: 1166,
   },
+  {
+    src: "/elsewhere/manas-majhi-city-from-plane.jpg",
+    alt: "Aerial night view of a city from a plane window — Manas Majhi",
+    caption: "Cities look like circuits from up here. Which is more or less what they are.",
+    width: 1112,
+    height: 1280,
+  },
 ];
 
 export default function ElsewherePage() {
