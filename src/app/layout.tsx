@@ -126,9 +126,9 @@ const personSchema = {
     "https://majhi.tech",
     "https://www.wikidata.org/wiki/Q140134809",
     "https://www.crunchbase.com/person/manas-majhi",
-    "https://www.candidately.com/directory/person/manas-majhi",
+    "https://www.candidately.com/directory/person/maanas-majhi",
     "https://www.candidately.com/blog/interview-with-manas-majhi",
-    "https://www.candidately.com/worldstaffingsummit/awards/meet-all-staffing-leaders/manas-majhi",
+    "https://www.candidately.com/worldstaffingsummit/awards/meet-all-staffing-leaders/maanas-majhi",
   ],
   knowsAbout: [
     "Executive Search",

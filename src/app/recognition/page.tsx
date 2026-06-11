@@ -75,7 +75,7 @@ const awardsListSchema = {
       name: "Top 100 Staffing Leaders 2024 — World Staffing Summit (Rank #18)",
       description:
         "Manas Majhi ranked #18 in the World Staffing Summit Top 100 Staffing Leaders 2024, recognising global leadership in executive search and hiring operations.",
-      url: "https://www.candidately.com/directory/person/manas-majhi",
+      url: "https://www.candidately.com/directory/person/maanas-majhi",
       image: {
         "@type": "ImageObject",
         url: "https://cdn.sanity.io/images/hqw5c4pt/production/ce2f3cf969a30379922dd780d348a9e819ece0e5-1920x1080.png",
@@ -90,7 +90,7 @@ const awardsListSchema = {
       name: "Top 100 Staffing Leaders 2023 — World Staffing Summit (Rank #87)",
       description:
         "Manas Majhi ranked #87 in the World Staffing Summit Top 100 Staffing Leaders 2023.",
-      url: "https://www.candidately.com/worldstaffingsummit/awards/meet-all-staffing-leaders/manas-majhi",
+      url: "https://www.candidately.com/worldstaffingsummit/awards/meet-all-staffing-leaders/maanas-majhi",
       image: {
         "@type": "ImageObject",
         url: "https://cdn.sanity.io/images/hqw5c4pt/production/864c9e134060a353b28048916e144c666720ac08-1920x1080.jpg",
@@ -130,7 +130,7 @@ const awards = [
     rank: "Rank #18",
     title: "Top 100 Staffing Leaders",
     body: "World Staffing Summit",
-    href: "https://www.candidately.com/directory/person/manas-majhi",
+    href: "https://www.candidately.com/directory/person/maanas-majhi",
     image: {
       src: "https://cdn.sanity.io/images/hqw5c4pt/production/ce2f3cf969a30379922dd780d348a9e819ece0e5-1920x1080.png",
       alt: "Manas Majhi — World Staffing Leader 2024, Top 100 Staffing Leaders to Watch, Rank #18, World Staffing Summit presented by Candidately",
@@ -143,7 +143,7 @@ const awards = [
     rank: "Rank #87",
     title: "Top 100 Staffing Leaders",
     body: "World Staffing Summit",
-    href: "https://www.candidately.com/worldstaffingsummit/awards/meet-all-staffing-leaders/manas-majhi",
+    href: "https://www.candidately.com/worldstaffingsummit/awards/meet-all-staffing-leaders/maanas-majhi",
     image: {
       src: "https://cdn.sanity.io/images/hqw5c4pt/production/864c9e134060a353b28048916e144c666720ac08-1920x1080.jpg",
       alt: "Manas Majhi — World Staffing Leader 2023, Top 100 Staffing Leaders to Watch, Rank #87, World Staffing Summit presented by Candidately",
@@ -214,7 +214,7 @@ const media = [
   },
   {
     name: "Candidately (Directory)",
-    href: "https://www.candidately.com/directory/person/manas-majhi",
+    href: "https://www.candidately.com/directory/person/maanas-majhi",
   },
   {
     name: "The Prameya",
