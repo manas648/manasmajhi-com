@@ -68,9 +68,14 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="mt-16 pt-8 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Manas Majhi. All rights reserved.
-          </p>
+          <div>
+            <p className="text-xs text-muted-foreground">
+              © {new Date().getFullYear()} Manas Majhi. All rights reserved.
+            </p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Also known as Manas Ranjan Majhi and Maanas Ranjan Majhi.
+            </p>
+          </div>
           <div className="flex items-center gap-6">
             <Link
               href="/rss.xml"
