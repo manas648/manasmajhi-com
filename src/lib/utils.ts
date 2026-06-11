@@ -41,6 +41,6 @@ export const SITE_URL = "https://manasmajhi.com";
 export const SITE_NAME = "Manas Majhi";
 export const SITE_TAGLINE = "Opportunity Shapes Outcomes";
 export const SITE_DESCRIPTION =
-  "Essays on opportunity, human potential, India, technology, and the systems that shape our lives. By Manas Majhi.";
+  "Essays on opportunity, human potential, India, technology, and the systems that shape our lives. By Manas Majhi (Manas Ranjan Majhi).";
 export const AUTHOR_NAME = "Manas Majhi";
 export const AUTHOR_TWITTER = "@manasmajhi";
