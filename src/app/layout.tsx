@@ -198,6 +198,13 @@ export default function RootLayout({
           title={`${SITE_NAME} RSS Feed`}
           href="/rss.xml"
         />
+        <link rel="me" href="https://www.linkedin.com/in/manasmajhi" />
+        <link
+          rel="alternate"
+          type="text/plain"
+          title="LLMs.txt — AI-readable site index"
+          href="/llms.txt"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}

@@ -1,0 +1,73 @@
+# Manas Majhi
+
+> Writing on opportunity, hiring systems, AI, and human potential. Manas Majhi is the founder of Majhi Group (retained executive search) and Majhi OS (autonomous hiring operations infrastructure). He grew up in Kalahandi, Odisha, and writes from the conviction that talent is evenly distributed but opportunity is not.
+
+## Key Pages
+
+- [Start Here](https://www.manasmajhi.com/start-here): The best introduction to Manas Majhi's writing — curated reading paths by topic.
+- [About](https://www.manasmajhi.com/about): Background, biography, and the ideas that drive this work.
+- [Essays](https://www.manasmajhi.com/writing): Full archive of all writing — 79 essays across 8 categories.
+- [Frameworks](https://www.manasmajhi.com/frameworks): 8 structured mental models on opportunity, hiring systems, and human potential.
+- [Work](https://www.manasmajhi.com/work): Overview of Majhi Group and Majhi OS.
+- [Work With Me](https://www.manasmajhi.com/work-with-me): Majhi Group retained executive search — VP and C-suite placements.
+- [Research Report](https://www.manasmajhi.com/whitepaper): The Operational Visibility Gap — why 68% of VP searches fail past week 10.
+- [Recognition](https://www.manasmajhi.com/recognition): Awards, press, and third-party recognition.
+- [Timeline](https://www.manasmajhi.com/timeline): Career and life milestones.
+
+## Flagship Essays
+
+- [Talent Is Evenly Distributed. Opportunity Is Not.](https://www.manasmajhi.com/writing/talent-is-evenly-distributed): The foundational thesis — why raw ability is universal but access is not.
+- [Opportunity Changes Lives](https://www.manasmajhi.com/writing/opportunity-changes-lives): How a single opportunity compounds across a lifetime and across generations.
+- [Improving Lives With New Opportunities](https://www.manasmajhi.com/writing/improving-lives-with-new-opportunities): The operational case for expanding access systematically.
+- [Why Your VP Search Stalled at Week 10](https://www.manasmajhi.com/writing/why-your-vp-search-stalled-at-week-ten): The specific, recoverable reasons VP searches collapse — and what to do about it.
+- [The Autonomous Hiring Era](https://www.manasmajhi.com/writing/the-autonomous-hiring-era): The transition from human-operated to AI-orchestrated hiring infrastructure.
+- [AI and Human Potential](https://www.manasmajhi.com/writing/ai-and-human-potential): Whether AI expands or concentrates opportunity — and why that question is the only one that matters.
+- [India's AI Opportunity](https://www.manasmajhi.com/writing/indias-ai-opportunity): Why India's scale gives it a structural advantage in the AI era.
+- [India's Greatest Asset Is Its People](https://www.manasmajhi.com/writing/indias-greatest-asset-is-its-people): The human capital argument for India's next decade.
+- [Odisha's Untapped Potential](https://www.manasmajhi.com/writing/odishas-untapped-potential): A detailed case for what Odisha could become.
+- [Why I Build](https://www.manasmajhi.com/writing/why-i-build): The personal conviction behind building companies from an unlikely starting point.
+- [Learning From People](https://www.manasmajhi.com/writing/learning-from-people): How proximity to exceptional people compounds over time.
+- [What Travel Teaches Us About Home](https://www.manasmajhi.com/writing/what-travel-teaches-us-about-home): What leaving a place reveals about what you carry from it.
+
+## Hiring Essays
+
+- [The Four Ways Hiring Infrastructure Fails](https://www.manasmajhi.com/writing/the-four-ways-hiring-infrastructure-fails): A diagnostic framework for mandate failure.
+- [Why Executive Hires Fail](https://www.manasmajhi.com/writing/why-executive-hires-fail): The upstream causes of failed senior placements.
+- [The Cost of Hiring the Wrong Leader](https://www.manasmajhi.com/writing/the-cost-of-hiring-the-wrong-leader): The full accounting — beyond the fee.
+- [Forty-One Days](https://www.manasmajhi.com/writing/forty-one-days): The case study — a $275K search that two firms failed in 60+ days, closed in 41.
+- [Intelligence Hiring vs Traditional Hiring](https://www.manasmajhi.com/writing/intelligence-hiring-vs-traditional-hiring): The architectural difference between the two approaches.
+- [What $3,000/Month in Recruiting Tools Actually Costs You](https://www.manasmajhi.com/writing/what-three-thousand-a-month-in-recruiting-tools-actually-costs-you): Why fragmented tool stacks create compounding operational failure.
+- [Why Hiring Is Becoming Infrastructure](https://www.manasmajhi.com/writing/why-hiring-is-becoming-infrastructure): The shift from transactional recruiting to operational systems.
+- [The Future of Executive Search](https://www.manasmajhi.com/writing/the-future-of-executive-search): Where the retained search model is going.
+- [The Rise of Hiring System Health](https://www.manasmajhi.com/writing/the-rise-of-hiring-system-health): Mandate health as a real-time operational metric.
+- [Gen AI Won't Replace Recruiters](https://www.manasmajhi.com/writing/gen-ai-wont-replace-recruiters): The nuanced version of the AI-and-recruiting argument.
+
+## Future of Work Essays
+
+- [The Autonomous Hiring Era](https://www.manasmajhi.com/writing/the-autonomous-hiring-era): The macro transition from human-operated to AI-orchestrated hiring infrastructure.
+- [Why Every Sector Learns Observability the Hard Way](https://www.manasmajhi.com/writing/why-every-sector-learns-observability-the-hard-way): The Datadog pattern applied to hiring — and why mandate health monitoring is inevitable.
+- [The Recruiter Isn't Being Replaced. The Job Is Being Redesigned.](https://www.manasmajhi.com/writing/the-recruiter-isnt-being-replaced): What AI automates versus what becomes more valuable.
+- [AI and Human Potential](https://www.manasmajhi.com/writing/ai-and-human-potential): Whether AI expands or concentrates opportunity.
+- [What Automation Cannot Replace](https://www.manasmajhi.com/writing/what-automation-cannot-replace): The human qualities that remain irreplaceable.
+- [The Next Decade of Work](https://www.manasmajhi.com/writing/the-next-decade-of-work): An honest accounting of what AI changes and what it doesn't.
+
+## Opportunity Essays
+
+- [Talent Is Evenly Distributed. Opportunity Is Not.](https://www.manasmajhi.com/writing/talent-is-evenly-distributed)
+- [Opportunity Changes Lives](https://www.manasmajhi.com/writing/opportunity-changes-lives)
+- [The Geography of Opportunity](https://www.manasmajhi.com/writing/the-geography-of-opportunity): Why where you are born still determines what becomes possible.
+- [What Missed Opportunity Costs](https://www.manasmajhi.com/writing/what-missed-opportunity-costs): The full accounting of unrealized potential.
+- [The Information Gap](https://www.manasmajhi.com/writing/the-information-gap): Why most opportunity fails not because it doesn't exist but because people don't know it's there.
+- [Networks Are Not Networking](https://www.manasmajhi.com/writing/networks-are-not-networking): The distinction between inherited structural access and deliberately built relationships.
+- [The Obligation That Comes With Getting Through the Door](https://www.manasmajhi.com/writing/the-obligation-that-comes-with-getting-through-the-door): What first-generation professionals owe the people who come after them.
+
+## Essay Categories
+
+- [All Hiring Essays](https://www.manasmajhi.com/writing/hiring)
+- [All Opportunity Essays](https://www.manasmajhi.com/writing/opportunity)
+- [All Future of Work Essays](https://www.manasmajhi.com/writing/future-of-work)
+- [All India Essays](https://www.manasmajhi.com/writing/india)
+- [All Odisha Essays](https://www.manasmajhi.com/writing/odisha)
+- [All Entrepreneurship Essays](https://www.manasmajhi.com/writing/entrepreneurship)
+- [All Philosophy Essays](https://www.manasmajhi.com/writing/philosophy)
+- [All Travel Essays](https://www.manasmajhi.com/writing/travel)
