@@ -202,7 +202,7 @@ const media = [
   },
   {
     name: "Zee5",
-    href: null, // URL pending
+    href: null,
   },
   {
     name: "HackerNoon",
@@ -211,6 +211,41 @@ const media = [
   {
     name: "Candidately",
     href: "https://www.candidately.com/directory/person/maanas-majhi",
+  },
+  {
+    name: "The Prameya",
+    href: null,
+  },
+  {
+    name: "Dainik Bhaskar",
+    href: null,
+  },
+];
+
+const pressClips = [
+  {
+    publication: "The Prameya",
+    language: "Odia",
+    year: "2022",
+    headline: "Manas nominated to Advisory Board of a 190-year-old American University",
+    image: {
+      src: "/awards/manas-majhi-prameya-press.png",
+      alt: "The Prameya newspaper coverage — Manas Ranjan Majhi nominated to Ithaca College Advisory Board",
+      width: 1662,
+      height: 1438,
+    },
+  },
+  {
+    publication: "Dainik Bhaskar",
+    language: "Hindi",
+    year: "2022",
+    headline: "Manas nominated to Advisory Board of an American University",
+    image: {
+      src: "/awards/manas-majhi-dainik-bhaskar-press.png",
+      alt: "Dainik Bhaskar newspaper coverage — Manas Ranjan Majhi nominated to Ithaca College Advisory Board",
+      width: 1412,
+      height: 1426,
+    },
   },
 ];
 
@@ -336,6 +371,35 @@ export default function RecognitionPage() {
               </div>
             );
           })}
+        </div>
+
+        {/* Press Clips */}
+        <div className="mt-20">
+          <p className="text-xs uppercase tracking-widest text-muted-foreground mb-10">
+            In the press
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {pressClips.map((clip) => (
+              <div key={clip.publication} className="space-y-3">
+                <div>
+                  <p className="font-serif text-base font-medium">{clip.publication}</p>
+                  <p className="text-xs text-muted-foreground uppercase tracking-widest mt-0.5">
+                    {clip.language} · {clip.year}
+                  </p>
+                </div>
+                <div className="rounded-lg overflow-hidden border border-border">
+                  <Image
+                    src={clip.image.src}
+                    alt={clip.image.alt}
+                    width={clip.image.width}
+                    height={clip.image.height}
+                    className="w-full h-auto"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Footer note */}
