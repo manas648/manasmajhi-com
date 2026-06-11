@@ -230,6 +230,57 @@ export default async function EssayPage({ params }: Props) {
           />
         </div>
 
+        {/* Hiring CTA */}
+        {essay.category === "hiring" && (
+          <div className="px-6 lg:px-8 pb-16">
+            <div className="max-w-3xl mx-auto">
+              {essay.tags.includes("Majhi OS") ? (
+                <div className="rounded-2xl border border-border bg-muted/40 p-8">
+                  <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">Majhi OS</p>
+                  <h3 className="font-serif text-2xl font-medium mb-3">
+                    Running a VP search that&apos;s stalling?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    The research report documents why 68% of VP searches fail past week 10 — and what a different architecture produces. The Mission Walkthrough uses your actual mandate as working context, not a demo.
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    <a
+                      href="/whitepaper"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-foreground text-background text-sm font-medium hover:opacity-85 transition-opacity"
+                    >
+                      Download the research report
+                    </a>
+                    <a
+                      href="https://majhi.tech"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-border text-sm font-medium hover:border-foreground/40 transition-colors"
+                    >
+                      Book a Mission Walkthrough →
+                    </a>
+                  </div>
+                </div>
+              ) : essay.tags.includes("Majhi Group") ? (
+                <div className="rounded-2xl border border-border bg-muted/40 p-8">
+                  <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">Majhi Group</p>
+                  <h3 className="font-serif text-2xl font-medium mb-3">
+                    Running a search that won&apos;t close?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    Majhi Group runs retained VP and C-suite searches. 30–45 days against the 65–90 day industry median. 90-day replacement guarantee. For CEOs who need a different process, not just a different firm.
+                  </p>
+                  <a
+                    href="/work-with-me"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-foreground text-background text-sm font-medium hover:opacity-85 transition-opacity"
+                  >
+                    Request a Search Assessment →
+                  </a>
+                </div>
+              ) : null}
+            </div>
+          </div>
+        )}
+
         {/* Navigation */}
         <div className="px-6 lg:px-8 pb-16">
           <div className="max-w-3xl mx-auto">
