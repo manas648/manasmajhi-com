@@ -16,6 +16,8 @@ const FLAGSHIP_SLUGS = [
   "improving-lives-with-new-opportunities",
   "talent-is-evenly-distributed",
   "opportunity-changes-lives",
+  "why-your-vp-search-stalled-at-week-ten",
+  "forty-one-days",
   "why-i-build",
   "learning-from-people",
   "one-year-later",
@@ -81,6 +83,18 @@ const readingPaths = [
     title: "Entrepreneurship Path",
     description: "Building, executing, and thinking for the long term.",
     slugs: ["why-i-build", "learning-from-people", "one-year-later"],
+  },
+  {
+    id: "hiring",
+    icon: "◇",
+    title: "Hiring Path",
+    description:
+      "Why hiring infrastructure breaks, what it costs, and what the next generation of execution looks like.",
+    slugs: [
+      "why-your-vp-search-stalled-at-week-ten",
+      "the-four-ways-hiring-infrastructure-fails",
+      "forty-one-days",
+    ],
   },
 ];
 
@@ -211,6 +225,68 @@ export default function StartHerePage() {
           )}
         </div>
 
+        {/* Work with Manas */}
+        <div className="mb-20">
+          <p className="section-label mb-3">The Work</p>
+          <h2 className="font-serif text-3xl md:text-4xl font-medium mb-10">
+            If you&apos;re here about hiring.
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Majhi OS */}
+            <div className="rounded-2xl border border-border p-8 flex flex-col">
+              <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">
+                Majhi OS
+              </p>
+              <h3 className="font-serif text-2xl font-medium mb-3">
+                Hiring system health.
+              </h3>
+              <p className="text-muted-foreground leading-relaxed text-sm mb-6 flex-1">
+                Autonomous hiring operations infrastructure — the observability
+                and execution layer that prevents VP searches from stalling and
+                recovers them when they do. 68% of VP searches fail past week
+                10. Most don&apos;t have to.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/whitepaper"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-foreground text-background text-sm font-medium hover:opacity-85 transition-opacity"
+                >
+                  Read the research report
+                </Link>
+                <a
+                  href="https://majhi.tech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-border text-sm font-medium hover:border-foreground/40 transition-colors"
+                >
+                  Book a Mission Walkthrough →
+                </a>
+              </div>
+            </div>
+
+            {/* Majhi Group */}
+            <div className="rounded-2xl border border-border p-8 flex flex-col">
+              <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">
+                Majhi Group
+              </p>
+              <h3 className="font-serif text-2xl font-medium mb-3">
+                Retained executive search.
+              </h3>
+              <p className="text-muted-foreground leading-relaxed text-sm mb-6 flex-1">
+                VP and C-suite placements. 30–45 days against the 65–90 day
+                industry median. 90-day replacement guarantee. For CEOs running
+                revenue-critical searches that can&apos;t afford to stall.
+              </p>
+              <Link
+                href="/work-with-me"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-foreground text-background text-sm font-medium hover:opacity-85 transition-opacity w-fit"
+              >
+                Request a Search Assessment →
+              </Link>
+            </div>
+          </div>
+        </div>
+
         {/* About Manas */}
         <div className="max-w-2xl">
           <p className="section-label mb-4">About the Author</p>
@@ -236,7 +312,7 @@ export default function StartHerePage() {
               opportunity is still too wide.
             </p>
           </div>
-          <div className="mt-8 flex gap-4">
+          <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href="/about"
               className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
@@ -248,6 +324,12 @@ export default function StartHerePage() {
               className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Timeline
+            </Link>
+            <Link
+              href="/work-with-me"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Work with Manas
             </Link>
           </div>
         </div>
