@@ -105,8 +105,8 @@ export default async function EssayPage({ params }: Props) {
         "https://www.crunchbase.com/person/manas-majhi",
       ],
     },
-    datePublished: essay.date,
-    dateModified: essay.date,
+    datePublished: essay.date.includes('T') ? essay.date : `${essay.date}T00:00:00Z`,
+    dateModified: essay.date.includes('T') ? essay.date : `${essay.date}T00:00:00Z`,
     publisher: {
       "@type": "Person",
       "@id": `${SITE_URL}/#person`,
