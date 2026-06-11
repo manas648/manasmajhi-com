@@ -11,7 +11,6 @@ export async function GET() {
   const essays = getAllEssays();
 
   const items = essays
-    .slice(0, 20)
     .map((essay) => {
       const url = `${SITE_URL}/writing/${essay.slug}`;
       const pubDate = new Date(essay.date).toUTCString();
