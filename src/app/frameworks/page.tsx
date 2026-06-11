@@ -63,6 +63,67 @@ const frameworks: Framework[] = [
     ],
     color: "from-purple-500/15 to-violet-500/10 border-purple-500/25",
   },
+  {
+    id: "mandate-recovery",
+    title: "Mandate Recovery Framework™",
+    tagline: "The five stages of recovering a stalled search.",
+    description:
+      "When a VP search stalls, the default response is to add more: more sourcing, more outreach, a new vendor. These are supply-side solutions to a demand-side problem. Mandate recovery requires a different sequence — one that starts with diagnosis, not action.",
+    steps: [
+      "Diagnose — Identify the actual failure point. Is this a sourcing problem, a positioning problem, a process problem, or a decision problem?",
+      "Audit — Review every touchpoint in the mandate. What is the outreach quality? What is the intake accuracy? Where did velocity collapse?",
+      "Reposition — Fix the upstream problem before re-engaging downstream. Bad positioning cannot be outrun by volume.",
+      "Re-engage — Return to the market with corrected inputs. Reactivate dormant candidates. Expand the search radius deliberately.",
+      "Rebuild — Reconstruct the pipeline with improved decision infrastructure. Track the signals that caused the original stall.",
+    ],
+    color: "from-rose-500/15 to-red-500/10 border-rose-500/25",
+  },
+  {
+    id: "failure-prediction",
+    title: "Failure Prediction System™",
+    tagline: "The five signals that precede hiring system failure.",
+    description:
+      "Mandate failure is not sudden. It is telegraphed, weeks in advance, through a consistent set of signals. Most teams don't monitor them until after the damage is done. These five indicators, tracked in real time, predict which mandates are at risk — before the pipeline collapses.",
+    steps: [
+      "Response Decay — Reply rates dropping across channels. Not a sourcing problem. A positioning or timing problem.",
+      "Funnel Stall — Candidates entering the pipeline but not advancing. A process or decision problem.",
+      "Intake Drift — Requirements shifting without documentation. A stakeholder alignment problem.",
+      "Recruiter Overload — Mandate count exceeding execution capacity. A resource allocation problem.",
+      "Decision Lag — Evaluation cycles extending past 72 hours per stage. A hiring manager problem.",
+    ],
+    color: "from-sky-500/15 to-cyan-500/10 border-sky-500/25",
+  },
+  {
+    id: "compounding-failure-loop",
+    title: "Compounding Failure Loop™",
+    tagline: "How hiring systems collapse — and where to intervene.",
+    description:
+      "When a mandate fails, the natural response is to add more inputs: more sourcing, more outreach, more urgency. This usually makes things worse. What looks like a sourcing problem is almost always a symptom of a failure that started several stages earlier.",
+    steps: [
+      "Bad Intake — Criteria are unclear, contradictory, or misaligned between hiring manager and search team.",
+      "Poor Dossiers — Candidate briefs lack the intelligence needed to make a compelling case to the market.",
+      "Weak Outreach — Without a clear value proposition, outreach reads generic and response rates collapse.",
+      "Low Replies — Pipeline dries up. The team responds by adding volume, which compounds the positioning problem.",
+      "Pipeline Collapse — Qualified candidates disengage. The mandate acquires a reputation in the market.",
+      "Leadership Escalation — Pressure mounts. The team scrambles into manual recovery rather than systematic repair.",
+    ],
+    color: "from-zinc-500/15 to-slate-500/10 border-zinc-500/25",
+  },
+  {
+    id: "hiring-slo",
+    title: "Hiring SLO Framework™",
+    tagline: "Service-level thinking for hiring operations.",
+    description:
+      "In engineering, a service level objective defines the acceptable threshold of system performance — and triggers an automated response when breached. Most hiring teams have no equivalent: no defined thresholds, no alerts, no recovery protocols. Applying SLO thinking to hiring is the shift that separates infrastructure-grade teams from everyone else.",
+    steps: [
+      "Define the Mandate SLO — What is acceptable time-to-shortlist? What is the minimum response rate? What is the maximum stage duration?",
+      "Monitor in Real Time — Track mandate health against defined thresholds continuously, not retrospectively in a Friday review.",
+      "Alert on Breach — When a mandate crosses a threshold, surface the alert before the pipeline collapses — not after.",
+      "Execute Recovery Protocol — Launch a defined response sequence. Not a scramble. A playbook built from prior recovery data.",
+      "Measure and Compound — Track which recovery actions succeed. Build institutional memory. Each mandate makes the system smarter.",
+    ],
+    color: "from-fuchsia-500/15 to-pink-500/10 border-fuchsia-500/25",
+  },
 ];
 
 export default function FrameworksPage() {
