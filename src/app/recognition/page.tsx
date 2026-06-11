@@ -75,7 +75,7 @@ const awardsListSchema = {
       name: "Top 100 Staffing Leaders 2024 — World Staffing Summit (Rank #18)",
       description:
         "Manas Majhi ranked #18 in the World Staffing Summit Top 100 Staffing Leaders 2024, recognising global leadership in executive search and hiring operations.",
-      url: "https://www.candidately.com/directory/person/maanas-majhi",
+      url: "https://www.candidately.com/directory/person/manas-majhi",
       image: {
         "@type": "ImageObject",
         url: "https://cdn.sanity.io/images/hqw5c4pt/production/ce2f3cf969a30379922dd780d348a9e819ece0e5-1920x1080.png",
@@ -130,7 +130,7 @@ const awards = [
     rank: "Rank #18",
     title: "Top 100 Staffing Leaders",
     body: "World Staffing Summit",
-    href: "https://www.candidately.com/directory/person/maanas-majhi",
+    href: "https://www.candidately.com/directory/person/manas-majhi",
     image: {
       src: "https://cdn.sanity.io/images/hqw5c4pt/production/ce2f3cf969a30379922dd780d348a9e819ece0e5-1920x1080.png",
       alt: "Manas Majhi — World Staffing Leader 2024, Top 100 Staffing Leaders to Watch, Rank #18, World Staffing Summit presented by Candidately",
@@ -209,8 +209,12 @@ const media = [
     href: "https://hackernoon.com/startups-of-the-year-2023-winners-north-america",
   },
   {
-    name: "Candidately",
-    href: "https://www.candidately.com/directory/person/maanas-majhi",
+    name: "Candidately (Interview)",
+    href: "https://www.candidately.com/blog/interview-with-manas-majhi",
+  },
+  {
+    name: "Candidately (Directory)",
+    href: "https://www.candidately.com/directory/person/manas-majhi",
   },
   {
     name: "The Prameya",
