@@ -148,6 +148,20 @@ const photos = [
     width: 1112,
     height: 1280,
   },
+  {
+    src: "/elsewhere/manas-majhi-kaindy-lake-flag.jpg",
+    alt: "Manas Majhi draped in the Indian flag at a submerged forest lake",
+    caption: "Took it further than anyone asked me to.",
+    width: 1438,
+    height: 921,
+  },
+  {
+    src: "/elsewhere/manas-majhi-beatles-almaty.jpg",
+    alt: "Manas Majhi with The Beatles bronze statues",
+    caption: "Found the fifth Beatle. He's Indian.",
+    width: 1086,
+    height: 1280,
+  },
 ];
 
 export default function ElsewherePage() {
