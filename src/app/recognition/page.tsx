@@ -106,6 +106,13 @@ const awardsListSchema = {
       description:
         "Majhi Group recognised by HackerNoon as a Startup of the Year 2023 in the North America category.",
       url: "https://hackernoon.com/startups-of-the-year-2023-winners-north-america",
+      image: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/awards/manas-majhi-hackernoon-startup-of-the-year-2023.png`,
+        name: "Manas Majhi HackerNoon Startup of the Year 2023 — North America, Majhi Group",
+        description:
+          "HackerNoon Startup of the Year 2023 certificate for Majhi Group, founded by Manas Majhi (Manas Ranjan Majhi) from Kalahandi, Odisha, India — North America category winner.",
+      },
     },
     {
       "@type": "ListItem",
@@ -150,7 +157,12 @@ const awards = [
     title: "Startups of the Year",
     body: "HackerNoon",
     href: "https://hackernoon.com/startups-of-the-year-2023-winners-north-america",
-    image: null,
+    image: {
+      src: "/awards/manas-majhi-hackernoon-startup-of-the-year-2023.png",
+      alt: "HackerNoon Startup of the Year 2023 certificate — Majhi Group, founded by Manas Majhi (Manas Ranjan Majhi) from Kalahandi, Odisha, India — North America category winner",
+      width: 800,
+      height: 800,
+    },
   },
   {
     year: "2022",
