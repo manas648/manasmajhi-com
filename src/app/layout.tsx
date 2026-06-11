@@ -26,6 +26,15 @@ export const metadata: Metadata = {
     "Manas Majhi",
     "Manas Ranjan Majhi",
     "Maanas Ranjan Majhi",
+    "Manas Majhi Majhi Group",
+    "Manas Majhi Majhi OS",
+    "Manas Majhi India",
+    "Manas Majhi Odisha",
+    "Manas Majhi Kalahandi",
+    "Manas Majhi Indian Achievers Award",
+    "Manas Majhi World Staffing Leader",
+    "Manas Majhi HackerNoon Startup of the Year",
+    "Manas Majhi manasmajhi.com",
     "Majhi Group",
     "Majhi OS",
     "executive search",
@@ -34,6 +43,10 @@ export const metadata: Metadata = {
     "essays",
     "India",
     "Odisha",
+    "Kalahandi",
+    "Indian Achievers Award",
+    "World Staffing Leader",
+    "HackerNoon Startup of the Year",
     "human potential",
     "technology",
     "entrepreneurship",
@@ -121,6 +134,10 @@ const personSchema = {
     "India and Odisha Development",
     "Entrepreneurship",
   ],
+  birthPlace: {
+    "@type": "Place",
+    name: "Kalahandi, Odisha, India",
+  },
   hasOccupation: [
     {
       "@type": "Occupation",
@@ -134,6 +151,12 @@ const personSchema = {
       description: "Founder building autonomous hiring operations infrastructure",
       occupationLocation: { "@type": "Country", name: "India" },
     },
+  ],
+  award: [
+    "Indian Achievers Award 2022 — Entrepreneur of the Year, Indian Achievers' Forum",
+    "Top 100 Staffing Leaders 2024 Rank #18 — World Staffing Summit, World Staffing Leader",
+    "Top 100 Staffing Leaders 2023 Rank #87 — World Staffing Summit, World Staffing Leader",
+    "HackerNoon Startups of the Year 2023 — North America",
   ],
 };
 

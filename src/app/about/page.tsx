@@ -11,10 +11,21 @@ export const metadata: Metadata = {
     "Manas Majhi",
     "Manas Ranjan Majhi",
     "Maanas Ranjan Majhi",
+    "Manas Majhi Kalahandi",
+    "Manas Majhi Odisha",
+    "Manas Majhi India",
+    "Manas Majhi Majhi Group",
+    "Manas Majhi Majhi OS",
+    "Manas Majhi Indian Achievers Award",
+    "Manas Majhi World Staffing Leader",
+    "Manas Majhi HackerNoon Startup of the Year",
     "Majhi Group founder",
     "Majhi OS founder",
     "executive search India",
     "hiring infrastructure",
+    "Kalahandi Odisha",
+    "Indian Achievers Award 2022",
+    "World Staffing Leader",
   ],
   alternates: {
     canonical: `${SITE_URL}/about`,
@@ -55,6 +66,12 @@ const jsonLd = {
       "India and Odisha",
       "Entrepreneurship",
       "Technology",
+    ],
+    award: [
+      "Indian Achievers Award 2022 — Entrepreneur of the Year, Indian Achievers' Forum",
+      "Top 100 Staffing Leaders 2024 Rank #18 — World Staffing Summit, World Staffing Leader",
+      "Top 100 Staffing Leaders 2023 Rank #87 — World Staffing Summit, World Staffing Leader",
+      "HackerNoon Startups of the Year 2023 — North America",
     ],
   },
 };
@@ -221,6 +238,31 @@ export default function AboutPage() {
           <p>
             Talent is evenly distributed. Opportunity is not. That asymmetry is
             the most important problem of our time — and the most solvable one.
+          </p>
+
+          <hr className="border-border my-10" />
+
+          <h2 className="font-serif text-3xl font-medium">Recognition.</h2>
+
+          <p>
+            The work has been recognised externally. In 2022, I received the{" "}
+            <strong>Indian Achievers Award</strong> — Entrepreneur of the Year —
+            from the Indian Achievers' Forum, covered by Business Standard, The
+            Print, and ANI. In 2023 and again in 2024, I was named a{" "}
+            <strong>World Staffing Leader</strong> by the World Staffing Summit,
+            ranking #87 and then #18 in the global Top 100. Also in 2023,
+            HackerNoon recognised Majhi Group as a{" "}
+            <strong>Startup of the Year</strong> in North America — an outcome
+            that matters not because of the award, but because of what it
+            represents: a firm built from{" "}
+            <strong>Kalahandi, Odisha</strong>, competing and winning on a
+            global stage.
+          </p>
+
+          <p>
+            I note these not for the recognition itself, but because they are
+            proof of something I believe more strongly than any award could
+            confirm: where you come from does not determine where you get to go.
           </p>
         </div>
 

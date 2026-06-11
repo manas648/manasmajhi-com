@@ -1,10 +1,98 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Recognition",
+  title: "Awards & Recognition — Manas Majhi | Indian Achievers Award, World Staffing Leader, HackerNoon",
   description:
-    "Awards and media recognition for Manas Majhi — Indian Achievers Award, World Staffing Summit, HackerNoon, and more.",
+    "Manas Majhi (Manas Ranjan Majhi) — Indian Achievers Award 2022 Entrepreneur of the Year, World Staffing Leader Top 100 (2023 & 2024), HackerNoon Startup of the Year North America 2023.",
+  keywords: [
+    "Manas Majhi Indian Achievers Award",
+    "Manas Majhi World Staffing Leader",
+    "Manas Majhi HackerNoon Startup of the Year",
+    "Manas Ranjan Majhi awards",
+    "Indian Achievers Award 2022",
+    "World Staffing Summit Top 100",
+    "HackerNoon Startups of the Year 2023",
+    "Manas Majhi recognition",
+    "Manas Majhi Entrepreneur of the Year",
+  ],
+  alternates: {
+    canonical: `${SITE_URL}/recognition`,
+  },
+};
+
+const recognitionSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": `${SITE_URL}/recognition`,
+  name: "Awards & Recognition — Manas Majhi",
+  description:
+    "Manas Majhi (Manas Ranjan Majhi) — Indian Achievers Award 2022 Entrepreneur of the Year, World Staffing Leader Top 100 (2023 & 2024), HackerNoon Startup of the Year North America 2023.",
+  url: `${SITE_URL}/recognition`,
+  mainEntity: {
+    "@type": "Person",
+    "@id": `${SITE_URL}/#person`,
+    name: "Manas Majhi",
+    alternateName: ["Manas Ranjan Majhi", "Maanas Ranjan Majhi"],
+    url: SITE_URL,
+    award: [
+      "Indian Achievers Award 2022 — Entrepreneur of the Year, Indian Achievers' Forum",
+      "Top 100 Staffing Leaders 2024 Rank #18 — World Staffing Summit, World Staffing Leader",
+      "Top 100 Staffing Leaders 2023 Rank #87 — World Staffing Summit, World Staffing Leader",
+      "HackerNoon Startups of the Year 2023 — North America",
+    ],
+  },
+};
+
+const awardsListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Awards and Recognition — Manas Majhi",
+  description:
+    "Selected awards recognising Manas Majhi for entrepreneurship, staffing leadership, and technology innovation.",
+  numberOfItems: 5,
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Indian Achievers Award 2022 — Entrepreneur of the Year",
+      description:
+        "Manas Ranjan Majhi, Director of Majhi Group, honoured with the Indian Achievers Award 2022 for Entrepreneur of the Year by the Indian Achievers' Forum.",
+      url: "https://www.business-standard.com/content/press-releases-ani/manas-ranjan-majhi-director-of-majhi-group-honoured-with-the-indian-achievers-award-2022-122062000539_1.html",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Top 100 Staffing Leaders 2024 — World Staffing Summit (Rank #18)",
+      description:
+        "Manas Majhi ranked #18 in the World Staffing Summit Top 100 Staffing Leaders 2024, recognising global leadership in executive search and hiring operations.",
+      url: "https://www.candidately.com/directory/person/maanas-majhi",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Top 100 Staffing Leaders 2023 — World Staffing Summit (Rank #87)",
+      description:
+        "Manas Majhi ranked #87 in the World Staffing Summit Top 100 Staffing Leaders 2023.",
+      url: "https://www.candidately.com/worldstaffingsummit/awards/meet-all-staffing-leaders/manas-majhi",
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      name: "HackerNoon Startups of the Year 2023 — North America",
+      description:
+        "Majhi Group recognised by HackerNoon as a Startup of the Year 2023 in the North America category.",
+      url: "https://hackernoon.com/startups-of-the-year-2023-winners-north-america",
+    },
+    {
+      "@type": "ListItem",
+      position: 5,
+      name: "Customer Experience Certificate Program Advisory Board — Ithaca College & Zschool (2022)",
+      description:
+        "Manas Majhi appointed Advisory Board Member for the Customer Experience Certificate Program at Ithaca College and Zschool, 2022.",
+    },
+  ],
 };
 
 const awards = [
@@ -74,6 +162,15 @@ const media = [
 
 export default function RecognitionPage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(recognitionSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(awardsListSchema) }}
+      />
     <div className="min-h-screen px-6 lg:px-8 py-20">
       <div className="max-w-3xl mx-auto">
         {/* Header */}
@@ -181,5 +278,6 @@ export default function RecognitionPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
