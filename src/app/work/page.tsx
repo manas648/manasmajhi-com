@@ -75,9 +75,15 @@ export default function WorkPage() {
               "41 days. $275K search. Two firms failed in 60+ days. That's not
               luck. That's a different system."
             </p>
-            <p className="text-sm text-muted-foreground">
+            <a
+              href="https://www.linkedin.com/posts/background-a-prominent-global-financial-share-7224380852200255488-UF3k/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1.5"
+            >
               Case study: Alternatives Investment Director placement
-            </p>
+              <ExternalLink className="w-3 h-3" />
+            </a>
           </div>
 
           <div className="flex items-center gap-3">
