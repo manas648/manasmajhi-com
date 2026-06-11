@@ -32,6 +32,12 @@
       ]
     }
   ],
+  "crons": [
+    {
+      "path": "/api/cron/indexnow",
+      "schedule": "0 0 * * *"
+    }
+  ],
   "redirects": [
     {
       "source": "/feed",
