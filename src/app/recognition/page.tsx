@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/utils";
 
@@ -60,6 +61,13 @@ const awardsListSchema = {
       description:
         "Manas Ranjan Majhi, Director of Majhi Group, honoured with the Indian Achievers Award 2022 for Entrepreneur of the Year by the Indian Achievers' Forum.",
       url: "https://www.business-standard.com/content/press-releases-ani/manas-ranjan-majhi-director-of-majhi-group-honoured-with-the-indian-achievers-award-2022-122062000539_1.html",
+      image: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/awards/manas-majhi-indian-achievers-award-2022.jpg`,
+        name: "Manas Ranjan Majhi Indian Achievers Award 2022 Certificate — Entrepreneur of the Year",
+        description:
+          "Official Indian Achievers Award 2022 certificate presented to Manas Ranjan Majhi, Executive Director of Majhi Group, by the Indian Achievers' Forum for Entrepreneur of the Year.",
+      },
     },
     {
       "@type": "ListItem",
@@ -68,6 +76,13 @@ const awardsListSchema = {
       description:
         "Manas Majhi ranked #18 in the World Staffing Summit Top 100 Staffing Leaders 2024, recognising global leadership in executive search and hiring operations.",
       url: "https://www.candidately.com/directory/person/maanas-majhi",
+      image: {
+        "@type": "ImageObject",
+        url: "https://cdn.sanity.io/images/hqw5c4pt/production/ce2f3cf969a30379922dd780d348a9e819ece0e5-1920x1080.png",
+        name: "Manas Majhi World Staffing Leader 2024 — Top 100 Staffing Leaders to Watch, Rank #18",
+        description:
+          "World Staffing Awards 2024 banner recognising Manas Majhi (Maanas Majhi), Executive Director of Majhi Group, as a Top 100 Staffing Leader ranked #18 globally.",
+      },
     },
     {
       "@type": "ListItem",
@@ -76,6 +91,13 @@ const awardsListSchema = {
       description:
         "Manas Majhi ranked #87 in the World Staffing Summit Top 100 Staffing Leaders 2023.",
       url: "https://www.candidately.com/worldstaffingsummit/awards/meet-all-staffing-leaders/manas-majhi",
+      image: {
+        "@type": "ImageObject",
+        url: "https://cdn.sanity.io/images/hqw5c4pt/production/864c9e134060a353b28048916e144c666720ac08-1920x1080.jpg",
+        name: "Manas Majhi World Staffing Leader 2023 — Top 100 Staffing Leaders to Watch, Rank #87",
+        description:
+          "World Staffing Awards 2023 banner recognising Manas Majhi, Executive Director of Majhi Group, as a Top 100 Staffing Leader ranked #87 globally.",
+      },
     },
     {
       "@type": "ListItem",
@@ -102,6 +124,12 @@ const awards = [
     title: "Top 100 Staffing Leaders",
     body: "World Staffing Summit",
     href: "https://www.candidately.com/directory/person/maanas-majhi",
+    image: {
+      src: "https://cdn.sanity.io/images/hqw5c4pt/production/ce2f3cf969a30379922dd780d348a9e819ece0e5-1920x1080.png",
+      alt: "Manas Majhi — World Staffing Leader 2024, Top 100 Staffing Leaders to Watch, Rank #18, World Staffing Summit presented by Candidately",
+      width: 1920,
+      height: 1080,
+    },
   },
   {
     year: "2023",
@@ -109,6 +137,12 @@ const awards = [
     title: "Top 100 Staffing Leaders",
     body: "World Staffing Summit",
     href: "https://www.candidately.com/worldstaffingsummit/awards/meet-all-staffing-leaders/manas-majhi",
+    image: {
+      src: "https://cdn.sanity.io/images/hqw5c4pt/production/864c9e134060a353b28048916e144c666720ac08-1920x1080.jpg",
+      alt: "Manas Majhi — World Staffing Leader 2023, Top 100 Staffing Leaders to Watch, Rank #87, World Staffing Summit presented by Candidately",
+      width: 1920,
+      height: 1080,
+    },
   },
   {
     year: "2023",
@@ -116,6 +150,7 @@ const awards = [
     title: "Startups of the Year",
     body: "HackerNoon",
     href: "https://hackernoon.com/startups-of-the-year-2023-winners-north-america",
+    image: null,
   },
   {
     year: "2022",
@@ -123,6 +158,12 @@ const awards = [
     title: "Indian Achievers Award",
     body: "Indian Achievers' Forum",
     href: "https://www.business-standard.com/content/press-releases-ani/manas-ranjan-majhi-director-of-majhi-group-honoured-with-the-indian-achievers-award-2022-122062000539_1.html",
+    image: {
+      src: "/awards/manas-majhi-indian-achievers-award-2022.jpg",
+      alt: "Indian Achievers Award 2022 certificate presented to Manas Ranjan Majhi, Executive Director of Majhi Group — Entrepreneur of the Year, Indian Achievers' Forum",
+      width: 1200,
+      height: 1748,
+    },
   },
   {
     year: "2022",
@@ -130,6 +171,7 @@ const awards = [
     title: "Customer Experience Certificate Program Advisory Board",
     body: "Ithaca College · Zschool",
     href: null,
+    image: null,
   },
 ];
 
@@ -230,7 +272,7 @@ export default function RecognitionPage() {
                     {award.year}
                   </span>
                   {/* Content */}
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">
                       {award.rank}
                     </p>
@@ -240,6 +282,20 @@ export default function RecognitionPage() {
                     <p className="text-sm text-muted-foreground mt-1">
                       {award.body}
                     </p>
+                    {/* Award image */}
+                    {award.image && (
+                      <div className="mt-6 rounded-lg overflow-hidden border border-border">
+                        <Image
+                          src={award.image.src}
+                          alt={award.image.alt}
+                          width={award.image.width}
+                          height={award.image.height}
+                          className="w-full h-auto"
+                          loading="lazy"
+                          unoptimized={award.image.src.startsWith("https://cdn.sanity.io")}
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
                 {award.href && (
