@@ -40,9 +40,60 @@ export default function LibraryPage() {
             Library
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            Every essay, organised by section. {totalCount} pieces across{" "}
+            Every piece of writing, organised by section. {totalCount} essays, 2 long-form guides, across{" "}
             {categories.filter((c) => essays.some((e) => e.category === c)).length} categories.
           </p>
+        </div>
+
+        {/* Long-form section */}
+        <div className="mb-16 pb-16 border-b border-border">
+          <div className="flex items-center gap-3 mb-6">
+            <h2 className="font-serif text-2xl font-medium">Long-form</h2>
+            <span className="text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded-full">2</span>
+          </div>
+          <p className="text-sm text-muted-foreground mb-8 max-w-lg">
+            Research reports and guides — longer pieces on hiring, executive search, and operational infrastructure.
+          </p>
+          <ul className="space-y-0 divide-y divide-border/50">
+            <li>
+              <a
+                href="/whitepaper"
+                className="group flex items-start justify-between gap-6 py-4 hover:bg-muted/30 -mx-3 px-3 rounded-lg transition-colors"
+              >
+                <div className="flex-1 min-w-0">
+                  <p className="font-medium text-foreground leading-snug mb-0.5">
+                    The Operational Visibility Gap
+                  </p>
+                  <p className="text-sm text-muted-foreground line-clamp-1 leading-relaxed">
+                    Why recruiting breaks at scale — and the infrastructure that closes the gap. Majhi OS Research Report.
+                  </p>
+                </div>
+                <span className="shrink-0 text-xs text-muted-foreground/60 mt-0.5 whitespace-nowrap">
+                  Research Report
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/executive-search-playbook.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-start justify-between gap-6 py-4 hover:bg-muted/30 -mx-3 px-3 rounded-lg transition-colors"
+              >
+                <div className="flex-1 min-w-0">
+                  <p className="font-medium text-foreground leading-snug mb-0.5">
+                    The Executive Search Playbook
+                  </p>
+                  <p className="text-sm text-muted-foreground line-clamp-1 leading-relaxed">
+                    How to close the right VP or C-suite hire in 50 days — and why most searches take 120. Majhi Group Guide.
+                  </p>
+                </div>
+                <span className="shrink-0 text-xs text-muted-foreground/60 mt-0.5 whitespace-nowrap">
+                  PDF Guide
+                </span>
+              </a>
+            </li>
+          </ul>
         </div>
 
         {/* Category jump links */}
