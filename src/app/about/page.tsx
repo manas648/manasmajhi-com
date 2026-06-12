@@ -54,10 +54,15 @@ const jsonLd = {
     sameAs: [
       "https://www.linkedin.com/in/manasmajhi",
       "https://twitter.com/manasmajhi",
+      "https://instagram.com/manas.majhi56",
       "https://majhigroup.com",
       "https://majhi.tech",
       "https://www.wikidata.org/wiki/Q140134809",
       "https://www.crunchbase.com/person/manas-majhi",
+      "https://hackernoon.com/company/majhigroup",
+      "https://www.candidately.com/directory/person/maanas-majhi",
+      "https://www.candidately.com/blog/interview-with-manas-majhi",
+      "https://www.candidately.com/worldstaffingsummit/awards/meet-all-staffing-leaders/maanas-majhi",
     ],
     knowsAbout: [
       "Executive Search",
