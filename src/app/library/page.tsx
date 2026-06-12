@@ -45,15 +45,44 @@ export default function LibraryPage() {
           </p>
         </div>
 
+        {/* Category jump links */}
+        <div className="flex flex-wrap gap-2 mb-20 pb-8 border-b border-border">
+          <a
+            href="#long-form"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border text-sm text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-all"
+          >
+            Long-form
+            <span className="text-xs opacity-60">2</span>
+          </a>
+          {categories.map((cat) => {
+            const count = essays.filter((e) => e.category === cat).length;
+            if (count === 0) return null;
+            return (
+              <a
+                key={cat}
+                href={`#${cat}`}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border text-sm text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-all"
+              >
+                {CATEGORY_LABELS[cat]}
+                <span className="text-xs opacity-60">{count}</span>
+              </a>
+            );
+          })}
+        </div>
+
         {/* Long-form section */}
-        <div id="long-form" className="mb-16 pb-16 border-b border-border">
-          <div className="flex items-center gap-3 mb-6">
-            <h2 className="font-serif text-2xl font-medium">Long-form</h2>
-            <span className="text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded-full">2</span>
+        <div id="long-form" className="mb-20 pb-8 border-b border-border">
+          <div className="flex items-start justify-between mb-8 pb-4 border-b border-border">
+            <div>
+              <div className="flex items-center gap-3 mb-1">
+                <h2 className="font-serif text-2xl font-medium">Long-form</h2>
+                <span className="text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded-full">2</span>
+              </div>
+              <p className="text-sm text-muted-foreground max-w-lg">
+                Research reports and guides — longer pieces on hiring, executive search, and operational infrastructure.
+              </p>
+            </div>
           </div>
-          <p className="text-sm text-muted-foreground mb-8 max-w-lg">
-            Research reports and guides — longer pieces on hiring, executive search, and operational infrastructure.
-          </p>
           <ul className="space-y-0 divide-y divide-border/50">
             <li>
               <a
@@ -94,31 +123,6 @@ export default function LibraryPage() {
               </a>
             </li>
           </ul>
-        </div>
-
-        {/* Category jump links */}
-        <div className="flex flex-wrap gap-2 mb-20 pb-8 border-b border-border">
-          <a
-            href="#long-form"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border text-sm text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-all"
-          >
-            Long-form
-            <span className="text-xs opacity-60">2</span>
-          </a>
-          {categories.map((cat) => {
-            const count = essays.filter((e) => e.category === cat).length;
-            if (count === 0) return null;
-            return (
-              <a
-                key={cat}
-                href={`#${cat}`}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border text-sm text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-all"
-              >
-                {CATEGORY_LABELS[cat]}
-                <span className="text-xs opacity-60">{count}</span>
-              </a>
-            );
-          })}
         </div>
 
         {/* Sections */}
