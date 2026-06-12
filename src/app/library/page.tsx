@@ -46,7 +46,7 @@ export default function LibraryPage() {
         </div>
 
         {/* Long-form section */}
-        <div className="mb-16 pb-16 border-b border-border">
+        <div id="long-form" className="mb-16 pb-16 border-b border-border">
           <div className="flex items-center gap-3 mb-6">
             <h2 className="font-serif text-2xl font-medium">Long-form</h2>
             <span className="text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded-full">2</span>
@@ -98,6 +98,13 @@ export default function LibraryPage() {
 
         {/* Category jump links */}
         <div className="flex flex-wrap gap-2 mb-20 pb-8 border-b border-border">
+          <a
+            href="#long-form"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border text-sm text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-all"
+          >
+            Long-form
+            <span className="text-xs opacity-60">2</span>
+          </a>
           {categories.map((cat) => {
             const count = essays.filter((e) => e.category === cat).length;
             if (count === 0) return null;
