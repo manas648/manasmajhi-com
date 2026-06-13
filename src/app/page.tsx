@@ -280,7 +280,7 @@ export default function HomePage() {
                     {path.description}
                   </p>
                   <div className="text-xs text-muted-foreground">
-                    {path.essays.length} essays in this path
+                    {path.essays.length} {path.essays.length === 1 ? "essay" : "essays"} in this path
                   </div>
                 </div>
               </Link>
