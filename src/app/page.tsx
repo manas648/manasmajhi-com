@@ -9,7 +9,7 @@ import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Manas Majhi — Opportunity Shapes Outcomes",
+  title: "Manas Majhi",
   description:
     "Essays on opportunity, human potential, India, technology, and the systems that shape lives. By Manas Majhi.",
 };
