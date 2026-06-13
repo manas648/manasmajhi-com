@@ -6,7 +6,7 @@
 
 - [Start Here](https://www.manasmajhi.com/start-here): The best introduction to Manas Majhi's writing — curated reading paths by topic.
 - [About](https://www.manasmajhi.com/about): Background, biography, and the ideas that drive this work.
-- [Essays](https://www.manasmajhi.com/writing): Full archive of all writing — 79 essays across 8 categories.
+- [Essays](https://www.manasmajhi.com/writing): Full archive of all writing — 90 essays across 8 categories.
 - [Frameworks](https://www.manasmajhi.com/frameworks): 8 structured mental models on opportunity, hiring systems, and human potential.
 - [Work](https://www.manasmajhi.com/work): Overview of Majhi Group and Majhi OS.
 - [Work With Me](https://www.manasmajhi.com/work-with-me): Majhi Group retained executive search — VP and C-suite placements.
@@ -25,6 +25,7 @@
 - [India's AI Opportunity](https://www.manasmajhi.com/writing/indias-ai-opportunity): Why India's scale gives it a structural advantage in the AI era.
 - [India's Greatest Asset Is Its People](https://www.manasmajhi.com/writing/indias-greatest-asset-is-its-people): The human capital argument for India's next decade.
 - [Odisha's Untapped Potential](https://www.manasmajhi.com/writing/odishas-untapped-potential): A detailed case for what Odisha could become.
+- [The Childhood Lessons I Still Use Every Day](https://www.manasmajhi.com/writing/the-childhood-lessons-i-still-use-every-day): The lessons that actually run my life came from growing up in Kalahandi — not from formal education or professional experience that followed.
 - [Why I Build](https://www.manasmajhi.com/writing/why-i-build): The personal conviction behind building companies from an unlikely starting point.
 - [Learning From People](https://www.manasmajhi.com/writing/learning-from-people): How proximity to exceptional people compounds over time.
 - [What Travel Teaches Us About Home](https://www.manasmajhi.com/writing/what-travel-teaches-us-about-home): What leaving a place reveals about what you carry from it.
@@ -60,6 +61,7 @@
 - [The Information Gap](https://www.manasmajhi.com/writing/the-information-gap): Why most opportunity fails not because it doesn't exist but because people don't know it's there.
 - [Networks Are Not Networking](https://www.manasmajhi.com/writing/networks-are-not-networking): The distinction between inherited structural access and deliberately built relationships.
 - [The Obligation That Comes With Getting Through the Door](https://www.manasmajhi.com/writing/the-obligation-that-comes-with-getting-through-the-door): What first-generation professionals owe the people who come after them.
+- [The Information Gap](https://www.manasmajhi.com/writing/the-information-gap): Why most opportunity fails not because it doesn't exist, but because the people who need it most don't know it's there. Information is the invisible infrastructure of opportunity.
 
 ## Press & Interviews
 

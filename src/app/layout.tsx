@@ -182,6 +182,31 @@ const websiteSchema = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
+  name: "Manas Majhi",
+  url: SITE_URL,
+  logo: {
+    "@type": "ImageObject",
+    url: `${SITE_URL}/headshot.jpg`,
+    width: 376,
+    height: 550,
+  },
+  founder: { "@id": `${SITE_URL}/#person` },
+  description:
+    "Essays on opportunity, hiring systems, India, and human potential. Founded by Manas Majhi, founder of Majhi Group and Majhi OS.",
+  sameAs: [
+    "https://www.linkedin.com/in/manasmajhi",
+    "https://twitter.com/manasmajhi",
+    "https://majhigroup.com",
+    "https://majhi.tech",
+    "https://www.wikidata.org/wiki/Q140134809",
+    "https://www.crunchbase.com/person/manas-majhi",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -216,6 +241,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
       <body className="min-h-screen antialiased">
