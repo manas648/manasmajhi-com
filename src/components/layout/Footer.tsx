@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FooterQuote } from "./FooterQuote";
 
 const footerLinks = {
   Reading: [
@@ -38,10 +39,7 @@ export function Footer() {
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
               Improving Lives With New Opportunities.
             </p>
-            <p className="mt-4 text-xs text-muted-foreground">
-              Essays on opportunity, human potential, India, and the systems
-              that shape our lives.
-            </p>
+            <FooterQuote />
           </div>
 
           {/* Links */}

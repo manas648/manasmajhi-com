@@ -88,7 +88,10 @@ export default function HomePage() {
                 <br />
                 <span className="text-muted-foreground">Shapes Outcomes.</span>
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-4 max-w-2xl">
+              <p className="font-serif text-xl md:text-2xl italic text-foreground/80 leading-relaxed mb-5 max-w-xl">
+                "Talent is evenly distributed. Opportunity is not."
+              </p>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4 max-w-2xl">
                 Exploring how people, technology, and systems create human potential.
               </p>
               <p className="text-sm text-muted-foreground mb-10">
