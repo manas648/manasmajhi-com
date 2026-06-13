@@ -16,6 +16,7 @@ export function EssayCard({
   className,
 }: EssayCardProps) {
   const categoryImage = CATEGORY_IMAGES[essay.category];
+  const cardImage = essay.coverImage || categoryImage;
 
   if (variant === "compact") {
     return (
@@ -30,7 +31,7 @@ export function EssayCard({
           {/* Small category thumbnail */}
           <div className="relative w-16 h-16 rounded-lg overflow-hidden shrink-0">
             <Image
-              src={categoryImage}
+              src={cardImage}
               alt={CATEGORY_LABELS[essay.category]}
               fill
               className="object-cover"
@@ -58,7 +59,7 @@ export function EssayCard({
           {/* Category image header */}
           <div className="relative h-52 -mx-0 -mt-0 mb-5 rounded-t-2xl overflow-hidden">
             <Image
-              src={categoryImage}
+              src={cardImage}
               alt={CATEGORY_LABELS[essay.category]}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -94,7 +95,7 @@ export function EssayCard({
         {/* Category image header */}
         <div className="relative h-40 -mx-0 -mt-0 mb-4 rounded-t-2xl overflow-hidden">
           <Image
-            src={categoryImage}
+            src={cardImage}
             alt={CATEGORY_LABELS[essay.category]}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-500"
