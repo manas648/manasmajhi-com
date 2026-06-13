@@ -1,0 +1,119 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .pg { fill: #fdf8f0; }
+      .line { stroke: #b8c8d8; stroke-width: 1; }
+      .margin { stroke: #e89898; stroke-width: 1.5; }
+      .ink { fill: none; stroke: #1a2840; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+      .ink-fade { fill: none; stroke: #1a2840; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; opacity: 0.35; }
+      .ink-very-fade { fill: none; stroke: #1a2840; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; opacity: 0.15; }
+      @media (prefers-color-scheme: dark) {
+        .pg { fill: #12100c; }
+        .line { stroke: #1e2830; }
+        .margin { stroke: #5a2828; }
+        .ink { stroke: #e8d8b8; }
+        .ink-fade { stroke: #e8d8b8; }
+        .ink-very-fade { stroke: #e8d8b8; }
+      }
+    </style>
+  </defs>
+
+  <!-- Page background -->
+  <rect width="1200" height="600" class="pg"/>
+
+  <!-- Ruled lines — every 36px -->
+  <line x1="0" y1="72" x2="1200" y2="72" class="line"/>
+  <line x1="0" y1="108" x2="1200" y2="108" class="line"/>
+  <line x1="0" y1="144" x2="1200" y2="144" class="line"/>
+  <line x1="0" y1="180" x2="1200" y2="180" class="line"/>
+  <line x1="0" y1="216" x2="1200" y2="216" class="line"/>
+  <line x1="0" y1="252" x2="1200" y2="252" class="line"/>
+  <line x1="0" y1="288" x2="1200" y2="288" class="line"/>
+  <line x1="0" y1="324" x2="1200" y2="324" class="line"/>
+  <line x1="0" y1="360" x2="1200" y2="360" class="line"/>
+  <line x1="0" y1="396" x2="1200" y2="396" class="line"/>
+  <line x1="0" y1="432" x2="1200" y2="432" class="line"/>
+  <line x1="0" y1="468" x2="1200" y2="468" class="line"/>
+  <line x1="0" y1="504" x2="1200" y2="504" class="line"/>
+  <line x1="0" y1="540" x2="1200" y2="540" class="line"/>
+  <line x1="0" y1="576" x2="1200" y2="576" class="line"/>
+
+  <!-- Margin line -->
+  <line x1="120" y1="0" x2="120" y2="600" class="margin"/>
+
+  <!-- Odia script strokes — hand-drawn feel, left-to-right across lines -->
+  <!-- Line 1 (y~88): Odia characters — abstract but recognisable curves -->
+  <!-- ଓ-like loop -->
+  <path d="M148,95 Q155,78 170,80 Q185,82 185,92 Q185,104 172,107 Q158,110 150,100 Q145,92 148,88" class="ink"/>
+  <!-- ଡ-like -->
+  <path d="M200,82 L200,104 M200,82 Q218,78 222,88 Q225,100 212,107 L200,104" class="ink"/>
+  <!-- ି vowel mark -->
+  <path d="M220,78 Q230,72 238,76" class="ink"/>
+  <!-- ଶ-like -->
+  <path d="M250,105 Q255,85 268,82 Q278,82 280,92 L278,105 M265,95 L280,95" class="ink"/>
+  <!-- ା mark -->
+  <path d="M290,80 L290,108 M298,80 L298,108" class="ink"/>
+  <!-- ନ-like -->
+  <path d="M315,108 L315,82 Q330,78 338,88 Q340,98 330,105 L315,105" class="ink"/>
+  <!-- horizontal bar / matras -->
+  <path d="M148,80 L340,80" class="ink"/>
+
+  <!-- Continued text row 1 (fading as moves right) -->
+  <path d="M360,80 L600,80 M365,80 Q372,88 370,100 Q368,107 358,105" class="ink-fade"/>
+  <path d="M610,80 L900,80" class="ink-very-fade"/>
+  <path d="M910,80 L1150,80" class="ink-very-fade" opacity="0.08"/>
+
+  <!-- Line 2 (y~124): more writing -->
+  <path d="M148,116 L680,116 M150,108 L150,124 M200,108 L200,124 M250,108 L250,124 M300,108 L300,124 M360,108 L360,124 M420,108 L420,124 M480,108 L480,124 M540,108 L540,124 M600,108 L600,124" class="ink"/>
+
+  <!-- Characters on line 2 -->
+  <path d="M155,122 Q165,112 178,114 Q190,116 188,124" class="ink"/>
+  <path d="M210,112 Q225,108 230,118 Q232,128 222,126" class="ink"/>
+  <path d="M258,126 Q265,110 275,108 Q285,108 285,118 L282,126" class="ink"/>
+  <path d="M310,124 L310,108 Q322,106 328,114 Q330,122 322,125 L310,124" class="ink"/>
+  <path d="M368,126 Q375,108 385,108 Q395,110 395,120 Q393,130 382,128" class="ink"/>
+
+  <!-- Rows 3-5: systematic fading text simulation -->
+  <path d="M148,152 L900,152" class="ink"/>
+  <g class="ink">
+    <path d="M155,142 Q165,136 175,140 Q180,148 170,152"/>
+    <path d="M210,140 L210,158 M220,140 Q232,136 236,146 Q238,156 228,156"/>
+    <path d="M278,154 Q285,138 298,138 Q308,140 308,150 L305,158"/>
+    <path d="M380,154 Q387,138 400,138 Q410,140 408,152 Q406,160 396,158"/>
+    <path d="M450,140 L450,158 M462,140 L462,158"/>
+    <path d="M520,156 L520,138 Q534,136 540,146 Q542,156 532,158"/>
+  </g>
+
+  <path d="M148,188 L1050,188" class="ink"/>
+  <g class="ink">
+    <path d="M155,178 Q165,170 177,174 Q182,182 172,185"/>
+    <path d="M212,178 L212,196 Q226,174 232,185 Q234,196 224,193"/>
+    <path d="M290,192 Q298,176 312,176 Q322,178 318,190 L312,193"/>
+    <path d="M365,192 Q375,176 388,176 Q398,178 395,192"/>
+    <path d="M430,176 L430,196 M442,176 Q458,172 462,184 Q464,196 452,194"/>
+  </g>
+
+  <!-- Line 5 — starts to trail off -->
+  <path d="M148,224 L780,224" class="ink-fade"/>
+  <path d="M148,260" class="ink-fade"/>
+  <path d="M148,260 L600,260" class="ink-fade" opacity="0.25"/>
+
+  <!-- Line 6-8 — very faint, representing fading memory / unused pages -->
+  <path d="M148,296 L450,296 M148,332 L380,332 M148,368 L280,368" class="ink-very-fade"/>
+
+  <!-- A child's drawing in the corner — simple sun/circle doodle, bottom right -->
+  <circle cx="1040" cy="480" r="45" fill="none" stroke="#e8800a" stroke-width="2.5" opacity="0.4"/>
+  <!-- Sun rays -->
+  <line x1="1040" y1="425" x2="1040" y2="412" stroke="#e8800a" stroke-width="2" opacity="0.4"/>
+  <line x1="1072" y1="435" x2="1080" y2="424" stroke="#e8800a" stroke-width="2" opacity="0.4"/>
+  <line x1="1086" y1="467" x2="1098" y2="463" stroke="#e8800a" stroke-width="2" opacity="0.4"/>
+  <line x1="1072" y1="505" x2="1080" y2="516" stroke="#e8800a" stroke-width="2" opacity="0.4"/>
+  <line x1="1040" y1="525" x2="1040" y2="538" stroke="#e8800a" stroke-width="2" opacity="0.4"/>
+  <line x1="1008" y1="505" x2="1000" y2="516" stroke="#e8800a" stroke-width="2" opacity="0.4"/>
+  <line x1="994" y1="467" x2="982" y2="463" stroke="#e8800a" stroke-width="2" opacity="0.4"/>
+  <line x1="1008" y1="435" x2="1000" y2="424" stroke="#e8800a" stroke-width="2" opacity="0.4"/>
+  <!-- Smiley face inside sun -->
+  <circle cx="1030" cy="472" r="4" fill="#e8800a" opacity="0.4"/>
+  <circle cx="1050" cy="472" r="4" fill="#e8800a" opacity="0.4"/>
+  <path d="M1024,488 Q1040,498 1056,488" fill="none" stroke="#e8800a" stroke-width="2" opacity="0.4"/>
+</svg>

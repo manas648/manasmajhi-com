@@ -1,0 +1,102 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2a5a"/>
+      <stop offset="35%" stop-color="#4a3a7a"/>
+      <stop offset="65%" stop-color="#c86030"/>
+      <stop offset="85%" stop-color="#e88040"/>
+      <stop offset="100%" stop-color="#f0a060"/>
+    </linearGradient>
+    <linearGradient id="ocean" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a3060"/>
+      <stop offset="100%" stop-color="#0e1e40"/>
+    </linearGradient>
+    <linearGradient id="beach" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4b880"/>
+      <stop offset="100%" stop-color="#c0a060"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="45%" r="15%">
+      <stop offset="0%" stop-color="#ffd060" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#ff8030" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ff8030" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="reflection" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c86030" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#c86030" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky gradient -->
+  <rect width="1200" height="600" fill="url(#dusk)"/>
+
+  <!-- Sun glow -->
+  <ellipse cx="600" cy="270" rx="180" ry="120" fill="url(#sun)"/>
+  <!-- Sun disc -->
+  <circle cx="600" cy="265" r="42" fill="#ffd060" opacity="0.9"/>
+  <circle cx="600" cy="265" r="34" fill="#fff0a0" opacity="0.8"/>
+
+  <!-- Horizon line — ocean meets beach -->
+  <!-- Ocean -->
+  <path d="M0 380 Q200 370 400 375 Q600 380 800 372 Q1000 365 1200 370 L1200 500 Q1000 495 800 490 Q600 485 400 490 Q200 495 0 492 Z" fill="url(#ocean)"/>
+
+  <!-- Wave ripples -->
+  <path d="M0 382 Q100 378 200 382 Q300 386 400 382 Q500 378 600 382 Q700 386 800 380 Q900 374 1000 378 Q1100 382 1200 378" fill="none" stroke="#3060a0" stroke-width="1.5" opacity="0.5"/>
+  <path d="M0 395 Q150 391 300 395 Q450 399 600 393 Q750 387 900 391 Q1050 395 1200 391" fill="none" stroke="#3060a0" stroke-width="1" opacity="0.4"/>
+  <path d="M0 410 Q120 406 240 410 Q360 414 480 408 Q600 402 720 406 Q840 410 960 406 Q1080 402 1200 406" fill="none" stroke="#3060a0" stroke-width="1" opacity="0.3"/>
+
+  <!-- Sun reflection on water -->
+  <ellipse cx="600" cy="430" rx="80" ry="50" fill="url(#reflection)"/>
+  <path d="M560 388 Q600 395 640 388 Q635 420 600 430 Q565 420 560 388Z" fill="#d08040" opacity="0.5"/>
+
+  <!-- Beach strip -->
+  <path d="M0 490 Q200 484 400 487 Q600 490 800 486 Q1000 482 1200 485 L1200 520 Q1000 518 800 516 Q600 514 400 516 Q200 518 0 516 Z" fill="url(#beach)"/>
+
+  <!-- Temple silhouette — Jagannath-style shikhara (tower) -->
+  <g fill="#0e1828" opacity="0.85">
+    <!-- Main shikhara -->
+    <polygon points="580,140 620,140 635,380 565,380"/>
+    <!-- Curvilinear taper -->
+    <path d="M565,380 Q560,300 570,240 Q580,180 600,140 Q620,180 630,240 Q640,300 635,380Z"/>
+    <!-- Ribbed texture lines -->
+    <line x1="600" y1="145" x2="575" y2="380" stroke="#0e1828" stroke-width="2" opacity="0.3"/>
+    <line x1="600" y1="145" x2="625" y2="380" stroke="#0e1828" stroke-width="2" opacity="0.3"/>
+    <!-- Amalaka (crown disc) -->
+    <ellipse cx="600" cy="145" rx="28" ry="8"/>
+    <!-- Kalasha (finial) -->
+    <rect x="596" y="120" width="8" height="26"/>
+    <circle cx="600" cy="118" r="6"/>
+
+    <!-- Subsidiary towers -->
+    <path d="M530,240 Q520,215 528,185 Q536,200 540,240Z"/>
+    <path d="M670,240 Q680,215 672,185 Q664,200 660,240Z"/>
+    <ellipse cx="535" cy="185" rx="12" ry="4"/>
+    <ellipse cx="665" cy="185" rx="12" ry="4"/>
+
+    <!-- Temple base -->
+    <rect x="520" y="374" width="160" height="18"/>
+    <rect x="505" y="388" width="190" height="10"/>
+    <rect x="490" y="395" width="220" height="8"/>
+  </g>
+
+  <!-- Palm trees — left -->
+  <g fill="#0e1828" opacity="0.7">
+    <rect x="118" y="340" width="6" height="60"/>
+    <path d="M121,340 Q90,310 70,295 Q90,315 95,320 Q100,305 85,290 Q105,312 108,318 Q118,300 115,280 Q125,305 121,318 Q135,298 148,285 Q138,310 132,318 Q148,302 165,295 Q148,318 135,322 Q155,315 168,310 Q148,328 134,328 Q148,328 160,340 Q140,340 121,340Z"/>
+  </g>
+  <!-- Palm trees — right -->
+  <g fill="#0e1828" opacity="0.7">
+    <rect x="1076" y="345" width="6" height="55"/>
+    <path d="M1079,345 Q1048,315 1028,300 Q1048,320 1053,325 Q1058,310 1043,295 Q1063,317 1066,323 Q1076,305 1073,285 Q1083,310 1079,323 Q1093,303 1106,290 Q1096,315 1090,323 Q1106,307 1119,302 Q1102,323 1089,327 Q1103,327 1115,338 Q1095,338 1079,345Z"/>
+  </g>
+
+  <!-- Stars in upper sky -->
+  <circle cx="150" cy="60" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="280" cy="40" r="1" fill="white" opacity="0.6"/>
+  <circle cx="450" cy="55" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="750" cy="45" r="1" fill="white" opacity="0.6"/>
+  <circle cx="900" cy="65" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="1050" cy="38" r="1" fill="white" opacity="0.5"/>
+  <circle cx="1150" cy="55" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="350" cy="28" r="1" fill="white" opacity="0.4"/>
+  <circle cx="870" cy="30" r="1" fill="white" opacity="0.4"/>
+</svg>

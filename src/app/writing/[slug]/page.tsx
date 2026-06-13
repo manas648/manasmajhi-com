@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import {
   getEssayBySlug,
@@ -221,6 +222,23 @@ export default async function EssayPage({ params }: Props) {
             <AuthorCard slug={slug} />
           </div>
         </header>
+
+        {/* Hero image */}
+        {essay.coverImage && (
+          <div className="px-6 lg:px-8 pb-10">
+            <div className="max-w-3xl mx-auto">
+              <div className="relative w-full overflow-hidden rounded-2xl" style={{ aspectRatio: "2/1" }}>
+                <Image
+                  src={essay.coverImage}
+                  alt={essay.title}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Essay body */}
         <div className="px-6 lg:px-8 pb-16">

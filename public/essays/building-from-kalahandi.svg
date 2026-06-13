@@ -1,0 +1,90 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #faf7f2; }
+    .layer1 { fill: #c4651a; }
+    .layer2 { fill: #d4804a; }
+    .layer3 { fill: #e8a06a; }
+    .layer4 { fill: #f0bc8c; }
+    .layer5 { fill: #f8d8b4; }
+    .dot { fill: #c4651a; opacity: 0.9; }
+    .dot-mid { fill: #8b3a0f; opacity: 0.7; }
+    .dot-top { fill: #5a2008; opacity: 0.5; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #1a1208; }
+      .layer1 { fill: #7a3a10; }
+      .layer2 { fill: #9a4e20; }
+      .layer3 { fill: #b86530; }
+      .layer4 { fill: #d08050; }
+      .layer5 { fill: #e8a070; }
+      .dot { fill: #f0a060; opacity: 0.9; }
+      .dot-mid { fill: #f8c090; opacity: 0.7; }
+      .dot-top { fill: #fff0d8; opacity: 0.6; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="600" class="bg"/>
+
+  <!-- Terrain layers — horizontal strata rising from bottom -->
+  <!-- Layer 1 — deepest earth -->
+  <path d="M0 600 Q150 540 300 555 Q450 570 600 550 Q750 535 900 548 Q1050 560 1200 545 L1200 600 Z" class="layer1"/>
+  <!-- Layer 2 -->
+  <path d="M0 560 Q120 500 280 515 Q420 528 580 510 Q740 492 900 508 Q1060 522 1200 505 L1200 560 Q1050 560 900 548 Q750 535 600 550 Q450 570 300 555 Q150 540 0 600 Z" class="layer2"/>
+  <!-- Layer 3 -->
+  <path d="M0 510 Q200 455 380 468 Q540 480 680 462 Q820 445 980 460 Q1120 472 1200 458 L1200 505 Q1060 522 900 508 Q740 492 580 510 Q420 528 280 515 Q120 500 0 560 Z" class="layer3"/>
+  <!-- Layer 4 -->
+  <path d="M0 460 Q180 405 360 418 Q520 430 670 412 Q810 395 970 408 Q1100 418 1200 405 L1200 458 Q1120 472 980 460 Q820 445 680 462 Q540 480 380 468 Q200 455 0 510 Z" class="layer4"/>
+  <!-- Layer 5 — surface -->
+  <path d="M0 415 Q160 360 340 372 Q500 383 650 365 Q800 348 960 360 Q1090 370 1200 358 L1200 405 Q1100 418 970 408 Q810 395 670 412 Q520 430 360 418 Q180 405 0 460 Z" class="layer5"/>
+
+  <!-- Horizon fade -->
+  <rect x="0" y="0" width="1200" height="360" fill="url(#skyGrad)"/>
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#faf7f2" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#faf7f2" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      @media (prefers-color-scheme: dark) {
+        #skyGrad stop:first-child { stop-color: #1a1208; }
+        #skyGrad stop:last-child { stop-color: #1a1208; }
+      }
+    </style>
+  </defs>
+
+  <!-- Ascending dots — sparse below, concentrated above surface -->
+  <!-- Ground dots -->
+  <circle cx="180" cy="390" r="3.5" class="dot-top"/>
+  <circle cx="340" cy="375" r="3" class="dot-top"/>
+  <circle cx="510" cy="360" r="4" class="dot-top"/>
+  <circle cx="680" cy="348" r="3.5" class="dot-top"/>
+  <circle cx="850" cy="355" r="3" class="dot-top"/>
+  <circle cx="1020" cy="365" r="4" class="dot-top"/>
+
+  <!-- Rising dots — mid -->
+  <circle cx="220" cy="320" r="3" class="dot-mid"/>
+  <circle cx="400" cy="300" r="4" class="dot-mid"/>
+  <circle cx="580" cy="285" r="3.5" class="dot-mid"/>
+  <circle cx="750" cy="295" r="3" class="dot-mid"/>
+  <circle cx="920" cy="305" r="4" class="dot-mid"/>
+  <circle cx="140" cy="275" r="2.5" class="dot-mid"/>
+  <circle cx="1080" cy="288" r="3" class="dot-mid"/>
+
+  <!-- High dots -->
+  <circle cx="310" cy="235" r="3" class="dot"/>
+  <circle cx="490" cy="215" r="4.5" class="dot"/>
+  <circle cx="660" cy="200" r="3.5" class="dot"/>
+  <circle cx="820" cy="220" r="3" class="dot"/>
+  <circle cx="990" cy="235" r="4" class="dot"/>
+  <circle cx="175" cy="205" r="2.5" class="dot"/>
+  <circle cx="1100" cy="225" r="3" class="dot"/>
+  <circle cx="430" cy="170" r="3" class="dot"/>
+  <circle cx="720" cy="158" r="4" class="dot"/>
+  <circle cx="900" cy="172" r="2.5" class="dot"/>
+
+  <!-- Highest dots — sparse, near sky -->
+  <circle cx="550" cy="120" r="3" class="dot" opacity="0.4"/>
+  <circle cx="700" cy="108" r="2.5" class="dot" opacity="0.35"/>
+  <circle cx="400" cy="130" r="2" class="dot" opacity="0.3"/>
+  <circle cx="820" cy="118" r="2" class="dot" opacity="0.3"/>
+</svg>

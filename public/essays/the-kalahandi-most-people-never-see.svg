@@ -1,0 +1,85 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4e8c8"/>
+      <stop offset="100%" stop-color="#a8cc88"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a7a30"/>
+      <stop offset="100%" stop-color="#2a4a18"/>
+    </linearGradient>
+    <linearGradient id="shaft1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#fff8e0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="shaft2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#fff8e0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="shaft3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#fff8e0" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      @media (prefers-color-scheme: dark) {
+        #sky stop:first-child { stop-color: #1a2e10; }
+        #sky stop:last-child { stop-color: #243818; }
+        #ground stop:first-child { stop-color: #1e3812; }
+        #ground stop:last-child { stop-color: #0e1e08; }
+      }
+    </style>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="1200" height="600" fill="url(#sky)"/>
+
+  <!-- Ground -->
+  <rect x="0" y="480" width="1200" height="120" fill="url(#ground)"/>
+
+  <!-- Light shafts breaking through canopy -->
+  <polygon points="420,0 460,0 520,480 380,480" fill="url(#shaft1)"/>
+  <polygon points="680,0 710,0 760,480 630,480" fill="url(#shaft2)"/>
+  <polygon points="220,0 248,0 290,480 178,480" fill="url(#shaft3)"/>
+  <polygon points="940,0 968,0 1010,480 880,480" fill="url(#shaft3)"/>
+
+  <!-- Back canopy layer — darker -->
+  <ellipse cx="100" cy="120" rx="160" ry="120" fill="#3a6025" opacity="0.8"/>
+  <ellipse cx="320" cy="90" rx="200" ry="140" fill="#4a7830" opacity="0.85"/>
+  <ellipse cx="580" cy="100" rx="220" ry="130" fill="#3e6828" opacity="0.9"/>
+  <ellipse cx="840" cy="85" rx="210" ry="145" fill="#4a7830" opacity="0.85"/>
+  <ellipse cx="1080" cy="110" rx="180" ry="125" fill="#3a6025" opacity="0.8"/>
+  <ellipse cx="1260" cy="120" rx="150" ry="110" fill="#3a6025" opacity="0.75"/>
+  <ellipse cx="-60" cy="115" rx="140" ry="100" fill="#3a6025" opacity="0.75"/>
+
+  <!-- Mid canopy layer -->
+  <ellipse cx="0" cy="200" rx="120" ry="95" fill="#3a7020" opacity="0.9"/>
+  <ellipse cx="200" cy="170" rx="180" ry="130" fill="#4a8028" opacity="0.95"/>
+  <ellipse cx="440" cy="155" rx="200" ry="140" fill="#3e7822" opacity="0.9"/>
+  <ellipse cx="700" cy="165" rx="195" ry="135" fill="#4a8028" opacity="0.95"/>
+  <ellipse cx="950" cy="150" rx="205" ry="142" fill="#3e7822" opacity="0.9"/>
+  <ellipse cx="1180" cy="185" rx="160" ry="120" fill="#4a8028" opacity="0.85"/>
+
+  <!-- Front canopy — most detailed, darkest -->
+  <ellipse cx="80" cy="300" rx="140" ry="110" fill="#2a5815" opacity="0.95"/>
+  <ellipse cx="290" cy="270" rx="175" ry="125" fill="#336020" opacity="0.98"/>
+  <ellipse cx="540" cy="255" rx="185" ry="138" fill="#2a5815" opacity="0.95"/>
+  <ellipse cx="790" cy="262" rx="180" ry="130" fill="#336020" opacity="0.98"/>
+  <ellipse cx="1030" cy="270" rx="175" ry="128" fill="#2a5815" opacity="0.95"/>
+  <ellipse cx="1200" cy="295" rx="130" ry="105" fill="#336020" opacity="0.9"/>
+
+  <!-- Canopy edge detail — leaf clusters -->
+  <ellipse cx="160" cy="340" rx="80" ry="65" fill="#2a5010" opacity="0.9"/>
+  <ellipse cx="380" cy="320" rx="95" ry="72" fill="#2e5818" opacity="0.95"/>
+  <ellipse cx="620" cy="308" rx="90" ry="68" fill="#2a5010" opacity="0.9"/>
+  <ellipse cx="860" cy="318" rx="88" ry="70" fill="#2e5818" opacity="0.95"/>
+  <ellipse cx="1100" cy="332" rx="82" ry="66" fill="#2a5010" opacity="0.9"/>
+
+  <!-- Ground vegetation hints -->
+  <ellipse cx="300" cy="495" rx="120" ry="30" fill="#1e4010" opacity="0.6"/>
+  <ellipse cx="700" cy="490" rx="140" ry="28" fill="#1e4010" opacity="0.6"/>
+  <ellipse cx="1000" cy="500" rx="110" ry="25" fill="#1e4010" opacity="0.6"/>
+
+  <!-- Glowing spots where light hits ground -->
+  <ellipse cx="440" cy="488" rx="55" ry="15" fill="#c8e880" opacity="0.35"/>
+  <ellipse cx="690" cy="484" rx="45" ry="12" fill="#c8e880" opacity="0.28"/>
+</svg>
