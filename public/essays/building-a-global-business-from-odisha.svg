@@ -1,0 +1,44 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>
+    .bg{fill:#0a1020}.globe{fill:none;stroke:#1e3a6a;stroke-width:1}.line{fill:none;stroke:#e8800a;stroke-width:1.5;opacity:.6}.node{fill:#e8800a}.node-sm{fill:#c06010;opacity:.7}.origin{fill:#ff9820}
+    @media(prefers-color-scheme:dark){.bg{fill:#060810}}
+  </style>
+</defs>
+<rect width="1200" height="600" class="bg"/>
+<!-- Globe outline circles -->
+<circle cx="600" cy="300" r="220" class="globe" opacity=".4"/>
+<ellipse cx="600" cy="300" rx="220" ry="80" class="globe" opacity=".25"/>
+<ellipse cx="600" cy="300" rx="110" ry="220" class="globe" opacity=".2"/>
+<ellipse cx="600" cy="300" rx="220" ry="160" class="globe" opacity=".15"/>
+<!-- Latitude lines -->
+<line x1="380" y1="220" x2="820" y2="220" stroke="#1e3a6a" stroke-width=".8" opacity=".3"/>
+<line x1="380" y1="300" x2="820" y2="300" stroke="#1e3a6a" stroke-width=".8" opacity=".3"/>
+<line x1="380" y1="380" x2="820" y2="380" stroke="#1e3a6a" stroke-width=".8" opacity=".3"/>
+<!-- Origin — Odisha -->
+<circle cx="680" cy="320" r="10" class="origin"/>
+<circle cx="680" cy="320" r="18" fill="none" stroke="#ff9820" stroke-width="1.5" opacity=".5"/>
+<circle cx="680" cy="320" r="26" fill="none" stroke="#ff9820" stroke-width="1" opacity=".25"/>
+<!-- Connection lines to world hubs -->
+<line x1="680" y1="320" x2="180" y2="180" class="line"/>
+<line x1="680" y1="320" x2="300" y2="420" class="line"/>
+<line x1="680" y1="320" x2="480" y2="140" class="line"/>
+<line x1="680" y1="320" x2="900" y2="180" class="line"/>
+<line x1="680" y1="320" x2="1050" y2="280" class="line"/>
+<line x1="680" y1="320" x2="980" y2="430" class="line"/>
+<line x1="680" y1="320" x2="760" y2="140" class="line"/>
+<line x1="680" y1="320" x2="150" y2="310" class="line" opacity=".4"/>
+<line x1="680" y1="320" x2="1100" y2="180" class="line" opacity=".4"/>
+<!-- Destination nodes -->
+<circle cx="180" cy="180" r="6" class="node-sm"/>
+<circle cx="300" cy="420" r="5" class="node-sm"/>
+<circle cx="480" cy="140" r="7" class="node-sm"/>
+<circle cx="900" cy="180" r="8" class="node"/>
+<circle cx="1050" cy="280" r="6" class="node-sm"/>
+<circle cx="980" cy="430" r="7" class="node-sm"/>
+<circle cx="760" cy="140" r="5" class="node-sm"/>
+<circle cx="150" cy="310" r="4" class="node-sm" opacity=".5"/>
+<circle cx="1100" cy="180" r="5" class="node-sm" opacity=".5"/>
+<!-- Label -->
+<text x="680" y="355" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#e8800a" opacity=".7">Odisha</text>
+</svg>

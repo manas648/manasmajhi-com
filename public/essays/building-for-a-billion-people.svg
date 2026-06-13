@@ -1,0 +1,52 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>
+    .bg{fill:#f8f4ee}.s{fill:#c87020}.m{fill:#e89840}.l{fill:#a05010}
+    @media(prefers-color-scheme:dark){.bg{fill:#0c0805}.s{fill:#a05010}.m{fill:#c07030}.l{fill:#7a3808}}
+  </style>
+  <linearGradient id="exp" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#c87020" stop-opacity=".2"/>
+    <stop offset="100%" stop-color="#c87020" stop-opacity="1"/>
+  </linearGradient>
+</defs>
+<rect width="1200" height="600" class="bg"/>
+<!-- Exponential scale: small left, massive right -->
+<!-- Left side — one person -->
+<circle cx="100" cy="300" r="8" class="l"/>
+<!-- Growing clusters -->
+<circle cx="240" cy="300" r="6" class="s"/><circle cx="258" cy="300" r="6" class="s"/><circle cx="249" cy="284" r="6" class="s"/>
+<circle cx="390" cy="300" r="5" class="m"/><circle cx="404" cy="300" r="5" class="m"/><circle cx="418" cy="300" r="5" class="m"/><circle cx="397" cy="288" r="5" class="m"/><circle cx="411" cy="288" r="5" class="m"/><circle cx="404" cy="276" r="5" class="m"/>
+<!-- Medium cluster -->
+<g transform="translate(520,250)">
+  <circle cx="0" cy="50" r="4.5" class="s"/><circle cx="12" cy="50" r="4.5" class="s"/><circle cx="24" cy="50" r="4.5" class="s"/><circle cx="36" cy="50" r="4.5" class="s"/>
+  <circle cx="6" cy="40" r="4.5" class="s"/><circle cx="18" cy="40" r="4.5" class="s"/><circle cx="30" cy="40" r="4.5" class="s"/>
+  <circle cx="12" cy="30" r="4.5" class="s"/><circle cx="24" cy="30" r="4.5" class="s"/>
+  <circle cx="18" cy="20" r="4.5" class="s"/>
+</g>
+<!-- Large cluster -->
+<g transform="translate(650,160)">
+  <circle cx="0" cy="140" r="4" class="m"/><circle cx="10" cy="140" r="4" class="m"/><circle cx="20" cy="140" r="4" class="m"/><circle cx="30" cy="140" r="4" class="m"/><circle cx="40" cy="140" r="4" class="m"/><circle cx="50" cy="140" r="4" class="m"/>
+  <circle cx="5" cy="130" r="4" class="m"/><circle cx="15" cy="130" r="4" class="m"/><circle cx="25" cy="130" r="4" class="m"/><circle cx="35" cy="130" r="4" class="m"/><circle cx="45" cy="130" r="4" class="m"/>
+  <circle cx="10" cy="120" r="4" class="m"/><circle cx="20" cy="120" r="4" class="m"/><circle cx="30" cy="120" r="4" class="m"/><circle cx="40" cy="120" r="4" class="m"/>
+  <circle cx="15" cy="110" r="4" class="m"/><circle cx="25" cy="110" r="4" class="m"/><circle cx="35" cy="110" r="4" class="m"/>
+  <circle cx="20" cy="100" r="4" class="m"/><circle cx="30" cy="100" r="4" class="m"/>
+  <circle cx="25" cy="90" r="4" class="m"/>
+</g>
+<!-- Massive right cluster filling right third -->
+<g transform="translate(800,80)" opacity=".85">
+  <!-- Dense dot field -->
+  <circle cx="10" cy="220" r="3.5" class="s"/><circle cx="24" cy="220" r="3.5" class="s"/><circle cx="38" cy="220" r="3.5" class="s"/><circle cx="52" cy="220" r="3.5" class="s"/><circle cx="66" cy="220" r="3.5" class="s"/><circle cx="80" cy="220" r="3.5" class="s"/><circle cx="94" cy="220" r="3.5" class="s"/><circle cx="108" cy="220" r="3.5" class="s"/><circle cx="122" cy="220" r="3.5" class="s"/><circle cx="136" cy="220" r="3.5" class="s"/><circle cx="150" cy="220" r="3.5" class="s"/><circle cx="164" cy="220" r="3.5" class="s"/><circle cx="178" cy="220" r="3.5" class="s"/><circle cx="192" cy="220" r="3.5" class="s"/><circle cx="206" cy="220" r="3.5" class="s"/><circle cx="220" cy="220" r="3.5" class="s"/><circle cx="234" cy="220" r="3.5" class="s"/><circle cx="248" cy="220" r="3.5" class="s"/><circle cx="262" cy="220" r="3.5" class="s"/><circle cx="276" cy="220" r="3.5" class="s"/>
+  <circle cx="10" cy="207" r="3.5" class="s"/><circle cx="24" cy="207" r="3.5" class="s"/><circle cx="38" cy="207" r="3.5" class="s"/><circle cx="52" cy="207" r="3.5" class="s"/><circle cx="66" cy="207" r="3.5" class="s"/><circle cx="80" cy="207" r="3.5" class="s"/><circle cx="94" cy="207" r="3.5" class="s"/><circle cx="108" cy="207" r="3.5" class="s"/><circle cx="122" cy="207" r="3.5" class="s"/><circle cx="136" cy="207" r="3.5" class="s"/><circle cx="150" cy="207" r="3.5" class="s"/><circle cx="164" cy="207" r="3.5" class="s"/><circle cx="178" cy="207" r="3.5" class="s"/><circle cx="192" cy="207" r="3.5" class="s"/><circle cx="206" cy="207" r="3.5" class="s"/><circle cx="220" cy="207" r="3.5" class="s"/><circle cx="234" cy="207" r="3.5" class="s"/><circle cx="248" cy="207" r="3.5" class="s"/>
+  <circle cx="10" cy="194" r="3.5" class="s"/><circle cx="24" cy="194" r="3.5" class="s"/><circle cx="38" cy="194" r="3.5" class="s"/><circle cx="52" cy="194" r="3.5" class="s"/><circle cx="66" cy="194" r="3.5" class="s"/><circle cx="80" cy="194" r="3.5" class="s"/><circle cx="94" cy="194" r="3.5" class="s"/><circle cx="108" cy="194" r="3.5" class="s"/><circle cx="122" cy="194" r="3.5" class="s"/><circle cx="136" cy="194" r="3.5" class="s"/><circle cx="150" cy="194" r="3.5" class="s"/><circle cx="164" cy="194" r="3.5" class="s"/><circle cx="178" cy="194" r="3.5" class="s"/><circle cx="192" cy="194" r="3.5" class="s"/><circle cx="206" cy="194" r="3.5" class="s"/>
+  <circle cx="10" cy="181" r="3.5" class="s"/><circle cx="24" cy="181" r="3.5" class="s"/><circle cx="38" cy="181" r="3.5" class="s"/><circle cx="52" cy="181" r="3.5" class="s"/><circle cx="66" cy="181" r="3.5" class="s"/><circle cx="80" cy="181" r="3.5" class="s"/><circle cx="94" cy="181" r="3.5" class="s"/><circle cx="108" cy="181" r="3.5" class="s"/><circle cx="122" cy="181" r="3.5" class="s"/><circle cx="136" cy="181" r="3.5" class="s"/><circle cx="150" cy="181" r="3.5" class="s"/><circle cx="164" cy="181" r="3.5" class="s"/>
+  <circle cx="10" cy="168" r="3.5" class="s"/><circle cx="24" cy="168" r="3.5" class="s"/><circle cx="38" cy="168" r="3.5" class="s"/><circle cx="52" cy="168" r="3.5" class="s"/><circle cx="66" cy="168" r="3.5" class="s"/><circle cx="80" cy="168" r="3.5" class="s"/><circle cx="94" cy="168" r="3.5" class="s"/><circle cx="108" cy="168" r="3.5" class="s"/><circle cx="122" cy="168" r="3.5" class="s"/>
+  <circle cx="10" cy="155" r="3.5" class="s"/><circle cx="24" cy="155" r="3.5" class="s"/><circle cx="38" cy="155" r="3.5" class="s"/><circle cx="52" cy="155" r="3.5" class="s"/><circle cx="66" cy="155" r="3.5" class="s"/><circle cx="80" cy="155" r="3.5" class="s"/>
+  <circle cx="10" cy="142" r="3.5" class="s"/><circle cx="24" cy="142" r="3.5" class="s"/><circle cx="38" cy="142" r="3.5" class="s"/>
+  <circle cx="10" cy="129" r="3.5" class="s"/>
+</g>
+<!-- Scale label -->
+<text x="100" y="360" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#8a6040" opacity=".7">1</text>
+<text x="1100" y="120" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#8a6040" opacity=".7">1.4 billion</text>
+<!-- Baseline -->
+<line x1="80" y1="340" x2="1120" y2="340" stroke="#c8a870" stroke-width=".8" opacity=".3"/>
+</svg>

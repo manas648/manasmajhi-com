@@ -1,0 +1,59 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>
+    .bg{fill:#f0f4f8}.atom{fill:none;stroke:#2a5a8a;stroke-width:2}.bond{fill:none;stroke:#2a5a8a;stroke-width:3;stroke-linecap:round}.gap-bond{fill:none;stroke:#c84020;stroke-width:3;stroke-dasharray:10,8;stroke-linecap:round}.nucleus{fill:#2a5a8a}.missing{fill:none;stroke:#c84020;stroke-width:2;stroke-dasharray:5,4}.lbl{font-family:Georgia,serif;font-size:12px;fill:#2a3a50}.gap-lbl{font-family:Georgia,serif;font-size:13px;fill:#c84020;font-weight:bold}
+    @media(prefers-color-scheme:dark){.bg{fill:#060c12}.atom{stroke:#4080c0}.bond{stroke:#4080c0}.nucleus{fill:#4080c0}.lbl{fill:#80a8d0}.gap-lbl{fill:#e05030}.missing{stroke:#e05030}.gap-bond{stroke:#e05030}}
+  </style>
+</defs>
+<rect width="1200" height="600" class="bg"/>
+<!-- Molecular chain — left half (Western India pharma) -->
+<!-- Atom 1 -->
+<circle cx="120" cy="300" r="28" class="atom"/>
+<circle cx="120" cy="300" r="12" class="nucleus"/>
+<text x="120" y="350" text-anchor="middle" class="lbl">Capital</text>
+<line x1="148" y1="300" x2="210" y2="300" class="bond"/>
+<!-- Atom 2 -->
+<circle cx="240" cy="300" r="28" class="atom"/>
+<circle cx="240" cy="300" r="12" class="nucleus"/>
+<text x="240" y="350" text-anchor="middle" class="lbl">Research</text>
+<line x1="268" y1="300" x2="330" y2="300" class="bond"/>
+<!-- Atom 3 -->
+<circle cx="360" cy="300" r="28" class="atom"/>
+<circle cx="360" cy="300" r="12" class="nucleus"/>
+<text x="360" y="350" text-anchor="middle" class="lbl">Talent</text>
+<line x1="388" y1="300" x2="450" y2="300" class="bond"/>
+<!-- Atom 4 -->
+<circle cx="480" cy="300" r="28" class="atom"/>
+<circle cx="480" cy="300" r="12" class="nucleus"/>
+<text x="480" y="350" text-anchor="middle" class="lbl">Clusters</text>
+<line x1="508" y1="300" x2="540" y2="300" class="bond"/>
+
+<!-- THE GAP — broken bond -->
+<line x1="540" y1="300" x2="660" y2="300" class="gap-bond"/>
+<text x="600" y="260" text-anchor="middle" class="gap-lbl">EASTERN INDIA</text>
+<text x="600" y="280" text-anchor="middle" class="gap-lbl">GAP</text>
+<!-- Missing atom placeholder -->
+<circle cx="600" cy="300" r="28" class="missing"/>
+<text x="600" y="350" text-anchor="middle" class="gap-lbl" font-size="11">missing</text>
+
+<!-- Right half (potential) -->
+<line x1="660" y1="300" x2="720" y2="300" class="bond" opacity=".4"/>
+<circle cx="750" cy="300" r="28" class="atom" opacity=".4"/>
+<circle cx="750" cy="300" r="12" class="nucleus" opacity=".3"/>
+<text x="750" y="350" text-anchor="middle" class="lbl" opacity=".4">Output</text>
+<line x1="778" y1="300" x2="840" y2="300" class="bond" opacity=".4"/>
+<circle cx="870" cy="300" r="28" class="atom" opacity=".4"/>
+<circle cx="870" cy="300" r="12" class="nucleus" opacity=".3"/>
+<text x="870" y="350" text-anchor="middle" class="lbl" opacity=".4">Jobs</text>
+<line x1="898" y1="300" x2="960" y2="300" class="bond" opacity=".4"/>
+<circle cx="990" cy="300" r="28" class="atom" opacity=".4"/>
+<circle cx="990" cy="300" r="12" class="nucleus" opacity=".3"/>
+<text x="990" y="350" text-anchor="middle" class="lbl" opacity=".4">Growth</text>
+<line x1="1018" y1="300" x2="1080" y2="300" class="bond" opacity=".4"/>
+<circle cx="1110" cy="300" r="28" class="atom" opacity=".4"/>
+<circle cx="1110" cy="300" r="12" class="nucleus" opacity=".3"/>
+<text x="1110" y="350" text-anchor="middle" class="lbl" opacity=".4">Exports</text>
+
+<!-- Label -->
+<text x="600" y="480" text-anchor="middle" font-family="Georgia,serif" font-size="16" fill="#2a3a50" opacity=".55" font-style="italic">"Eastern India has the feedstock. It lacks the chain."</text>
+</svg>
