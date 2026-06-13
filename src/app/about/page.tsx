@@ -250,20 +250,6 @@ export default function AboutPage() {
 
           <hr className="border-border my-10" />
 
-          <h2 className="font-serif text-3xl font-medium">Always learning.</h2>
-
-          <ul className="space-y-2 text-base">
-            <li>Organizational Analysis — <span className="text-muted-foreground">Stanford Online</span></li>
-            <li>Leadership &amp; Adaptability — <span className="text-muted-foreground">McKinsey Forward</span></li>
-            <li>Generative AI — <span className="text-muted-foreground">Microsoft &amp; LinkedIn</span></li>
-            <li>AI-Powered Applications — <span className="text-muted-foreground">LinkedIn Learning</span></li>
-            <li>Strategic Workforce Planning — <span className="text-muted-foreground">LinkedIn Learning</span></li>
-            <li>Managing Distributed Teams — <span className="text-muted-foreground">LinkedIn Learning</span></li>
-            <li>Agile Methodologies — <span className="text-muted-foreground">Scrum Inc.</span></li>
-          </ul>
-
-          <hr className="border-border my-10" />
-
           <h2 className="font-serif text-3xl font-medium">Recognition.</h2>
 
           <p>
@@ -313,6 +299,12 @@ export default function AboutPage() {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
             >
               Awards &amp; Recognition
+            </Link>
+            <Link
+              href="/always-learning"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+            >
+              Always Learning
             </Link>
           </div>
         </div>
