@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import {
   getEssayBySlug,
@@ -227,15 +226,13 @@ export default async function EssayPage({ params }: Props) {
         {essay.coverImage && (
           <div className="px-6 lg:px-8 pb-10">
             <div className="max-w-3xl mx-auto">
-              <div className="relative w-full overflow-hidden rounded-2xl" style={{ aspectRatio: "2/1" }}>
-                <Image
-                  src={essay.coverImage}
-                  alt={essay.title}
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={essay.coverImage}
+                alt={essay.title}
+                className="w-full rounded-2xl"
+                style={{ aspectRatio: "2/1", objectFit: "cover" }}
+              />
             </div>
           </div>
         )}

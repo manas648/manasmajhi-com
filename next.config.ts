@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
   },
   images: {
     formats: ["image/avif", "image/webp"],
+    dangerouslyAllowSVG: true,
+    contentDispositionType: "attachment",
     remotePatterns: [
       {
         protocol: "https",
