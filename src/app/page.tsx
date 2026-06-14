@@ -495,30 +495,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="px-6 lg:px-8 pb-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="rounded-2xl border border-border bg-muted/20 px-8 py-6">
-            <p className="section-label mb-5 text-center">Recognition</p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
-              {socialProof.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="group text-center hover:opacity-80 transition-opacity"
-                >
-                  <div className="flex items-center justify-center gap-1.5 mb-1">
-                    <Award className="w-3.5 h-3.5 text-accent" />
-                    <p className="font-medium text-sm">{item.label}</p>
-                  </div>
-                  <p className="text-xs text-muted-foreground">{item.org}</p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Newsletter CTA */}
       <section className="px-6 lg:px-8 pb-32">
         <div className="max-w-7xl mx-auto">
