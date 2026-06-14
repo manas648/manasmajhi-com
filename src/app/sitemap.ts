@@ -13,6 +13,7 @@ const categories: EssayCategory[] = [
   "entrepreneurship",
   "philosophy",
   "hiring",
+  "frameworks",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -34,7 +34,8 @@ export type EssayCategory =
   | "travel"
   | "entrepreneurship"
   | "philosophy"
-  | "hiring";
+  | "hiring"
+  | "frameworks";
 
 export const CATEGORY_LABELS: Record<EssayCategory, string> = {
   opportunity: "Opportunity",
@@ -46,6 +47,7 @@ export const CATEGORY_LABELS: Record<EssayCategory, string> = {
   entrepreneurship: "Entrepreneurship",
   philosophy: "Philosophy",
   hiring: "Hiring",
+  frameworks: "Frameworks",
 };
 
 export const CATEGORY_IMAGES: Record<EssayCategory, string> = {
@@ -58,6 +60,7 @@ export const CATEGORY_IMAGES: Record<EssayCategory, string> = {
   entrepreneurship: "/categories/entrepreneurship.jpg",
   philosophy: "/categories/philosophy.jpg",
   hiring: "/categories/hiring.jpg",
+  frameworks: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=1200&q=80",
 };
 
 export const CATEGORY_DESCRIPTIONS: Record<EssayCategory, string> = {
@@ -79,6 +82,8 @@ export const CATEGORY_DESCRIPTIONS: Record<EssayCategory, string> = {
     "On learning, identity, perspective, and the examined life.",
   hiring:
     "Why executive hiring fails, what better looks like, and the infrastructure that fixes it.",
+  frameworks:
+    "Mental models for thinking about opportunity, hiring, and human potential.",
 };
 
 export interface Collection {

@@ -28,6 +28,7 @@ const VALID_CATEGORIES = new Set([
   "entrepreneurship",
   "philosophy",
   "hiring",
+  "frameworks",
 ]);
 
 export async function generateStaticParams() {

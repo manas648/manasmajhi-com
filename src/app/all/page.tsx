@@ -19,6 +19,7 @@ const categories: EssayCategory[] = [
   "entrepreneurship",
   "philosophy",
   "hiring",
+  "frameworks",
 ];
 
 export default function IndexPage() {
