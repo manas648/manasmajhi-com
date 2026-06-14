@@ -20,28 +20,28 @@ const collections = [
     label: "Primary Collection",
     title: "Opportunity",
     description: CATEGORY_DESCRIPTIONS["opportunity"],
-    href: "/writing/opportunity",
+    href: "/opportunity",
   },
   {
     id: "india" as EssayCategory,
     label: "Country",
     title: "India",
     description: CATEGORY_DESCRIPTIONS["india"],
-    href: "/writing/india",
+    href: "/india",
   },
   {
     id: "future-of-work" as EssayCategory,
     label: "Technology",
     title: "Future of Work",
     description: CATEGORY_DESCRIPTIONS["future-of-work"],
-    href: "/writing/future-of-work",
+    href: "/future-of-work",
   },
   {
     id: "philosophy" as EssayCategory,
     label: "Thinking",
     title: "Philosophy",
     description: CATEGORY_DESCRIPTIONS["philosophy"],
-    href: "/writing/philosophy",
+    href: "/philosophy",
   },
 ];
 
@@ -56,13 +56,13 @@ const readingPaths = [
     title: "India Path",
     description: "India's moment and what it means.",
     essays: ["indias-ai-opportunity", "indias-greatest-asset-is-its-people"],
-    href: "/writing/india",
+    href: "/india",
   },
   {
     title: "AI Path",
     description: "Technology and human potential.",
     essays: ["ai-and-human-potential"],
-    href: "/writing/future-of-work",
+    href: "/future-of-work",
   },
 ];
 

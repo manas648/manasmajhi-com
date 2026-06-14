@@ -12,7 +12,7 @@ export async function GET() {
 
   const items = essays
     .map((essay) => {
-      const url = `${SITE_URL}/writing/${essay.slug}`;
+      const url = `${SITE_URL}/${essay.category}/${essay.slug}`;
       const pubDate = new Date(essay.date).toUTCString();
       const category = CATEGORY_LABELS[essay.category];
 

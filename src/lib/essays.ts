@@ -105,6 +105,11 @@ export function getRelatedEssays(
   return related;
 }
 
+// Canonical URL for an essay — /{category}/{slug}
+export function getEssayUrl(essay: Pick<EssayMeta, "category" | "slug">): string {
+  return `/${essay.category}/${essay.slug}`;
+}
+
 // Navigation: prev/next within all essays (sorted by date)
 export function getAdjacentEssays(slug: string): {
   prev: EssayMeta | null;

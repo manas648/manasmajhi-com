@@ -20,7 +20,7 @@ export function EssayCard({
 
   if (variant === "compact") {
     return (
-      <Link href={`/essays/${essay.slug}`} className="group block">
+      <Link href={`/${essay.category}/${essay.slug}`} className="group block">
         <article
           className={cn(
             "flex items-start gap-4 py-5 border-b border-border",
@@ -54,7 +54,7 @@ export function EssayCard({
 
   if (variant === "featured") {
     return (
-      <Link href={`/essays/${essay.slug}`} className="group block h-full">
+      <Link href={`/${essay.category}/${essay.slug}`} className="group block h-full">
         <article className={cn("card-essay h-full flex flex-col overflow-hidden", className)}>
           {/* Category image header */}
           <div className="relative h-52 -mx-0 -mt-0 mb-5 rounded-t-2xl overflow-hidden">
@@ -90,7 +90,7 @@ export function EssayCard({
 
   // default variant
   return (
-    <Link href={`/essays/${essay.slug}`} className="group block h-full">
+    <Link href={`/${essay.category}/${essay.slug}`} className="group block h-full">
       <article className={cn("card-essay h-full flex flex-col overflow-hidden", className)}>
         {/* Category image header */}
         <div className="relative h-40 -mx-0 -mt-0 mb-4 rounded-t-2xl overflow-hidden">

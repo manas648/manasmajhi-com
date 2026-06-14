@@ -91,7 +91,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     ...categories.map((cat) => ({
-      url: `${SITE_URL}/writing/${cat}`,
+      url: `${SITE_URL}/${cat}`,
       lastModified: new Date(),
       changeFrequency: "weekly" as const,
       priority: 0.8,
@@ -99,7 +99,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const essayPages: MetadataRoute.Sitemap = essays.map((essay) => ({
-    url: `${SITE_URL}/writing/${essay.slug}`,
+    url: `${SITE_URL}/${essay.category}/${essay.slug}`,
     lastModified: new Date(essay.date),
     changeFrequency: "monthly" as const,
     priority: essay.featured ? 0.9 : 0.7,
