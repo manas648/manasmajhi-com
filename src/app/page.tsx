@@ -199,7 +199,7 @@ export default function HomePage() {
             <div className="h-px sm:h-8 w-full sm:w-px bg-border shrink-0" />
             <div>
               <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">
-                Essays
+                Articles
               </p>
               <p className="font-serif text-lg">
                 {allEssays.length > 0 ? `${allEssays.length} published` : "Growing library"}
