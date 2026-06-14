@@ -289,27 +289,29 @@ export default function StartHerePage() {
 
         {/* About Manas */}
         <div className="max-w-2xl">
-          <p className="section-label mb-4">About the Author</p>
+          <p className="section-label mb-4">Why read this</p>
           <h2 className="font-serif text-3xl font-medium mb-6">
-            Who is Manas Majhi?
+            What makes this writing different.
           </h2>
           <div className="prose-essay text-sm text-muted-foreground space-y-4 font-sans">
             <p>
-              I grew up in Kalahandi, Odisha — one of India's most underserved
-              districts. I attended a government Odia-medium school with no
-              access to the internet, no connections to the outside world, and
-              no clear path forward.
+              Most writing on opportunity, hiring, and India comes from
+              observers. This comes from someone who lived the gap — grew up in
+              Kalahandi with no internet, no connections, no obvious path — and
+              then spent a decade building systems to close it.
             </p>
             <p>
-              That experience shaped everything. Not as a hardship story, but as
-              a lens: I understand, from the inside, what it means to have
-              talent without access. To see potential without opportunity.
+              That matters because the ideas here are tested. The hiring
+              frameworks come from running 25+ C-suite searches. The opportunity
+              thesis comes from watching what actually compounds for people
+              without a head start. The writing on India comes from someone who
+              left, built globally, and watches the country with both love and
+              clear eyes.
             </p>
             <p>
-              Today I run two companies: Majhi Group (retained executive search)
-              and Majhi OS (autonomous hiring operations infrastructure). I write
-              because ideas matter — and because the gap between talent and
-              opportunity is still too wide.
+              You won&apos;t find generic takes. Every essay takes a position.
+              If a piece doesn&apos;t make you think differently about something
+              you assumed was settled — it isn&apos;t finished.
             </p>
           </div>
           <div className="mt-8 flex flex-wrap gap-4">
@@ -317,7 +319,7 @@ export default function StartHerePage() {
               href="/about"
               className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
             >
-              Full story <ArrowRight className="w-3.5 h-3.5" />
+              About Manas <ArrowRight className="w-3.5 h-3.5" />
             </Link>
             <Link
               href="/timeline"
