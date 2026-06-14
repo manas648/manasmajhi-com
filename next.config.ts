@@ -246,6 +246,12 @@ const nextConfig: NextConfig = {
     ];
   },
 
+  async rewrites() {
+    return [
+      { source: "/index", destination: "/all" },
+    ];
+  },
+
   async headers() {
     return [
       {
