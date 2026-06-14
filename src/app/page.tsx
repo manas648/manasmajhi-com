@@ -445,10 +445,16 @@ export default function HomePage() {
             <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">
               Essays in your inbox.
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               New essays on opportunity, India, technology, and human potential.
               Written when there's something worth saying.
             </p>
+            <blockquote className="border-l-2 border-accent/40 pl-4 mb-8">
+              <p className="text-muted-foreground leading-relaxed italic">
+                "The man in my neighbourhood who repaired electrical equipment was genuinely skilled — people came from across town when the regular shops gave up. His shop was the size of a large wardrobe. He worked out of it his entire life."
+              </p>
+              <p className="text-xs text-muted-foreground/60 mt-2">— from a recent issue</p>
+            </blockquote>
             <NewsletterForm variant="inline" />
           </div>
         </div>

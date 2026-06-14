@@ -69,7 +69,14 @@ export function NewsletterForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} className={cn("space-y-3", className)}>
+    <div className={cn("space-y-6", className)}>
+      <blockquote className="border-l-2 border-accent/40 pl-4">
+        <p className="text-muted-foreground leading-relaxed italic text-sm">
+          "The man in my neighbourhood who repaired electrical equipment was genuinely skilled — people came from across town when the regular shops gave up. His shop was the size of a large wardrobe. He worked out of it his entire life."
+        </p>
+        <p className="text-xs text-muted-foreground/60 mt-2">— from a recent issue</p>
+      </blockquote>
+    <form onSubmit={handleSubmit} className="space-y-3">
       <input
         type="email"
         value={email}
@@ -101,5 +108,6 @@ export function NewsletterForm({
         No spam. Unsubscribe any time.
       </p>
     </form>
+    </div>
   );
 }
