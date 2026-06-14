@@ -209,6 +209,88 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Who is Manas Majhi */}
+      <section className="px-6 lg:px-8 pb-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="rounded-3xl border border-border bg-muted/30 p-8 md:p-12 lg:p-16">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr,auto] gap-12 items-start">
+              {/* Bio */}
+              <div className="max-w-2xl">
+                <p className="section-label mb-5">Who is Manas Majhi</p>
+                <h2 className="font-serif text-3xl md:text-4xl font-medium leading-tight mb-6">
+                  From a government school in Kalahandi to building companies that operate globally.
+                </h2>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                  I grew up in Kalahandi, Odisha — a part of India most people
+                  will never visit. I attended a government Odia-medium school.
+                  What I built there was a habit of figuring things out without
+                  the infrastructure that makes figuring things out easy.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  That background became the lens through which I see
+                  everything: opportunity, systems, India, hiring, and human
+                  potential. I run <strong className="text-foreground">Majhi Group</strong> — a retained
+                  executive search firm that places VP and C-suite leaders in
+                  30–45 days against a 65–90 day industry median — and{" "}
+                  <strong className="text-foreground">Majhi OS</strong>, autonomous hiring
+                  operations infrastructure. 25+ placements completed. Two
+                  global recognitions as a World Staffing Leader.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-8">
+                  The writing on this site is not content. It is the actual
+                  work of trying to understand things that matter — and
+                  building frameworks for people who are serious about them.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <Link
+                    href="/about"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-foreground text-background text-sm font-medium hover:opacity-85 transition-opacity"
+                  >
+                    Full story <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                  <Link
+                    href="/start-here"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-border text-sm font-medium text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
+                  >
+                    Start reading
+                  </Link>
+                </div>
+              </div>
+
+              {/* Credentials */}
+              <div className="lg:min-w-[220px] space-y-6">
+                {[
+                  { label: "Indian Achievers Award", sub: "Entrepreneur of the Year · 2022" },
+                  { label: "World Staffing Leader #18", sub: "Global Top 100 · 2024" },
+                  { label: "World Staffing Leader #87", sub: "Global Top 100 · 2023" },
+                  { label: "HackerNoon Startup of the Year", sub: "North America · 2023" },
+                ].map((item) => (
+                  <div key={item.label} className="flex items-start gap-3">
+                    <Award className="w-4 h-4 mt-0.5 text-accent shrink-0" />
+                    <div>
+                      <p className="text-sm font-medium">{item.label}</p>
+                      <p className="text-xs text-muted-foreground">{item.sub}</p>
+                    </div>
+                  </div>
+                ))}
+                <div className="pt-4 border-t border-border space-y-3">
+                  {[
+                    { stat: "64K+", label: "Majhi Group followers" },
+                    { stat: "19K+", label: "Newsletter subscribers" },
+                    { stat: "218", label: "Articles published" },
+                  ].map((item) => (
+                    <div key={item.label} className="flex items-baseline gap-2">
+                      <span className="font-serif text-xl font-medium">{item.stat}</span>
+                      <span className="text-xs text-muted-foreground">{item.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Essay */}
       {heroEssay && (
         <section className="px-6 lg:px-8 pb-20">
