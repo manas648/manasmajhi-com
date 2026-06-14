@@ -1,0 +1,130 @@
+---
+title: "Hiring SLO Framework™"
+excerpt: "In engineering, a service level objective defines acceptable performance thresholds and triggers automated responses when breached. Most hiring teams have no equivalent. That is the gap this framework closes."
+date: "2025-06-06"
+category: "frameworks"
+tags: ["hiring", "frameworks", "executive search", "SLO", "operations", "systems", "Majhi Group"]
+featured: true
+flagship: true
+coverImage: https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&h=600&q=80
+---
+
+Engineering teams learned, over several decades of painful outages, that you cannot manage a system by feel. You need defined thresholds — specific, measurable standards of acceptable performance — and you need automated alerts that fire when those thresholds are breached. This combination of defined standards and real-time monitoring is what separates infrastructure-grade engineering operations from teams that discover problems only when users complain.
+
+The concept is a Service Level Objective: a target for system performance, defined in advance, monitored continuously, and used to trigger a response when the system degrades below the target.
+
+Most hiring teams manage their processes the way engineering teams managed systems before observability tools existed: by feel, retrospectively, with no defined thresholds and no alerts. They discover that a search has stalled when the hiring manager asks why there's no shortlist. They discover that a candidate has disengaged when the offer is declined. They discover that the pipeline has collapsed when there's nothing left in it.
+
+The Hiring SLO Framework applies service level thinking to hiring operations. The result is a hiring system that detects degradation in real time, before the search fails, and triggers a defined response rather than a reactive scramble.
+
+## The five stages
+
+```
+STAGE 1: DEFINE
+  ↓
+  [What is acceptable performance for this mandate?
+   Set thresholds for response rate, stage velocity,
+   decision lag, and offer acceptance.]
+
+STAGE 2: MONITOR
+  ↓
+  [Track mandate health against defined thresholds
+   continuously — not in a Friday retrospective.]
+
+STAGE 3: ALERT
+  ↓
+  [When a mandate crosses a threshold, surface
+   the alert before the pipeline collapses.
+   Not after.]
+
+STAGE 4: EXECUTE
+  ↓
+  [Launch a defined response sequence.
+   Not a scramble. A playbook built from
+   prior recovery data.]
+
+STAGE 5: MEASURE
+  [Track which recovery actions succeed.
+   Build institutional memory.
+   Each mandate makes the system smarter.]
+```
+
+## Stage 1: Define the mandate SLOs
+
+An SLO for a hiring mandate has four components. Each maps to a specific observable metric and a specific threshold above which the mandate is healthy and below which intervention is required.
+
+**Response Rate SLO:** The minimum acceptable percentage of outreach that generates a reply, measured weekly.
+- Target: 20%+
+- Warning threshold: 15%
+- Breach threshold: 10%
+
+**Stage Velocity SLO:** The maximum acceptable number of days between a candidate completing a stage and receiving communication about the next step.
+- Target: 48 hours
+- Warning threshold: 72 hours
+- Breach threshold: 5 business days
+
+**Shortlist Conversion SLO:** The minimum acceptable percentage of initial conversations that convert to a formal interview.
+- Target: 40%+
+- Warning threshold: 30%
+- Breach threshold: 20%
+
+**Offer Acceptance SLO:** The minimum acceptable percentage of offers that result in acceptance.
+- Target: 80%+
+- Warning threshold: 70%
+- Breach threshold: Any declined offer at final stage
+
+The specific numbers are calibrated against what the market produces for well-run executive searches. They are not aspirational targets — they are thresholds below which the search is demonstrably in trouble.
+
+**The definition conversation:** Before the search begins, the SLOs should be shared with the hiring manager. Not as a technical document — as a commitment. "Here is how we will know this search is on track. Here is when we will flag that it isn't. Here is what we will do when we flag it." This converts the SLOs from an internal monitoring tool into a shared understanding of what a well-run search looks like.
+
+## Stage 2: Monitor in real time
+
+The standard model of search monitoring is a weekly status update: here is how many candidates are in the pipeline, here is where they are in the process, here is what happened this week. This is a retrospective, not a monitoring system. By the time the weekly update documents a problem, the problem has been accumulating for days.
+
+Real-time monitoring means tracking the key metrics as they change, not as they are reported. Response rate is calculated daily, not weekly — because a response rate that drops sharply on Tuesday needs a response on Wednesday, not at the Friday review. Stage velocity is tracked from the moment a candidate completes an interview, not from the moment someone gets around to updating a spreadsheet.
+
+**What this requires in practice:** A system — not necessarily a sophisticated one — that records key events as they happen and makes the current state of the search visible without requiring someone to compile a report. This can be as simple as a shared document with live data entry, or as sophisticated as a purpose-built ATS with built-in SLO tracking.
+
+**What it rules out:** Managing a search from memory, from periodic check-ins, or from the hiring manager's impression of progress. These are feel-based systems. They detect failure slowly, at best.
+
+## Stage 3: Alert on breach
+
+An alert is not a report. A report says: here is what happened. An alert says: something that requires a response is happening right now.
+
+The distinction matters because the appropriate response to a metric that is about to breach a threshold is different from the appropriate response to a metric that has already breached it. The warning threshold exists to trigger a lower-cost, earlier intervention — a repositioned message, a shortened process step, a conversation with the hiring manager — before the breach threshold triggers a more expensive one.
+
+**Alert structure:**
+- Warning: Internal flag. Search team reviews the metric and assesses whether intervention is needed.
+- Breach: Escalation flag. Hiring manager is notified that a defined threshold has been crossed and that the agreed response protocol is being initiated.
+
+**What prevents alerting from working:** When alerts are generated but not acted on. When the threshold is set but no one has agreed what happens when it's crossed. When the alert is treated as information rather than a trigger.
+
+The SLO framework is only as useful as the response protocols that it activates. An alert with no defined response is a warning light with no mechanic.
+
+## Stage 4: Execute the recovery protocol
+
+A recovery protocol is a defined set of actions triggered by a specific breach. It is written before the search begins, when the team has the clarity to think about what the right response to each failure mode is, rather than in the middle of the failure, when the pressure to act quickly produces reactions rather than responses.
+
+**For response rate breach:** Stop volume outreach. Review and rewrite positioning. Test revised message on a small sample before deploying at scale. Assess whether the candidate pool has been exhausted or whether new segments need to be mapped.
+
+**For stage velocity breach:** Escalate to the hiring manager with specific data: candidate X completed interview Y on date Z and has not received a next step. Frame as a risk to candidate retention, not as a process complaint. Get a commitment to a specific timeline for the next step.
+
+**For shortlist conversion breach:** Review the first-conversation experience. Assess whether outreach messaging and first-conversation content are aligned. Identify the specific point at which candidates are disengaging and investigate the cause.
+
+**For offer decline:** Conduct an immediate debrief with the candidate who declined, if possible. Understand whether the decline was about compensation, scope, the team, the process, or timing. Use the information to adjust before the next offer.
+
+**The protocol discipline:** Recovery protocols work because they are executed consistently, not because they are creative. The value is in having thought through the response in advance, so that when the breach occurs, the response is a system activation rather than an improvised reaction.
+
+## Stage 5: Measure and compound
+
+The final stage is what separates a hiring SLO system from a hiring checklist. A checklist is used once. A system learns.
+
+After each mandate closes — successfully or not — the SLO data from that mandate becomes an input to the system's institutional memory. Which recovery actions worked? At which threshold did they work? Which mandates breached multiple SLOs simultaneously, and what did that pattern predict? Which SLO breaches were most strongly predictive of eventual mandate failure?
+
+Over time, this data produces a compounding advantage. The tenth mandate run through the system benefits from the learning of the first nine. The response protocols become more calibrated. The thresholds become more accurate. The alerts fire earlier, more precisely.
+
+**The long-run value:** A hiring team that has tracked SLO performance across 20 or 30 executive searches has an operational intelligence advantage that cannot be replicated by a team that has run the same number of searches without tracking. The data exists in the market — in the outcomes of those searches. The question is whether it was captured and converted into system learning.
+
+Most teams run searches. Infrastructure-grade teams run searches and learn from them.
+
+The Hiring SLO Framework is the structure that makes learning systematic rather than incidental.

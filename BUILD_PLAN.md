@@ -10,7 +10,6 @@ Redesign URL structure from flat `/essays/` to hierarchical:
 * `/hiring/` → child pages underneath
 * `/future-of-work/` → child pages underneath
 * `/philosophy/` → child pages underneath
-* `/people/` → child pages underneath
 * `/frameworks/` → child pages underneath
 * `/travel/` → child pages underneath
 
@@ -262,29 +261,6 @@ New frameworks to build:
 
 ---
 
-## PEOPLE SECTION
-Parent page: `/people/`
-
-Do not write about famous people from Wikipedia distance. Write about people you have actually encountered. Supplement with people who genuinely shaped your thinking.
-
-Structure for each person page:
-* Who they are (brief)
-* What I observed or learned
-* Where I agree
-* Where I disagree
-* Why it matters to my worldview
-
-People to start with:
-* People from Kalahandi who shaped your early thinking
-* Executives you've placed who surprised you
-* Founders you've met who changed how you think about building
-* Mentors across your career
-* Thinkers whose frameworks you use (and where you'd push back)
-
-This section should feel like a living reading list crossed with personal memoir. Impossible to replicate. High trust signal for readers.
-
----
-
 ## PHILOSOPHY HUB
 Parent page: `/philosophy/`
 
@@ -384,8 +360,7 @@ Currently there is a newsletter subscription. Missing:
 
 **Phase 3 — Knowledge Graph Expansion**
 1. Question pages across all hubs
-2. People section (start with 5 people)
-3. Future of Work child pages
+2. Future of Work child pages
 4. India state pages
 
 **Phase 4 — Ongoing**

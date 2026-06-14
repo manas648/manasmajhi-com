@@ -321,7 +321,28 @@ export default async function EssayPage({ params }: Props) {
                     Request a Search Assessment →
                   </a>
                 </div>
-              ) : null}
+              ) : (
+                <div className="rounded-2xl border border-border bg-muted/40 p-8">
+                  <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">
+                    Majhi Group
+                  </p>
+                  <h3 className="font-serif text-2xl font-medium mb-3">
+                    VP or C-suite search that won&apos;t close?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    Majhi Group runs retained executive searches. 30–45 day
+                    median against the 65–90 day industry norm. If the role
+                    has been open 60+ days or you&apos;ve tried contingency
+                    already, the assessment is worth 20 minutes.
+                  </p>
+                  <a
+                    href="/work-with-me"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-foreground text-background text-sm font-medium hover:opacity-85 transition-opacity"
+                  >
+                    Request a Search Assessment →
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         )}

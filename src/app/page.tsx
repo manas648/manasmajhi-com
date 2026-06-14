@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BookOpen } from "lucide-react";
+import { ArrowRight, BookOpen, Award } from "lucide-react";
 import { getAllEssayMeta, getFeaturedEssays, getLatestEssays } from "@/lib/essays";
 import { EssayCard } from "@/components/essay/EssayCard";
 import { NewsletterForm } from "@/components/ui/NewsletterForm";
@@ -64,6 +64,36 @@ const readingPaths = [
     essays: ["ai-and-human-potential"],
     href: "/future-of-work",
   },
+];
+
+const placesHubs = [
+  {
+    label: "Country",
+    title: "India",
+    description: "Why India's moment is now. Technology, talent, and what's being built.",
+    href: "/india",
+    count: "26 essays",
+  },
+  {
+    label: "State",
+    title: "Odisha",
+    description: "The most differentiated state in India. Economy, talent, cities, and opportunity.",
+    href: "/odisha",
+    count: "38 essays",
+  },
+  {
+    label: "District",
+    title: "Kalahandi",
+    description: "Where I come from. What a place most people haven't heard of taught me about opportunity.",
+    href: "/kalahandi",
+    count: "15 essays",
+  },
+];
+
+const socialProof = [
+  { label: "World Staffing Leader", org: "Staffing Industry Analysts", href: "/entrepreneurship/world-staffing-leader" },
+  { label: "Indian Achievers Award", org: "Indian Achievers Forum", href: "/entrepreneurship/indian-achievers-award-2022" },
+  { label: "Startup of the Year", org: "HackerNoon 2023", href: "/entrepreneurship/hackernoon-startup-of-the-year-2023" },
 ];
 
 export default function HomePage() {
@@ -324,7 +354,7 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* Frameworks teaser */}
+      {/* Frameworks teaser — raised above collections */}
       <section className="px-6 lg:px-8 pb-20">
         <div className="max-w-7xl mx-auto">
           <Link href="/frameworks" className="group block">
@@ -343,6 +373,67 @@ export default function HomePage() {
               </div>
             </div>
           </Link>
+        </div>
+      </section>
+
+      {/* Places */}
+      <section className="px-6 lg:px-8 pb-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-end justify-between mb-10">
+            <div>
+              <p className="section-label mb-3">Places</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-medium">
+                Where I come from shapes what I see.
+              </h2>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {placesHubs.map((place) => (
+              <Link key={place.href} href={place.href} className="group block">
+                <div className="rounded-2xl border border-border p-7 hover:border-accent/40 transition-all duration-200 h-full flex flex-col">
+                  <div className="mb-4">
+                    <p className="section-label mb-1.5">{place.label}</p>
+                    <h3 className="font-serif text-2xl font-medium group-hover:text-accent transition-colors">
+                      {place.title}
+                    </h3>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-5">
+                    {place.description}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-muted-foreground">{place.count}</span>
+                    <div className="inline-flex items-center gap-1 text-xs font-medium text-accent">
+                      Explore <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof */}
+      <section className="px-6 lg:px-8 pb-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="rounded-2xl border border-border bg-muted/20 px-8 py-6">
+            <p className="section-label mb-5 text-center">Recognition</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+              {socialProof.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="group text-center hover:opacity-80 transition-opacity"
+                >
+                  <div className="flex items-center justify-center gap-1.5 mb-1">
+                    <Award className="w-3.5 h-3.5 text-accent" />
+                    <p className="font-medium text-sm">{item.label}</p>
+                  </div>
+                  <p className="text-xs text-muted-foreground">{item.org}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
