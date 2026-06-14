@@ -80,7 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${SITE_URL}/index`,
+      url: `${SITE_URL}/all`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,

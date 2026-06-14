@@ -16,7 +16,7 @@ const placesItems = [
 const navLinks = [
   { href: "/start-here", label: "Start Here" },
   { href: "/writing", label: "Writing" },
-  { href: "/index", label: "Index" },
+  { href: "/all", label: "Index" },
   { href: "/hiring", label: "Hiring" },
   { href: "/frameworks", label: "Frameworks" },
   { href: "/about", label: "About" },
