@@ -13,6 +13,7 @@ const VALID_CATEGORIES: EssayCategory[] = [
   "future-of-work",
   "india",
   "odisha",
+  "kalahandi",
   "travel",
   "entrepreneurship",
   "philosophy",

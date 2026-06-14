@@ -30,6 +30,7 @@ export type EssayCategory =
   | "future-of-work"
   | "india"
   | "odisha"
+  | "kalahandi"
   | "travel"
   | "entrepreneurship"
   | "philosophy"
@@ -40,6 +41,7 @@ export const CATEGORY_LABELS: Record<EssayCategory, string> = {
   "future-of-work": "Future of Work",
   india: "India",
   odisha: "Odisha",
+  kalahandi: "Kalahandi",
   travel: "Travel",
   entrepreneurship: "Entrepreneurship",
   philosophy: "Philosophy",
@@ -51,6 +53,7 @@ export const CATEGORY_IMAGES: Record<EssayCategory, string> = {
   "future-of-work": "/categories/future-of-work.jpg",
   india: "/categories/india.jpg",
   odisha: "/categories/odisha.jpg",
+  kalahandi: "/categories/kalahandi.jpg",
   travel: "/categories/travel.jpg",
   entrepreneurship: "/categories/entrepreneurship.jpg",
   philosophy: "/categories/philosophy.jpg",
@@ -66,6 +69,8 @@ export const CATEGORY_DESCRIPTIONS: Record<EssayCategory, string> = {
     "Infrastructure, technology, policy, and the making of a new India.",
   odisha:
     "Development, tourism, culture, and the untapped potential of a remarkable state.",
+  kalahandi:
+    "Where I come from, what it taught me, and why it still shapes how I think about everything.",
   travel:
     "What crossing borders teaches us about perspective, people, and identity.",
   entrepreneurship:

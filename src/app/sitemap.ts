@@ -8,6 +8,7 @@ const categories: EssayCategory[] = [
   "future-of-work",
   "india",
   "odisha",
+  "kalahandi",
   "travel",
   "entrepreneurship",
   "philosophy",

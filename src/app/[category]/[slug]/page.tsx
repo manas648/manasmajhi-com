@@ -23,6 +23,7 @@ const VALID_CATEGORIES = new Set([
   "future-of-work",
   "india",
   "odisha",
+  "kalahandi",
   "travel",
   "entrepreneurship",
   "philosophy",
