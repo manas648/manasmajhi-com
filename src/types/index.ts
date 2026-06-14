@@ -53,7 +53,7 @@ export const CATEGORY_IMAGES: Record<EssayCategory, string> = {
   "future-of-work": "/categories/future-of-work.jpg",
   india: "/categories/india.jpg",
   odisha: "/categories/odisha.jpg",
-  kalahandi: "/categories/kalahandi.jpg",
+  kalahandi: "https://images.unsplash.com/photo-1474221550179-c492fb337327?auto=format&fit=crop&w=1200&q=80",
   travel: "/categories/travel.jpg",
   entrepreneurship: "/categories/entrepreneurship.jpg",
   philosophy: "/categories/philosophy.jpg",

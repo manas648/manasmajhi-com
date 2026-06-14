@@ -24,6 +24,7 @@ export function CategoryPage({ category }: CategoryPageProps) {
           src={image}
           alt={CATEGORY_LABELS[category]}
           fill
+          unoptimized
           className="object-cover"
           priority
           sizes="100vw"
