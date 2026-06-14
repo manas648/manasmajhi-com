@@ -4,7 +4,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Elsewhere",
   description:
-    "Dispatches from the road. Kazakhstan, Thailand, India, and wherever the work takes me next.",
+    "Dispatches from the road. Sea and sky — and wherever the work takes me next.",
 };
 
 const photos = [
@@ -181,7 +181,7 @@ export default function ElsewherePage() {
 
         {/* Masonry grid */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6">
-          {photos.map((photo) => (
+          {photos.map((photo, index) => (
             <div key={photo.src} className="break-inside-avoid mb-6">
               <div className="overflow-hidden rounded-2xl bg-muted group">
                 <Image
@@ -191,6 +191,7 @@ export default function ElsewherePage() {
                   height={photo.height}
                   className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.025]"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  priority={index < 3}
                 />
               </div>
               <div className="mt-3 px-0.5">
