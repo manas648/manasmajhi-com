@@ -208,7 +208,7 @@ export default function AboutPage() {
           <h2 className="font-serif text-3xl font-medium">Why I write.</h2>
 
           <p>
-            Writing is how I think. The essays on this site are not content
+            Writing is how I think. The articles on this site are not content
             marketing. They are the actual work of trying to understand things
             that matter: opportunity, systems, India, technology, the future of
             work, and the examined life.
@@ -238,7 +238,7 @@ export default function AboutPage() {
           </blockquote>
 
           <p>
-            Every essay on this site orbits that belief. Opportunity is the
+            Every article on this site orbits that belief. Opportunity is the
             lens I use to understand India, AI, entrepreneurship, hiring, and
             human potential.
           </p>

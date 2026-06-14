@@ -48,7 +48,7 @@ export async function GET(request: NextRequest) {
               fontFamily: "system-ui, sans-serif",
             }}
           >
-            {category || "Essay"}
+            {category || "Article"}
           </span>
         </div>
 

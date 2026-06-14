@@ -192,7 +192,7 @@ export default async function EssayPage({ params }: Props) {
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
-                Essays
+                Articles
               </Link>
               <span className="text-border">/</span>
               <Link

@@ -35,7 +35,7 @@ const readingPaths = [
     icon: "✦",
     title: "New Reader",
     description:
-      "If you're here for the first time, start with the foundational essays on opportunity and why this work exists.",
+      "If you're here for the first time, start with the foundational articles on opportunity and why this work exists.",
     slugs: [
       "improving-lives-with-new-opportunities",
       "talent-is-evenly-distributed",
@@ -115,7 +115,7 @@ export default function StartHerePage() {
             Start Here
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            A curated reading experience. The essays below are the best place
+            A curated reading experience. The articles below are the best place
             to begin — the ones that define this work and why it exists.
           </p>
         </div>

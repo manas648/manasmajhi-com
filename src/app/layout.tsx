@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "executive search",
     "hiring infrastructure",
     "opportunity",
-    "essays",
+    "articles",
     "India",
     "Odisha",
     "Kalahandi",
@@ -196,7 +196,7 @@ const organizationSchema = {
   },
   founder: { "@id": `${SITE_URL}/#person` },
   description:
-    "Essays on opportunity, hiring systems, India, and human potential. Founded by Manas Majhi, founder of Majhi Group and Majhi OS.",
+    "Articles on opportunity, hiring systems, India, and human potential. Founded by Manas Majhi, founder of Majhi Group and Majhi OS.",
   sameAs: [
     "https://www.linkedin.com/in/manasmajhi",
     "https://twitter.com/manasmajhi",

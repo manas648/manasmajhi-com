@@ -11,7 +11,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Manas Majhi",
   description:
-    "Essays on opportunity, human potential, India, technology, and the systems that shape lives. By Manas Majhi.",
+    "Articles on opportunity, human potential, India, technology, and the systems that shape lives. By Manas Majhi.",
 };
 
 const collections = [
@@ -72,21 +72,21 @@ const placesHubs = [
     title: "India",
     description: "Why India's moment is now. Technology, talent, and what's being built.",
     href: "/india",
-    count: "26 essays",
+    count: "26 articles",
   },
   {
     label: "State",
     title: "Odisha",
     description: "The most differentiated state in India. Economy, talent, cities, and opportunity.",
     href: "/odisha",
-    count: "38 essays",
+    count: "38 articles",
   },
   {
     label: "District",
     title: "Kalahandi",
     description: "Where I come from. What a place most people haven't heard of taught me about opportunity.",
     href: "/kalahandi",
-    count: "15 essays",
+    count: "15 articles",
   },
 ];
 
@@ -213,7 +213,7 @@ export default function HomePage() {
       {heroEssay && (
         <section className="px-6 lg:px-8 pb-20">
           <div className="max-w-7xl mx-auto">
-            <p className="section-label mb-6">Featured Essay</p>
+            <p className="section-label mb-6">Featured Article</p>
             <Link href={`/writing/${heroEssay.slug}`} className="group block">
               <div className="relative rounded-3xl overflow-hidden border border-border bg-gradient-to-br from-muted/50 to-background p-8 md:p-12 lg:p-16">
                 <div className="max-w-3xl">
@@ -228,7 +228,7 @@ export default function HomePage() {
                     {heroEssay.excerpt}
                   </p>
                   <div className="inline-flex items-center gap-2 text-sm font-medium text-accent">
-                    Read essay
+                    Read article
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
@@ -310,7 +310,7 @@ export default function HomePage() {
                     {path.description}
                   </p>
                   <div className="text-xs text-muted-foreground">
-                    {path.essays.length} {path.essays.length === 1 ? "essay" : "essays"} in this path
+                    {path.essays.length} {path.essays.length === 1 ? "article" : "articles"} in this path
                   </div>
                 </div>
               </Link>
@@ -327,7 +327,7 @@ export default function HomePage() {
               <div>
                 <p className="section-label mb-3">Latest</p>
                 <h2 className="font-serif text-3xl md:text-4xl font-medium">
-                  Recent essays.
+                  Recent articles.
                 </h2>
               </div>
               <Link
@@ -443,10 +443,10 @@ export default function HomePage() {
           <div className="max-w-xl">
             <p className="section-label mb-4">Newsletter</p>
             <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">
-              Essays in your inbox.
+              Articles in your inbox.
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              New essays on opportunity, India, technology, and human potential.
+              New articles on opportunity, India, technology, and human potential.
               Written when there's something worth saying.
             </p>
             <blockquote className="border-l-2 border-accent/40 pl-4 mb-8">

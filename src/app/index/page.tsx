@@ -8,9 +8,9 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Library",
+  title: "Index",
   description:
-    "Every article by Manas Majhi, organised by section. Opportunity, India, Odisha, hiring, philosophy, and more.",
+    "Every article by Manas Majhi, organised by section. Long-form guides, whitepapers, and articles on opportunity, India, Odisha, hiring, and more.",
 };
 
 const categories: EssayCategory[] = [
@@ -18,16 +18,16 @@ const categories: EssayCategory[] = [
   "future-of-work",
   "india",
   "odisha",
+  "kalahandi",
   "travel",
   "entrepreneurship",
   "philosophy",
   "hiring",
 ];
 
-export default function LibraryPage() {
-  const essays = getAllEssayMeta();
-
-  const totalCount = essays.length;
+export default function IndexPage() {
+  const articles = getAllEssayMeta();
+  const totalCount = articles.length;
 
   return (
     <div className="min-h-screen px-6 lg:px-8 py-20">
@@ -35,17 +35,18 @@ export default function LibraryPage() {
 
         {/* Header */}
         <div className="mb-20">
-          <p className="section-label mb-4">Complete Index</p>
+          <p className="section-label mb-4">Everything</p>
           <h1 className="font-serif text-5xl md:text-6xl font-medium tracking-tight mb-6">
-            Library
+            Index
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            Every piece of writing, organised by section. {totalCount} articles, 2 long-form guides, across{" "}
-            {categories.filter((c) => essays.some((e) => e.category === c)).length} categories.
+            {totalCount} articles, 2 long-form guides, across{" "}
+            {categories.filter((c) => articles.some((e) => e.category === c)).length} sections.
+            A complete record of everything published here.
           </p>
         </div>
 
-        {/* Category jump links */}
+        {/* Jump links */}
         <div className="flex flex-wrap gap-2 mb-20 pb-8 border-b border-border">
           <a
             href="#long-form"
@@ -55,7 +56,7 @@ export default function LibraryPage() {
             <span className="text-xs opacity-60">2</span>
           </a>
           {categories.map((cat) => {
-            const count = essays.filter((e) => e.category === cat).length;
+            const count = articles.filter((e) => e.category === cat).length;
             if (count === 0) return null;
             return (
               <a
@@ -128,15 +129,14 @@ export default function LibraryPage() {
         {/* Sections */}
         <div className="space-y-20">
           {categories.map((cat) => {
-            const catEssays = essays
+            const catArticles = articles
               .filter((e) => e.category === cat)
               .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-            if (catEssays.length === 0) return null;
+            if (catArticles.length === 0) return null;
 
             return (
               <section key={cat} id={cat}>
-                {/* Section header */}
                 <div className="flex items-start justify-between mb-8 pb-4 border-b border-border">
                   <div>
                     <div className="flex items-center gap-3 mb-1">
@@ -144,7 +144,7 @@ export default function LibraryPage() {
                         {CATEGORY_LABELS[cat]}
                       </h2>
                       <span className="text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded-full">
-                        {catEssays.length}
+                        {catArticles.length}
                       </span>
                     </div>
                     <p className="text-sm text-muted-foreground max-w-lg">
@@ -152,31 +152,30 @@ export default function LibraryPage() {
                     </p>
                   </div>
                   <Link
-                    href={`/writing/${cat}`}
+                    href={`/${cat}`}
                     className="hidden sm:inline-flex shrink-0 text-xs text-muted-foreground hover:text-foreground transition-colors mt-1"
                   >
                     Browse section →
                   </Link>
                 </div>
 
-                {/* Essay list */}
                 <ul className="space-y-0 divide-y divide-border/50">
-                  {catEssays.map((essay) => (
-                    <li key={essay.slug}>
+                  {catArticles.map((article) => (
+                    <li key={article.slug}>
                       <Link
-                        href={`/writing/${essay.slug}`}
+                        href={`/${article.category}/${article.slug}`}
                         className="group flex items-start justify-between gap-6 py-4 hover:bg-muted/30 -mx-3 px-3 rounded-lg transition-colors"
                       >
                         <div className="flex-1 min-w-0">
                           <p className="font-medium text-foreground group-hover:text-foreground leading-snug mb-0.5 truncate">
-                            {essay.title}
+                            {article.title}
                           </p>
                           <p className="text-sm text-muted-foreground line-clamp-1 leading-relaxed">
-                            {essay.excerpt}
+                            {article.excerpt}
                           </p>
                         </div>
                         <span className="shrink-0 text-xs text-muted-foreground/60 mt-0.5 whitespace-nowrap">
-                          {essay.readingTime}
+                          {article.readingTime}
                         </span>
                       </Link>
                     </li>
@@ -198,7 +197,7 @@ export default function LibraryPage() {
             <Link href="/start-here" className="underline underline-offset-4 hover:text-foreground transition-colors">
               start here
             </Link>{" "}
-            if you're new.
+            if you&apos;re new.
           </p>
         </div>
 
