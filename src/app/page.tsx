@@ -147,20 +147,15 @@ export default function HomePage() {
             {/* Headshot */}
             <div className="hidden lg:block shrink-0">
               <div className="relative flex items-center justify-center">
-                {/* Ambient glow */}
+                {/* Warm amber halo behind photo */}
                 <div
-                  className="absolute bg-amber-200/50 dark:bg-amber-700/20 blur-3xl"
-                  style={{ width: "320px", height: "400px", borderRadius: "16px" }}
+                  className="absolute bg-amber-300/50 dark:bg-amber-600/30 blur-3xl"
+                  style={{ width: "340px", height: "440px" }}
                 />
-                {/* Portrait — rectangular with rounded corners */}
+                {/* Portrait — fades into page background */}
                 <div
-                  className="relative overflow-hidden rounded-2xl"
-                  style={{
-                    width: "260px",
-                    height: "380px",
-                    boxShadow:
-                      "0 0 0 1.5px rgba(196,155,72,0.35), 0 0 0 7px rgba(196,155,72,0.08), 0 28px 64px rgba(0,0,0,0.14)",
-                  }}
+                  className="relative"
+                  style={{ width: "280px", height: "400px" }}
                 >
                   <Image
                     src="/headshot.jpg"
@@ -168,7 +163,13 @@ export default function HomePage() {
                     width={376}
                     height={550}
                     className="w-full h-full object-cover"
-                    style={{ objectPosition: "center top" }}
+                    style={{
+                      objectPosition: "center top",
+                      WebkitMaskImage:
+                        "radial-gradient(ellipse 85% 88% at 50% 38%, black 48%, transparent 76%)",
+                      maskImage:
+                        "radial-gradient(ellipse 85% 88% at 50% 38%, black 48%, transparent 76%)",
+                    }}
                     priority
                   />
                 </div>
