@@ -120,6 +120,37 @@
 - [The Cultural Life of Kalahandi](https://www.manasmajhi.com/kalahandi/kalahandi-culture-festivals): Nuakhai harvest festival, Kondh tribal culture, Sambalpuri textile traditions, and the social fabric that development economics cannot capture.
 - [The Water Paradox: Why Kalahandi's Farms Fail When the Rivers Are Full](https://www.manasmajhi.com/kalahandi/kalahandi-agriculture): Kalahandi's irrigation gap — the Indravati, monsoon dependence, the missing rabi season, and the infrastructure case for agricultural transformation.
 
+## Entrepreneurship Essays
+
+- [Why I Build](https://www.manasmajhi.com/entrepreneurship/why-i-build)
+- [Building Through Uncertainty](https://www.manasmajhi.com/entrepreneurship/building-through-uncertainty)
+- [Founder Lessons From the Frontline](https://www.manasmajhi.com/entrepreneurship/founder-lessons-from-the-frontline)
+- [The Joy of Growing Something From Scratch](https://www.manasmajhi.com/entrepreneurship/the-joy-of-growing-something-from-scratch)
+- [The Reality Behind Overnight Success](https://www.manasmajhi.com/entrepreneurship/the-reality-behind-overnight-success)
+- [Why Most Founders Quit Too Early](https://www.manasmajhi.com/entrepreneurship/why-most-founders-quit-too-early)
+- [The First International Client](https://www.manasmajhi.com/entrepreneurship/the-first-international-client)
+- [The Advantage of Building Outside the Metro](https://www.manasmajhi.com/entrepreneurship/the-advantage-of-building-outside-the-metro): Why building from Odisha rather than Bangalore produced real advantages — lower costs, underserved talent, differentiated positioning, and the 10-seater Kalahandi office.
+- [What Your First Client Teaches You](https://www.manasmajhi.com/entrepreneurship/what-your-first-client-teaches-you): The first retained search, the CFO who wasn't right, the question that changed the room — and what the first client actually reveals about whether you can do this.
+- [Why Cold Outreach Is a Founder's Most Underrated Skill](https://www.manasmajhi.com/entrepreneurship/why-cold-outreach-is-a-founders-most-underrated-skill): 184 messages before the first meaningful response — the writing practice, the specific observation, and why brevity is respect.
+- [The Loneliness of Building](https://www.manasmajhi.com/entrepreneurship/the-loneliness-of-building): The structural isolation of early-stage founding, the gap between what you say and what you feel, and what changes over time.
+- [From Service to System](https://www.manasmajhi.com/entrepreneurship/from-service-to-system): The hardest transition in a service business — how Majhi Group moved from founder-delivered to infrastructure-supported, and how that problem became Majhi OS.
+
+## Future of Work Essays
+
+- [The Autonomous Hiring Era](https://www.manasmajhi.com/future-of-work/the-autonomous-hiring-era)
+- [Why Every Sector Learns Observability the Hard Way](https://www.manasmajhi.com/future-of-work/why-every-sector-learns-observability-the-hard-way)
+- [The Recruiter Isn't Being Replaced. The Job Is Being Redesigned.](https://www.manasmajhi.com/future-of-work/the-recruiter-isnt-being-replaced)
+- [AI and Human Potential](https://www.manasmajhi.com/future-of-work/ai-and-human-potential)
+- [What Automation Cannot Replace](https://www.manasmajhi.com/future-of-work/what-automation-cannot-replace)
+- [The Next Decade of Work](https://www.manasmajhi.com/future-of-work/the-next-decade-of-work)
+- [Skills vs Degrees](https://www.manasmajhi.com/future-of-work/skills-vs-degrees)
+- [Why Talented People Stay Unnoticed](https://www.manasmajhi.com/future-of-work/why-talented-people-stay-unnoticed)
+- [The Global Hiring Floor](https://www.manasmajhi.com/future-of-work/the-global-hiring-floor): How AI is raising the output floor for all knowledge workers, what this means for global talent markets, and why human judgment becomes more valuable as the floor rises.
+- [The Rise of the Fractional Executive](https://www.manasmajhi.com/future-of-work/the-rise-of-the-fractional-executive): When fractional leadership works, when it doesn't, and how to know when to convert from fractional to full-time search.
+- [Why Human Judgment Still Matters in Hiring](https://www.manasmajhi.com/future-of-work/why-human-judgment-still-matters-in-hiring): The specific assessment skills that AI cannot replicate — reading candidates between the lines, the cultural fit judgment, the reference call that changed a hire.
+- [What Building Distributed Teams Actually Requires](https://www.manasmajhi.com/future-of-work/building-distributed-teams): Documentation as organizational architecture, time zone design, hiring for autonomy — built from running distributed teams across Odisha, India, and global clients.
+- [AI and the Future of Talent Sourcing](https://www.manasmajhi.com/future-of-work/ai-and-the-future-of-talent-sourcing): Why AI solved the finding problem but not the reaching problem, why outreach quality matters more now than before, and how Majhi OS divides process from judgment.
+
 ## Frameworks
 
 - [Hiring System Health](https://www.manasmajhi.com/frameworks/hiring-system-health): The diagnostic model for real-time mandate health monitoring.
