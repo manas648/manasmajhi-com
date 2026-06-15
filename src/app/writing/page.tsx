@@ -229,7 +229,7 @@ export default function EssaysPage() {
           {/* Closing */}
           <div className="border-t border-border pt-16">
             <p className="font-serif text-xl md:text-2xl leading-relaxed text-foreground mb-6">
-              I don&apos;t expect every essay to resonate with every reader.
+              I don&apos;t expect every article to resonate with every reader.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               But if something here helps you see an opportunity where you
@@ -240,6 +240,20 @@ export default function EssaysPage() {
             <p className="text-muted-foreground leading-relaxed mt-4">
               That&apos;s why I write.
             </p>
+            <div className="mt-12 flex flex-wrap gap-4">
+              <Link
+                href="/start-here"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-foreground text-background text-sm font-medium hover:opacity-85 transition-opacity"
+              >
+                Start reading <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+              <Link
+                href="/newsletter"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border text-sm font-medium hover:border-foreground/40 transition-colors"
+              >
+                Get new articles by email
+              </Link>
+            </div>
           </div>
 
         </div>
