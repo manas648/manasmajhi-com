@@ -64,8 +64,16 @@ export function Footer() {
           ))}
         </div>
 
+        {/* Disclaimer */}
+        <div className="mt-16 pt-8 border-t border-border">
+          <p className="text-xs text-muted-foreground leading-relaxed">
+            <span className="font-medium text-foreground/60">Disclaimer:</span>{" "}
+            All views, opinions, and observations expressed on this website are solely my own and do not represent the views of any organisation, employer, client, or institution I am or have been associated with. The content here is written in a personal capacity for the purpose of sharing ideas, perspectives, and experiences. Nothing on this site constitutes professional legal, financial, investment, or policy advice. While I make every effort to ensure accuracy, some content reflects my personal interpretation of events, data, or situations and should be read as such. I am not responsible for how this content is interpreted, shared, or applied by others.
+          </p>
+        </div>
+
         {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div className="mt-8 pt-6 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <p className="text-xs text-muted-foreground">
               © {new Date().getFullYear()} Manas Majhi. All rights reserved.
