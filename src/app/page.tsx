@@ -157,7 +157,7 @@ export default function HomePage() {
                   className="relative overflow-hidden"
                   style={{
                     width: "260px",
-                    height: "330px",
+                    height: "380px",
                     borderRadius: "50%",
                     boxShadow:
                       "0 0 0 1.5px rgba(196,155,72,0.35), 0 0 0 7px rgba(196,155,72,0.08), 0 28px 64px rgba(0,0,0,0.14)",
@@ -169,7 +169,7 @@ export default function HomePage() {
                     width={376}
                     height={550}
                     className="w-full h-full object-cover"
-                    style={{ objectPosition: "center 5%" }}
+                    style={{ objectPosition: "center top" }}
                     priority
                   />
                 </div>
