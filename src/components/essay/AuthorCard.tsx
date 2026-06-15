@@ -28,7 +28,7 @@ export function AuthorCard({ slug }: { slug: string }) {
           alt="Manas Majhi"
           width={44}
           height={44}
-          className="rounded-full object-cover w-11 h-11 ring-2 ring-border"
+          className="rounded-full object-cover object-top w-11 h-11 ring-2 ring-border"
         />
       </Link>
       <div>
