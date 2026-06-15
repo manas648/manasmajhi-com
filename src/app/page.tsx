@@ -145,18 +145,15 @@ export default function HomePage() {
             </div>
 
             {/* Headshot */}
-            <div className="hidden lg:block shrink-0">
+            <div className="flex justify-center lg:justify-end shrink-0">
               <div className="relative flex items-center justify-center">
                 {/* Warm amber halo behind photo */}
                 <div
                   className="absolute bg-amber-300/50 dark:bg-amber-600/30 blur-3xl"
-                  style={{ width: "340px", height: "440px" }}
+                  style={{ width: "240px", height: "320px" }}
                 />
                 {/* Portrait — fades into page background */}
-                <div
-                  className="relative"
-                  style={{ width: "280px", height: "400px" }}
-                >
+                <div className="relative w-[200px] h-[280px] lg:w-[280px] lg:h-[400px]">
                   <Image
                     src="/headshot.jpg"
                     alt="Manas Majhi"

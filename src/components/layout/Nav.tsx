@@ -177,7 +177,7 @@ export function Nav() {
 
         {/* Mobile menu */}
         {mobileOpen && (
-          <div className="md:hidden pb-4 pt-2 space-y-1 border-t border-border/60">
+          <div className="md:hidden pb-4 pt-2 space-y-1 border-t border-border/60 bg-background">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
