@@ -50,6 +50,7 @@ export function getEssayBySlug(slug: string): Essay | null {
       featured: data.featured || false,
       flagship: data.flagship || false,
       coverImage: data.coverImage || undefined,
+      faqs: data.faqs || undefined,
       content,
     };
   } catch {

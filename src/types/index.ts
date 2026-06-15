@@ -1,3 +1,8 @@
+export interface FAQ {
+  question: string;
+  answer: string;
+}
+
 export interface Essay {
   slug: string;
   title: string;
@@ -9,6 +14,7 @@ export interface Essay {
   featured?: boolean;
   flagship?: boolean;
   coverImage?: string;
+  faqs?: FAQ[];
   content: string;
 }
 
@@ -23,6 +29,7 @@ export interface EssayMeta {
   featured?: boolean;
   flagship?: boolean;
   coverImage?: string;
+  faqs?: FAQ[];
 }
 
 export type EssayCategory =
