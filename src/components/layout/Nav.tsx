@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Search } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { cn } from "@/lib/utils";
 
@@ -19,6 +19,7 @@ const navLinks = [
   { href: "/all", label: "Index" },
   { href: "/hiring", label: "Hiring" },
   { href: "/frameworks", label: "Frameworks" },
+  { href: "/now", label: "Now" },
   { href: "/about", label: "About" },
   { href: "/work-with-me", label: "Work With Me" },
 ];
@@ -153,8 +154,20 @@ export function Nav() {
             </div>
           </div>
 
-          {/* Right: theme + mobile toggle */}
+          {/* Right: search + theme + mobile toggle */}
           <div className="flex items-center gap-2">
+            <Link
+              href="/search"
+              className={cn(
+                "w-9 h-9 rounded-full flex items-center justify-center",
+                "text-muted-foreground hover:text-foreground",
+                "hover:bg-ink-100 dark:hover:bg-ink-800",
+                "transition-all duration-200"
+              )}
+              aria-label="Search"
+            >
+              <Search className="w-4 h-4" />
+            </Link>
             <ThemeToggle />
             <button
               className={cn(

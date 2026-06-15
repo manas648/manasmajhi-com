@@ -6,6 +6,7 @@ const footerLinks = {
     { href: "/start-here", label: "Start Here" },
     { href: "/writing", label: "All Writing" },
     { href: "/frameworks", label: "Frameworks" },
+    { href: "/search", label: "Search" },
   ],
   Topics: [
     { href: "/opportunity", label: "Opportunity" },
@@ -16,6 +17,7 @@ const footerLinks = {
   ],
   Connect: [
     { href: "/about", label: "About" },
+    { href: "/now", label: "Now" },
     { href: "/work", label: "Work" },
     { href: "/elsewhere", label: "Elsewhere" },
     { href: "/recognition", label: "Recognition" },

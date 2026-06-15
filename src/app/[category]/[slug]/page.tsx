@@ -75,6 +75,7 @@ function renderContent(content: string): string {
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
     .replace(/\*(.+?)\*/g, "<em>$1</em>")
     .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2">$1</a>')
+    .replace(/^>> (.+)$/gm, '<p class="pull-quote">$1</p>')
     .replace(/^> (.+)$/gm, "<blockquote>$1</blockquote>")
     .replace(/^---$/gm, "<hr>")
     .replace(/\n\n/g, "</p><p>")
@@ -368,6 +369,23 @@ export default async function EssayPage({ params }: Props) {
             </div>
           </div>
         )}
+
+        {/* Reply CTA */}
+        <div className="px-6 lg:px-8 pb-10">
+          <div className="max-w-3xl mx-auto">
+            <div className="rounded-2xl border border-border bg-muted/30 px-8 py-6 flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Did this land? Push back? Add something I missed?
+              </p>
+              <a
+                href={`mailto:manas@majhigroup.com?subject=Re: ${essay.title}`}
+                className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-border text-sm font-medium hover:border-foreground/40 hover:bg-muted transition-all"
+              >
+                Reply to Manas →
+              </a>
+            </div>
+          </div>
+        </div>
 
         {/* Navigation */}
         <div className="px-6 lg:px-8 pb-16">
