@@ -147,18 +147,17 @@ export default function HomePage() {
             {/* Headshot */}
             <div className="hidden lg:block shrink-0">
               <div className="relative flex items-center justify-center">
-                {/* Ambient glow — oval to match frame */}
+                {/* Ambient glow */}
                 <div
                   className="absolute bg-amber-200/50 dark:bg-amber-700/20 blur-3xl"
-                  style={{ width: "320px", height: "400px", borderRadius: "50%" }}
+                  style={{ width: "320px", height: "400px", borderRadius: "16px" }}
                 />
-                {/* Portrait oval: head to pocket */}
+                {/* Portrait — rectangular with rounded corners */}
                 <div
-                  className="relative overflow-hidden"
+                  className="relative overflow-hidden rounded-2xl"
                   style={{
                     width: "260px",
                     height: "380px",
-                    borderRadius: "50%",
                     boxShadow:
                       "0 0 0 1.5px rgba(196,155,72,0.35), 0 0 0 7px rgba(196,155,72,0.08), 0 28px 64px rgba(0,0,0,0.14)",
                   }}
