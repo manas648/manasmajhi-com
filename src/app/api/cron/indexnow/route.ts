@@ -249,11 +249,8 @@ const SITE_URLS = [
 
 export async function GET(req: Request) {
   // Vercel cron jobs send Authorization: Bearer <CRON_SECRET>
-  // One-time manual trigger for initial submission — remove after use
-  const url = new URL(req.url);
-  const manualTrigger = url.searchParams.get("trigger") === "submit-manas-2026";
   const authHeader = req.headers.get("authorization");
-  if (!manualTrigger && authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
+  if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
