@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "The intellectual map behind the writing — Manas Majhi's positions on opportunity, talent, AI, Odisha, Kalahandi, entrepreneurship, and the future.",
   alternates: {
-    canonical: "https://manasmajhi.com/thinking",
+    canonical: "https://manasmajhi.com/the-map",
   },
 };
 

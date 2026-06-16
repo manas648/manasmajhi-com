@@ -243,6 +243,8 @@ const nextConfig: NextConfig = {
       { source: "/essays/why-talented-people-stay-unnoticed", destination: "/future-of-work/why-talented-people-stay-unnoticed", permanent: true },
       { source: "/essays/why-your-vp-search-stalled-at-week-ten", destination: "/hiring/why-your-vp-search-stalled-at-week-ten", permanent: true },
       { source: "/essays/world-staffing-leader", destination: "/hiring/world-staffing-leader", permanent: true },
+      // /thinking → /the-map
+      { source: "/thinking", destination: "/the-map", permanent: true },
     ];
   },
 
