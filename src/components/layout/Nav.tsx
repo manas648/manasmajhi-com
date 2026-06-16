@@ -19,7 +19,7 @@ const navLinks = [
   { href: "/all", label: "Index" },
   { href: "/hiring", label: "Hiring" },
   { href: "/frameworks", label: "Frameworks" },
-  { href: "/thinking", label: "Thinking" },
+  { href: "/thinking", label: "The Map" },
   { href: "/now", label: "Now" },
   { href: "/about", label: "About" },
   { href: "/work-with-me", label: "Work With Me" },
