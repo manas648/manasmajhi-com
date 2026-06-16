@@ -102,9 +102,9 @@ export function Nav() {
                 href={link.href}
                 className={cn(
                   "px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150",
-                  "hover:text-foreground hover:bg-ink-100 dark:hover:bg-ink-800",
+                  "hover:text-foreground hover:bg-ink-100 dark:hover:bg-ink-300",
                   pathname === link.href || pathname.startsWith(link.href + "/")
-                    ? "text-foreground bg-ink-100 dark:bg-ink-800"
+                    ? "text-foreground bg-ink-100 dark:bg-ink-300"
                     : "text-muted-foreground"
                 )}
               >
@@ -118,9 +118,9 @@ export function Nav() {
                 onClick={() => setPlacesOpen((v) => !v)}
                 className={cn(
                   "flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150",
-                  "hover:text-foreground hover:bg-ink-100 dark:hover:bg-ink-800",
+                  "hover:text-foreground hover:bg-ink-100 dark:hover:bg-ink-300",
                   isPlacesActive
-                    ? "text-foreground bg-ink-100 dark:bg-ink-800"
+                    ? "text-foreground bg-ink-100 dark:bg-ink-300"
                     : "text-muted-foreground"
                 )}
               >
@@ -199,7 +199,7 @@ export function Nav() {
                 className={cn(
                   "block px-4 py-3 rounded-xl text-sm font-medium transition-all",
                   pathname === link.href
-                    ? "text-foreground bg-ink-100 dark:bg-ink-800"
+                    ? "text-foreground bg-ink-100 dark:bg-ink-300"
                     : "text-muted-foreground hover:text-foreground"
                 )}
               >
