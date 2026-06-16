@@ -103,6 +103,32 @@ export default function ThinkingPage() {
             </div>
           </section>
 
+          {/* India */}
+          <section>
+            <h2 className="font-serif text-xl font-medium mb-4 text-foreground">
+              India
+            </h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                India is in the middle of something that doesn&apos;t have a clean
+                name yet. The infrastructure build, the digital stack, the
+                demographic curve, the global repositioning — these are
+                happening simultaneously, and the compounding effect is larger
+                than any single trend suggests. Most coverage either overstates
+                it or understates it because the story is too uneven to fit a
+                single frame.
+              </p>
+              <p>
+                What I watch most closely is the talent layer — whether the
+                people being produced by India&apos;s education system are finding
+                work that matches their capability, and whether the systems
+                connecting talent to opportunity are keeping pace with the scale
+                of what is being built. That gap, more than any policy question,
+                will determine what the next decade actually produces.
+              </p>
+            </div>
+          </section>
+
           {/* Odisha */}
           <section>
             <h2 className="font-serif text-xl font-medium mb-4 text-foreground">
