@@ -6,7 +6,7 @@
 
 - [Start Here](https://www.manasmajhi.com/start-here): The best introduction to Manas Majhi's writing — curated reading paths by topic.
 - [About](https://www.manasmajhi.com/about): Background, biography, and the ideas that drive this work.
-- [All Articles](https://www.manasmajhi.com/all): Full archive of all writing — 239 articles across 10 categories.
+- [All Articles](https://www.manasmajhi.com/all): Full archive of all writing — 234 articles across 10 categories.
 - [Writing](https://www.manasmajhi.com/writing): Editorial index and reading guide.
 - [Frameworks](https://www.manasmajhi.com/frameworks): Structured mental models on opportunity, hiring systems, and human potential.
 - [Work](https://www.manasmajhi.com/work): Overview of Majhi Group and Majhi OS.
