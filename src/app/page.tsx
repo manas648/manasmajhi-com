@@ -122,7 +122,7 @@ export default function HomePage() {
                 "Talent is evenly distributed. Opportunity is not."
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4 max-w-2xl">
-                Exploring how people, technology, and systems create human potential.
+                A Kalahandi-born entrepreneur writing about how talent, opportunity, technology, and development intersect in Odisha, India, and the world.
               </p>
               <p className="text-sm text-muted-foreground mb-10">
                 A growing community of thousands of readers across India and beyond.
