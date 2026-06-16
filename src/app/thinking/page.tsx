@@ -65,7 +65,7 @@ export default function ThinkingPage() {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Fifteen years of running executive searches taught me that
+                Five years of running executive searches taught me that
                 talent is radically more evenly distributed than hiring systems
                 account for. The filters we use — credential, network,
                 geography, school — are proxies that correlate weakly with
