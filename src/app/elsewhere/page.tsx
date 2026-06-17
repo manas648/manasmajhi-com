@@ -186,6 +186,20 @@ const photos = [
     width: 1170,
     height: 1444,
   },
+  {
+    src: "/elsewhere/manas-majhi-langkawi-eagle.jpg",
+    alt: "Manas Majhi at Dataran Lang Eagle Square, Langkawi, Malaysia",
+    caption: "Langkawi. The eagle has been here longer than the tourists.",
+    width: 1148,
+    height: 1280,
+  },
+  {
+    src: "/elsewhere/manas-majhi-india-road-trip.jpg",
+    alt: "Manas Majhi on an Indian highway road trip",
+    caption: "Some of the best thinking happens between cities.",
+    width: 1025,
+    height: 1280,
+  },
 ];
 
 const imageSchema = {
