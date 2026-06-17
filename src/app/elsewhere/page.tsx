@@ -179,6 +179,13 @@ const photos = [
     width: 1086,
     height: 1280,
   },
+  {
+    src: "/elsewhere/manas-majhi-jaypee-greens-golf.jpg",
+    alt: "Manas Majhi at Jaypee Greens Golf Club, Greater Noida",
+    caption: "Jaypee Greens. The game rewards patience. The business required it first.",
+    width: 1170,
+    height: 1444,
+  },
 ];
 
 const imageSchema = {
