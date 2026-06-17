@@ -1,10 +1,27 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Elsewhere",
   description:
     "Dispatches from the road. Sea and sky — and wherever the work takes me next.",
+  alternates: {
+    canonical: `${SITE_URL}/elsewhere`,
+  },
+  openGraph: {
+    title: "Elsewhere — Manas Majhi",
+    description: "Dispatches from the road. Sea and sky — and wherever the work takes me next.",
+    url: `${SITE_URL}/elsewhere`,
+    images: [
+      {
+        url: `${SITE_URL}/elsewhere/manas-majhi-koh-phi-phi.jpg`,
+        width: 1169,
+        height: 877,
+        alt: "Manas Majhi overlooking Koh Phi Phi bay, Thailand",
+      },
+    ],
+  },
 };
 
 const photos = [
@@ -164,8 +181,39 @@ const photos = [
   },
 ];
 
+const imageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  name: "Elsewhere — Manas Majhi",
+  description: "Dispatches from the road. Sea and sky — and wherever the work takes me next.",
+  url: `${SITE_URL}/elsewhere`,
+  author: {
+    "@type": "Person",
+    name: "Manas Majhi",
+    url: SITE_URL,
+  },
+  image: photos.map((photo) => ({
+    "@type": "ImageObject",
+    contentUrl: `${SITE_URL}${photo.src}`,
+    url: `${SITE_URL}/elsewhere`,
+    name: photo.alt,
+    description: photo.caption,
+    width: photo.width,
+    height: photo.height,
+    author: {
+      "@type": "Person",
+      name: "Manas Majhi",
+    },
+  })),
+};
+
 export default function ElsewherePage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(imageSchema) }}
+      />
     <div className="min-h-screen px-6 lg:px-8 py-20">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -212,5 +260,6 @@ export default function ElsewherePage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
