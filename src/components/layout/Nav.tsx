@@ -17,7 +17,6 @@ const writingItems = [
 ];
 
 const navLinks = [
-  { href: "/start-here", label: "Start Here" },
   { href: "/elsewhere", label: "Elsewhere" },
   { href: "/about", label: "About" },
   { href: "/work-with-me", label: "Work With Me" },
