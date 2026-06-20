@@ -162,6 +162,33 @@ export default function WorkWithMePage() {
           </div>
         </div>
 
+        {/* Contact */}
+        <div className="border-t border-border pt-16 mb-16">
+          <h2 className="font-serif text-2xl font-medium mb-8">Ready to talk?</h2>
+          <div className="grid sm:grid-cols-2 gap-6 max-w-2xl">
+            <div className="rounded-2xl border border-border p-6">
+              <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2">Executive Search</p>
+              <p className="text-sm text-foreground mb-3">Majhi Group — retained search enquiries</p>
+              <a
+                href="mailto:manas@majhigroup.com"
+                className="text-sm font-medium text-accent hover:underline"
+              >
+                manas@majhigroup.com
+              </a>
+            </div>
+            <div className="rounded-2xl border border-border p-6">
+              <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2">Hiring Infrastructure</p>
+              <p className="text-sm text-foreground mb-3">Majhi OS — product and partnership enquiries</p>
+              <a
+                href="mailto:manas@majhi.tech"
+                className="text-sm font-medium text-accent hover:underline"
+              >
+                manas@majhi.tech
+              </a>
+            </div>
+          </div>
+        </div>
+
         {/* Reading links */}
         <div className="border-t border-border pt-12">
           <p className="text-sm text-muted-foreground mb-6">
