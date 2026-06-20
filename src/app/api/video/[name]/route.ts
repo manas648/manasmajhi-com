@@ -60,7 +60,7 @@ export async function GET(
 
     const chunk = readChunk(videoPath, start, end);
 
-    return new NextResponse(chunk, {
+    return new NextResponse(new Uint8Array(chunk), {
       status: 206,
       headers: {
         "Content-Range": `bytes ${start}-${end}/${fileSize}`,
@@ -75,7 +75,7 @@ export async function GET(
   // Full file request — read entire file into buffer
   const chunk = readChunk(videoPath, 0, fileSize - 1);
 
-  return new NextResponse(chunk, {
+  return new NextResponse(new Uint8Array(chunk), {
     status: 200,
     headers: {
       "Accept-Ranges": "bytes",
