@@ -293,22 +293,37 @@ export default function HomePage() {
         <section className="px-6 lg:px-8 pb-20">
           <div className="max-w-7xl mx-auto">
             <p className="section-label mb-6">Featured Article</p>
-            <Link href={`/writing/${heroEssay.slug}`} className="group block">
-              <div className="relative rounded-3xl overflow-hidden border border-border bg-gradient-to-br from-muted/50 to-background p-8 md:p-12 lg:p-16">
-                <div className="max-w-3xl">
-                  <div className="essay-meta mb-4">
-                    {CATEGORY_LABELS[heroEssay.category]} · {formatDate(heroEssay.date)} ·{" "}
-                    {heroEssay.readingTime}
+            <Link href={`/${heroEssay.category}/${heroEssay.slug}`} className="group block">
+              <div className="relative rounded-3xl overflow-hidden border border-border">
+                {/* Cover image */}
+                {heroEssay.coverImage && (
+                  <div className="relative h-64 md:h-80 w-full">
+                    <Image
+                      src={heroEssay.coverImage}
+                      alt={heroEssay.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 1280px) 100vw, 1280px"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                   </div>
-                  <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-tight mb-6 group-hover:text-accent transition-colors">
-                    {heroEssay.title}
-                  </h2>
-                  <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-2xl">
-                    {heroEssay.excerpt}
-                  </p>
-                  <div className="inline-flex items-center gap-2 text-sm font-medium text-accent">
-                    Read article
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                )}
+                <div className={heroEssay.coverImage ? "p-8 md:p-12" : "bg-gradient-to-br from-muted/50 to-background p-8 md:p-12 lg:p-16"}>
+                  <div className="max-w-3xl">
+                    <div className="essay-meta mb-4">
+                      {CATEGORY_LABELS[heroEssay.category]} · {formatDate(heroEssay.date)} ·{" "}
+                      {heroEssay.readingTime}
+                    </div>
+                    <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-tight mb-6 group-hover:text-accent transition-colors">
+                      {heroEssay.title}
+                    </h2>
+                    <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-2xl">
+                      {heroEssay.excerpt}
+                    </p>
+                    <div className="inline-flex items-center gap-2 text-sm font-medium text-accent">
+                      Read article
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -370,33 +385,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Reading Paths */}
-      <section className="px-6 lg:px-8 pb-20">
-        <div className="max-w-7xl mx-auto">
-          <p className="section-label mb-3">Reading Paths</p>
-          <h2 className="font-serif text-3xl md:text-4xl font-medium mb-10">
-            Where to begin.
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {readingPaths.map((path) => (
-              <Link key={path.title} href={path.href} className="group block">
-                <div className="rounded-2xl border border-border p-6 hover:border-accent/40 transition-all duration-200 h-full">
-                  <div className="flex items-center gap-2 mb-4">
-                    <BookOpen className="w-4 h-4 text-accent" />
-                    <p className="section-label">{path.title}</p>
+      {/* Reading Paths — only show paths with 3+ essays; hide section if fewer than 2 qualify */}
+      {readingPaths.filter((p) => p.essays.length >= 3).length >= 2 && (
+        <section className="px-6 lg:px-8 pb-20">
+          <div className="max-w-7xl mx-auto">
+            <p className="section-label mb-3">Reading Paths</p>
+            <h2 className="font-serif text-3xl md:text-4xl font-medium mb-10">
+              Where to begin.
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {readingPaths.filter((p) => p.essays.length >= 3).map((path) => (
+                <Link key={path.title} href={path.href} className="group block">
+                  <div className="rounded-2xl border border-border p-6 hover:border-accent/40 transition-all duration-200 h-full">
+                    <div className="flex items-center gap-2 mb-4">
+                      <BookOpen className="w-4 h-4 text-accent" />
+                      <p className="section-label">{path.title}</p>
+                    </div>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                      {path.description}
+                    </p>
+                    <div className="text-xs text-muted-foreground">
+                      {path.essays.length} articles in this path
+                    </div>
                   </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                    {path.description}
-                  </p>
-                  <div className="text-xs text-muted-foreground">
-                    {path.essays.length} {path.essays.length === 1 ? "article" : "articles"} in this path
-                  </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Latest Essays */}
       {gridEssays.length > 0 && (
