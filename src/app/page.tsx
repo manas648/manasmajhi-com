@@ -49,20 +49,23 @@ const readingPaths = [
   {
     title: "New Reader",
     description: "The best place to start.",
-    essays: ["improving-lives-with-new-opportunities", "talent-is-evenly-distributed", "why-i-build"],
     href: "/start-here",
+    category: null,
+    fixedCount: 3,
   },
   {
     title: "India Path",
     description: "India's moment and what it means.",
-    essays: ["indias-ai-opportunity", "indias-greatest-asset-is-its-people"],
     href: "/india",
+    category: "india" as EssayCategory,
+    fixedCount: null,
   },
   {
     title: "AI Path",
     description: "Technology and human potential.",
-    essays: ["ai-and-human-potential"],
     href: "/future-of-work",
+    category: "future-of-work" as EssayCategory,
+    fixedCount: null,
   },
 ];
 
@@ -385,16 +388,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Reading Paths — only show paths with 3+ essays; hide section if fewer than 2 qualify */}
-      {readingPaths.filter((p) => p.essays.length >= 3).length >= 2 && (
-        <section className="px-6 lg:px-8 pb-20">
-          <div className="max-w-7xl mx-auto">
-            <p className="section-label mb-3">Reading Paths</p>
-            <h2 className="font-serif text-3xl md:text-4xl font-medium mb-10">
-              Where to begin.
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {readingPaths.filter((p) => p.essays.length >= 3).map((path) => (
+      {/* Reading Paths */}
+      <section className="px-6 lg:px-8 pb-20">
+        <div className="max-w-7xl mx-auto">
+          <p className="section-label mb-3">Reading Paths</p>
+          <h2 className="font-serif text-3xl md:text-4xl font-medium mb-10">
+            Where to begin.
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {readingPaths.map((path) => {
+              const count = path.fixedCount ?? allEssays.filter((e) => e.category === path.category).length;
+              return (
                 <Link key={path.title} href={path.href} className="group block">
                   <div className="rounded-2xl border border-border p-6 hover:border-accent/40 transition-all duration-200 h-full">
                     <div className="flex items-center gap-2 mb-4">
@@ -405,15 +409,15 @@ export default function HomePage() {
                       {path.description}
                     </p>
                     <div className="text-xs text-muted-foreground">
-                      {path.essays.length} articles in this path
+                      {count} articles in this path
                     </div>
                   </div>
                 </Link>
-              ))}
-            </div>
+              );
+            })}
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* Latest Essays */}
       {gridEssays.length > 0 && (
