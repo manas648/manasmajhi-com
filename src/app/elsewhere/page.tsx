@@ -220,17 +220,19 @@ type VideoItem = {
   aspectRatio?: string; // CSS aspect-ratio value, default "9/16"
 };
 
+// To add a new video: drop the .mp4 into public/video/, then add one entry here.
+// The /api/video/[name] route handles streaming with proper Range + Content-Length headers.
 const videos: VideoItem[] = [
   {
     type: "video",
-    src: "/video/manas-majhi-kalahandi-view.mp4",
-    caption: "The valley that built everything.", // placeholder — update with Manas's caption
+    src: "/api/video/manas-majhi-kalahandi-view.mp4",
+    caption: "The valley that built everything.",
     aspectRatio: "9/16",
   },
   {
     type: "video",
-    src: "/video/manas-majhi-almaty-tulips.mp4",
-    caption: "Spring in full argument.", // placeholder — update with Manas's caption
+    src: "/api/video/manas-majhi-almaty-tulips.mp4",
+    caption: "Spring in full argument.",
     aspectRatio: "9/16",
   },
 ];
