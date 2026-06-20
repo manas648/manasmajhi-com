@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getAllEssayMeta } from "@/lib/essays";
 import { CATEGORY_LABELS, CATEGORY_DESCRIPTIONS, EssayCategory } from "@/types";
 import type { Metadata } from "next";
@@ -24,6 +25,7 @@ const categories: EssayCategory[] = [
 
 export default function IndexPage() {
   const articles = getAllEssayMeta();
+  const latest = articles[0];
 
   const byCategory = categories.reduce<Record<EssayCategory, typeof articles>>(
     (acc, cat) => {
@@ -73,6 +75,43 @@ export default function IndexPage() {
 
       <div className="px-6 lg:px-8 py-16">
         <div className="max-w-4xl mx-auto space-y-20">
+
+          {/* Latest article */}
+          {latest && (
+            <section>
+              <p className="text-xs uppercase tracking-widest text-muted-foreground mb-6">
+                New
+              </p>
+              <Link
+                href={`/${latest.category}/${latest.slug}`}
+                className="group block rounded-2xl border border-foreground/20 hover:border-foreground/50 transition-all overflow-hidden"
+              >
+                {latest.coverImage && (
+                  <div className="relative h-52 w-full">
+                    <Image
+                      src={latest.coverImage}
+                      alt={latest.title}
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/30" />
+                  </div>
+                )}
+                <div className="p-6">
+                  <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2">
+                    {CATEGORY_LABELS[latest.category as EssayCategory]} · {latest.readingTime}
+                  </p>
+                  <h3 className="font-serif text-2xl font-medium mb-3 group-hover:text-accent transition-colors">
+                    {latest.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                    {latest.excerpt}
+                  </p>
+                  <p className="mt-4 text-xs text-muted-foreground">Read →</p>
+                </div>
+              </Link>
+            </section>
+          )}
 
           {/* Long-form documents */}
           <section id="long-form">
