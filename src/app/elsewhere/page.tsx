@@ -225,7 +225,7 @@ const videos: VideoItem[] = [
   {
     type: "video",
     src: "/api/video/manas-majhi-almaty-tulips.mp4",
-    caption: "Spring in full argument.",
+    caption: "Every city is someone's whole world, from up here they all look the same size.",
     aspectRatio: "9/16",
   },
 ];
