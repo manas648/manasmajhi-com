@@ -200,6 +200,13 @@ const photos = [
     width: 1025,
     height: 1280,
   },
+  {
+    src: "/elsewhere/manas-majhi-tulips.jpg",
+    alt: "Manas Majhi standing in front of a field of yellow tulips",
+    caption: "Yellow and unavoidable.",
+    width: 1440,
+    height: 1800,
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -216,13 +223,13 @@ type VideoItem = {
 const videos: VideoItem[] = [
   {
     type: "video",
-    src: "/elsewhere/manas-majhi-kalahandi-view.mp4",
+    src: "/video/manas-majhi-kalahandi-view.mp4",
     caption: "The valley that built everything.", // placeholder — update with Manas's caption
     aspectRatio: "9/16",
   },
   {
     type: "video",
-    src: "/elsewhere/manas-majhi-almaty-tulips.mp4",
+    src: "/video/manas-majhi-almaty-tulips.mp4",
     caption: "Spring in full argument.", // placeholder — update with Manas's caption
     aspectRatio: "9/16",
   },

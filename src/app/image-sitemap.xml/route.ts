@@ -137,6 +137,11 @@ const elsewherePhotos = [
     title: "Manas Majhi on an Indian highway road trip",
     caption: "Some of the best thinking happens between cities.",
   },
+  {
+    url: `${SITE_URL}/elsewhere/manas-majhi-tulips.jpg`,
+    title: "Manas Majhi standing in a field of yellow tulips",
+    caption: "Yellow and unavoidable.",
+  },
 ];
 
 export function GET() {

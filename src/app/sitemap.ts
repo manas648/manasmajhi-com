@@ -87,6 +87,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         `${SITE_URL}/elsewhere/manas-majhi-jaypee-greens-golf.jpg`,
         `${SITE_URL}/elsewhere/manas-majhi-langkawi-eagle.jpg`,
         `${SITE_URL}/elsewhere/manas-majhi-india-road-trip.jpg`,
+        `${SITE_URL}/elsewhere/manas-majhi-tulips.jpg`,
       ],
     },
     {
