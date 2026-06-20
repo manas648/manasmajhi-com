@@ -88,7 +88,6 @@ export const metadata: Metadata = {
     images: [`${SITE_URL}/api/og?title=Opportunity+Shapes+Outcomes`],
   },
   alternates: {
-    canonical: SITE_URL,
     types: {
       "application/rss+xml": `${SITE_URL}/rss.xml`,
     },

@@ -271,10 +271,17 @@ export default async function EssayPage({ params }: Props) {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={essay.coverImage}
-                alt={essay.title}
+                alt={essay.coverImageCaption || essay.title}
                 className="w-full rounded-2xl"
                 style={{ aspectRatio: "2/1", objectFit: "cover" }}
               />
+              {(essay.coverImageCaption || essay.coverImageCredit) && (
+                <p className="mt-2 text-xs text-muted-foreground italic text-center">
+                  {essay.coverImageCaption}
+                  {essay.coverImageCaption && essay.coverImageCredit && " · "}
+                  {essay.coverImageCredit}
+                </p>
+              )}
             </div>
           </div>
         )}
