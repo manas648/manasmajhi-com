@@ -56,7 +56,7 @@ const photos = [
   {
     src: "/elsewhere/manas-majhi-marble-elephant.jpg",
     alt: "Manas Majhi beside a white marble elephant sculpture",
-    caption: "Somewhere between one thing and the next.",
+    caption: "Stone outlasts the occasion.",
     width: 1170,
     height: 1167,
   },
@@ -168,7 +168,7 @@ const photos = [
   {
     src: "/elsewhere/manas-majhi-beatles-almaty.jpg",
     alt: "Manas Majhi with The Beatles bronze statues",
-    caption: "Found the fifth Beatle. He's Indian.",
+    caption: "Liverpool via Odisha. It counts.",
     width: 1086,
     height: 1280,
   },
@@ -330,8 +330,8 @@ export default function ElsewherePage() {
         {/* Footer note */}
         <div className="mt-20 pt-12 border-t border-border">
           <p className="font-serif text-lg text-muted-foreground italic">
-            "The world rewards people who show up — to the meeting, to the
-            mountain, to the unknown city with no plan."
+            The world rewards people who show up — to the meeting, to the
+            mountain, to the unknown city with no plan. — Manas Majhi
           </p>
         </div>
       </div>
