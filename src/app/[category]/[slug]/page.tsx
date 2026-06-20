@@ -43,6 +43,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const ogUrl = `${SITE_URL}/api/og?title=${encodeURIComponent(essay.title)}&category=${encodeURIComponent(CATEGORY_LABELS[essay.category])}`;
 
+  const ogImages = essay.coverImage
+    ? [
+        { url: essay.coverImage, width: 1200, height: 800, alt: essay.title },
+        { url: ogUrl, width: 1200, height: 630, alt: essay.title },
+      ]
+    : [{ url: ogUrl, width: 1200, height: 630, alt: essay.title }];
+
   return {
     title: essay.title,
     description: essay.excerpt,
@@ -53,13 +60,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: essay.date,
       authors: ["Manas Majhi"],
       tags: essay.tags,
-      images: [{ url: ogUrl, width: 1200, height: 630, alt: essay.title }],
+      images: ogImages,
     },
     twitter: {
       card: "summary_large_image",
       title: essay.title,
       description: essay.excerpt,
-      images: [ogUrl],
+      images: [essay.coverImage || ogUrl],
     },
     alternates: {
       canonical: `${SITE_URL}/${essay.category}/${slug}`,
@@ -107,7 +114,7 @@ export default async function EssayPage({ params }: Props) {
     "@id": `${SITE_URL}/${essay.category}/${slug}`,
     headline: essay.title,
     description: essay.excerpt,
-    image: ogImage,
+    image: essay.coverImage || ogImage,
     inLanguage: "en",
     keywords: essay.tags.join(", "),
     articleSection: CATEGORY_LABELS[essay.category],
