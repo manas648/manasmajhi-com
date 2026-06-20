@@ -54,17 +54,66 @@ const readingPaths = [
     fixedCount: 3,
   },
   {
-    title: "India Path",
+    title: "Opportunity",
+    description: "How opportunity forms, compounds, and what closes the gap.",
+    href: "/opportunity",
+    category: "opportunity" as EssayCategory,
+    fixedCount: null,
+  },
+  {
+    title: "India",
     description: "India's moment and what it means.",
     href: "/india",
     category: "india" as EssayCategory,
     fixedCount: null,
   },
   {
-    title: "AI Path",
-    description: "Technology and human potential.",
+    title: "Odisha",
+    description: "Development, talent, and the untapped potential of a remarkable state.",
+    href: "/odisha",
+    category: "odisha" as EssayCategory,
+    fixedCount: null,
+  },
+  {
+    title: "Kalahandi",
+    description: "Where I come from and what it taught me.",
+    href: "/kalahandi",
+    category: "kalahandi" as EssayCategory,
+    fixedCount: null,
+  },
+  {
+    title: "Future of Work",
+    description: "AI, automation, and what actually changes.",
     href: "/future-of-work",
     category: "future-of-work" as EssayCategory,
+    fixedCount: null,
+  },
+  {
+    title: "Entrepreneurship",
+    description: "Building things, executing with conviction, thinking long-term.",
+    href: "/entrepreneurship",
+    category: "entrepreneurship" as EssayCategory,
+    fixedCount: null,
+  },
+  {
+    title: "Hiring",
+    description: "Why executive hiring fails and what better looks like.",
+    href: "/hiring",
+    category: "hiring" as EssayCategory,
+    fixedCount: null,
+  },
+  {
+    title: "Philosophy",
+    description: "On learning, identity, perspective, and the examined life.",
+    href: "/philosophy",
+    category: "philosophy" as EssayCategory,
+    fixedCount: null,
+  },
+  {
+    title: "Frameworks",
+    description: "Mental models for thinking about opportunity and human potential.",
+    href: "/frameworks",
+    category: "frameworks" as EssayCategory,
     fixedCount: null,
   },
 ];
@@ -395,7 +444,7 @@ export default function HomePage() {
           <h2 className="font-serif text-3xl md:text-4xl font-medium mb-10">
             Where to begin.
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
             {readingPaths.map((path) => {
               const count = path.fixedCount ?? allEssays.filter((e) => e.category === path.category).length;
               return (
