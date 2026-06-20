@@ -104,7 +104,7 @@ export default function LibraryPage() {
             </li>
             <li>
               <a
-                href="/executive-search-playbook.pdf"
+                href="https://github.com/manas648/Majhi-OS/blob/main/executive-search-playbook.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-start justify-between gap-6 py-4 hover:bg-muted/30 -mx-3 px-3 rounded-lg transition-colors"

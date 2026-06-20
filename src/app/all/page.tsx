@@ -102,7 +102,7 @@ export default function IndexPage() {
 
               {/* Ebook */}
               <a
-                href="/ebook"
+                href="https://github.com/manas648/Majhi-OS/blob/main/executive-search-playbook.pdf"
                 className="group block p-6 rounded-2xl border border-border hover:border-foreground/30 transition-all"
               >
                 <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">
