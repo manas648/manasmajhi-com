@@ -50,7 +50,10 @@ export function getEssayBySlug(slug: string): Essay | null {
       featured: data.featured || false,
       flagship: data.flagship || false,
       coverImage: data.coverImage || undefined,
+      coverImageCaption: data.coverImageCaption || undefined,
+      coverImageCredit: data.coverImageCredit || undefined,
       faqs: data.faqs || undefined,
+      hidden: data.hidden || false,
       content,
     };
   } catch {
@@ -62,7 +65,7 @@ export function getAllEssays(): Essay[] {
   const slugs = getEssaySlugs();
   return slugs
     .map((slug) => getEssayBySlug(slug))
-    .filter((essay): essay is Essay => essay !== null)
+    .filter((essay): essay is Essay => essay !== null && !essay.hidden)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 

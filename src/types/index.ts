@@ -14,7 +14,10 @@ export interface Essay {
   featured?: boolean;
   flagship?: boolean;
   coverImage?: string;
+  coverImageCaption?: string;
+  coverImageCredit?: string;
   faqs?: FAQ[];
+  hidden?: boolean;
   content: string;
 }
 
@@ -29,7 +32,10 @@ export interface EssayMeta {
   featured?: boolean;
   flagship?: boolean;
   coverImage?: string;
+  coverImageCaption?: string;
+  coverImageCredit?: string;
   faqs?: FAQ[];
+  hidden?: boolean;
 }
 
 export type EssayCategory =
