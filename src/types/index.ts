@@ -68,12 +68,12 @@ export const CATEGORY_IMAGES: Record<EssayCategory, string> = {
   "future-of-work": "/categories/future-of-work.jpg",
   india: "/categories/india.jpg",
   odisha: "/categories/odisha.jpg",
-  kalahandi: "https://images.unsplash.com/photo-1474221550179-c492fb337327?auto=format&fit=crop&w=1200&q=80",
+  kalahandi: "/categories/kalahandi.jpg",
   travel: "/categories/travel.jpg",
   entrepreneurship: "/categories/entrepreneurship.jpg",
   philosophy: "/categories/philosophy.jpg",
   hiring: "/categories/hiring.jpg",
-  frameworks: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=1200&q=80",
+  frameworks: "/Essay Pictures/The information Gap.jpeg",
 };
 
 export const CATEGORY_DESCRIPTIONS: Record<EssayCategory, string> = {
