@@ -120,24 +120,38 @@ export function Nav() {
 
             {/* Writing dropdown */}
             <div className="relative" ref={writingRef}>
-              <button
-                onClick={() => setWritingOpen((v) => !v)}
-                className={cn(
-                  "flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150",
-                  "hover:text-foreground hover:bg-ink-100 dark:hover:bg-ink-300",
-                  isWritingActive
-                    ? "text-foreground bg-ink-100 dark:bg-ink-300"
-                    : "text-muted-foreground"
-                )}
-              >
-                Writing
-                <ChevronDown
+              <div className={cn(
+                "flex items-center rounded-lg transition-all duration-150",
+                "hover:bg-ink-100 dark:hover:bg-ink-300",
+                isWritingActive
+                  ? "bg-ink-100 dark:bg-ink-300"
+                  : ""
+              )}>
+                <Link
+                  href="/writing"
                   className={cn(
-                    "w-3.5 h-3.5 transition-transform duration-200",
-                    writingOpen && "rotate-180"
+                    "pl-3 pr-1 py-2 text-sm font-medium transition-colors",
+                    isWritingActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"
                   )}
-                />
-              </button>
+                >
+                  Writing
+                </Link>
+                <button
+                  onClick={() => setWritingOpen((v) => !v)}
+                  className={cn(
+                    "pr-2 py-2 transition-colors",
+                    isWritingActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+                  )}
+                  aria-label="Toggle writing menu"
+                >
+                  <ChevronDown
+                    className={cn(
+                      "w-3.5 h-3.5 transition-transform duration-200",
+                      writingOpen && "rotate-180"
+                    )}
+                  />
+                </button>
+              </div>
 
               {writingOpen && (
                 <div className="absolute left-0 top-full mt-1.5 w-40 rounded-xl border border-border bg-background/95 backdrop-blur-sm shadow-lg py-1 z-50">
