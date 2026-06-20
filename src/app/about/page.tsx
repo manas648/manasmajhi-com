@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/utils";
@@ -92,19 +93,32 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto">
           {/* Header */}
           <div className="mb-16">
-            <p className="section-label mb-4">About</p>
-            <h1 className="font-serif text-5xl md:text-6xl font-medium tracking-tight mb-4">
-              Talent is abundant.
-              <br />
-              <span className="text-muted-foreground">Opportunity is not.</span>
-            </h1>
-            <p className="text-sm text-muted-foreground mt-4">
-              <span className="font-medium text-foreground">Manas Ranjan Majhi</span>
-              {" "}· Founder, Majhi Group & Majhi OS · Kalahandi, Odisha
-            </p>
-            <p className="text-xs text-muted-foreground mt-1">
-              Also known as Maanas Ranjan Majhi.
-            </p>
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
+              <div className="flex-1">
+                <p className="section-label mb-4">About</p>
+                <h1 className="font-serif text-5xl md:text-6xl font-medium tracking-tight mb-4">
+                  Talent is abundant.
+                  <br />
+                  <span className="text-muted-foreground">Opportunity is not.</span>
+                </h1>
+                <p className="text-sm text-muted-foreground mt-4">
+                  <span className="font-medium text-foreground">Manas Ranjan Majhi</span>
+                  {" "}· Founder, Majhi Group & Majhi OS · Kalahandi, Odisha
+                </p>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Also known as Maanas Ranjan Majhi.
+                </p>
+              </div>
+              <div className="relative w-48 h-56 md:w-56 md:h-64 rounded-2xl overflow-hidden flex-shrink-0">
+                <Image
+                  src="/Essay Pictures/ChatGPT Image May 16, 2026, 11_51_20 AM.png"
+                  alt="Manas Majhi"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                />
+              </div>
+            </div>
           </div>
 
           {/* Social proof */}
