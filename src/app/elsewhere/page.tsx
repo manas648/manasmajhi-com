@@ -202,6 +202,32 @@ const photos = [
   },
 ];
 
+// ---------------------------------------------------------------------------
+// Short videos — MP4s displayed inline in the masonry grid
+// ---------------------------------------------------------------------------
+type VideoItem = {
+  type: "video";
+  src: string;
+  poster?: string; // optional thumbnail shown before play
+  caption: string;
+  aspectRatio?: string; // CSS aspect-ratio value, default "9/16"
+};
+
+const videos: VideoItem[] = [
+  {
+    type: "video",
+    src: "/elsewhere/manas-majhi-kalahandi-view.mp4",
+    caption: "The valley that built everything.", // placeholder — update with Manas's caption
+    aspectRatio: "9/16",
+  },
+  {
+    type: "video",
+    src: "/elsewhere/manas-majhi-almaty-tulips.mp4",
+    caption: "Spring in full argument.", // placeholder — update with Manas's caption
+    aspectRatio: "9/16",
+  },
+];
+
 const imageSchema = {
   "@context": "https://schema.org",
   "@type": "ImageGallery",
@@ -248,8 +274,35 @@ export default function ElsewherePage() {
           </p>
         </div>
 
-        {/* Masonry grid */}
+        {/* Masonry grid — photos + videos interleaved */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6">
+          {/* Videos first — shorts sit at the top of the grid */}
+          {videos.map((video) => (
+            <div key={video.src} className="break-inside-avoid mb-6">
+              <div
+                className="overflow-hidden rounded-2xl bg-muted"
+                style={{ aspectRatio: video.aspectRatio ?? "9/16" }}
+              >
+                {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+                <video
+                  src={video.src}
+                  poster={video.poster}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="mt-3 px-0.5">
+                <p className="text-sm leading-snug text-muted-foreground">
+                  {video.caption}
+                </p>
+              </div>
+            </div>
+          ))}
+
+          {/* Photos */}
           {photos.map((photo, index) => (
             <div key={photo.src} className="break-inside-avoid mb-6">
               <div className="overflow-hidden rounded-2xl bg-muted group">
