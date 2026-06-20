@@ -7,20 +7,18 @@ import { Menu, X, ChevronDown, Search } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { cn } from "@/lib/utils";
 
-const placesItems = [
-  { href: "/india", label: "India" },
-  { href: "/odisha", label: "Odisha" },
-  { href: "/kalahandi", label: "Kalahandi" },
+const writingItems = [
+  { href: "/all", label: "Index" },
+  { href: "/the-map", label: "The Map" },
+  { href: "/frameworks", label: "Frameworks" },
+  { href: "/hiring", label: "Hiring" },
+  { href: "/travel", label: "Places" },
+  { href: "/now", label: "Now" },
 ];
 
 const navLinks = [
   { href: "/start-here", label: "Start Here" },
-  { href: "/writing", label: "Writing" },
-  { href: "/all", label: "Index" },
-  { href: "/hiring", label: "Hiring" },
-  { href: "/frameworks", label: "Frameworks" },
-  { href: "/the-map", label: "The Map" },
-  { href: "/now", label: "Now" },
+  { href: "/elsewhere", label: "Elsewhere" },
   { href: "/about", label: "About" },
   { href: "/work-with-me", label: "Work With Me" },
 ];
@@ -29,8 +27,8 @@ export function Nav() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [placesOpen, setPlacesOpen] = useState(false);
-  const placesRef = useRef<HTMLDivElement>(null);
+  const [writingOpen, setWritingOpen] = useState(false);
+  const writingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -44,18 +42,29 @@ export function Nav() {
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
-      if (placesRef.current && !placesRef.current.contains(e.target as Node)) {
-        setPlacesOpen(false);
+      if (writingRef.current && !writingRef.current.contains(e.target as Node)) {
+        setWritingOpen(false);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const isPlacesActive =
+  const isWritingActive =
+    pathname.startsWith("/all") ||
+    pathname.startsWith("/the-map") ||
+    pathname.startsWith("/frameworks") ||
+    pathname.startsWith("/hiring") ||
+    pathname.startsWith("/travel") ||
+    pathname.startsWith("/now") ||
+    pathname.startsWith("/writing") ||
     pathname.startsWith("/india") ||
     pathname.startsWith("/odisha") ||
-    pathname.startsWith("/kalahandi");
+    pathname.startsWith("/kalahandi") ||
+    pathname.startsWith("/opportunity") ||
+    pathname.startsWith("/future-of-work") ||
+    pathname.startsWith("/entrepreneurship") ||
+    pathname.startsWith("/philosophy");
 
   return (
     <header
@@ -96,6 +105,63 @@ export function Nav() {
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-1">
+            {/* Start Here */}
+            <Link
+              href="/start-here"
+              className={cn(
+                "px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150",
+                "hover:text-foreground hover:bg-ink-100 dark:hover:bg-ink-300",
+                pathname.startsWith("/start-here")
+                  ? "text-foreground bg-ink-100 dark:bg-ink-300"
+                  : "text-muted-foreground"
+              )}
+            >
+              Start Here
+            </Link>
+
+            {/* Writing dropdown */}
+            <div className="relative" ref={writingRef}>
+              <button
+                onClick={() => setWritingOpen((v) => !v)}
+                className={cn(
+                  "flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150",
+                  "hover:text-foreground hover:bg-ink-100 dark:hover:bg-ink-300",
+                  isWritingActive
+                    ? "text-foreground bg-ink-100 dark:bg-ink-300"
+                    : "text-muted-foreground"
+                )}
+              >
+                Writing
+                <ChevronDown
+                  className={cn(
+                    "w-3.5 h-3.5 transition-transform duration-200",
+                    writingOpen && "rotate-180"
+                  )}
+                />
+              </button>
+
+              {writingOpen && (
+                <div className="absolute left-0 top-full mt-1.5 w-40 rounded-xl border border-border bg-background/95 backdrop-blur-sm shadow-lg py-1 z-50">
+                  {writingItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setWritingOpen(false)}
+                      className={cn(
+                        "block px-4 py-2.5 text-sm font-medium transition-colors",
+                        pathname.startsWith(item.href)
+                          ? "text-foreground bg-muted"
+                          : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
+                      )}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Remaining top-level links */}
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -111,48 +177,6 @@ export function Nav() {
                 {link.label}
               </Link>
             ))}
-
-            {/* Places dropdown */}
-            <div className="relative" ref={placesRef}>
-              <button
-                onClick={() => setPlacesOpen((v) => !v)}
-                className={cn(
-                  "flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150",
-                  "hover:text-foreground hover:bg-ink-100 dark:hover:bg-ink-300",
-                  isPlacesActive
-                    ? "text-foreground bg-ink-100 dark:bg-ink-300"
-                    : "text-muted-foreground"
-                )}
-              >
-                Places
-                <ChevronDown
-                  className={cn(
-                    "w-3.5 h-3.5 transition-transform duration-200",
-                    placesOpen && "rotate-180"
-                  )}
-                />
-              </button>
-
-              {placesOpen && (
-                <div className="absolute right-0 top-full mt-1.5 w-36 rounded-xl border border-border bg-background/95 backdrop-blur-sm shadow-lg py-1 z-50">
-                  {placesItems.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setPlacesOpen(false)}
-                      className={cn(
-                        "block px-4 py-2.5 text-sm font-medium transition-colors",
-                        pathname.startsWith(item.href)
-                          ? "text-foreground bg-muted"
-                          : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
-                      )}
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
           </div>
 
           {/* Right: search + theme + mobile toggle */}
@@ -192,6 +216,39 @@ export function Nav() {
         {/* Mobile menu */}
         {mobileOpen && (
           <div className="md:hidden pb-4 pt-2 space-y-1 border-t border-border/60 bg-background">
+            <Link
+              href="/start-here"
+              className={cn(
+                "block px-4 py-3 rounded-xl text-sm font-medium transition-all",
+                pathname.startsWith("/start-here")
+                  ? "text-foreground bg-ink-100 dark:bg-ink-300"
+                  : "text-muted-foreground hover:text-foreground"
+              )}
+            >
+              Start Here
+            </Link>
+
+            {/* Writing section in mobile */}
+            <div className="px-4 pt-2 pb-1">
+              <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">
+                Writing
+              </p>
+            </div>
+            {writingItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={cn(
+                  "block px-6 py-2.5 rounded-xl text-sm font-medium transition-all",
+                  pathname.startsWith(item.href)
+                    ? "text-foreground bg-ink-100 dark:bg-ink-800"
+                    : "text-muted-foreground hover:text-foreground"
+                )}
+              >
+                {item.label}
+              </Link>
+            ))}
+
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -204,26 +261,6 @@ export function Nav() {
                 )}
               >
                 {link.label}
-              </Link>
-            ))}
-            {/* Places in mobile */}
-            <div className="px-4 pt-1 pb-1">
-              <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">
-                Places
-              </p>
-            </div>
-            {placesItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "block px-6 py-2.5 rounded-xl text-sm font-medium transition-all",
-                  pathname.startsWith(item.href)
-                    ? "text-foreground bg-ink-100 dark:bg-ink-800"
-                    : "text-muted-foreground hover:text-foreground"
-                )}
-              >
-                {item.label}
               </Link>
             ))}
           </div>
