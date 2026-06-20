@@ -8,7 +8,7 @@ import {
   getRelatedEssays,
   getAdjacentEssays,
 } from "@/lib/essays";
-import { CATEGORY_LABELS, EssayCategory } from "@/types";
+import { CATEGORY_LABELS, CATEGORY_IMAGES, EssayCategory } from "@/types";
 import { formatDate, SITE_URL, SITE_NAME } from "@/lib/utils";
 import { EssayCard } from "@/components/essay/EssayCard";
 import { AuthorCard } from "@/components/essay/AuthorCard";
@@ -271,27 +271,30 @@ export default async function EssayPage({ params }: Props) {
           </div>
         </header>
 
-        {/* Hero image */}
-        {essay.coverImage && (
-          <div className="px-6 lg:px-8 pb-10">
-            <div className="max-w-3xl mx-auto">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={essay.coverImage}
-                alt={essay.coverImageCaption || essay.title}
-                className="w-full rounded-2xl"
-                style={{ aspectRatio: "2/1", objectFit: "cover" }}
-              />
-              {(essay.coverImageCaption || essay.coverImageCredit) && (
-                <p className="mt-2 text-xs text-muted-foreground italic text-center">
-                  {essay.coverImageCaption}
-                  {essay.coverImageCaption && essay.coverImageCredit && " · "}
-                  {essay.coverImageCredit}
-                </p>
-              )}
+        {/* Hero image — falls back to category image if no coverImage set */}
+        {(() => {
+          const heroImage = essay.coverImage || CATEGORY_IMAGES[essay.category as EssayCategory];
+          return heroImage ? (
+            <div className="px-6 lg:px-8 pb-10">
+              <div className="max-w-3xl mx-auto">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={heroImage}
+                  alt={essay.coverImageCaption || essay.title}
+                  className="w-full rounded-2xl"
+                  style={{ aspectRatio: "2/1", objectFit: "cover" }}
+                />
+                {(essay.coverImageCaption || essay.coverImageCredit) && (
+                  <p className="mt-2 text-xs text-muted-foreground italic text-center">
+                    {essay.coverImageCaption}
+                    {essay.coverImageCaption && essay.coverImageCredit && " · "}
+                    {essay.coverImageCredit}
+                  </p>
+                )}
+              </div>
             </div>
-          </div>
-        )}
+          ) : null;
+        })()}
 
         {/* Essay body */}
         <div className="px-6 lg:px-8 pb-16">
