@@ -159,13 +159,6 @@ const photos = [
     height: 1166,
   },
   {
-    src: "/elsewhere/manas-majhi-city-from-plane.jpg",
-    alt: "Aerial night view of a city from a plane window — Manas Majhi",
-    caption: "Cities look like circuits from up here. Which is more or less what they are.",
-    width: 1112,
-    height: 1280,
-  },
-  {
     src: "/elsewhere/manas-majhi-kaindy-lake-flag.jpg",
     alt: "Manas Majhi draped in the Indian flag at a submerged forest lake",
     caption: "Took it further than anyone asked me to.",
@@ -226,7 +219,7 @@ const videos: VideoItem[] = [
   {
     type: "video",
     src: "/api/video/manas-majhi-kalahandi-view.mp4",
-    caption: "The valley that built everything.",
+    caption: "Cities look like circuits from up here. Which is more or less what they are.",
     aspectRatio: "9/16",
   },
   {

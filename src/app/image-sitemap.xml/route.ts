@@ -108,11 +108,6 @@ const elsewherePhotos = [
     caption: "Front row. Bhangra happening behind. Priorities sorted.",
   },
   {
-    url: `${SITE_URL}/elsewhere/manas-majhi-city-from-plane.jpg`,
-    title: "Aerial night view of a city from a plane window — Manas Majhi",
-    caption: "Cities look like circuits from up here. Which is more or less what they are.",
-  },
-  {
     url: `${SITE_URL}/elsewhere/manas-majhi-kaindy-lake-flag.jpg`,
     title: "Manas Majhi draped in the Indian flag at Kaindy submerged forest lake, Kazakhstan",
     caption: "Took it further than anyone asked me to.",
