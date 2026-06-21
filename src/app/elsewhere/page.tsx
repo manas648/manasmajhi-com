@@ -200,6 +200,13 @@ const photos = [
     width: 1440,
     height: 1800,
   },
+  {
+    src: "/elsewhere/manas-majhi-goa-coast.jpg",
+    alt: "Manas Majhi walking along the rocky Goa coastline in a white shirt",
+    caption: "The ocean has never once asked for a deliverable.",
+    width: 1170,
+    height: 1161,
+  },
 ];
 
 // ---------------------------------------------------------------------------
