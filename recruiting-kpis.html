@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Recruiting KPIs: The Metrics That Actually Predict Hiring System Health | Majhi OS</title>
+  <meta name="description" content="Most recruiting teams track the wrong KPIs. Here are the recruiting metrics that predict mandate failure before it happens — and how to monitor them in real time.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://majhi.tech/recruiting-kpis">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://majhi.tech/recruiting-kpis">
+  <meta property="og:title" content="Recruiting KPIs: The Metrics That Actually Predict Hiring System Health | Majhi OS">
+  <meta property="og:description" content="Most recruiting teams track the wrong KPIs. Here are the recruiting metrics that predict mandate failure before it happens — and how to monitor them in real time.">
+  <meta property="og:image" content="https://majhi.tech/og-image.png">
+  <meta property="og:site_name" content="Majhi OS">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@majhitech">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23B8882A'/><path d='M8 16h16M16 8l8 8-8 8' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>">
+  <meta name="theme-color" content="#B8882A">
+  <script type="application/ld+json">{
+    "@context":"https://schema.org","@type":"Article",
+    "headline":"Recruiting KPIs: The Metrics That Actually Predict Hiring System Health",
+    "description":"Most recruiting teams track the wrong KPIs. Here are the recruiting metrics that predict mandate failure before it happens — and how to monitor them in real time.",
+    "author":{"@type":"Person","name":"Manas Majhi"},
+    "publisher":{"@type":"Organization","name":"Majhi OS","url":"https://majhi.tech"},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://majhi.tech/recruiting-kpis"}
+  }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#fff;--bg2:#F8F9FB;--ink:#0A1628;--body:#3D4F61;--muted:#7A8FA6;--border:#DDE3EC;--gold:#B8882A;--gold2:#D4A84B;--gold-bg:#F8F2E6;--gold-border:rgba(184,136,42,.18)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.7}
+    h1,h2,h3,h4{font-family:"Cormorant Garamond",serif;line-height:1.15}
+    nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+    .nav-inner{max-width:1160px;margin:0 auto;padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+    .nav-logo{display:flex;align-items:center;gap:.625rem;text-decoration:none}
+    .logo-mark{width:30px;height:30px;background:var(--gold);border-radius:8px;display:grid;place-items:center;flex-shrink:0}
+    .logo-mark svg{width:16px;height:16px;fill:none;stroke:white;stroke-width:2;stroke-linecap:round}
+    .logo-name{font-family:"Cormorant Garamond",serif;font-size:1.1rem;font-weight:700;letter-spacing:-.02em;color:var(--ink)}
+    .nav-links{display:flex;align-items:center;gap:0}
+    .nav-links a{font-size:.825rem;font-weight:500;color:var(--body);text-decoration:none;padding:.45rem .9rem;border-radius:6px;transition:color .15s,background .15s}
+    .nav-links a:hover{color:var(--ink);background:var(--bg2)}
+    .nav-cta{font-size:.825rem;font-weight:600;color:white;background:var(--gold);border:none;cursor:pointer;padding:.5rem 1.15rem;border-radius:7px;transition:background .15s;white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center}
+    .nav-cta:hover{background:var(--gold2)}
+    .article-hero{padding:4.5rem 2rem 3rem;background:var(--bg);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+    .article-hero::before{content:"";position:absolute;top:-40%;left:5%;width:60%;height:120%;border-radius:50%;background:radial-gradient(ellipse,rgba(184,136,42,.06) 0%,transparent 65%);pointer-events:none}
+    .article-inner{max-width:760px;margin:0 auto;position:relative}
+    .breadcrumb{font-size:.8rem;color:var(--muted);margin-bottom:1.25rem;display:flex;align-items:center;gap:.4rem}
+    .breadcrumb a{color:var(--muted);text-decoration:none}.breadcrumb a:hover{color:var(--gold)}
+    .article-pill{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);background:var(--gold-bg);border:1px solid var(--gold-border);padding:.3rem .85rem;border-radius:999px;margin-bottom:1.25rem}
+    .pill-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);animation:breathe 2.5s ease-in-out infinite}
+    @keyframes breathe{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.35);opacity:.6}}
+    .article-h1{font-size:clamp(2rem,4vw,3.2rem);font-weight:700;letter-spacing:-.03em;color:var(--ink);margin-bottom:1rem}
+    .article-meta{font-size:.82rem;color:var(--muted);display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
+    .article-meta strong{color:var(--body)}
+    .article-wrap{max-width:760px;margin:0 auto;padding:3rem 2rem 4rem}
+    .article-body p{font-size:1.05rem;color:var(--body);line-height:1.85;margin-bottom:1.5rem}
+    .article-body h2{font-size:1.6rem;font-weight:700;color:var(--ink);margin:2.5rem 0 1rem;letter-spacing:-.025em}
+    .article-body h3{font-size:1.2rem;font-weight:600;color:var(--ink);margin:1.75rem 0 .6rem}
+    .article-body strong{color:var(--ink);font-weight:600}
+    .article-body ul,ol{padding-left:1.5rem;margin-bottom:1.5rem}
+    .article-body li{font-size:1.05rem;color:var(--body);line-height:1.85;margin-bottom:.4rem}
+    .article-body blockquote{border-left:3px solid var(--gold);margin:2rem 0;padding:.75rem 1.25rem;background:var(--gold-bg);border-radius:0 8px 8px 0;font-style:italic;color:var(--body)}
+    .article-body hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0}
+    .article-body .cta-inline{background:var(--gold-bg);border:1px solid var(--gold-border);border-radius:12px;padding:1.75rem;margin:2.5rem 0;text-align:center}
+    .article-body .cta-inline p{margin-bottom:1rem}
+    .btn-cta{font-size:.9rem;font-weight:600;color:white;background:var(--gold);border:none;cursor:pointer;padding:.75rem 1.75rem;border-radius:8px;transition:background .15s,transform .12s;text-decoration:none;display:inline-block}
+    .btn-cta:hover{background:var(--gold2);transform:translateY(-1px)}
+    .kpi-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.95rem}
+    .kpi-table th{background:var(--bg2);font-weight:600;color:var(--ink);padding:.75rem 1rem;text-align:left;border-bottom:2px solid var(--border)}
+    .kpi-table td{padding:.65rem 1rem;border-bottom:1px solid var(--border);color:var(--body);vertical-align:top}
+    .kpi-table tr:last-child td{border-bottom:none}
+    .kpi-table .flag-green{color:#16a34a;font-weight:600}
+    .kpi-table .flag-red{color:#dc2626;font-weight:600}
+    .stats-strip{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3rem 2rem}
+    .stats-inner{max-width:760px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1.25rem}
+    .stat{text-align:center;padding:1.5rem 1rem;background:white;border:1px solid var(--border);border-radius:10px}
+    .stat-val{font-family:"Cormorant Garamond",serif;font-size:2.25rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:.4rem}
+    .stat-label{font-size:.8rem;color:var(--muted);font-weight:500}
+    .cta-section{padding:4.5rem 2rem;background:linear-gradient(135deg,#B8882A 0%,#D4A84B 100%);text-align:center}
+    .cta-section h2{font-family:"Cormorant Garamond",serif;font-size:clamp(1.6rem,3vw,2.5rem);font-weight:700;color:white;margin-bottom:.875rem}
+    .cta-section p{font-size:1rem;color:rgba(255,255,255,.85);max-width:500px;margin:0 auto 1.75rem;line-height:1.7}
+    .btn-white{font-size:.9rem;font-weight:600;color:var(--gold);background:white;border:none;cursor:pointer;padding:.8rem 2rem;border-radius:8px;transition:all .15s;text-decoration:none;display:inline-block;box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    .btn-white:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(0,0,0,.2)}
+    .site-footer{background:var(--ink);color:var(--muted);padding:2.5rem 2rem;font-size:.875rem;text-align:center}
+    .footer-inner{max-width:1160px;margin:0 auto}
+    .footer-logo{font-family:"Cormorant Garamond",serif;font-size:1.1rem;font-weight:700;color:white;margin-bottom:.5rem}
+    .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin:1rem 0}
+    .footer-links a{color:var(--muted);text-decoration:none;transition:color .15s}.footer-links a:hover{color:white}
+    @media(max-width:768px){.nav-links{display:none}.stats-inner{grid-template-columns:1fr 1fr}.kpi-table{font-size:.85rem}}
+  </style>
+</head><body>
+<nav><div class="nav-inner">
+  <a href="/" class="nav-logo">
+    <div class="logo-mark"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+    <span class="logo-name">Majhi OS</span>
+  </a>
+  <div class="nav-links">
+    <a href="/#features">Platform</a>
+    <a href="/hiring-system-health">Health Score</a>
+    <a href="/hiring-observability">Observability</a>
+    <a href="/operational-visibility-gap">Whitepaper</a>
+    <a href="/mission-walkthrough">Walkthrough</a>
+  </div>
+  <a href="/mission-walkthrough" class="nav-cta">Book Mission Walkthrough</a>
+</div></nav>
+
+<div class="article-hero"><div class="article-inner">
+  <div class="breadcrumb"><a href="/">Majhi OS</a> › <span>Recruiting Operations</span></div>
+  <div class="article-pill"><span class="pill-dot"></span>Hiring Observability</div>
+  <h1 class="article-h1">Recruiting KPIs: The Metrics That Actually Predict Hiring System Health</h1>
+  <div class="article-meta">
+    <span>By <strong>Manas Majhi</strong></span>
+    <span>·</span>
+    <span>Majhi OS</span>
+    <span>·</span>
+    <span>10 min read</span>
+  </div>
+</div></div>
+
+<div class="stats-strip"><div class="stats-inner">
+  <div class="stat"><div class="stat-val">14%</div><div class="stat-label">avg outreach reply rate without verification</div></div>
+  <div class="stat"><div class="stat-val">35%</div><div class="stat-label">reply rate with DNS/MX verified contacts</div></div>
+  <div class="stat"><div class="stat-val">38%</div><div class="stat-label">typical shortlist approval before Majhi OS</div></div>
+  <div class="stat"><div class="stat-val">82%</div><div class="stat-label">shortlist approval on Majhi OS mandates</div></div>
+</div></div>
+
+<div class="article-wrap"><div class="article-body">
+
+<p>Most recruiting teams track the wrong KPIs. They measure inputs — number of applications, interviews scheduled, offers extended — without monitoring the operational signals that actually predict whether a mandate will close on time or collapse at week twelve. The difference between a hiring system that consistently closes and one that consistently stalls is, in large part, a metrics problem.</p>
+
+<h2>The Problem with Standard Recruiting Metrics</h2>
+
+<p>Time-to-fill, cost-per-hire, and application volume are the most commonly tracked recruiting metrics. They are also almost entirely lagging indicators — they tell you what happened after the fact, not what's about to happen. By the time time-to-fill is flagging a problem, the mandate has already stalled. By the time cost-per-hire looks wrong, the budget has already been spent.</p>
+
+<p>Hiring systems that prevent mandate failure — rather than just measuring it — track a different set of metrics entirely. Metrics that are <strong>predictive</strong>, not descriptive.</p>
+
+<h2>Tier 1: Mandate Health Metrics (Real-Time Predictive)</h2>
+
+<p>These metrics determine whether a mandate is on track or heading toward failure before the stall becomes visible.</p>
+
+<h3>Outreach Reply Rate by Cohort</h3>
+<p>Track reply rate per outreach wave, not as a single rolling average. If reply rates drop from 30% in week one to 8% in week three, the outreach targeting or messaging has degraded. This is detectable at week three — not week ten.</p>
+
+<h3>Interview-to-Second-Round Conversion</h3>
+<p>A first-round-to-second-round conversion below 40% for executive searches signals intake misalignment. The candidates being passed to interviews don't match the internal picture of the role. This surfaces the mandate definition problem early, when it's still fixable.</p>
+
+<h3>Hiring Manager Response Latency</h3>
+<p>Track the average time between candidate profile submission and hiring manager feedback. Response latency above five days on a first-round profile causes a 3x increase in candidate disengagement in executive searches. This is one of the most predictive signals in the Majhi OS Hiring Health Score.</p>
+
+<h3>Candidate Engagement Decay Rate</h3>
+<p>Measure the drop in candidate responsiveness between outreach stages. A candidate who replies promptly to a LinkedIn message and then goes silent after a scheduled call is not a ghosting problem — it's a signal that the opportunity pitch isn't landing. That signal is recoverable if caught early.</p>
+
+<table class="kpi-table">
+  <thead><tr><th>Metric</th><th>Healthy Range</th><th>Danger Signal</th></tr></thead>
+  <tbody>
+    <tr><td>Outreach reply rate (exec search)</td><td class="flag-green">25–40%</td><td class="flag-red">Below 12%</td></tr>
+    <tr><td>1st → 2nd round conversion</td><td class="flag-green">45–65%</td><td class="flag-red">Below 35%</td></tr>
+    <tr><td>Hiring manager feedback latency</td><td class="flag-green">Under 3 days</td><td class="flag-red">Over 7 days</td></tr>
+    <tr><td>Candidate re-engagement rate</td><td class="flag-green">Above 60%</td><td class="flag-red">Below 30%</td></tr>
+    <tr><td>Shortlist approval rate</td><td class="flag-green">65%+</td><td class="flag-red">Below 40%</td></tr>
+  </tbody>
+</table>
+
+<h2>Tier 2: Recruiter Efficiency Metrics (Operational)</h2>
+
+<p>These metrics reveal whether the recruiting team itself is a bottleneck in the hiring system.</p>
+
+<h3>Active Mandate Load per Recruiter</h3>
+<p>A recruiter running more than four concurrent VP or C-suite mandates shows measurable performance degradation — slower outreach, lower personalization quality, and delayed follow-up. Mandate load is a leading indicator of pipeline quality degradation.</p>
+
+<h3>Outreach Velocity</h3>
+<p>The number of qualified contacts reached per day per mandate. Velocity below three verified contacts per day on a VP-level search signals sourcing infrastructure issues — either the contact data quality is low or the recruiter is spending too much time on verification instead of outreach.</p>
+
+<h3>Audit Trail Coverage</h3>
+<p>What percentage of recruiter actions are logged with enough context to reconstruct the decision? Most hiring systems have 9% audit trail coverage — meaning 91% of what happens in a search exists only in recruiters' heads and email inboxes. Majhi OS drives this to 100%, which is the operational foundation for learning and recovery.</p>
+
+<blockquote>"Nine percent audit trail coverage means when a mandate stalls, no one can diagnose why. You can't recover what you can't see."</blockquote>
+
+<h2>Tier 3: Funnel Health Metrics (Structural)</h2>
+
+<p>These metrics identify whether the hiring funnel itself is structurally sound or has points of guaranteed failure.</p>
+
+<h3>Source-to-Shortlist Rate</h3>
+<p>For every 100 sourced profiles, how many reach the shortlist? Below 3% signals over-narrow sourcing criteria or misaligned intake. Above 15% often signals under-screening — candidates are reaching the shortlist who shouldn't, creating evaluation fatigue for hiring managers.</p>
+
+<h3>Time Between Funnel Stages</h3>
+<p>Track time in days between: sourced → contacted, contacted → replied, replied → interviewed, interviewed → shortlisted, shortlisted → offered. Extended time at any specific stage reveals the operational bottleneck. For most stalled mandates, the bottleneck is between interviewed and shortlisted — hiring manager review latency.</p>
+
+<h3>Offer Acceptance Rate</h3>
+<p>Below 70% is a signal of compensation misalignment, competitive offers, or a broken final-stage experience. Offer acceptance rate below 50% is a structural mandate problem — the role, compensation, or company aren't competitive enough at the offer stage and this needs to be surfaced before another search round runs.</p>
+
+<div class="cta-inline">
+  <p><strong>Want to see your mandate's Hiring Health Score in real time?</strong> Majhi OS monitors every KPI above across all active mandates simultaneously.</p>
+  <a href="/mission-walkthrough" class="btn-cta">Book a 45-Minute Mission Walkthrough →</a>
+</div>
+
+<h2>The Metric Most TA Teams Don't Track: Response Decay</h2>
+
+<p>Response decay is the rate at which candidate responsiveness drops over the life of a search. In a healthy mandate, candidates who enter the pipeline in week one have the same engagement rate as candidates who enter in week six. In a stalling mandate, week-six candidates respond at half the rate of week-one candidates.</p>
+
+<p>This happens because late-stage outreach in a stalling search becomes less personalized (recruiters are overwhelmed), slower (follow-up latency increases), and less compelling (the opportunity pitch hasn't evolved since week one even though the candidate pool has shifted). Response decay is one of the most powerful early signals of mandate stall — and almost no hiring system monitors it.</p>
+
+<h2>How Majhi OS Uses These Metrics</h2>
+
+<p>Majhi OS monitors all of the above metrics simultaneously across every active mandate. The Hiring Health Score aggregates these signals into a single real-time operational indicator per mandate, updated continuously. When any metric breaches its healthy threshold, the Failure Prediction Engine surfaces the warning and — when appropriate — triggers an autonomous recovery sequence without waiting for a human to notice.</p>
+
+<p>This is the difference between a hiring system that reacts to stalls and one that prevents them.</p>
+
+<hr>
+<p>Recruiting KPIs only matter if they're predictive and monitored in real time. Lagging indicators measured in spreadsheets after weekly standups produce weekly regret, not operational improvement. The right metrics framework, monitored continuously, is the foundation of a hiring system that doesn't fail.</p>
+
+</div></div>
+
+<section class="cta-section">
+  <h2>Monitor the KPIs That Predict Mandate Failure — Before It Happens</h2>
+  <p>Majhi OS tracks hiring health metrics in real time across every active mandate. When signals degrade, the system flags and recovers — without waiting for a weekly review meeting.</p>
+  <a href="/mission-walkthrough" class="btn-white">Book the 45-Minute Mission Walkthrough</a>
+</section>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div class="footer-logo">Majhi OS</div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/hiring-system-health">Health Score</a>
+    <a href="/hiring-observability">Observability</a>
+    <a href="/talent-acquisition-metrics">TA Metrics</a>
+    <a href="/recruiter-productivity-metrics">Recruiter Metrics</a>
+    <a href="/operational-visibility-gap">Whitepaper</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+  </div>
+  <p>© 2026 Majhi OS · Autonomous Hiring Operations Infrastructure</p>
+</div></footer>
+</body></html>
