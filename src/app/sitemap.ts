@@ -87,6 +87,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         `${SITE_URL}/elsewhere/manas-majhi-langkawi-eagle.jpg`,
         `${SITE_URL}/elsewhere/manas-majhi-india-road-trip.jpg`,
         `${SITE_URL}/elsewhere/manas-majhi-tulips.jpg`,
+        `${SITE_URL}/elsewhere/manas-majhi-goa-coast.jpg`,
       ],
     },
     {
@@ -150,6 +151,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(essay.date),
     changeFrequency: "monthly" as const,
     priority: essay.featured ? 0.9 : 0.7,
+    ...(essay.coverImage ? { images: [essay.coverImage] } : {}),
   }));
 
   return [...staticPages, ...essayPages];

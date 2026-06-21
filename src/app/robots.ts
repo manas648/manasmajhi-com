@@ -15,6 +15,14 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Amazonbot", allow: "/" },
       { userAgent: "cohere-ai", allow: "/" },
       { userAgent: "anthropic-ai", allow: "/" },
+      { userAgent: "OAI-SearchBot", allow: "/" },
+      { userAgent: "Meta-ExternalAgent", allow: "/" },
+      { userAgent: "Applebot", allow: "/" },
+      { userAgent: "Applebot-Extended", allow: "/" },
+      { userAgent: "DuckAssistBot", allow: "/" },
+      { userAgent: "YouBot", allow: "/" },
+      { userAgent: "Diffbot", allow: "/" },
+      { userAgent: "facebookexternalhit", allow: "/" },
       // Default: allow all, block internal API routes only
       {
         userAgent: "*",

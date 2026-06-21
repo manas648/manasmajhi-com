@@ -137,6 +137,11 @@ const elsewherePhotos = [
     title: "Manas Majhi standing in a field of yellow tulips",
     caption: "Yellow and unavoidable.",
   },
+  {
+    url: `${SITE_URL}/elsewhere/manas-majhi-goa-coast.jpg`,
+    title: "Manas Majhi walking along the rocky Goa coastline in a white shirt",
+    caption: "The ocean has never once asked for a deliverable.",
+  },
 ];
 
 export function GET() {
