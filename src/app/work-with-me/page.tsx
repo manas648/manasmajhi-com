@@ -149,11 +149,17 @@ export default function WorkWithMePage() {
               Why both exist
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Majhi Group runs searches. Majhi OS is the infrastructure those searches
-              run on. Over five years and 25+ C-suite and VP placements, the same
-              failure patterns kept appearing — not in the talent market, but in the
-              execution layer. Majhi OS was built to fix that at the infrastructure
-              level, not the workflow level.
+              Majhi Group has completed 25+ C-suite and VP placements over five years.
+              That depth of operational experience surfaced a consistent pattern: searches
+              fail at the execution layer, not the talent layer. The same failure modes
+              appeared across mandates — visibility gaps, unverified outreach, impression-based
+              shortlisting, no audit trail. Majhi OS was built to eliminate those failure
+              modes at the infrastructure level.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Majhi OS is now deployed as a standalone product for hiring teams who need
+              that operational infrastructure — not only for Majhi Group searches, but for
+              any organization running concurrent leadership hires at scale.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Both operate under the same principle: controlled execution is the only
