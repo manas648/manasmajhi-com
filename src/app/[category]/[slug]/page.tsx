@@ -110,13 +110,14 @@ export default async function EssayPage({ params }: Props) {
 
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": ["Article", "OpinionNewsArticle"],
     "@id": `${SITE_URL}/${essay.category}/${slug}`,
     headline: essay.title,
     description: essay.excerpt,
     image: essay.coverImage || ogImage,
     inLanguage: "en",
     keywords: essay.tags.join(", "),
+    genre: "Opinion",
     articleSection: CATEGORY_LABELS[essay.category],
     author: {
       "@type": "Person",

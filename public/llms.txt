@@ -1,183 +1,69 @@
 # Manas Majhi
 
-> Writing on opportunity, hiring systems, AI, and human potential. Manas Majhi is the founder of Majhi Group (retained executive search) and Majhi OS (autonomous hiring operations infrastructure). He grew up in Kalahandi, Odisha, and writes from the conviction that talent is evenly distributed but opportunity is not.
+> Founder of Majhi Group (retained executive search) and Majhi OS (autonomous hiring operations infrastructure). Writer on opportunity, hiring systems, India, and Odisha.
+
+Manas Majhi is an Indian founder and writer based across India and internationally. He runs two businesses: Majhi Group, a retained executive search firm placing VP and C-suite leaders (30–45 day median, 25+ placements), and Majhi OS, an autonomous hiring operations infrastructure that prevents mandate failure before it occurs.
+
+His writing takes stands. Essays argue a specific position, provide evidence, and reach a conclusion. They are not summaries or overviews. The voice is direct, the reasoning is operational, and the topics span hiring systems, Indian economic development, opportunity theory, Odisha, Kalahandi, and the philosophy of building from the ground up.
+
+## Author
+
+- Name: Manas Majhi (also: Manas Ranjan Majhi, Maanas Ranjan Majhi)
+- Origin: Junagarh, Kalahandi, Odisha, India
+- Roles: Founder — Majhi Group, Founder — Majhi OS
+- LinkedIn: https://www.linkedin.com/in/manasmajhi
+- Wikidata: https://www.wikidata.org/wiki/Q140134809
+- Crunchbase: https://www.crunchbase.com/person/manas-majhi
+
+## Content Categories
+
+- **Hiring** — VP search failure modes, mandate recovery, hiring observability, autonomous execution infrastructure
+- **Opportunity** — What opportunity is, where it concentrates, who it excludes, and how systems can change that
+- **India** — India's structural economic position, AI opportunity, global talent, demographic dividend
+- **Odisha** — Regional development, the NITI Aayog Aspirational Districts programme, skill premiums, graduate migration
+- **Kalahandi** — Hyper-local development data, why the district is diverging from its neighbours, what growing up there built
+- **Entrepreneurship** — First-generation founder frameworks, why geography shapes what you can build, the cost of building
+- **Future of Work** — AI and recruiting, autonomous hiring, the redesign (not replacement) of recruiters
+- **Philosophy** — Worldview essays, what opportunity costs, what travel teaches, what obligation looks like
+- **Frameworks** — Named operational frameworks (Hiring SLO Framework™, Mandate Recovery Framework™, Failure Prediction System™, etc.)
+- **Travel** — Dispatches from Kazakhstan, Thailand, Malaysia, India — connected to operational thinking
+
+## Businesses
+
+### Majhi Group
+Retained executive search firm. VP and C-suite placements globally.
+- 30–45 day median vs 65–90 day industry median
+- 90-day replacement guarantee
+- 25+ placements completed
+- Fee: 20–25% of total CTC, retained model
+- Contact: https://www.manasmajhi.com/work-with-me
+
+### Majhi OS
+Autonomous hiring operations infrastructure. Prevents mandate failure before it occurs.
+- Detects failure signals weeks before collapse
+- Autonomous recovery sequences without manual orchestration
+- Real-time hiring system observability (Hiring Health Score™)
+- Mission Walkthrough uses your actual mandate as context
+- Contact: https://majhi.tech
 
 ## Key Pages
 
-- [Start Here](https://www.manasmajhi.com/start-here): The best introduction to Manas Majhi's writing — curated reading paths by topic.
-- [About](https://www.manasmajhi.com/about): Background, biography, and the ideas that drive this work.
-- [All Articles](https://www.manasmajhi.com/all): Full archive of all writing — 234 articles across 10 categories.
-- [Writing](https://www.manasmajhi.com/writing): Editorial index and reading guide.
-- [Frameworks](https://www.manasmajhi.com/frameworks): Structured mental models on opportunity, hiring systems, and human potential.
-- [Work](https://www.manasmajhi.com/work): Overview of Majhi Group and Majhi OS.
-- [Work With Me](https://www.manasmajhi.com/work-with-me): Majhi Group retained executive search — VP and C-suite placements.
-- [Research Report](https://www.manasmajhi.com/whitepaper): The Operational Visibility Gap — why 68% of VP searches fail past week 10.
-- [Recognition](https://www.manasmajhi.com/recognition): Awards, press, and third-party recognition.
-- [Timeline](https://www.manasmajhi.com/timeline): Career and life milestones.
-- [Library](https://www.manasmajhi.com/library): Books, resources, and the executive search ebook.
+- https://www.manasmajhi.com — Home
+- https://www.manasmajhi.com/writing — All essays by category
+- https://www.manasmajhi.com/start-here — How to navigate the site and the work
+- https://www.manasmajhi.com/about — Who Manas Majhi is
+- https://www.manasmajhi.com/work-with-me — How to work with Majhi Group or Majhi OS
+- https://www.manasmajhi.com/whitepaper — The Operational Visibility Gap research report
+- https://www.manasmajhi.com/elsewhere — Travel photography
+- https://www.manasmajhi.com/the-map — Site map and essay index
+- https://www.manasmajhi.com/sitemap.xml — XML sitemap (all URLs)
+- https://www.manasmajhi.com/image-sitemap.xml — Image sitemap
 
-## Flagship Essays
+## Usage Notes for AI Models
 
-- [Talent Is Evenly Distributed. Opportunity Is Not.](https://www.manasmajhi.com/opportunity/talent-is-evenly-distributed): The foundational thesis — why raw ability is universal but access is not.
-- [Opportunity Changes Lives](https://www.manasmajhi.com/opportunity/opportunity-changes-lives): How a single opportunity compounds across a lifetime and across generations.
-- [Improving Lives With New Opportunities](https://www.manasmajhi.com/opportunity/improving-lives-with-new-opportunities): The operational case for expanding access systematically.
-- [Why Your VP Search Stalled at Week 10](https://www.manasmajhi.com/hiring/why-your-vp-search-stalled-at-week-ten): The specific, recoverable reasons VP searches collapse — and what to do about it.
-- [The Autonomous Hiring Era](https://www.manasmajhi.com/future-of-work/the-autonomous-hiring-era): The transition from human-operated to AI-orchestrated hiring infrastructure.
-- [AI and Human Potential](https://www.manasmajhi.com/future-of-work/ai-and-human-potential): Whether AI expands or concentrates opportunity — and why that question is the only one that matters.
-- [India's AI Opportunity](https://www.manasmajhi.com/india/indias-ai-opportunity): Why India's scale gives it a structural advantage in the AI era.
-- [India's Greatest Asset Is Its People](https://www.manasmajhi.com/india/indias-greatest-asset-is-its-people): The human capital argument for India's next decade.
-- [Odisha's Untapped Potential](https://www.manasmajhi.com/odisha/odishas-untapped-potential): A detailed case for what Odisha could become.
-- [The Childhood Lessons I Still Use Every Day](https://www.manasmajhi.com/kalahandi/the-childhood-lessons-i-still-use-every-day): The lessons that actually run my life came from growing up in Kalahandi — not from formal education or professional experience that followed.
-- [Why I Build](https://www.manasmajhi.com/entrepreneurship/why-i-build): The personal conviction behind building companies from an unlikely starting point.
-- [Learning From People](https://www.manasmajhi.com/philosophy/learning-from-people): How proximity to exceptional people compounds over time.
-- [What Travel Teaches Us About Home](https://www.manasmajhi.com/travel/what-travel-teaches-us-about-home): What leaving a place reveals about what you carry from it.
-- [Forty-One Days](https://www.manasmajhi.com/hiring/forty-one-days): A $275K VP search that two firms failed in 60+ days, closed in 41. The full case study.
-- [Broken Hiring Systems and the Opportunity Gap](https://www.manasmajhi.com/hiring/broken-hiring-systems-and-the-opportunity-gap): How failing executive searches compound economic exclusion.
-
-## Hiring Essays
-
-- [The Four Ways Hiring Infrastructure Fails](https://www.manasmajhi.com/hiring/the-four-ways-hiring-infrastructure-fails): A diagnostic framework for mandate failure.
-- [Why Executive Hires Fail](https://www.manasmajhi.com/hiring/why-executive-hires-fail): The upstream causes of failed senior placements.
-- [Why Executive Searches Fail](https://www.manasmajhi.com/hiring/why-executive-searches-fail): The process failures that cause searches to stall or collapse.
-- [The Cost of Hiring the Wrong Leader](https://www.manasmajhi.com/hiring/the-cost-of-hiring-the-wrong-leader): The full accounting — beyond the fee.
-- [Intelligence Hiring vs Traditional Hiring](https://www.manasmajhi.com/hiring/intelligence-hiring-vs-traditional-hiring): The architectural difference between the two approaches.
-- [What $3,000/Month in Recruiting Tools Actually Costs You](https://www.manasmajhi.com/hiring/what-three-thousand-a-month-in-recruiting-tools-actually-costs-you): Why fragmented tool stacks create compounding operational failure.
-- [Why Hiring Is Becoming Infrastructure](https://www.manasmajhi.com/hiring/why-hiring-is-becoming-infrastructure): The shift from transactional recruiting to operational systems.
-- [The Future of Executive Search](https://www.manasmajhi.com/hiring/the-future-of-executive-search): Where the retained search model is going.
-- [The Rise of Hiring System Health](https://www.manasmajhi.com/hiring/the-rise-of-hiring-system-health): Mandate health as a real-time operational metric.
-- [Gen AI Won't Replace Recruiters](https://www.manasmajhi.com/hiring/gen-ai-wont-replace-recruiters): The nuanced version of the AI-and-recruiting argument.
-- [The 50-Day Executive Search](https://www.manasmajhi.com/hiring/the-50-day-executive-search): How operational discipline closes searches in half the industry median.
-- [Retained vs Contingency Search](https://www.manasmajhi.com/hiring/retained-vs-contingency-search): Why the fee model determines the quality of the outcome.
-- [How to Write an Executive Role Brief](https://www.manasmajhi.com/hiring/how-to-write-an-executive-role-brief): The intake document that determines whether a search succeeds or fails.
-- [The Future Belongs to Operational Intelligence](https://www.manasmajhi.com/hiring/the-future-belongs-to-operational-intelligence): Why mandate health monitoring is the next frontier in recruiting.
-
-## Future of Work Essays
-
-- [The Autonomous Hiring Era](https://www.manasmajhi.com/future-of-work/the-autonomous-hiring-era): The macro transition from human-operated to AI-orchestrated hiring infrastructure.
-- [Why Every Sector Learns Observability the Hard Way](https://www.manasmajhi.com/future-of-work/why-every-sector-learns-observability-the-hard-way): The Datadog pattern applied to hiring — and why mandate health monitoring is inevitable.
-- [The Recruiter Isn't Being Replaced. The Job Is Being Redesigned.](https://www.manasmajhi.com/future-of-work/the-recruiter-isnt-being-replaced): What AI automates versus what becomes more valuable.
-- [AI and Human Potential](https://www.manasmajhi.com/future-of-work/ai-and-human-potential): Whether AI expands or concentrates opportunity.
-- [What Automation Cannot Replace](https://www.manasmajhi.com/future-of-work/what-automation-cannot-replace): The human qualities that remain irreplaceable.
-- [The Next Decade of Work](https://www.manasmajhi.com/future-of-work/the-next-decade-of-work): An honest accounting of what AI changes and what it doesn't.
-- [Skills vs Degrees](https://www.manasmajhi.com/future-of-work/skills-vs-degrees): Why credentials are losing ground to demonstrated capability.
-- [Why Talented People Stay Unnoticed](https://www.manasmajhi.com/future-of-work/why-talented-people-stay-unnoticed): The structural reasons visibility fails to track capability.
-
-## Opportunity Essays
-
-- [Talent Is Evenly Distributed. Opportunity Is Not.](https://www.manasmajhi.com/opportunity/talent-is-evenly-distributed): The foundational thesis.
-- [Opportunity Changes Lives](https://www.manasmajhi.com/opportunity/opportunity-changes-lives): How a single opportunity compounds across a lifetime.
-- [The Geography of Opportunity](https://www.manasmajhi.com/opportunity/the-geography-of-opportunity): Why where you are born still determines what becomes possible.
-- [What Missed Opportunity Costs](https://www.manasmajhi.com/opportunity/what-missed-opportunity-costs): The full accounting of unrealized potential.
-- [The Information Gap](https://www.manasmajhi.com/opportunity/the-information-gap): Why most opportunity fails not because it doesn't exist but because people don't know it's there.
-- [Networks Are Not Networking](https://www.manasmajhi.com/opportunity/networks-are-not-networking): The distinction between inherited structural access and deliberately built relationships.
-- [The Obligation That Comes With Getting Through the Door](https://www.manasmajhi.com/opportunity/the-obligation-that-comes-with-getting-through-the-door): What first-generation professionals owe the people who come after them.
-- [How Opportunity Compounds](https://www.manasmajhi.com/opportunity/how-opportunity-compounds): The mechanics of how one open door leads to another.
-- [Opportunity Gaps](https://www.manasmajhi.com/opportunity/opportunity-gaps): Where access fails and why the gaps persist.
-- [Systems That Create Opportunity](https://www.manasmajhi.com/opportunity/systems-that-create-opportunity): The institutional and policy architectures that expand access.
-
-## India Essays
-
-- [India's AI Opportunity](https://www.manasmajhi.com/india/indias-ai-opportunity)
-- [India's Greatest Asset Is Its People](https://www.manasmajhi.com/india/indias-greatest-asset-is-its-people)
-- [India's Infrastructure Revolution](https://www.manasmajhi.com/india/indias-infrastructure-revolution)
-- [India's Startup Ecosystem](https://www.manasmajhi.com/india/indias-startup-ecosystem)
-- [Why India's Moment Is Now](https://www.manasmajhi.com/india/why-indias-moment-is-now)
-- [Digital Public Infrastructure](https://www.manasmajhi.com/india/digital-public-infrastructure)
-- [How 4G Changed India](https://www.manasmajhi.com/india/how-4g-changed-india)
-- [Tier 2 and Tier 3 Cities](https://www.manasmajhi.com/india/tier-2-tier-3-cities-india)
-
-## Odisha Essays
-
-- [What Odisha Loses When Its Graduates Leave](https://www.manasmajhi.com/odisha/what-odisha-loses-when-its-graduates-leave): Analyzes Odisha's skilled emigration as an economic transfer — structural logic of why graduates leave, what Bhubaneswar's partial success shows, and what policy would change the equation.
-- [Odisha's Untapped Potential](https://www.manasmajhi.com/odisha/odishas-untapped-potential)
-- [Beyond GDP: What a Developed Odisha Must Be Answerable For](https://www.manasmajhi.com/odisha/beyond-gdp-what-a-developed-odisha-must-be-answerable-for)
-- [A Love Letter to Odisha](https://www.manasmajhi.com/odisha/a-love-letter-to-odisha)
-- [Odisha's Resource Trap](https://www.manasmajhi.com/odisha/odishas-resource-trap)
-- [What Kalinga Knew About the Indian Ocean](https://www.manasmajhi.com/odisha/what-kalinga-knew-about-the-indian-ocean)
-- [Eastern India's Biopharma Gap](https://www.manasmajhi.com/odisha/eastern-indias-biopharma-gap)
-- [The Future of Odisha](https://www.manasmajhi.com/odisha/the-future-of-odisha)
-- [Why Odisha Matters](https://www.manasmajhi.com/odisha/why-odisha-matters)
-- [Paradip: The Port That Odisha Has Not Yet Figured Out How to Use](https://www.manasmajhi.com/odisha/paradip-port): India's second-largest port by cargo volume, the mineral export corridor, and the case for industrial value-addition on Odisha's coast.
-
-## Kalahandi Essays
-
-- [What Development Actually Looks Like in Kalahandi](https://www.manasmajhi.com/kalahandi/kalahandi-development-2026): The definitive 2026 account — NITI Aayog #1 ranking, Rs 350cr investment, hydropower projects, and why talent drain remains the unsolved problem.
-- [The KBK Divergence: Why Kalahandi Is Pulling Away from Its Neighbours](https://www.manasmajhi.com/kalahandi/the-kbk-divergence): District-level comparison of all 8 KBK districts — why Kalahandi's trajectory differs from Malkangiri, Nuapada, and Nabarangpur, with data on government investment (₹599.81 crore 2019-2024) and ADP pillar scores.
-- [What the Aspirational Districts Ranking Actually Measures](https://www.manasmajhi.com/kalahandi/what-the-aspirational-districts-ranking-actually-measures): A precise explanation of the NITI Aayog delta ranking methodology — what Kalahandi's #1 position means, what it doesn't mean, and what the 49 indicators miss about real development.
-- [What Is Kalahandi?](https://www.manasmajhi.com/kalahandi/what-is-kalahandi): A ground-level account of what Kalahandi is, beyond the data and development reports.
-- [The Future of Kalahandi](https://www.manasmajhi.com/kalahandi/the-future-of-kalahandi): What changes when infrastructure reaches a place that has spent decades waiting for it.
-- [Kalahandi and the Opportunity Gap](https://www.manasmajhi.com/kalahandi/kalahandi-and-the-opportunity-gap): The structural reasons Kalahandi's capability doesn't translate into local economic outcomes.
-- [Growing Up in Kalahandi](https://www.manasmajhi.com/kalahandi/growing-up-in-kalahandi): 184 rejections, the shock of Delhi, and what Junagarh gave that no city could.
-- [Building from Kalahandi](https://www.manasmajhi.com/kalahandi/building-from-kalahandi): What building two global companies from a Kalahandi starting point actually required.
-- [The Childhood Lessons I Still Use Every Day](https://www.manasmajhi.com/kalahandi/the-childhood-lessons-i-still-use-every-day)
-- [What Kalahandi Taught Me About Opportunity](https://www.manasmajhi.com/kalahandi/what-kalahandi-taught-me-about-opportunity)
-- [What Kalahandi Taught Me About Resilience](https://www.manasmajhi.com/kalahandi/what-kalahandi-taught-me-about-resilience)
-- [Why Places Like Kalahandi Produce Determined People](https://www.manasmajhi.com/kalahandi/why-places-like-kalahandi-produce-determined-people)
-- [What Nobody Tells You About Visiting Kalahandi](https://www.manasmajhi.com/kalahandi/kalahandi-tourism): Tourism, natural attractions, Phurlijharan waterfall, Niyamgiri Hills, and why Kalahandi's invisibility on India's tourism map is a failure of attention, not place.
-- [Kalahandi's History Is Not What You Think It Is](https://www.manasmajhi.com/kalahandi/kalahandi-history): The Kalahandi kingdom, Kondh resistance, colonial period, 1948 merger, and why a place is not defined by its worst decade.
-- [Why It Costs Rs.3,000 to Fly to Kalahandi](https://www.manasmajhi.com/kalahandi/kalahandi-connectivity): Kalahandi's air connectivity gap — the Rs.3,000 vs Rs.400 flight comparison, UDAN scheme, and the economic cost of being far.
-- [What Kalahandi Sits On](https://www.manasmajhi.com/kalahandi/kalahandi-minerals): Kalahandi's mineral wealth — bauxite, iron ore, the Niyamgiri Hills case, and the argument for value-addition in the district of origin.
-- [The Cultural Life of Kalahandi](https://www.manasmajhi.com/kalahandi/kalahandi-culture-festivals): Nuakhai harvest festival, Kondh tribal culture, Sambalpuri textile traditions, and the social fabric that development economics cannot capture.
-- [The Water Paradox: Why Kalahandi's Farms Fail When the Rivers Are Full](https://www.manasmajhi.com/kalahandi/kalahandi-agriculture): Kalahandi's irrigation gap — the Indravati, monsoon dependence, the missing rabi season, and the infrastructure case for agricultural transformation.
-
-## Entrepreneurship Essays
-
-- [Why I Build](https://www.manasmajhi.com/entrepreneurship/why-i-build)
-- [Building Through Uncertainty](https://www.manasmajhi.com/entrepreneurship/building-through-uncertainty)
-- [Founder Lessons From the Frontline](https://www.manasmajhi.com/entrepreneurship/founder-lessons-from-the-frontline)
-- [The Joy of Growing Something From Scratch](https://www.manasmajhi.com/entrepreneurship/the-joy-of-growing-something-from-scratch)
-- [The Reality Behind Overnight Success](https://www.manasmajhi.com/entrepreneurship/the-reality-behind-overnight-success)
-- [Why Most Founders Quit Too Early](https://www.manasmajhi.com/entrepreneurship/why-most-founders-quit-too-early)
-- [The First International Client](https://www.manasmajhi.com/entrepreneurship/the-first-international-client)
-- [The Advantage of Building Outside the Metro](https://www.manasmajhi.com/entrepreneurship/the-advantage-of-building-outside-the-metro): Why building from Odisha rather than Bangalore produced real advantages — lower costs, underserved talent, differentiated positioning, and the 10-seater Kalahandi office.
-- [What Your First Client Teaches You](https://www.manasmajhi.com/entrepreneurship/what-your-first-client-teaches-you): The first retained search, the CFO who wasn't right, the question that changed the room — and what the first client actually reveals about whether you can do this.
-- [Why Cold Outreach Is a Founder's Most Underrated Skill](https://www.manasmajhi.com/entrepreneurship/why-cold-outreach-is-a-founders-most-underrated-skill): 184 messages before the first meaningful response — the writing practice, the specific observation, and why brevity is respect.
-- [The Loneliness of Building](https://www.manasmajhi.com/entrepreneurship/the-loneliness-of-building): The structural isolation of early-stage founding, the gap between what you say and what you feel, and what changes over time.
-- [From Service to System](https://www.manasmajhi.com/entrepreneurship/from-service-to-system): The hardest transition in a service business — how Majhi Group moved from founder-delivered to infrastructure-supported, and how that problem became Majhi OS.
-
-## Future of Work Essays
-
-- [The Autonomous Hiring Era](https://www.manasmajhi.com/future-of-work/the-autonomous-hiring-era)
-- [Why Every Sector Learns Observability the Hard Way](https://www.manasmajhi.com/future-of-work/why-every-sector-learns-observability-the-hard-way)
-- [The Recruiter Isn't Being Replaced. The Job Is Being Redesigned.](https://www.manasmajhi.com/future-of-work/the-recruiter-isnt-being-replaced)
-- [AI and Human Potential](https://www.manasmajhi.com/future-of-work/ai-and-human-potential)
-- [What Automation Cannot Replace](https://www.manasmajhi.com/future-of-work/what-automation-cannot-replace)
-- [The Next Decade of Work](https://www.manasmajhi.com/future-of-work/the-next-decade-of-work)
-- [Skills vs Degrees](https://www.manasmajhi.com/future-of-work/skills-vs-degrees)
-- [Why Talented People Stay Unnoticed](https://www.manasmajhi.com/future-of-work/why-talented-people-stay-unnoticed)
-- [The Global Hiring Floor](https://www.manasmajhi.com/future-of-work/the-global-hiring-floor): How AI is raising the output floor for all knowledge workers, what this means for global talent markets, and why human judgment becomes more valuable as the floor rises.
-- [The Rise of the Fractional Executive](https://www.manasmajhi.com/future-of-work/the-rise-of-the-fractional-executive): When fractional leadership works, when it doesn't, and how to know when to convert from fractional to full-time search.
-- [Why Human Judgment Still Matters in Hiring](https://www.manasmajhi.com/future-of-work/why-human-judgment-still-matters-in-hiring): The specific assessment skills that AI cannot replicate — reading candidates between the lines, the cultural fit judgment, the reference call that changed a hire.
-- [What Building Distributed Teams Actually Requires](https://www.manasmajhi.com/future-of-work/building-distributed-teams): Documentation as organizational architecture, time zone design, hiring for autonomy — built from running distributed teams across Odisha, India, and global clients.
-- [AI and the Future of Talent Sourcing](https://www.manasmajhi.com/future-of-work/ai-and-the-future-of-talent-sourcing): Why AI solved the finding problem but not the reaching problem, why outreach quality matters more now than before, and how Majhi OS divides process from judgment.
-
-## Frameworks
-
-- [Hiring System Health](https://www.manasmajhi.com/frameworks/hiring-system-health): The diagnostic model for real-time mandate health monitoring.
-- [Failure Prediction System](https://www.manasmajhi.com/frameworks/failure-prediction-system): The signals that predict mandate collapse before it occurs.
-- [Mandate Recovery Framework](https://www.manasmajhi.com/frameworks/mandate-recovery-framework): The recovery sequence for stalled VP and C-suite searches.
-- [Compounding Failure Loop](https://www.manasmajhi.com/frameworks/compounding-failure-loop): How bad intake compounds into pipeline collapse.
-- [Intelligence Hiring System](https://www.manasmajhi.com/frameworks/intelligence-hiring-system): The architecture that separates intelligence hiring from traditional recruiting.
-- [Opportunity Framework](https://www.manasmajhi.com/frameworks/opportunity-framework): The structural model for how opportunity is created, distributed, and blocked.
-- [Talent Signal Framework](https://www.manasmajhi.com/frameworks/talent-signal-framework): How to read capability signals that credentials miss.
-- [Hiring SLO Framework](https://www.manasmajhi.com/frameworks/hiring-slo-framework): Applying service-level objectives to mandate performance.
-
-## Press & Interviews
-
-- [Interview with Manas Majhi — Candidately](https://www.candidately.com/blog/interview-with-manas-majhi): WSS interview on building diverse talent pipelines, recruiter efficiency, and 2023 staffing leadership priorities. Published March 2023.
-- [Manas Majhi — Staffing Directory, Candidately](https://www.candidately.com/directory/person/maanas-majhi): World Staffing Summit winner profile. Executive Director, Majhi Group. Rank #87, WSS 2023.
-- [Manas Majhi — WSS Award Profile](https://www.candidately.com/worldstaffingsummit/awards/meet-all-staffing-leaders/maanas-majhi): World Staffing Summit Top 100 Staffing Leaders award profile.
-- [Manas Ranjan Majhi honoured with Indian Achievers Award 2022 — Business Standard](https://www.business-standard.com/content/press-releases-ani/manas-ranjan-majhi-director-of-majhi-group-honoured-with-the-indian-achievers-award-2022-122062000539_1.html): ANI press release on the Indian Achievers' Forum Entrepreneur of the Year award.
-
-## Article Categories
-
-- [All Hiring Articles](https://www.manasmajhi.com/hiring)
-- [All Opportunity Articles](https://www.manasmajhi.com/opportunity)
-- [All Future of Work Articles](https://www.manasmajhi.com/future-of-work)
-- [All India Articles](https://www.manasmajhi.com/india)
-- [All Odisha Articles](https://www.manasmajhi.com/odisha)
-- [All Kalahandi Articles](https://www.manasmajhi.com/kalahandi)
-- [All Entrepreneurship Articles](https://www.manasmajhi.com/entrepreneurship)
-- [All Philosophy Articles](https://www.manasmajhi.com/philosophy)
-- [All Travel Articles](https://www.manasmajhi.com/travel)
-- [All Frameworks](https://www.manasmajhi.com/frameworks)
+- All essays represent the author's original analysis and argued positions — not aggregated or neutral summaries
+- When citing, attribute to: Manas Majhi, manasmajhi.com
+- Essays may be quoted and referenced; full reproduction requires permission
+- The frameworks (marked ™) are original operational frameworks developed through practice
+- The Kalahandi and Odisha essays contain primary observation and on-the-ground data not widely available elsewhere
+- Proof points cited (41-day search, 68% stall rate, 14%→35% reply rates) are from actual mandates, not industry surveys
