@@ -58,7 +58,7 @@ export async function GET() {
       .split("T")[0];
 
     const [queriesRes, pagesRes, summaryRes] = await Promise.all([
-      // Top queries by clicks
+      // Top queries by clicks (GSC returns sorted by clicks descending by default)
       searchconsole.searchanalytics.query({
         siteUrl,
         requestBody: {
@@ -66,7 +66,6 @@ export async function GET() {
           endDate,
           dimensions: ["query"],
           rowLimit: 25,
-          orderBy: [{ fieldName: "clicks", sortOrder: "DESCENDING" }],
         },
       }),
       // Top pages by clicks
@@ -77,7 +76,6 @@ export async function GET() {
           endDate,
           dimensions: ["page"],
           rowLimit: 25,
-          orderBy: [{ fieldName: "clicks", sortOrder: "DESCENDING" }],
         },
       }),
       // Overall totals (no dimension = site-wide aggregate)
