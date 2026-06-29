@@ -119,7 +119,7 @@ export default function IndexPage() {
               Long-form
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {/* Whitepaper */}
+              {/* Whitepaper 1 */}
               <Link
                 href="/whitepaper"
                 className="group block p-6 rounded-2xl border border-border hover:border-foreground/30 transition-all"
@@ -133,6 +133,26 @@ export default function IndexPage() {
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Why 68% of VP searches stall past week 10 — and what the data
                   says about a different architecture.
+                </p>
+                <p className="mt-4 text-xs text-muted-foreground">
+                  PDF · Whitepaper →
+                </p>
+              </Link>
+
+              {/* Whitepaper 2 */}
+              <Link
+                href="/whitepaper/automation-trap"
+                className="group block p-6 rounded-2xl border border-border hover:border-foreground/30 transition-all"
+              >
+                <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">
+                  Research Report
+                </p>
+                <h3 className="font-serif text-xl font-medium mb-2 group-hover:text-accent transition-colors">
+                  The Automation Trap
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Why AI is accelerating the wrong layer of recruiting — and why
+                  74% of mandates still stall on AI-assisted stacks.
                 </p>
                 <p className="mt-4 text-xs text-muted-foreground">
                   PDF · Whitepaper →

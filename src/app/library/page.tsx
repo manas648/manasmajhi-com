@@ -40,7 +40,7 @@ export default function LibraryPage() {
             Library
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            Every piece of writing, organised by section. {totalCount} articles, 2 long-form guides, across{" "}
+            Every piece of writing, organised by section. {totalCount} articles, 3 long-form guides, across{" "}
             {categories.filter((c) => essays.some((e) => e.category === c)).length} categories.
           </p>
         </div>
@@ -76,7 +76,7 @@ export default function LibraryPage() {
             <div>
               <div className="flex items-center gap-3 mb-1">
                 <h2 className="font-serif text-2xl font-medium">Long-form</h2>
-                <span className="text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded-full">2</span>
+                <span className="text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded-full">3</span>
               </div>
               <p className="text-sm text-muted-foreground max-w-lg">
                 Research reports and guides — longer pieces on hiring, executive search, and operational infrastructure.
@@ -95,6 +95,24 @@ export default function LibraryPage() {
                   </p>
                   <p className="text-sm text-muted-foreground line-clamp-1 leading-relaxed">
                     Why recruiting breaks at scale — and the infrastructure that closes the gap. Majhi OS Research Report.
+                  </p>
+                </div>
+                <span className="shrink-0 text-xs text-muted-foreground/60 mt-0.5 whitespace-nowrap">
+                  Research Report
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/whitepaper/automation-trap"
+                className="group flex items-start justify-between gap-6 py-4 hover:bg-muted/30 -mx-3 px-3 rounded-lg transition-colors"
+              >
+                <div className="flex-1 min-w-0">
+                  <p className="font-medium text-foreground leading-snug mb-0.5">
+                    The Automation Trap
+                  </p>
+                  <p className="text-sm text-muted-foreground line-clamp-1 leading-relaxed">
+                    Why AI is accelerating the wrong layer of recruiting — and why 74% of mandates still stall. Majhi OS Research Report.
                   </p>
                 </div>
                 <span className="shrink-0 text-xs text-muted-foreground/60 mt-0.5 whitespace-nowrap">
