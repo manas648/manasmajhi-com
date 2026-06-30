@@ -1,0 +1,87 @@
+---
+title: "Why AI Makes Organisational Structure More Important, Not Less"
+excerpt: "The assumption is that AI flattens hierarchy and reduces the need for formal structure. The opposite is true. AI compresses execution — and when execution is no longer the bottleneck, the quality of your decision architecture becomes everything."
+date: "2026-06-15"
+category: "future-of-work"
+coverImage: https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80&auto=format&fit=crop
+tags: ["AI", "organisational design", "management", "future of work", "structure"]
+featured: false
+flagship: false
+faqs:
+  - question: "Why does AI make organisational structure more important rather than less?"
+    answer: "Because AI compresses execution, not decision-making. When the cost of doing things falls — generating a first draft, sourcing candidates, processing data — the bottleneck moves upstream to the decisions about what to do, who decides, and who is accountable for outcomes. In organisations with clear decision architecture, AI acceleration produces faster and better outcomes. In organisations with structural ambiguity, AI produces faster confusion. The structural gap that was previously self-limiting — because slow execution gave people time to negotiate ambiguity informally — becomes immediately expensive when execution accelerates."
+  - question: "What is 'organisational structure' in the context of AI — is it just org charts and hierarchy?"
+    answer: "No. The org chart is the least important part. Organisational structure, in the sense that matters for AI adoption, is three things: clarity of authority (who can actually decide what, not who theoretically can), accountability architecture (who is judged by outcomes, not just who is assigned tasks), and information flow (which information reaches which people in time to be acted on). Organisations that have these three things clearly designed get the full benefit of AI acceleration. Organisations that have org charts but not these three things get their structural debt surfaced faster and more expensively than it previously accumulated."
+  - question: "What does structural ambiguity look like in an AI-augmented organisation?"
+    answer: "The failure mode is consistent: AI surfaces a problem or opportunity faster than the organisation can act, because no one is clearly authorised to respond. A system flags that a hiring mandate is stalling — but authority to change the strategy sits between the recruiter, the hiring manager, and the executive sponsor, without clarity on who decides. A sales AI identifies an account at risk of churn — but the decision about what to offer requires negotiation between sales, customer success, and finance that takes longer than the customer's patience. Speed without decision clarity produces faster frustration, not faster outcomes."
+---
+
+When I built the observability layer for Majhi OS — the system that monitors mandate health in real time and surfaces recovery recommendations — I expected the hard problem to be the instrumentation. Getting the data, building the health scores, making the alerts meaningful. Those were hard problems. They were solvable engineering problems.
+
+The harder problem was something I hadn't anticipated: what happens when the system surfaces a problem and nobody has clear authority to act on it?
+
+A mandate is stalling. The alert fires. And then — nothing, or slow motion. Because the authority to change the sourcing strategy, adjust the search brief, or reallocate recruiter capacity sits somewhere between the recruiter, the hiring manager, and the executive sponsor, without clarity on who decides. The observability was working. The structure wasn't.
+
+That is the pattern repeating across every organisation that is adopting AI seriously. The technology is not the bottleneck. The structure is.
+
+## The assumption that needs examining
+
+The common narrative about AI and organisational structure goes like this: AI automates routine work, fewer layers of coordination are needed, hierarchy flattens, and formal structure becomes less important. Companies will become more fluid, more adaptive, more self-organising.
+
+This is appealing and almost entirely wrong.
+
+It confuses two things: the cost of execution and the need for decision architecture. AI is dramatically reducing the cost of execution — generating drafts, processing data, sourcing candidates, scheduling, synthesising information. What it is not doing is resolving the questions of who decides, who is accountable, and how information should flow to the people who need to act on it.
+
+When execution is expensive, poor decision architecture is somewhat self-limiting. Slow execution gives people time to negotiate ambiguity informally. The unclear authority gets worked out over days; the missing accountability gets substituted by relationship; the information gap gets bridged in the time things take to move. The friction is painful but manageable.
+
+When execution becomes cheap, the bottleneck moves immediately upstream to decision quality. And that is a structural function, not a technological one.
+
+## What structure actually means
+
+Organisational structure, in the sense that matters for AI adoption, is not the org chart. It is three things.
+
+**Clarity of authority** — not who theoretically can decide, but who actually does. Most organisations have significant distance between formal authority and exercised authority. AI surfaces that distance because it acts faster than the informal negotiation that usually covers it.
+
+**Accountability architecture** — not who is assigned tasks, but who is judged by outcomes. When AI handles the execution of a task, the question of who owns the outcome becomes sharper, not softer. Diffused accountability, in practice, is no accountability at all. [McKinsey research on AI governance](https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-organization-blog/accountability-by-design-in-the-agentic-organization) found that organisations with explicit accountability for AI outcomes score materially higher on AI maturity — 2.6 versus 1.8 — than those without a clearly accountable function.
+
+**Information flow** — which information reaches which people in time to be acted on. AI can generate more signal than any organisation has previously had to process. That signal is only useful if it reaches the people with the authority and context to act on it. Organisations without clear information architecture drown in dashboards and ignore alerts.
+
+>> AI compresses the cost of execution. It does not resolve the questions of who decides, who is accountable, and how information flows to the people who need to act. Those are structural questions. And when execution is no longer the bottleneck, they become everything.
+
+## The failure pattern
+
+The data on AI adoption is striking in what it reveals about where projects fail. [Between 70 and 85% of generative AI deployments are failing to meet their desired return on investment](https://www.nttdata.com/global/en/insights/focus/2024/between-70-85p-of-genai-deployment-efforts-are-failing). 42% of companies abandoned most of their AI initiatives in 2025, up from 17% the year before.
+
+The technology works. What fails is the organisational infrastructure around it — the clarity of decision rights, the accountability structures, the information flows that determine whether AI output gets acted on or ignored.
+
+[58% of leaders identify disconnected governance as the primary obstacle preventing them from scaling AI responsibly](https://www.aligne.ai/blog-posts/the-ai-governance-crisis-every-executive-must-address-in-2025). That is a structural problem, not a technical one.
+
+## The second-order effect
+
+There is a second consequence that is less discussed: AI raises the cost of structural ambiguity, not just the benefit of structural clarity.
+
+Before AI, an unclear authority structure produced delays. With AI, that same unclear structure produces a different failure mode: the organisation moves quickly in the wrong direction, or moves at different speeds toward incompatible goals, before anyone has resolved who was supposed to decide. Speed amplifies structural errors. The company with excellent AI tools and poor decision architecture makes bad decisions faster and scales them further before the consequences become visible.
+
+This is why the organisations that are failing at AI adoption are often not the ones that lack AI tools. They are the ones that lack the structural clarity to extract value from tools they already have.
+
+## What this means in practice
+
+From executive search: the most common reason a VP search fails is not candidate quality. It is organisational ambiguity about what the role actually requires, who it genuinely reports to in practice rather than on the org chart, and what success looks like in the specific context of this company at this moment. AI-powered sourcing sends better candidates into that ambiguity faster. It does not resolve it.
+
+From Majhi OS: the deployments that produce the most value are not the ones with the most sophisticated alerts. They are the ones where the client organisation has clarity on who acts on which alert, what the decision criteria are, and who is accountable for the outcome. The AI is only as useful as the structure it operates within.
+
+The organisations that will compound the most advantage from AI are not the ones with the most sophisticated tools. They are the ones that have done the harder, less glamorous work: clarifying who decides what, building accountability structures that survive the removal of execution friction, and designing information flows that put the right signal in front of the right person at the right time.
+
+That work is structural. It is not automated. And it is becoming more important, not less.
+
+---
+
+**Sources**
+
+[McKinsey — Accountability by design in the agentic organisation](https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-organization-blog/accountability-by-design-in-the-agentic-organization)
+
+[McKinsey — The state of AI in 2025](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)
+
+[NTT DATA — Between 70–85% of GenAI deployments failing to meet desired ROI (2024)](https://www.nttdata.com/global/en/insights/focus/2024/between-70-85p-of-genai-deployment-efforts-are-failing)
+
+[Aligne.ai — The AI Governance Crisis Every Executive Must Address in 2025](https://www.aligne.ai/blog-posts/the-ai-governance-crisis-every-executive-must-address-in-2025)
