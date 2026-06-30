@@ -7,6 +7,13 @@ coverImage: https://images.unsplash.com/photo-1573165231977-3f0e27806045?w=1200&
 tags: ["hiring", "infrastructure", "recruiting operations", "failure modes", "Majhi OS"]
 featured: true
 flagship: false
+faqs:
+  - question: "What are the most common reasons VP-level executive searches fail?"
+    answer: "Across VP-level mandates, failure clusters into four structural modes: intake without normalization (duplicate candidates consuming capacity, quality gates failing silently), outreach without verification (domain reputation degrading undetected, messages failing to arrive), evaluation without evidence (impression-based shortlists producing rework cycles when the CEO rejects), and execution without observability (failure accumulating invisibly until it's too late to recover cleanly). These modes amplify each other, which is why week 10 is the modal failure point — by then, all four have been compounding for weeks."
+  - question: "How does email verification affect executive search reply rates?"
+    answer: "Significantly. Outreach running on unverified contact data — no DNS/MX validation, no bounce-kill logic — produces two failure modes: messages that route to invalid addresses waste sequence touches, and messages that arrive but bounce degrade the sending domain's reputation over time. As domain reputation deteriorates, deliverability drops across the entire sequence, not just the bad addresses. The reply rate collapse looks like candidate disinterest but is actually infrastructure failure. Verified contact data with active bounce management consistently produces 2–3x the reply rates of unverified outreach."
+  - question: "What is the difference between hiring observability and standard ATS reporting?"
+    answer: "ATS reporting is retrospective: it shows what happened in past time periods. Observability is current-state: it shows what is happening now, across all active mandates simultaneously. An ATS can tell you that last quarter's average time-to-fill was 78 days. Observability tells you that Mandate 7 has had declining reply rates for 11 days, the hiring manager feedback on Mandate 3 is 4 days overdue, and Mandate 9 has a stall probability above the intervention threshold. The difference determines whether you diagnose failure at week 4 or week 10."
 ---
 
 I have been part of enough slow searches to know what the post-mortem always says: the market was tight, the role was specialized, the timing was bad. These things are sometimes true. They are rarely the cause. The cause is almost always one of four infrastructure failures that were present from the start — and that nobody named until the search had already stalled.
@@ -80,3 +87,13 @@ These numbers are not the result of working harder or moving faster. They are th
 >> You cannot fix a system failure by optimizing individual components. A better outreach tool does not close the visibility gap. Adding more tools to a fragmented stack produces more fragmentation — more data feeds, more coordination overhead, less unified signal.
 
 Majhi OS was built to close these four gaps — unified operational visibility, evidence-backed shortlisting, verified outreach, and full audit coverage — in a single connected system. [Book a Mission Walkthrough](/work-with-me).
+
+---
+
+**Sources**
+
+[Validity (formerly Return Path) — Email Deliverability Benchmark Report](https://www.validity.com/resource-center/email-deliverability-benchmark-report/)
+
+[McKinsey — Talent Acquisition in the Age of Continuous Change](https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/talent-acquisition-in-the-age-of-continuous-change)
+
+[Harvard Business Review — How Structured Interviews Improve Hiring](https://hbr.org/2016/04/how-structured-interviews-improve-hiring)

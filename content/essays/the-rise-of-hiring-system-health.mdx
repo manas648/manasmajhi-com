@@ -7,6 +7,13 @@ coverImage: https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?w=1200&
 tags: ["hiring", "systems", "infrastructure", "observability", "Majhi OS"]
 featured: false
 flagship: false
+faqs:
+  - question: "What is hiring system health and how is it different from traditional recruiting metrics?"
+    answer: "Traditional recruiting metrics — time-to-fill, cost-per-hire, offer acceptance rate — are retrospective. They tell you what happened after it happened. Hiring system health is a real-time concept: the ability to see whether active searches are healthy right now, which mandates are showing early signs of failure, and what specifically is causing the degradation. The distinction mirrors the difference between logging and observability in software engineering. Logging tells you what occurred. Observability tells you the current state of the system — and gives you lead time to act before failure is locked in."
+  - question: "How do you monitor hiring system health in practice?"
+    answer: "Monitoring hiring system health requires continuous signals, not weekly reports: reply rate trends by sequence and domain, candidate stage velocity compared to historical baselines, recruiter load relative to capacity thresholds, hiring manager feedback latency, and mandate age against predicted close dates. When these signals are aggregated in real time, failure patterns become visible two to four weeks before they produce timeline impact. The weekly status meeting sees the damage; real-time monitoring sees the cause."
+  - question: "What is a Hiring Health Score and how is it used?"
+    answer: "A Hiring Health Score is a composite real-time metric that rates each active mandate on operational dimensions: pipeline depth, engagement rate, stage velocity, recruiter capacity, and stall risk. It functions like an uptime metric in software: a mandate at 85 is healthy, a mandate at 42 has multiple degrading signals and needs intervention. The score makes mandate health legible to everyone involved — recruiter, hiring manager, leadership — without requiring anyone to manually synthesise data from five different tools."
 ---
 
 The concept behind Majhi OS came from a pattern I kept running into over five years of executive search: hiring systems were failing in ways that were entirely predictable in retrospect and completely invisible in real time. A recruiter carrying six mandates when five was already too many. A pipeline thinning at a specific stage while the weekly report said everything was on track. A search quietly dying two weeks before anyone named it.
@@ -50,3 +57,13 @@ Hiring system health is not a new metric. It is a new way of thinking about what
 >> The signals that predict mandate failure are typically visible weeks before the failure occurs. A recruiting team waiting for the weekly review is seeing problems too late to recover them efficiently. The shift is from logging — what happened — to observability: what is happening now, and why.
 
 Majhi OS was built to make hiring system health visible and actionable — across every active mandate, in real time. [Book a Mission Walkthrough](/work-with-me).
+
+---
+
+**Sources**
+
+[Google SRE Book — Monitoring Distributed Systems (Beyer, Jones, Petoff, Murphy)](https://sre.google/sre-book/monitoring-distributed-systems/)
+
+[McKinsey — The Organization Blog: Getting More from Your Recruiting Data](https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/getting-more-from-your-recruiting-data)
+
+[SHRM — HR Metrics and Analytics: Use and Impact](https://www.shrm.org/topics-tools/research/hr-metrics-analytics)
