@@ -1,0 +1,95 @@
+---
+title: "How to Design Systems That Outlast Their Designers"
+excerpt: "The hardest design problem is not making something work. It is making something work after the people who built it are no longer there to interpret it. That is a different problem, and almost nobody is taught how to solve it."
+date: "2026-06-30"
+category: "entrepreneurship"
+coverImage: https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80&auto=format&fit=crop
+tags: ["systems design", "institution building", "founder", "organisational design", "endurance"]
+featured: false
+flagship: false
+faqs:
+  - question: "What makes a system survive its designers?"
+    answer: "Two things, primarily. First, legibility — the system carries its own logic clearly enough that someone who wasn't there for its design can understand what it's doing and why. Systems that require insider knowledge to interpret are brittle: they work when the insiders are present and degrade when they leave. Second, self-correction — the system has mechanisms to detect when it is drifting from its intended function and to surface that drift before it becomes failure. Systems with these two properties outlast their designers. Systems without them depend on continuity of the original people."
+  - question: "Why do most systems fail to outlast their designers?"
+    answer: "Because most systems are built to solve an immediate problem, not to be maintained by people who weren't in the room. The design decisions that make a system work are often carried in the heads of the people who made them — the 'why' lives with the designers, not in the system itself. When the designers leave, the system continues running but the reasoning behind its design is gone. The people who maintain it make decisions based on what the system does, not what it was supposed to do. Drift follows. Eventually, the system fails in a way nobody expected because nobody understood what was actually keeping it stable."
+  - question: "Is there a practical framework for designing systems that outlast their designers?"
+    answer: "Yes — three principles matter most. First, make the design reasoning explicit: document not just what the system does but why it was designed that way, so future maintainers can make decisions consistent with the original intent. Second, design for legibility over efficiency: a system that is slightly less efficient but far easier to understand will outlast a clever one that only its creator can interpret. Third, build in self-correction: the system should have mechanisms to detect when it is drifting from its intended function and flag that drift before it becomes catastrophic. These principles appear in engineering, in constitutional design, and in the best organisational systems."
+---
+
+The Roman aqueduct at Segovia has been delivering water continuously since the first century AD. The engineers who built it have been dead for nearly two thousand years. The system they designed is still working.
+
+This is not primarily a story about Roman engineering. It is a story about a design problem that almost no one teaches and very few builders solve: how do you build something that keeps working after you are gone?
+
+The easy version of this question is about documentation. Write it down. Leave good notes. Train your successor. This is necessary and not sufficient. The systems that outlast their designers do not succeed because of good documentation. They succeed because the logic of the system is carried by the system itself, not by the knowledge of the people who built it.
+
+That is a design problem of a different order.
+
+## What insider-dependent systems look like
+
+Most systems — whether they are software codebases, organisational processes, or operational workflows — are built to solve an immediate problem by people who understand the context. The design decisions make sense to the people making them. The system works. The designers move on.
+
+What they leave behind is a system that works and a reasoning that doesn't. The current employees know what the system does. They have inherited the process. What they don't have is the understanding of why specific design choices were made — which means they cannot make good decisions when the system breaks, when the environment changes, or when a new requirement doesn't fit the existing design.
+
+The failure mode is predictable: the system runs correctly until something goes wrong in a way that requires understanding the original design intent to fix. The people who have to fix it can see the symptoms but not the cause. They patch the symptom. The underlying design intent drifts further from what the system actually does. Over time, the gap between what the system was designed for and what it is actually doing becomes large enough to cause a serious failure.
+
+[Michael Feathers, in his study of large software codebases](https://www.oreilly.com/library/view/working-effectively-with/0131177052/), called this "the fear cycle": developers afraid to change code they don't understand, so they add workarounds rather than repairs, increasing complexity until the system becomes effectively unmaintainable by anyone who wasn't there at the beginning. The same cycle appears in organisations, in legal systems, in operational processes.
+
+## The US Constitution as a design problem
+
+The designers of the US Constitution in 1787 faced an unusual version of this problem. They were building a governing system that would have to be operated by people who had never met them, in circumstances they couldn't fully anticipate, across time periods they wouldn't live to see.
+
+Their solution — not perfectly, but better than most — was to design a system whose logic was legible from the system itself. The separation of powers is not just a governance mechanism; it is a self-describing mechanism. Anyone who reads the structure can understand what it is protecting against and why. The amendment process is built into the system, not left as an afterthought. The Constitution even explains its own reasoning in the preamble.
+
+[James Madison, writing in Federalist No. 51](https://guides.loc.gov/federalist-papers/text-51-60), described the design principle explicitly: "If men were angels, no government would be necessary." The system was designed to function given the realistic properties of human behaviour, not the ideal properties. That is what makes it legible to people who came after — it is built on assumptions that remain true.
+
+The system has lasted because the design logic is in the document, not in the memory of its designers. You can disagree with specific provisions of the Constitution without needing to ask Madison what he meant. The reasoning is there.
+
+>> The systems that outlast their designers do not succeed because of good documentation. They succeed because the logic of the system is carried by the system itself — legible to people who were never there for the design.
+
+## The Majhi OS version
+
+Building the observability and recovery infrastructure for Majhi OS required confronting this problem directly.
+
+The system monitors mandate health, surfaces degradation alerts, and triggers recovery recommendations. The early version of this worked because I was always there to interpret the alerts — to apply judgment about what the signal meant, what the right response was, whether the recovery recommendation fit the specific situation.
+
+That is an insider-dependent system. It is functional while I am available and fragile the moment I am not.
+
+The design problem I had to solve was different: how does the system make good recovery decisions — or surface the right information to the person who needs to make the decision — without requiring me to interpret the situation? How does the reasoning become legible from the system itself?
+
+The answer required making explicit what had been implicit. Not just what the system detects, but why each signal matters and what the range of appropriate responses is. Not just what the recovery playbook recommends, but the logic of why that sequence works in that situation. The system carries its own reasoning now — a recruiter who has never spoken to me can read the alert, understand what it means, understand why the recommended action is correct, and act on it. The design intent is in the system, not in my head.
+
+This is what autonomous execution actually means at its deepest level. Not just automation, but a system whose logic is legible enough that it can be trusted and used by people who weren't there when it was built.
+
+## The three design principles
+
+**Legibility over efficiency.** The first principle, counterintuitively, is to prefer the design that is easier to understand over the design that is more clever. A system that is 10% less efficient but whose design logic is immediately apparent to a new maintainer will outlast a system that is 10% more efficient but requires insider knowledge to interpret. Efficiency is recoverable. Lost design intent is not.
+
+This applies to code — the readable function over the clever one-liner — and to organisational systems. The process that is slightly more steps but whose purpose is obvious at each step will survive handoffs that the elegant but opaque process will not.
+
+**Carry the reasoning, not just the rules.** The second principle is to build the reasoning into the system alongside the rules. Most systems document what to do. The systems that outlast their designers document why — what the rule is protecting against, what the design decision was responding to, what would need to change about the world for the rule to change.
+
+The Jesuits encoded not just their practices but the reasoning behind them into their formation curriculum. The practices could be adapted to different cultural contexts because the practitioners understood what the practices were for. An organisation that only transmits the rules transmits brittle rules — they break when the environment shifts in a way the original designers didn't anticipate.
+
+**Design self-correction in.** The third principle is that the system should be able to detect when it is drifting from its intended function and surface that drift before it becomes failure. This is what audit mechanisms, health scores, and feedback loops are for — not oversight, but self-correction. A system with a working self-correction mechanism can evolve with its environment without losing its design intent.
+
+## The Kalahandi problem
+
+Growing up in Kalahandi, I watched government systems — schools, hospitals, development programmes — that worked for a time and then degraded when the capable administrator who had been running them moved on. The system had been functioning. The reasoning behind it had never been codified. The next person inherited the process without the intent, and made locally rational decisions that slowly degraded the thing.
+
+This is a design failure, not a people failure. The people who came after were not less capable. They were working with a system that didn't carry its own reasoning.
+
+Building from that context has shaped what I care about in institutional design. The question is not whether the system works now. The question is whether it carries what it needs to keep working after the people who built it are gone.
+
+The Roman aqueduct at Segovia still works because the engineering logic — gravity, gradient, arch — is in the structure itself. You don't need to have known its builders to understand why it works. The system is its own explanation.
+
+That is the design standard worth building toward.
+
+---
+
+**Sources**
+
+[Michael Feathers — Working Effectively with Legacy Code (O'Reilly, 2004)](https://www.oreilly.com/library/view/working-effectively-with/0131177052/)
+
+[James Madison — Federalist No. 51: The Structure of Government Must Furnish Proper Checks and Balances](https://guides.loc.gov/federalist-papers/text-51-60)
+
+[Stewart Brand — How Buildings Learn: What Happens After They're Built](https://www.penguinrandomhouse.com/books/319462/how-buildings-learn-by-stewart-brand/)
