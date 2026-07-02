@@ -12,6 +12,7 @@ const footerLinks = {
     { href: "/opportunity", label: "Opportunity" },
     { href: "/india", label: "India" },
     { href: "/odisha", label: "Odisha" },
+    { href: "/odia", label: "ଓଡ଼ିଆ" },
     { href: "/future-of-work", label: "Future of Work" },
     { href: "/philosophy", label: "Philosophy" },
   ],

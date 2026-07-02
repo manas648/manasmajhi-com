@@ -14,6 +14,7 @@ const VALID_CATEGORIES: EssayCategory[] = [
   "india",
   "odisha",
   "kalahandi",
+  "odia",
   "travel",
   "entrepreneurship",
   "philosophy",

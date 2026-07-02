@@ -44,6 +44,7 @@ export type EssayCategory =
   | "india"
   | "odisha"
   | "kalahandi"
+  | "odia"
   | "travel"
   | "entrepreneurship"
   | "philosophy"
@@ -56,6 +57,7 @@ export const CATEGORY_LABELS: Record<EssayCategory, string> = {
   india: "India",
   odisha: "Odisha",
   kalahandi: "Kalahandi",
+  odia: "ଓଡ଼ିଆ",
   travel: "Travel",
   entrepreneurship: "Entrepreneurship",
   philosophy: "Philosophy",
@@ -69,6 +71,7 @@ export const CATEGORY_IMAGES: Record<EssayCategory, string> = {
   india: "/categories/india.jpg",
   odisha: "https://images.unsplash.com/photo-1779861656340-5b28470e18e5?w=1200&q=80&auto=format&fit=crop",
   kalahandi: "/categories/kalahandi.jpg",
+  odia: "https://images.unsplash.com/photo-1598323646582-18d2101c9aad?w=1200&q=80&auto=format&fit=crop",
   travel: "/categories/travel.jpg",
   entrepreneurship: "/categories/entrepreneurship.jpg",
   philosophy: "/categories/philosophy.jpg",
@@ -87,6 +90,8 @@ export const CATEGORY_DESCRIPTIONS: Record<EssayCategory, string> = {
     "Development, tourism, culture, and the untapped potential of a remarkable state.",
   kalahandi:
     "Where I come from, what it taught me, and why it still shapes how I think about everything.",
+  odia:
+    "ଓଡ଼ିଆ ଭାଷାରେ ଲେଖା। ଓଡ଼ିଶା, ଆମ ମାଟି, ଆମ ଦାୟିତ୍ୱ।",
   travel:
     "What crossing borders teaches us about perspective, people, and identity.",
   entrepreneurship:

@@ -13,6 +13,7 @@ const writingItems = [
   { href: "/frameworks", label: "Frameworks" },
   { href: "/hiring", label: "Hiring" },
   { href: "/travel", label: "Places" },
+  { href: "/odia", label: "ଓଡ଼ିଆ" },
   { href: "/now", label: "Now" },
 ];
 
@@ -63,7 +64,8 @@ export function Nav() {
     pathname.startsWith("/opportunity") ||
     pathname.startsWith("/future-of-work") ||
     pathname.startsWith("/entrepreneurship") ||
-    pathname.startsWith("/philosophy");
+    pathname.startsWith("/philosophy") ||
+    pathname.startsWith("/odia");
 
   return (
     <header
