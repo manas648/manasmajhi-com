@@ -24,6 +24,7 @@ const VALID_CATEGORIES = new Set([
   "india",
   "odisha",
   "kalahandi",
+  "odia",
   "travel",
   "entrepreneurship",
   "philosophy",
