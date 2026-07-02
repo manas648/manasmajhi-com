@@ -19,6 +19,7 @@ const VALID_CATEGORIES: EssayCategory[] = [
   "entrepreneurship",
   "philosophy",
   "hiring",
+  "frameworks",
 ];
 
 export function generateStaticParams() {
@@ -46,5 +47,56 @@ export default async function CategoryHubPage({ params }: Props) {
     notFound();
   }
 
-  return <CategoryPage category={category as EssayCategory} />;
+  const cat = category as EssayCategory;
+
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${SITE_URL}/${category}`,
+    name: CATEGORY_LABELS[cat],
+    description: CATEGORY_DESCRIPTIONS[cat],
+    url: `${SITE_URL}/${category}`,
+    author: {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#person`,
+      name: "Manas Majhi",
+    },
+    isPartOf: {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Writing",
+        item: `${SITE_URL}/writing`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: CATEGORY_LABELS[cat],
+        item: `${SITE_URL}/${category}`,
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <CategoryPage category={cat} />
+    </>
+  );
 }

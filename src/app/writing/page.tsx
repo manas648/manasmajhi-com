@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Writing",
+  title: "Writing — Manas Majhi",
   description:
     "Long-form thinking on opportunity, human potential, India, hiring, and the systems that shape lives.",
 };

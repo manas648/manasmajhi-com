@@ -9,6 +9,7 @@ const categories: EssayCategory[] = [
   "india",
   "odisha",
   "kalahandi",
+  "odia",
   "travel",
   "entrepreneurship",
   "philosophy",

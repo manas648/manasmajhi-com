@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Work With Me — Manas Majhi",
   description:
     "Two ways to work with Manas Majhi: Majhi OS for hiring teams that need operational infrastructure, and Majhi Group for CEOs running a critical VP or C-suite search.",
+  alternates: {
+    canonical: "https://www.manasmajhi.com/work-with-me",
+  },
 };
 
 export default function WorkWithMePage() {
