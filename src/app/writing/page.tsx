@@ -21,6 +21,8 @@ const categories: EssayCategory[] = [
   "entrepreneurship",
   "philosophy",
   "travel",
+  "frameworks",
+  "odia",
 ];
 
 const categoryDescriptions: Partial<Record<EssayCategory, string>> = {
@@ -40,6 +42,10 @@ const categoryDescriptions: Partial<Record<EssayCategory, string>> = {
     "Questions about judgment, identity, learning, responsibility, and how to live thoughtfully.",
   travel:
     "Lessons hiding in airports, roads, conversations, and places that rarely make the news.",
+  frameworks:
+    "Named operational models for thinking about opportunity, hiring systems, and human potential.",
+  odia:
+    "ଓଡ଼ିଆ ଭାଷାରେ ଲେଖା — ଓଡ଼ିଶା, ଆମ ମାଟି, ଆମ ଦାୟିତ୍ୱ।",
 };
 
 export default function EssaysPage() {
