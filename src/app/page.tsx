@@ -9,7 +9,7 @@ import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Manas Majhi",
+  title: { absolute: "Manas Majhi" },
   description:
     "Articles on opportunity, human potential, India, technology, and the systems that shape lives. By Manas Majhi.",
 };

@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "What I Think About — Manas Majhi",
+  title: "What I Think About",
   description:
     "The intellectual map behind the writing — Manas Majhi's positions on opportunity, talent, AI, Odisha, Kalahandi, entrepreneurship, and the future.",
   alternates: {

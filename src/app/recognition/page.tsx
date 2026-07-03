@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Awards & Recognition — Manas Majhi | Indian Achievers Award, World Staffing Leader, HackerNoon",
+  title: "Awards & Recognition | Indian Achievers Award, World Staffing Leader, HackerNoon",
   description:
     "Manas Majhi (Manas Ranjan Majhi) — Indian Achievers Award 2022 Entrepreneur of the Year, World Staffing Leader Top 100 (2023 & 2024), HackerNoon Startup of the Year North America 2023.",
   keywords: [

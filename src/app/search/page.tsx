@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 import SearchInput from "./SearchInput";
 
 export const metadata: Metadata = {
-  title: "Search — Manas Majhi",
+  title: "Search",
   description: "Search across all writing by Manas Majhi.",
 };
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Work With Me — Manas Majhi",
+  title: "Work With Me",
   description:
     "Two ways to work with Manas Majhi: Majhi OS for hiring teams that need operational infrastructure, and Majhi Group for CEOs running a critical VP or C-suite search.",
   alternates: {

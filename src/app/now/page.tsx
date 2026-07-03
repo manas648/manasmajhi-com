@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Now — Manas Majhi",
+  title: "Now",
   description: "What Manas Majhi is working on, reading, and thinking about right now.",
   alternates: {
     canonical: "https://manasmajhi.com/now",

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     canonical: `${SITE_URL}/elsewhere`,
   },
   openGraph: {
-    title: "Elsewhere — Manas Majhi",
+    title: "Elsewhere",
     description: "Dispatches from the road. Sea and sky — and wherever the work takes me next.",
     url: `${SITE_URL}/elsewhere`,
     images: [

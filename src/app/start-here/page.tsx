@@ -7,7 +7,7 @@ import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Start Here — Manas Majhi",
+  title: "Start Here",
   description:
     "The best place to begin reading Manas Majhi — a curated guide to the most important essays.",
 };

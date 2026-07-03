@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Always Learning — Manas Majhi",
+  title: "Always Learning",
   description:
     "Books, experiences, programs, and ideas that shaped how Manas Majhi sees the world. A living record of learning — from Kalahandi to global.",
   alternates: {

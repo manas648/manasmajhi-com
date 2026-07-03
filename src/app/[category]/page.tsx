@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const cat = category as EssayCategory;
   return {
-    title: `${CATEGORY_LABELS[cat]} — Manas Majhi`,
+    title: CATEGORY_LABELS[cat],
     description: CATEGORY_DESCRIPTIONS[cat],
     alternates: {
       canonical: `${SITE_URL}/${category}`,
