@@ -9,6 +9,7 @@ import SearchInput from "./SearchInput";
 export const metadata: Metadata = {
   title: "Search",
   description: "Search across all writing by Manas Majhi.",
+  robots: { index: false, follow: false },
 };
 
 interface Props {
