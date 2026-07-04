@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: essay.title,
-    description: essay.excerpt,
+    description: metaDesc(essay.excerpt),
     openGraph: {
       title: `${essay.title} — ${SITE_NAME}`,
       description: essay.excerpt,
@@ -73,6 +73,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: `${SITE_URL}/${essay.category}/${slug}`,
     },
   };
+}
+
+/** Truncates excerpt to ≤155 chars at a word boundary for use as HTML meta description. */
+function metaDesc(text: string): string {
+  if (text.length <= 155) return text;
+  const cut = text.lastIndexOf(" ", 155);
+  return text.slice(0, cut > 0 ? cut : 155) + "…";
 }
 
 function renderContent(content: string): string {

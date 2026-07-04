@@ -149,7 +149,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const essayPages: MetadataRoute.Sitemap = essays.map((essay) => ({
     url: `${SITE_URL}/${essay.category}/${essay.slug}`,
-    lastModified: new Date(essay.date),
+    lastModified: new Date(essay.dateModified || essay.date),
     changeFrequency: "monthly" as const,
     priority: essay.featured ? 0.9 : 0.7,
     ...(essay.coverImage ? { images: [essay.coverImage] } : {}),
