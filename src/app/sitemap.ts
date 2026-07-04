@@ -152,7 +152,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(essay.dateModified || essay.date),
     changeFrequency: "monthly" as const,
     priority: essay.featured ? 0.9 : 0.7,
-    ...(essay.coverImage ? { images: [essay.coverImage] } : {}),
+    // Note: Unsplash coverImage URLs contain unescaped & — omit from sitemap
+    // to prevent XML parse errors. Images covered by /image-sitemap.xml.
   }));
 
   return [...staticPages, ...essayPages];
