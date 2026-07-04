@@ -1,10 +1,25 @@
 import type { Metadata } from "next";
 import { Framework } from "@/types";
 
+import { SITE_URL } from "@/lib/utils";
+
 export const metadata: Metadata = {
   title: "Frameworks",
   description:
     "Mental models for thinking about opportunity, hiring, and human potential. Built from years of practice.",
+  alternates: { canonical: `${SITE_URL}/frameworks` },
+  openGraph: {
+    title: "Frameworks — Manas Majhi",
+    description: "Mental models for thinking about opportunity, hiring, and human potential. Built from years of practice.",
+    url: `${SITE_URL}/frameworks`,
+    images: [{ url: `${SITE_URL}/api/og?title=Frameworks`, width: 1200, height: 630, alt: "Frameworks — Manas Majhi" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Frameworks — Manas Majhi",
+    description: "Mental models for thinking about opportunity, hiring, and human potential. Built from years of practice.",
+    images: [`${SITE_URL}/api/og?title=Frameworks`],
+  },
 };
 
 const frameworks: Framework[] = [

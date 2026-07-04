@@ -5,8 +5,18 @@ export const metadata: Metadata = {
   title: "Always Learning",
   description:
     "Books, experiences, programs, and ideas that shaped how Manas Majhi sees the world. A living record of learning — from Kalahandi to global.",
-  alternates: {
-    canonical: `${SITE_URL}/always-learning`,
+  alternates: { canonical: `${SITE_URL}/always-learning` },
+  openGraph: {
+    title: 'Always Learning — Manas Majhi',
+    description: 'Books, experiences, programs, and ideas that shaped how Manas Majhi sees the world. A living record of learning — from Kalahandi to global.',
+    url: `${SITE_URL}/always-learning`,
+    images: [{ url: `${SITE_URL}/api/og?title=Always+Learning`, width: 1200, height: 630, alt: 'Always Learning — Manas Majhi' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Always Learning — Manas Majhi',
+    description: 'Books, experiences, programs, and ideas that shaped how Manas Majhi sees the world. A living record of learning — from Kalahandi to global.',
+    images: [`${SITE_URL}/api/og?title=Always+Learning`],
   },
 };
 

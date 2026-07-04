@@ -1,11 +1,25 @@
 import Link from "next/link";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Work",
   description:
     "Majhi Group — retained executive search. Majhi OS — autonomous hiring operations infrastructure.",
+  alternates: { canonical: `${SITE_URL}/work` },
+  openGraph: {
+    title: "Work — Manas Majhi",
+    description: "Majhi Group — retained executive search. Majhi OS — autonomous hiring operations infrastructure.",
+    url: `${SITE_URL}/work`,
+    images: [{ url: `${SITE_URL}/api/og?title=Work`, width: 1200, height: 630, alt: "Work — Manas Majhi" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Work — Manas Majhi",
+    description: "Majhi Group — retained executive search. Majhi OS — autonomous hiring operations infrastructure.",
+    images: [`${SITE_URL}/api/og?title=Work`],
+  },
 };
 
 export default function WorkPage() {
