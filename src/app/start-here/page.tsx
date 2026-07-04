@@ -3,13 +3,30 @@ import { ArrowRight, BookOpen } from "lucide-react";
 import { getAllEssayMeta } from "@/lib/essays";
 import { EssayCard } from "@/components/essay/EssayCard";
 import { CATEGORY_LABELS } from "@/types";
-import { formatDate } from "@/lib/utils";
+import { formatDate, SITE_URL } from "@/lib/utils";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Start Here",
   description:
     "The best place to begin reading Manas Majhi — a curated guide to the most important essays.",
+  alternates: {
+    canonical: `${SITE_URL}/start-here`,
+  },
+  openGraph: {
+    title: "Start Here — Manas Majhi",
+    description:
+      "The best place to begin reading Manas Majhi — a curated guide to the most important essays.",
+    url: `${SITE_URL}/start-here`,
+    images: [{ url: `${SITE_URL}/api/og?title=Start+Here`, width: 1200, height: 630, alt: "Start Here — Manas Majhi" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Start Here — Manas Majhi",
+    description:
+      "The best place to begin reading Manas Majhi — a curated guide to the most important essays.",
+    images: [`${SITE_URL}/api/og?title=Start+Here`],
+  },
 };
 
 const FLAGSHIP_SLUGS = [

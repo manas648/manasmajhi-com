@@ -1,12 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Work With Me",
   description:
     "Two ways to work with Manas Majhi: Majhi OS for hiring teams that need operational infrastructure, and Majhi Group for CEOs running a critical VP or C-suite search.",
   alternates: {
-    canonical: "https://www.manasmajhi.com/work-with-me",
+    canonical: `${SITE_URL}/work-with-me`,
+  },
+  openGraph: {
+    title: "Work With Manas Majhi",
+    description:
+      "Two ways to work with Manas Majhi: Majhi OS for hiring teams that need operational infrastructure, and Majhi Group for CEOs running a critical VP or C-suite search.",
+    url: `${SITE_URL}/work-with-me`,
+    images: [{ url: `${SITE_URL}/api/og?title=Work+With+Me`, width: 1200, height: 630, alt: "Work With Manas Majhi" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Work With Manas Majhi",
+    description:
+      "Two ways to work with Manas Majhi: Majhi OS for hiring teams that need operational infrastructure, and Majhi Group for CEOs running a critical VP or C-suite search.",
+    images: [`${SITE_URL}/api/og?title=Work+With+Me`],
   },
 };
 

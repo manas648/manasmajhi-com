@@ -31,6 +31,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${SITE_URL}/about`,
   },
+  openGraph: {
+    title: "About Manas Majhi",
+    description:
+      "Manas Majhi (Manas Ranjan Majhi) — founder of Majhi Group and Majhi OS. From Kalahandi, Odisha to executive search and autonomous hiring infrastructure.",
+    url: `${SITE_URL}/about`,
+    images: [{ url: `${SITE_URL}/api/og?title=About+Manas+Majhi`, width: 1200, height: 630, alt: "About Manas Majhi" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Manas Majhi",
+    description:
+      "Manas Majhi (Manas Ranjan Majhi) — founder of Majhi Group and Majhi OS. From Kalahandi, Odisha to executive search and autonomous hiring infrastructure.",
+    images: [`${SITE_URL}/api/og?title=About+Manas+Majhi`],
+  },
 };
 
 const jsonLd = {

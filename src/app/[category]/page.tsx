@@ -31,11 +31,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!VALID_CATEGORIES.includes(category as EssayCategory)) return {};
 
   const cat = category as EssayCategory;
+  const label = CATEGORY_LABELS[cat];
+  const desc = CATEGORY_DESCRIPTIONS[cat];
+  const ogImage = `${SITE_URL}/api/og?title=${encodeURIComponent(label)}`;
   return {
-    title: CATEGORY_LABELS[cat],
-    description: CATEGORY_DESCRIPTIONS[cat],
-    alternates: {
-      canonical: `${SITE_URL}/${category}`,
+    title: label,
+    description: desc,
+    alternates: { canonical: `${SITE_URL}/${category}` },
+    openGraph: {
+      title: `${label} — Manas Majhi`,
+      description: desc,
+      url: `${SITE_URL}/${category}`,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: `${label} — Manas Majhi` }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${label} — Manas Majhi`,
+      description: desc,
+      images: [ogImage],
     },
   };
 }

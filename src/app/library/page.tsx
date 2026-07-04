@@ -6,11 +6,25 @@ import {
   EssayCategory,
 } from "@/types";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Library",
   description:
     "Every article by Manas Majhi, organised by section. Opportunity, India, Odisha, hiring, philosophy, and more.",
+  alternates: { canonical: `${SITE_URL}/library` },
+  openGraph: {
+    title: "Library — Manas Majhi",
+    description: "Every article by Manas Majhi, organised by section. Opportunity, India, Odisha, hiring, philosophy, and more.",
+    url: `${SITE_URL}/library`,
+    images: [{ url: `${SITE_URL}/api/og?title=Library`, width: 1200, height: 630, alt: "Library — Manas Majhi" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Library — Manas Majhi",
+    description: "Every article by Manas Majhi, organised by section. Opportunity, India, Odisha, hiring, philosophy, and more.",
+    images: [`${SITE_URL}/api/og?title=Library`],
+  },
 };
 
 const categories: EssayCategory[] = [

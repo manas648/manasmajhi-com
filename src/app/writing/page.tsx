@@ -4,11 +4,25 @@ import { EssayCard } from "@/components/essay/EssayCard";
 import { CATEGORY_LABELS, CATEGORY_DESCRIPTIONS, EssayCategory } from "@/types";
 import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
+import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Writing",
   description:
     "Long-form thinking on opportunity, human potential, India, hiring, and the systems that shape lives.",
+  alternates: { canonical: `${SITE_URL}/writing` },
+  openGraph: {
+    title: "Writing — Manas Majhi",
+    description: "Long-form thinking on opportunity, human potential, India, hiring, and the systems that shape lives.",
+    url: `${SITE_URL}/writing`,
+    images: [{ url: `${SITE_URL}/api/og?title=Writing`, width: 1200, height: 630, alt: "Writing — Manas Majhi" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Writing — Manas Majhi",
+    description: "Long-form thinking on opportunity, human potential, India, hiring, and the systems that shape lives.",
+    images: [`${SITE_URL}/api/og?title=Writing`],
+  },
 };
 
 const categories: EssayCategory[] = [

@@ -1,10 +1,28 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "The Operational Visibility Gap — Majhi OS Research Report",
   description:
     "Why recruiting breaks at scale. A research report documenting the structural failure modes of fragmented hiring execution — and what genuine operational infrastructure requires.",
+  alternates: {
+    canonical: `${SITE_URL}/whitepaper`,
+  },
+  openGraph: {
+    title: "The Operational Visibility Gap",
+    description:
+      "Why recruiting breaks at scale. A research report documenting the structural failure modes of fragmented hiring execution — and what genuine operational infrastructure requires.",
+    url: `${SITE_URL}/whitepaper`,
+    images: [{ url: `${SITE_URL}/api/og?title=The+Operational+Visibility+Gap`, width: 1200, height: 630, alt: "The Operational Visibility Gap — Majhi OS" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Operational Visibility Gap",
+    description:
+      "Why recruiting breaks at scale. A research report documenting the structural failure modes of fragmented hiring execution — and what genuine operational infrastructure requires.",
+    images: [`${SITE_URL}/api/og?title=The+Operational+Visibility+Gap`],
+  },
 };
 
 const stats = [

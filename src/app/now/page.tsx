@@ -1,12 +1,23 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Now",
   description: "What Manas Majhi is working on, reading, and thinking about right now.",
-  alternates: {
-    canonical: "https://manasmajhi.com/now",
+  alternates: { canonical: `${SITE_URL}/now` },
+  openGraph: {
+    title: "Now — Manas Majhi",
+    description: "What Manas Majhi is working on, reading, and thinking about right now.",
+    url: `${SITE_URL}/now`,
+    images: [{ url: `${SITE_URL}/api/og?title=Now`, width: 1200, height: 630, alt: "Now — Manas Majhi" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Now — Manas Majhi",
+    description: "What Manas Majhi is working on, reading, and thinking about right now.",
+    images: [`${SITE_URL}/api/og?title=Now`],
   },
 };
 

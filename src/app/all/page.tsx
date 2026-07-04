@@ -3,11 +3,25 @@ import Image from "next/image";
 import { getAllEssayMeta } from "@/lib/essays";
 import { CATEGORY_LABELS, CATEGORY_DESCRIPTIONS, EssayCategory } from "@/types";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Index",
+  title: "All Essays",
   description:
     "Every article by Manas Majhi, organised by section — plus long-form documents on hiring and opportunity.",
+  alternates: { canonical: `${SITE_URL}/all` },
+  openGraph: {
+    title: "All Essays — Manas Majhi",
+    description: "Every article by Manas Majhi, organised by section — plus long-form documents on hiring and opportunity.",
+    url: `${SITE_URL}/all`,
+    images: [{ url: `${SITE_URL}/api/og?title=All+Essays`, width: 1200, height: 630, alt: "All Essays — Manas Majhi" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "All Essays — Manas Majhi",
+    description: "Every article by Manas Majhi, organised by section — plus long-form documents on hiring and opportunity.",
+    images: [`${SITE_URL}/api/og?title=All+Essays`],
+  },
 };
 
 const categories: EssayCategory[] = [

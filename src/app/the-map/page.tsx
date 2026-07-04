@@ -1,13 +1,24 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "What I Think About",
   description:
     "The intellectual map behind the writing — Manas Majhi's positions on opportunity, talent, AI, Odisha, Kalahandi, entrepreneurship, and the future.",
-  alternates: {
-    canonical: "https://manasmajhi.com/the-map",
+  alternates: { canonical: `${SITE_URL}/the-map` },
+  openGraph: {
+    title: "What I Think About — Manas Majhi",
+    description: "The intellectual map behind the writing — Manas Majhi's positions on opportunity, talent, AI, Odisha, Kalahandi, entrepreneurship, and the future.",
+    url: `${SITE_URL}/the-map`,
+    images: [{ url: `${SITE_URL}/api/og?title=What+I+Think+About`, width: 1200, height: 630, alt: "What I Think About — Manas Majhi" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "What I Think About — Manas Majhi",
+    description: "The intellectual map behind the writing — Manas Majhi's positions on opportunity, talent, AI, Odisha, Kalahandi, entrepreneurship, and the future.",
+    images: [`${SITE_URL}/api/og?title=What+I+Think+About`],
   },
 };
 

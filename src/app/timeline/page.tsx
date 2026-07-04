@@ -1,9 +1,23 @@
 import type { Metadata } from "next";
 import { TimelineItem } from "@/types";
+import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Timeline",
   description: "The story of Manas Majhi — from Kalahandi to global clients, Majhi Group, Majhi OS, and writing.",
+  alternates: { canonical: `${SITE_URL}/timeline` },
+  openGraph: {
+    title: "Timeline — Manas Majhi",
+    description: "The story of Manas Majhi — from Kalahandi to global clients, Majhi Group, Majhi OS, and writing.",
+    url: `${SITE_URL}/timeline`,
+    images: [{ url: `${SITE_URL}/api/og?title=Timeline`, width: 1200, height: 630, alt: "Timeline — Manas Majhi" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Timeline — Manas Majhi",
+    description: "The story of Manas Majhi — from Kalahandi to global clients, Majhi Group, Majhi OS, and writing.",
+    images: [`${SITE_URL}/api/og?title=Timeline`],
+  },
 };
 
 const timeline: TimelineItem[] = [

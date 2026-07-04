@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Awards & Recognition | Indian Achievers Award, World Staffing Leader, HackerNoon",
+  title: "Awards & Recognition",
   description:
     "Manas Majhi (Manas Ranjan Majhi) — Indian Achievers Award 2022 Entrepreneur of the Year, World Staffing Leader Top 100 (2023 & 2024), HackerNoon Startup of the Year North America 2023.",
   keywords: [
@@ -18,8 +18,20 @@ export const metadata: Metadata = {
     "Manas Majhi recognition",
     "Manas Majhi Entrepreneur of the Year",
   ],
-  alternates: {
-    canonical: `${SITE_URL}/recognition`,
+  alternates: { canonical: `${SITE_URL}/recognition` },
+  openGraph: {
+    title: "Awards & Recognition — Manas Majhi",
+    description:
+      "Manas Majhi — Indian Achievers Award 2022 Entrepreneur of the Year, World Staffing Leader Top 100 (2023 & 2024), HackerNoon Startup of the Year North America 2023.",
+    url: `${SITE_URL}/recognition`,
+    images: [{ url: `${SITE_URL}/api/og?title=Awards+%26+Recognition`, width: 1200, height: 630, alt: "Awards & Recognition — Manas Majhi" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Awards & Recognition — Manas Majhi",
+    description:
+      "Manas Majhi — Indian Achievers Award 2022 Entrepreneur of the Year, World Staffing Leader Top 100 (2023 & 2024), HackerNoon Startup of the Year North America 2023.",
+    images: [`${SITE_URL}/api/og?title=Awards+%26+Recognition`],
   },
 };
 
