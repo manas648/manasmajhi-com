@@ -44,6 +44,7 @@ export function getEssayBySlug(slug: string): Essay | null {
       title: data.title || slug,
       excerpt: data.excerpt || "",
       date: data.date ? new Date(data.date).toISOString().split("T")[0] : "",
+      dateModified: data.dateModified ? new Date(data.dateModified).toISOString().split("T")[0] : undefined,
       category: (data.category as EssayCategory) || "philosophy",
       tags: data.tags || [],
       readingTime: calculateReadingTime(content),

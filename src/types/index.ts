@@ -8,6 +8,7 @@ export interface Essay {
   title: string;
   excerpt: string;
   date: string;
+  dateModified?: string;
   category: EssayCategory;
   tags: string[];
   readingTime: string;
@@ -26,6 +27,7 @@ export interface EssayMeta {
   title: string;
   excerpt: string;
   date: string;
+  dateModified?: string;
   category: EssayCategory;
   tags: string[];
   readingTime: string;

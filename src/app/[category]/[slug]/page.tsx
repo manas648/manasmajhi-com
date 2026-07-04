@@ -136,7 +136,7 @@ export default async function EssayPage({ params }: Props) {
       ],
     },
     datePublished: essay.date.includes("T") ? essay.date : `${essay.date}T00:00:00Z`,
-    dateModified: essay.date.includes("T") ? essay.date : `${essay.date}T00:00:00Z`,
+    dateModified: (() => { const d = essay.dateModified || essay.date; return d.includes("T") ? d : `${d}T00:00:00Z`; })(),
     publisher: {
       "@type": "Person",
       "@id": `${SITE_URL}/#person`,

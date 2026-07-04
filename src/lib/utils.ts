@@ -37,7 +37,7 @@ export function truncate(text: string, maxLength: number): string {
   return text.slice(0, maxLength).replace(/\s+\S*$/, "") + "…";
 }
 
-export const SITE_URL = "https://manasmajhi.com";
+export const SITE_URL = "https://www.manasmajhi.com";
 export const SITE_NAME = "Manas Majhi";
 export const SITE_TAGLINE = "Opportunity Shapes Outcomes";
 export const SITE_DESCRIPTION =
