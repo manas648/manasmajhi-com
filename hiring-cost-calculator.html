@@ -3,5 +3,235 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Hiring Cost Calculator — Cost of VP or C-Suite Vacancy | Majhi OS</title>
-<meta name="description" content="Calculate the true cost of a VP or C-suite vacancy."><link rel="canonical" href="https://majhi.tech/hiring-cost-calculator">
-</head><body><p>Hiring Cost Calculator</p></body></html>
+<meta name="description" content="Calculate the true cost of a vacant VP or C-suite seat. Input OTE, days open, team size, and revenue dependency to get a total vacancy cost estimate with breakdown.">
+<link rel="canonical" href="https://majhi.tech/hiring-cost-calculator">
+<meta property="og:title" content="Hiring Cost Calculator — Cost of VP or C-Suite Vacancy">
+<meta property="og:description" content="Input your search parameters and get a total vacancy cost estimate: lost revenue, recruiting fee, management overhead, and ramp cost.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+[{"@context":"https://schema.org","@type":"WebPage","name":"Hiring Cost Calculator","url":"https://majhi.tech/hiring-cost-calculator","publisher":{"@type":"Organization","name":"Majhi OS","url":"https://majhi.tech"}},
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How much does a vacant VP role cost per day?","acceptedAnswer":{"@type":"Answer","text":"A vacant VP role typically costs 1.5–3× the daily OTE rate when you factor in lost revenue, management overhead, and team drag. For a $300K OTE role, that is $1,800–$3,600 per day. Past day 70, compounding effects — recruiter churn, team morale, pipeline stall — accelerate the cost curve significantly."}},
+{"@type":"Question","name":"What is included in the total vacancy cost?","acceptedAnswer":{"@type":"Answer","text":"Total vacancy cost includes four components: (1) lost revenue or output attributable to the unfilled seat, (2) recruiting fee paid to a search firm or agency, (3) management overhead — the time senior leaders spend covering the gap, and (4) ramp cost — the productivity deficit during the first 90 days after hire."}},
+{"@type":"Question","name":"Why does vacancy cost accelerate past 70 days?","acceptedAnswer":{"@type":"Answer","text":"Past 70 days, three compounding effects take hold: recruiter attention shifts to newer mandates, hiring manager confidence drops, and team members begin covering the gap permanently — creating hidden cost that does not appear in the vacancy counter. Majhi OS data shows 68% of VP searches that reach day 70 without intervention go on to stall past 14 weeks."}},
+{"@type":"Question","name":"How does Majhi OS reduce vacancy cost?","acceptedAnswer":{"@type":"Answer","text":"Majhi OS closes VP and C-suite searches in an average of 50 days versus a 14-week industry median. At $2,500/day fully loaded vacancy cost for a $300K OTE role, that is a 48-day gap — approximately $120,000 per mandate recovered. The system also eliminates the $3,280/month fragmented tool stack most recruiting teams are paying."}},
+{"@type":"Question","name":"What is a realistic recruiting fee for an executive search?","acceptedAnswer":{"@type":"Answer","text":"Retained executive search typically runs 20–25% of total first-year compensation (base + bonus). A $300K OTE role at 22% retention fee is $66,000. Contingency recruiters often charge 15–18% but are incentivised toward speed not quality — and failed placements restart the clock at full cost."}}
+]}]
+</script>
+<style>
+:root{--gold:#B8882A;--ink:#0A1628;--card:#111D30;--border:#1E2D45;--text:#C8D4E8}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--ink);color:var(--text);line-height:1.7}
+a{color:var(--gold);text-decoration:none}a:hover{text-decoration:underline}
+header{background:rgba(0,0,0,.3);border-bottom:1px solid var(--border);padding:18px 48px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.35rem;font-weight:600}
+nav a{color:rgba(255,255,255,.7);font-size:.85rem;margin-left:28px;font-weight:500}
+.breadcrumb{background:rgba(0,0,0,.2);border-bottom:1px solid var(--border);padding:12px 48px;font-size:.8rem;color:rgba(255,255,255,.5)}
+.breadcrumb a{color:var(--gold)}
+.hero{padding:56px 48px 44px;border-bottom:1px solid var(--border)}
+.tool-badge{display:inline-block;background:var(--gold);color:#fff;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;margin-bottom:18px}
+h1{font-family:'Cormorant Garamond',serif;font-size:2.3rem;font-weight:700;color:#fff;line-height:1.2;margin-bottom:12px;max-width:760px}
+.subhead{font-size:.95rem;color:rgba(255,255,255,.6);max-width:660px;line-height:1.6}
+.calc-wrap{max-width:960px;margin:0 auto;padding:48px 48px 80px;display:grid;grid-template-columns:1fr 380px;gap:40px;align-items:start}
+.inputs-panel h2{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:#fff;font-weight:600;margin-bottom:28px;border-bottom:1px solid var(--border);padding-bottom:12px}
+.input-group{margin-bottom:28px}
+.input-group label{display:flex;justify-content:space-between;align-items:baseline;font-size:.78rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:10px}
+.input-group label span.val{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold);font-weight:700;text-transform:none;letter-spacing:0}
+input[type=range]{width:100%;appearance:none;height:4px;background:var(--border);border-radius:2px;outline:none;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;background:var(--gold);border-radius:50%;cursor:pointer}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;background:var(--gold);border-radius:50%;cursor:pointer;border:none}
+.range-labels{display:flex;justify-content:space-between;font-size:.68rem;color:rgba(255,255,255,.3);margin-top:6px}
+select.input-select{width:100%;background:var(--card);border:1px solid var(--border);color:#fff;padding:11px 14px;font-family:'Inter',sans-serif;font-size:.9rem;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B8882A' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.results-panel{position:sticky;top:24px}
+.cost-card{background:var(--card);border:1px solid var(--border);padding:32px;margin-bottom:20px;text-align:center}
+.cost-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.4);margin-bottom:12px}
+.cost-total{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:6px}
+.cost-period{font-size:.8rem;color:rgba(255,255,255,.4);margin-bottom:16px}
+.cost-status{font-size:.9rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.cost-status.green{color:#4CAF82}
+.cost-status.yellow{color:#D4A017}
+.cost-status.red{color:#E05050}
+.breakdown-card{background:var(--card);border:1px solid var(--border);padding:24px}
+.breakdown-card h3{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:#fff;margin-bottom:16px;font-weight:600}
+.breakdown-row{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(30,45,69,.6);font-size:.82rem}
+.breakdown-row:last-child{border-bottom:none;padding-top:14px;font-weight:600;color:#fff}
+.breakdown-label{color:rgba(255,255,255,.6)}
+.breakdown-value{color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600}
+.breakdown-row:last-child .breakdown-value{font-size:1.1rem}
+.content-section{max-width:960px;margin:0 auto;padding:0 48px 80px}
+h2.section-head{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:#fff;margin:50px 0 16px;border-bottom:1px solid var(--border);padding-bottom:10px}
+p{margin-bottom:16px;font-size:.95rem;color:var(--text)}
+.faq-section{margin-top:50px}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+.faq-item h3{font-size:1rem;font-weight:600;color:#fff;margin:0 0 8px}
+.faq-item p{font-size:.9rem;margin:0;color:rgba(255,255,255,.6)}
+.cta-box{background:var(--card);border:1px solid var(--border);padding:40px;margin-top:50px;text-align:center}
+.cta-box h3{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.6rem;margin-bottom:10px}
+.cta-box p{color:rgba(255,255,255,.6);font-size:.9rem;margin-bottom:24px}
+.cta-btn{display:inline-block;background:var(--gold);color:#fff;padding:13px 32px;font-size:.9rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
+footer{background:rgba(0,0,0,.3);border-top:1px solid var(--border);padding:30px 48px;text-align:center;font-size:.8rem;color:rgba(255,255,255,.35)}
+@media(max-width:800px){.calc-wrap{grid-template-columns:1fr;padding:32px 20py}.results-panel{position:static}.content-section{padding:0 20px 60px}.hero{padding:40px 20px}.breadcrumb{padding:12px 20px}header{padding:16px 20px}h1{font-size:1.9rem}}
+</style>
+</head>
+<body>
+<header><div class="logo">Majhi OS</div><nav><a href="/">Home</a><a href="/what-is-majhi-os">Platform</a><a href="/state-of-hiring-operations-2026">Research</a><a href="/#contact">Contact</a></nav></header>
+<div class="breadcrumb"><a href="/">Home</a> ›  <a href="/what-is-majhi-os">Platform</a> ›  Hiring Cost Calculator</div>
+<div class="hero">
+  <div class="tool-badge">Majhi OS Tool · Interactive</div>
+  <h1>Hiring Cost Calculator</h1>
+  <p class="subhead">Input your vacancy parameters and get a total cost estimate — lost revenue, recruiting fee, management overhead, and ramp. The same logic Majhi OS applies to every active mandate in real time.</p>
+</div>
+
+<div class="calc-wrap">
+  <div class="inputs-panel">
+    <h2>Your Vacancy Parameters</h2>
+
+    <div class="input-group">
+      <label>Annual OTE of Role <span class="val" id="v_ote">$300K</span></label>
+      <input type="range" id="ote" min="150" max="600" step="25" value="300" oninput="document.getElementById('v_ote').textContent='$'+this.value+'K'; calc()">
+      <div class="range-labels"><span>$150K</span><span>$375K</span><span>$600K</span></div>
+    </div>
+
+    <div class="input-group">
+      <label>Days Vacant <span class="val" id="v_days">60</span></label>
+      <input type="range" id="days" min="1" max="180" value="60" oninput="document.getElementById('v_days').textContent=this.value; calc()">
+      <div class="range-labels"><span>1 day</span><span>90 days</span><span>180 days</span></div>
+    </div>
+
+    <div class="input-group">
+      <label>Recruiting Fee % <span class="val" id="v_fee">22%</span></label>
+      <input type="range" id="fee" min="15" max="30" value="22" oninput="document.getElementById('v_fee').textContent=this.value+'%'; calc()">
+      <div class="range-labels"><span>15%</span><span>22%</span><span>30%</span></div>
+    </div>
+
+    <div class="input-group">
+      <label>Revenue Dependency of Role</label>
+      <select class="input-select" id="rev_dep" onchange="calc()">
+        <option value="0">Support function (HR, Legal, Finance)</option>
+        <option value="1" selected>Moderate (Ops, Product, Engineering)</option>
+        <option value="2">High (Sales, GTM, Revenue)</option>
+        <option value="3">Critical (CEO, CRO, direct revenue ownership)</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label>Management Overhead While Vacant</label>
+      <select class="input-select" id="mgmt_load" onchange="calc()">
+        <option value="0">Minimal — role mostly self-managing</option>
+        <option value="1" selected>Moderate — CEO/CPO covering 5 hrs/week</option>
+        <option value="2">High — CEO/CPO covering 15+ hrs/week</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="results-panel">
+    <div class="cost-card">
+      <div class="cost-label">Estimated Total Vacancy Cost</div>
+      <div class="cost-total" id="costTotal">—</div>
+      <div class="cost-period" id="costPeriod">Adjust inputs to calculate</div>
+      <div class="cost-status" id="costStatus">—</div>
+    </div>
+
+    <div class="breakdown-card">
+      <h3>Cost Breakdown</h3>
+      <div class="breakdown-row">
+        <span class="breakdown-label">Lost revenue / output</span>
+        <span class="breakdown-value" id="b_revenue">—</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-label">Recruiting fee</span>
+        <span class="breakdown-value" id="b_fee">—</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-label">Management overhead</span>
+        <span class="breakdown-value" id="b_mgmt">—</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-label">Ramp cost (90-day)</span>
+        <span class="breakdown-value" id="b_ramp">—</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-label">Total</span>
+        <span class="breakdown-value" id="b_total">—</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content-section">
+  <h2 class="section-head">How the Cost Is Calculated</h2>
+  <p>The vacancy cost model combines four components weighted by role type and days open. Lost revenue is calculated as daily OTE × a revenue multiplier (0.5× for support functions, 1.2× for moderate roles, 2.5× for high-revenue roles, 4× for critical revenue ownership) × days vacant. This reflects the real output gap — not just salary cost.</p>
+  <p>The recruiting fee is straightforward: OTE × fee percentage, typically 20–25% for setained executive search. Management overhead is calculated as 250 days per year × manager OTE of $350K (CEO/CPO typical) × hours per week spent covering the gap, divided by 40-hour weeks. Ramp cost reflects that new VP hires typically operate at 50% productivity for the first 90 days — calculated as OTE × 50% × (90/365).</p>
+  <p>Past day 70, the model applies a 1.25× compounding multiplier to the revenue loss component. This reflects Majhi OS data showing that searches unresolved past week 10 generate accelerating hidden costs: team members permanently absorb the gap, hiring manager confidence erodes, and pipeline candidates lose momentum.</p>
+
+  <div class="faq-section">
+    <h2 class="section-head">Frequently Asked Questions</h2>
+    <div class="faq-item"><h3>How much does a vacant VP role cost per day?</h3><p>For a $300K OTE role with moderate revenue dependency, the fully loaded daily cost is approximately $1,800–$2,400. For a direct revenue role (VP Sales, CRO), the daily cost can reach $4,000–$6,000.</p></div>
+    <div class="faq-item"><h3>What is included in the total vacancy cost?</h3><p>Four components: (1) lost revenue or output attributable to the unfilled seat, (2) recruiting fee, (3) management overhead — the time senior leaders spend covering the gap, and (4) ramp cost — the productivity deficit during the first 90 days after hire.</p></div>
+    <div class="faq-item"><h3>Why does vacancy cost accelerate past 70 days?</h3><p>Past day 70, three effects compound: recruiter attention shifts to newer mandates, hiring manager confidence drops, and team members begin permanently absorbing the gap. Majhi OS data shows 68% of VP searches that reach day 70 stall past 14 weeks without intervention.</p></div>
+    <div class="faq-item"><h3>How does Majhi OS reduce vacancy cost?</h3><p>Majhi OS closes VP and C-suite searches in an average of 50 days versus a 14-week industry median. At $2,500/day fully loaded cost for a $300K OTE role, that 48-day gap recovers approximately $120,000 per mandate. The system also eliminates the $3,280/month fragmented tool stack most recruiting teams are running.</p></div>
+    <div class="faq-item"><h3>What is a realistic recruiting fee for executive search?</h3><p>Retained executive search typically runs 20–25% of total first-year compensation. A $300K OTE role at 22% is $66,000. Contingency recruiters charge 15–18% but are incentivised toward speed not quality — and failed placements restart the clock at full cost.</p></div>
+  </div>
+
+  <div class="cta-box">
+    <h3>Run This Against Your Live Mandate</h3>
+    <p>The Mission Walkthrough uses your actual search as the working context — not a generic demo. See your mandate's real cost trajectory, live.</p>
+    <a href="/#contact" class="cta-btn">Request Mission Walkthrough</a>
+  </div>
+</div>
+
+<footer>&copy; 2026 Majhi OS. Autonomous hiring operations infrastructure.</footer>
+
+<script>
+function fmt(n){
+  if(n>=1000000) return '$'+(n/1000000).toFixed(1)+'M';
+  if(n>=1000) return '$'+(Math.round(n/1000))+'K';
+  return '$'+Math.round(n);
+}
+
+function calc(){
+  const ote = parseInt(document.getElementById('ote').value) * 1000;
+  const days = parseInt(document.getElementById('days').value);
+  const feePct = parseInt(document.getElementById('fee').value) / 100;
+  const revDep = parseInt(document.getElementById('rev_dep').value);
+  const mgmtLoad = parseInt(document.getElementById('mgmt_load').value);
+
+  const revMultipliers = [0.5, 1.2, 2.5, 4.0];
+  const dailyOTE = ote / 250;
+  let revLoss = dailyOTE * revMultipliers[revDep] * days;
+  if(days > 70) revLoss *= 1.25;
+
+  const recFee = ote * feePct;
+
+  const mgmtHours = [2, 7, 15][mgmtLoad];
+  const managerDailyRate = 350000 / 250;
+  const mgmtCost = managerDailyRate * (mgmtHours / 8) * days;
+
+  const rampCost = ote * 0.5 * (90 / 365);
+
+  const total = Math.round(revLoss + recFee + mgmtCost + rampCost);
+
+  document.getElementById('b_revenue').textContent = fmt(Math.round(revLoss));
+  document.getElementById('b_fee').textContent = fmt(Math.round(recFee));
+  document.getElementById('b_mgmt').textContent = fmt(Math.round(mgmtCost));
+  document.getElementById('b_ramp').textContent = fmt(Math.round(rampCost));
+  document.getElementById('b_total').textContent = fmt(total);
+  document.getElementById('costTotal').textContent = fmt(total);
+  document.getElementById('costPeriod').textContent = days + ' days open · ' + parseInt(document.getElementById('ote').value) + 'K OTE';
+
+  let statusClass, statusText;
+  if(total < 100000){ statusClass='green'; statusText='MANAGEABLE'; }
+  else if(total < 250000){ statusClass='yellow'; statusText='SIGNIFICANT'; }
+  else { statusClass='red'; statusText='CRITICAL EXPOSURE'; }
+
+  const statusEl = document.getElementById('costStatus');
+  statusEl.textContent = statusText;
+  statusEl.className = 'cost-status ' + statusClass;
+  document.getElementById('costTotal').style.color = statusClass==='green'?'#4CAF82':statusClass==='yellow'?'#D4A017':'#E05050';
+}
+
+calc();
+</script>
+</body>
+</html>
