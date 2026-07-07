@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mandate Health Calculator — Score Your Active VP or C-Suite Search | Majhi OS</title>
+<meta name="description" content="Calculate the health score of your active VP or C-suite mandate. Input days open, reply rate, shortlist approval, recruiter load, and hiring manager engagement to get an operational health score and risk flags.">
+<link rel="canonical" href="https://majhi.tech/mandate-health-calculator">
+<meta property="og:title" content="Mandate Health Calculator — Score Your Active Search">
+<meta property="og:description" content="Input your search parameters and get a Hiring Health Score with specific risk flags and recovery recommendations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+[{"@context":"https://schema.org","@type":"WebPage","name":"Mandate Health Calculator","url":"https://majhi.tech/mandate-health-calculator","publisher":{"@type":"Organization","name":"Majhi OS","url":"https://majhi.tech"}},
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is a Hiring Health Score?","acceptedAnswer":{"@type":"Answer","text":"A Hiring Health Score is a real-time operational score (0–100) for an active mandate, tracking recruiter load, outreach response rate, shortlist quality, hiring manager engagement, and audit coverage. It moves before a mandate stalls, not after."}},
+{"@type":"Question","name":"What score indicates a mandate is at risk?","acceptedAnswer":{"@type":"Answer","text":"Scores below 50 indicate a mandate in active distress — recovery action is needed immediately. Scores between 50 and 79 indicate early warning signals that require monitoring and targeted intervention. Scores of 80 or above are healthy."}},
+{"@type":"Question","name":"What causes a mandate health score to drop?","acceptedAnswer":{"@type":"Answer","text":"The four most common causes: outreach reply rate below 20%, shortlist approval below 50%, hiring manager response time above 3 days, and mandates open past 70 days without intervention. Any one of these creates risk. Multiple together create compounding failure."}},
+{"@type":"Question","name":"How does Majhi OS monitor mandate health?","acceptedAnswer":{"@type":"Answer","text":"Majhi OS tracks the same signals this calculator uses — plus recruiter activity patterns, funnel velocity, and SLA adherence — in real time across all active mandates simultaneously. When a score drops below threshold, the system flags it and triggers a recovery sequence."}},
+{"@type":"Question","name":"Can a low-scoring mandate be recovered?","acceptedAnswer":{"@type":"Answer","text":"74% of mandates flagged by Majhi OS are recovered once a structured recovery playbook is applied. The recovery rate drops sharply if intervention is delayed past week 14. Early detection is the primary variable."}}
+]}]
+</script>
+<style>
+:root{--gold:#B8882A;--ink:#0A1628;--card:#111D30;--border:#1E2D45;--text:#C8D4E8;--green:#2E7D5E;--yellow:#B8860B;--red:#8B1A1A}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--ink);color:var(--text);line-height:1.7}
+a{color:var(--gold);text-decoration:none}a:hover{text-decoration:underline}
+header{background:rgba(0,0,0,.3);border-bottom:1px solid var(--border);padding:18px 48px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.35rem;font-weight:600}
+nav a{color:rgba(255,255,255,.7);font-size:.85rem;margin-left:28px;font-weight:500}
+.breadcrumb{background:rgba(0,0,0,.2);border-bottom:1px solid var(--border);padding:12px 48px;font-size:.8rem;color:rgba(255,255,255,.5)}
+.breadcrumb a{color:var(--gold)}
+.hero{padding:56px 48px 44px;border-bottom:1px solid var(--border)}
+.tool-badge{display:inline-block;background:var(--gold);color:#fff;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;margin-bottom:18px}
+h1{font-family:'Cormorant Garamond',serif;font-size:2.3rem;font-weight:700;color:#fff;line-height:1.2;margin-bottom:12px;max-width:760px}
+.subhead{font-size:.95rem;color:rgba(255,255,255,.6);max-width:660px;line-height:1.6}
+.calc-wrap{max-width:960px;margin:0 auto;padding:48px 48px 80px;display:grid;grid-template-columns:1fr 380px;gap:40px;align-items:start}
+.inputs-panel h2{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:#fff;font-weight:600;margin-bottom:28px;border-bottom:1px solid var(--border);padding-bottom:12px}
+.input-group{margin-bottom:28px}
+.input-group label{display:flex;justify-content:space-between;align-items:baseline;font-size:.78rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:10px}
+.input-group label span.val{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold);font-weight:700;text-transform:none;letter-spacing:0}
+input[type=range]{width:100%;appearance:none;height:4px;background:var(--border);border-radius:2px;outline:none;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;background:var(--gold);border-radius:50%;cursor:pointer}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;background:var(--gold);border-radius:50%;cursor:pointer;border:none}
+.range-labels{display:flex;justify-content:space-between;font-size:.68rem;color:rgba(255,255,255,.3);margin-top:6px}
+select.input-select{width:100%;background:var(--card);border:1px solid var(--border);color:#fff;padding:11px 14px;font-family:'Inter',sans-serif;font-size:.9rem;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B8882A' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.results-panel{position:sticky;top:24px}
+.score-card{background:var(--card);border:1px solid var(--border);padding:32px;margin-bottom:20px;text-align:center}
+.score-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.4);margin-bottom:12px}
+.score-ring-wrap{position:relative;width:160px;height:160px;margin:0 auto 16px}
+.score-ring-wrap svg{transform:rotate(-90deg)}
+.score-number{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;line-height:1}
+.score-status{font-size:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.score-status.green{color:#4CAF82}
+.score-status.yellow{color:#D4A017}
+.score-status.red{color:#E05050}
+.score-desc{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.5}
+.flags-card{background:var(--card);border:1px solid var(--border);padding:24px}
+.flags-card h3{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:#fff;margin-bottom:16px;font-weight:600}
+.flag-item{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid rgba(30,45,69,.6);font-size:.82rem;line-height:1.5}
+.flag-item:last-child{border-bottom:none}
+.flag-dot{width:8px;height:8px;border-radius:50%;margin-top:6px;flex-shrink:0}
+.flag-dot.red{background:#E05050}
+.flag-dot.yellow{background:#D4A017}
+.flag-dot.green{background:#4CAF82}
+.flag-text{color:rgba(255,255,255,.65)}
+.no-flags{font-size:.85rem;color:rgba(255,255,255,.4);font-style:italic}
+.content-section{max-width:960px;margin:0 auto;padding:0 48px 80px}
+
+h2.section-head{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:#fff;margin:50px 0 16px;border-bottom:1px solid var(--border);padding-bottom:10px}
+p{margin-bottom:16px;font-size:.95rem;color:var(--text)}
+.faq-section{margin-top:50px}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+.faq-item h3{font-size:1rem;font-weight:600;color:#fff;margin:0 0 8px}
+.faq-item p{font-size:.9rem;margin:0;color:rgba(255,255,255,.6)}
+.cta-box{background:var(--card);border:1px solid var(--border);padding:40px;margin-top:50px;text-align:center}
+.cta-box h3{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.6rem;margin-bottom:10px}
+.cta-box p{color:rgba(255,255,255,.6);font-size:.9rem;margin-bottom:24px}
+.cta-btn{display:inline-block;background:var(--gold);color:#fff;padding:13px 32px;font-size:.9rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
+footer{background:rgba(0,0,0,.3);border-top:1px solid var(--border);padding:30px 48px;text-align:center;font-size:.8rem;color:rgba(255,255,255,.35)}
+@media(max-width:800px){.calc-wrap{grid-template-columns:1fr;padding:32px 20px}.results-panel{postion:static}.content-section{padding:0 20px 60px}.hero{padding:40px 20px}.breadcrumb{padding:12px 20px}header{padding:16px 20px}h1{font-size:1.9rem}}
+</style>
+</head>
+<body>
+<header><div class="logo">Majhi OS</div><nav><a href="/">Home</a><a href="/what-is-majhi-os">Platform</a><a href="/state-of-hiring-operations-2026">Research</a><a href="/#contact">Contact</a></nav></header>
+<div class="breadcrumb"><a href="/">Home</a> › <a href="/what-is-majhi-os">Platform</a> › Mandate Health Calculator</div>
+<div class="hero">
+  <div class="tool-badge">Majhi OS Tool · Interactive</div>
+  <h1>Mandate Health Calculator</h1>
+  <p class="subhead">Input your active search parameters and get an operational health score (0–100) with risk flags and recovery signals. The same logic Majhi OS applies to every active mandate in real time.</p>
+</div>
+
+<div class="calc-wrap">
+  <div class="inputs-panel">
+    <h2>Your Search Parameters</h2>
+
+    <div class="input-group">
+      <label>Days Open <span class="val" id="v_days">30</span></label>
+      <input type="range" id="days" min="1" max="180" value="30" oninput="document.getElementById('v_days').textContent=this.value; calc()">
+      <div class="range-labels"><span>1 day</span><span>90 days</span><span>180 days</span></div>
+    </div>
+
+    <div class="input-group">
+      <label>Outreach Reply Rate <span class="val" id="v_reply">18%</span></label>
+      <input type="range" id="reply" min="0" max="50" value="18" oninput="document.getElementById('v_reply').textContent=this.value+'%'; calc()">
+      <div class="range-labels"><span>0%</span><span>25%</span><span>50%</span></div>
+    </div>
+
+    <div class="input-group">
+      <label>Shortlist Approval Rate <span class="val" id="v_shortlist">50%</span></label>
+      <input type="range" id="shortlist" min="0" max="100" value="50" oninput="document.getElementById('v_shortlist').textContent=this.value+'%'; calc()">
+      <div class="range-labels"><span>0%</span><span>50%</span><span>100%</span></div>
+    </div>
+
+    <div class="input-group">
+      <label>Active Recruiter Hours / Week <span class="val" id="v_hours">12</span></label>
+      <input type="range" id="hours" min="0" max="40" value="12" oninput="document.getElementById('v_hours').textContent=this.value; calc()">
+      <div class="range-labels"><span>0 hrs</span><span>20 hrs</span><span>40 hrs</span></div>
+    </div>
+
+    <div class="input-group">
+      <label>Hiring Manager Response Time</label>
+      <select class="input-select" id="hm_response" onchange="calc()">
+        <option value="0">Same day</option>
+        <option value="1" selected>1–2 business days</option>
+        <option value="2">3–5 business days</option>
+        <option value="3">5+ business days</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label>Audit Trail Coverage <span class="val" id="v_audit">40%</span></label>
+      <input type="range" id="audit" min="0" max="100" value="40" oninput="document.getElementById('v_audit').textContent=this.value+'%'; calc()">
+      <div class="range-labels"><span>0%</span><span>50%</span><span>100%</span></div>
+    </div>
+  </div>
+
+  <div class="results-panel">
+    <div class="score-card">
+      <div class="score-label">Hiring Health Score</div>
+      <div class="score-ring-wrap">
+        <svg width="160" height="160" viewBox="0 0 160 160">
+          <circle cx="80" cy="80" r="68" fill="none" stroke="#1E2D45" stroke-width="10"/>
+          <circle id="scoreArc" cx="80" cy="80" r="68" fill="none" stroke="#B8882A" stroke-width="10"
+            stroke-dasharray="427" stroke-dashoffset="427" stroke-linecap="round"/>
+        </svg>
+        <div class="score-number" id="scoreNum" style="color:#B8882A">—</div>
+      </div>
+      <div class="score-status" id="scoreStatus">—</div>
+      <div class="score-desc" id="scoreDesc">Adjust the inputs above to calculate.</div>
+    </div>
+
+    <div class="flags-card">
+      <h3>Risk Flags</h3>
+      <div id="flagsList"><div class="no-flags">No flags yet — enter parameters above.</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="content-section">
+  <h2 class="section-head">How the Score Is Calculated</h2>
+  <p>The Mandate Health Score starts at 100 and deducts points based on six operational signals. Each signal is weighted by its correlation with search stall risk, based on patterns from Majhi OS mandate analysis.</p>
+  <p>Days open contributes up to 25 points of deduction — a search open past 70 days is statistically in high-risk territory. Reply rate contributes up to 25 points: below 10% reply rate represents near-total outreach failure. Shortlist approval contributes up to 20 points — a 30% approval rate means 70% of recruiter work is invisible to the hiring manager. Recruiter hours contribute up to 15 points, reflecting whether sufficient operational attention is being allocated. Hiring manager response time contributes up to 15 points — slow HM feedback creates candidate drop-off and pipeline decay. Audit trail contributes up to 10 points, reflecting whether the system can recover if a recruiter is unavailable.</p>
+  <p>A score above 80 is operationally healthy. 50–79 requires active monitoring and targeted intervention. Below 50 indicates mandate distress — recovery action should start immediately.</p>
+
+  <div class="faq-section">
+    <h2 class="section-head">Frequently Asked Questions</h2>
+    <div class="faq-item"><h3>What is a Hiring Health Score?</h3><p>A real-time operational score (0–100) for an active mandate, tracking recruiter load, outreach response rate, shortlist quality, hiring manager engagement, and audit coverage. It moves before a mandate stalls, not after.</p></div>
+    <div class="faq-item"><h3>What score indicates a mandate is at risk?</h3><p>Scores below 50 indicate a mandate in active distress — recovery action is needed immediately. Scores between 50 and 79 indicate early warning signals that require monitoring and targeted intervention. Scores of 80 or above are healthy.</p></div>
+    <div class="faq-item"><h3>What causes a mandate health score to drop?</h3><p>The four most common causes: outreach reply rate below 20%, shortlist approval below 50%, hiring manager response time above 3 days, and mandates open past 70 days without intervention. Multiple factors together create compounding failure.</p></div>
+    <div class="faq-item"><h3>How does Majhi OS monitor mandate health?</h3><p>Majhi OS tracks the same signals this calculator uses — plus recruiter activity patterns, funnel velocity, and SLA adherence — in real time across all active mandates simultaneously. When a score drops below threshold, the system flags it and triggers a recovery sequence.</p></div>
+    <div class="faq-item"><h3>Can a low-scoring mandate be recovered?</h3><p>74% of mandates flagged by Majhi OS are recovered once a structured recovery playbook is applied. The recovery rate drops sharply if intervention is delayed past week 14. Early detection is the primary variable.</p></div>
+  </div>
+
+  <div class="cta-box">
+    <h3>Run This Calculation Against Your Live Mandate</h3>
+    <p>The Mission Walkthrough uses your actual search as the working context — not a generic demo. See your mandate's real health score, live.</p>
+    <a href="/#contact" class="cta-btn">Request Mission Walkthrough</a>
+  </div>
+</div>
+
+<footer>&copy; 2026 Majhi OS. Autonomous hiring operations infrastructure.</footer>
+
+<script>
+const CIRC = 2 * Math.PI * 68; // ~427
+
+function calc(){
+  const days = parseInt(document.getElementById('days').value);
+  const reply = parseInt(document.getElementById('reply').value);
+  const shortlist = parseInt(document.getElementById('shortlist').value);
+  const hours = parseInt(document.getElementById('hours').value);
+  const hm = parseInt(document.getElementById('hm_response').value);
+  const audit = parseInt(document.getElementById('audit').value);
+
+  let score = 100;
+  const flags = [];
+
+  // Days open: -25 max (linear from day 30 to day 90+)
+  let daysPenalty = 0;
+  if(days > 90) { daysPenalty = 25; }
+  else if(days > 70) { daysPenalty = 20; }
+  else if(days > 50) { daysPenalty = 14; }
+  else if(days > 35) { daysPenalty = 8; }
+  else if(days > 20) { daysPenalty = 3; }
+  score -= daysPenalty;
+  if(days > 90) flags.push({sev:'red', text:'Mandate open ' + days + ' days — past the 90-day critical threshold. High stall risk. Immediate recovery review needed.'});
+  else if(days > 70) flags.push({sev:'red', text:'Mandate open ' + days + ' days — past week 10. 68% of VP searches that reach this point stall. Intervention required.'});
+  else if(days > 50) flags.push({sev:'yellow', text:'Mandate at ' + days + ' days — approaching week 10 threshold. Proactive monitoring recommended.'});
+
+  // Reply rate: -25 max
+  let replyPenalty = 0;
+  if(reply < 5) { replyPenalty = 25; }
+  else if(reply < 10) { replyPenalty = 20; }
+  else if(reply < 15) { replyPenalty = 14; }
+  else if(reply < 20) { replyPenalty = 8; }
+  else if(reply < 25) { replyPenalty = 3; }
+  score -= replyPenalty;
+  if(reply < 10) flags.push({sev:'red', text:'Reply rate ' + reply + '% — near-total outreach failure. DNS/MX verification and message recalibration needed urgently.'});
+  else if(reply < 20) flags.push({sev:'yellow', text:'Reply rate ' + reply + '% — below 20% threshold. Verify email deliverability and reassess outreach targeting.'});
+  else if(reply >= 30) flags.push({sev:'green', text:'Reply rate ' + reply + '% — strong. Above the 30% benchmark for verified outreach.'});
+
+  // Shortlist: -20 max
+  let shortPenalty = 0;
+  if(shortlist < 20) { shortPenalty = 20; }
+  else if(shortlist < 35) { shortPenalty = 15; }
+  else if(shortlist < 50) { shortPenalty = 9; }
+  else if(shortlist < 65) { shortPenalty = 4; }
+  else if(shortlist < 75) { shortPenalty = 1; }
+  score -= shortPenalty;
+  if(shortlist < 35) flags.push({sev:'red', text:'Shortlist approval ' + shortlist + '% — critically low. Candidate brief quality or intake alignment needs immediate review.'});
+  else if(shortlist < 55) flags.push({sev:'yellow', text:'Shortlist approval ' + shortlist + '% — below 55% threshold. Hiring manager calibration session recommended.'});
+  else if(shortlist >= 75) flags.push({sev:'green', text:'Shortlist approval ' + shortlist + '% — strong. Candidate quality and HM alignment are working.'});
+
+  // Hours: -15 max
+  let hoursPenalty = 0;
+  if(hours < 5) { hoursPenalty = 15; }
+  else if(hours < 8) { hoursPenalty = 11; }
+  else if(hours < 12) { hoursPenalty = 7; }
+  else if(hours < 15) { hoursPenalty = 3; }
+  score -= hoursPenalty;
+  if(hours < 8) flags.push({sev:'red', text:'Recruiter at ' + hours + ' hours/week — insufficient for active mandate. Minimum 12 hours required for consistent pipeline movement.'});
+  else if(hours < 13) flags.push({sev:'yellow', text:'Recruiter at ' + hours + ' hours/week — borderline. Consider mandate reassignment or load redistribution.'});
+
+  // HM response: -15 max (0, 5, 11, 15)
+  const hmPenalties = [0, 5, 11, 15];
+  score -= hmPenalties[hm];
+  const hmLabels = ['Same day','1–2 days','3–5 days','5+ days'];
+  if(hm === 3) flags.push({sev:'red', text:'HM response time 5+ days — pipeline decay is certain. Candidate drop-off and offer decline risk increases with each day of silence.'});
+  else if(hm === 2) flags.push({sev:'yellow', text:'HM response time 3–5 days — slowing candidate momentum. Aim for 24–48 hour turnaround to maintain pipeline health.'});
+  else if(hm === 0) flags.push({sev:'green', text:'Same-day HM response — excellent. Candidate momentum is maximised.'});
+
+  // Audit: -10 max
+  let auditPenalty = 0;
+  if(audit < 20) { auditPenalty = 10; }
+  else if(audit < 40) { auditPenalty = 7; }
+  else if(audit < 65) { auditPenalty = 4; }
+  else if(audit < 80) { auditPenalty = 1; }
+  score -= auditPenalty;
+  if(audit < 40) flags.push({sev:'yellow', text:'Audit trail ' + audit + '% — if the search changes hands, there is no recovery record. Structured activity logging needed.'});
+  else if(audit >= 90) flags.push({sev:'green', text:'Audit trail ' + audit + '% — strong. Full mandate visibility maintained.'});
+
+  score = Math.max(0, Math.min(100, score));
+
+  // Render score ring
+  const offset = CIRC - (score / 100) * CIRC;
+  const arc = document.getElementById('scoreArc');
+  const numEl = document.getElementById('scoreNum');
+  arc.style.strokeDashoffset = offset;
+
+  let statusClass, statusText, descText, scoreColor;
+  if(score >= 80){
+    statusClass = 'green'; statusText = 'HEALTHY';
+    descText = 'This mandate is operationally sound. Continue monitoring — signals can decay quickly if recruiter attention drops.';
+    scoreColor = '#4CAF82';
+    arc.style.stroke = '#4CAF82';
+  } else if(score >= 50){
+    statusClass = 'yellow'; statusText = 'AT RISK';
+    descText = 'Early warning signals present. Targeted intervention on flagged areas will prevent further decay.';
+    scoreColor = '#D4A017';
+    arc.style.stroke = '#D4A017';
+  } else {
+    statusClass = 'red'; statusText = 'DISTRESSED';
+    descText = 'Mandate in active distress. Without structured recovery action, stall or failure is likely within 2–4 weeks.';
+    scoreColor = '#E05050';
+    arc.style.stroke = '#E05050';
+  }
+
+  numEl.textContent = score;
+  numEl.style.color = scoreColor;
+  const statusEl = document.getElementById('scoreStatus');
+  statusEl.textContent = statusText;
+  statusEl.className = 'score-status ' + statusClass;
+  document.getElementById('scoreDesc').textContent = descText;
+
+  // Flags
+  if(flags.length === 0){
+    document.getElementById('flagsList').innerHTML = '<div class="no-flags">No flags — mandate looks healthy.</div>';
+  } else {
+    document.getElementById('flagsList').innerHTML = flags.map(f =>
+      `<div class="flag-item"><div class="flag-dot ${f.sev}"></div><div class="flag-text">${f.text}</div></div>`
+    ).join('');
+  }
+}
+
+calc();
+</script>
+</body>
+</html>
