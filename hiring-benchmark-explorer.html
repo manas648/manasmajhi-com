@@ -1,1 +1,282 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hiring Benchmark Explorer — VP &amp; C-Suite Search Benchmarks by Role, Industry, Stage | Majhi OS</title>
+<meta name="description" content="Interactive hiring benchmark explorer: filter VP and C-suite search benchmarks by role level, industry, and company stage. Market median days, offer acceptance rates, stall rates, reply rates.">
+<link rel="canonical" href="https://majhi.tech/hiring-benchmark-explorer">
+<meta property="og:title" content="Hiring Benchmark Explorer — VP &amp; C-Suite Search Benchmarks">
+<meta property="og:description" content="Filter executive search benchmarks by role, industry, and company stage. Market median days, offer acceptance, stall rates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+[{"@context":"https://schema.org","@type":"WebPage","name":"Hiring Benchmark Explorer","url":"https://majhi.tech/hiring-benchmark-explorer","publisher":{"@type":"Organization","name":"Majhi OS","url":"https://majhi.tech"}},
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is the average time to fill a VP Sales role?","acceptedAnswer":{"@type":"Answer","text":"The market median for a VP Sales search is 94 days in 2026. Searches that use a retained model with operational monitoring close in 30–45 days on average."}},
+{"@type":"Question","name":"Why do so many executive searches stall past week 10?","acceptedAnswer":{"@type":"Answer","text":"68% of VP searches stall past week 10 because no system is monitoring mandate health in real time. By the time a recruiter flags a problem, the candidate pipeline has already decayed and the hiring manager has disengaged."}},
+{"@type":"Question","name":"What is the difference in offer acceptance between contingency and retained search?","acceptedAnswer":{"@type":"Answer","text":"Contingency searches average 59–70% offer acceptance depending on role type. Retained searches — where a firm is fully committed to the mandate — achieve 88–93% acceptance. The difference is candidate vetting depth and hiring manager alignment."}},
+{"@type":"Question","name":"How do these benchmarks vary by industry?","acceptedAnswer":{"@type":"Answer","text":"AI/ML and Cybersecurity roles run 10–15% longer than the baseline due to severe candidate supply constraints. SaaS and Fintech are near baseline. The adjusted estimates in this tool apply published industry research to baseline role benchmarks."}},
+{"@type":"Question","name":"What does Majhi OS do with benchmark data?","acceptedAnswer":{"@type":"Answer","text":"Majhi OS monitors live search performance against these benchmarks in real time via the Hiring Health Score. When a mandate deviates from its expected trajectory, the system flags it before it stalls."}}
+]}]
+</script>
+<style>
+:root{--gold:#B8882A;--ink:#0A1628;--card:#111D30;--border:#1E2D45;--text:#C8D4E8}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--ink);color:var(--text);line-height:1.7}
+a{color:var(--gold);text-decoration:none}a:hover{text-decoration:underline}
+header{background:rgba(0,0,0,.3);border-bottom:1px solid var(--border);padding:18px 48px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.35rem;font-weight:600}
+nav a{color:rgba(255,255,255,.7);font-size:.85rem;margin-left:28px;font-weight:500}
+.breadcrumb{background:rgba(0,0,0,.2);border-bottom:1px solid var(--border);padding:12px 48px;font-size:.8rem;color:rgba(255,255,255,.5)}
+.breadcrumb a{color:var(--gold)}
+.hero{padding:56px 48px 44px;border-bottom:1px solid var(--border)}
+.tool-badge{display:inline-block;background:var(--gold);color:#fff;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;margin-bottom:18px}
+h1{font-family:'Cormorant Garamond',serif;font-size:2.3rem;font-weight:700;color:#fff;line-height:1.2;margin-bottom:12px;max-width:760px}
+.subhead{font-size:.95rem;color:rgba(255,255,255,.6);max-width:660px;line-height:1.6}
+.explorer{max-width:1000px;margin:0 auto;padding:48px 48px 80px}
+.filters{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px}
+.filter-group label{display:block;line-height:1.4;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:8px}
+.filter-group select{width:100%;background:var(--card);border:1px solid var(--border);color:#fff;padding:11px 14px;font-family:'Inter',sans-serif;font-size:.9rem;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B8882A' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.filter-group select:focus{outline:1px solid var(--gold)}
+.results-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:24px;border-bottom:1px solid var(--border);padding-bottom:14px}
+.results-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:#fff;font-weight:600}
+.note{font-size:.75rem;color:rgba(255,255,255,.35)}
+.metrics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border);margin-bottom:32px}
+.metric-card{padding:28px 24px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.metric-card:nth-child(3n){border-right:none}
+.metric-card:nth-child(4),.metric-card:nth-child(5),.metric-card:nth-child(6){border-bottom:none}
+.metric-label{font-size:.72rem;font-weight:600;letter-spacing:.06em;text-ase;color:rgba(255,255,255,.4);margin-bottom:10px;line-height:1.4}
+.metric-value{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:6px}
+.metric-context{font-size:.75rem;color:rgba(255,255,255,.45);line-height:1.5}
+.metric-delta{font-size:.78rem;color:rgba(255,255,255,.55);margin-top:4px}
+.comparison-strip{background:var(--card);border:1px solid var(--border);padding:24px;margin-bottom:40px}
+.comparison-strip h3{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:#fff;margin-bottom:16px;font-weight:600}
+.comparison-row{display:flex;gap:0;font-size:.85rem}
+.comp-col{flex:1;padding:14px 20px;border-right:1px solid var(--border)}
+.comp-col:last-child{border-right:none}
+.comp-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:rgba(255,255,255,.4);margin-bottom:6px}
+.comp-val{font-weight:600;color:#fff}
+.comp-val.gold{color:var(--gold)}
+.adj-note{background:rgba(184,136,42,.08);border-left:3px solid var(--gold);padding:12px 16px;font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:32px;line-height:1.6}
+.adj-note strong{color:rgba(255,255,255,.75)}
+h2{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:#fff;margin:50px 0 16px;border-bottom:1px solid var(--border);padding-bottom:10px}
+p{margin-bottom:16px;font-size:.95rem;color:var(--text)}
+.faq-section{margin-top:50px}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+.faq-item h3{font-size:1rem;font-weight:600;color:#fff;margin:0 0 8px}
+.faq-item p{font-size:.9rem;margin:0;color:rgba(255,255,255,.6)}
+.cta-box{background:var(--card);border:1px solid var(--border);padding:40px;margin-top:50px;text-align:center}
+.cta-box h3{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.6rem;margin-bottom:10px}
+.cta-box p{color:rgba(255,255,255,.6);font-size:.9rem;margin-bottom:24px}
+.cta-btn{display:inline-block;background:var(--gold);color:#fff;padding:13px 32px;font-size:.9rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
+footer{background:rgba(0,0,0,.3);border-top:1px solid var(--border);padding:30px 48px;text-align:center;font-size:.8rem;color:rgba(255,255,255,.35)}
+@media(max-width:720px){.hero{padding:40px 20px}.explorer{padding:32px 20px}.breadcrumb{padding:12px 20px}header{padding:16px 20px}.filters{grid-template-columns:1fr}.metrics-grid{grid-template-columns:1fr 1fr}.comparison-row{flex-wrap:wrap}.comp-col{border-right:none;border-bottom:1px solid var(--border)}}
+</style>
+</head>
+<body>
+<header><div class="logo">Majhi OS</div><nav><a href="/">Home</a><a href="/what-is-majhi-os">Platform</a><a href="/state-of-hiring-operations-2026">Research</a><a href="/#contact">Contact</a></nav></header>
+<div class="breadcrumb"><a href="/">Home</a> › <a href="/state-of-hiring-operations-2026">Research</a> › Hiring Benchmark Explorer</div>
+<div class="hero">
+  <div class="tool-badge">Majhi OS Tool · Interactive</div>
+  <h1>Hiring Benchmark Explorer</h1>
+  <p class="subhead">Filter VP and C-suite search benchmarks by role level, industry, and company stage. Market medians, offer acceptance rates, and stall rate data from 2026 search engagements and industry research.</p>
+</div>
+<div class="explorer">
+  <div class="filters">
+    <div class="filter-group">
+      <label>Role Level</label>
+      <select id="roleSelect" onchange="updateResults()">
+        <option value="vp_sales">VP Sales</option>
+        <option value="vp_engineering">VP Engineering</option>
+        <option value="cto">CTO</option>
+        <option value="cmo">CMO</option>
+        <option value="cfo">CFO</option>
+        <option value="cpo">Chief People Officer</option>
+        <option value="dir_eng">Director of Engineering</option>
+        <option value="dir_sales">Director of Sales</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Industry</label>
+      <select id="industrySelect" onchange="updateResults()">
+        <option value="all">All Industries (Baseline)</option>
+        <option value="saas">SaaS</option>
+        <option value="fintech">Fintech</option>
+        <option value="aiml">AI / ML</option>
+        <option value="cybersecurity">Cybersecurity</option>
+        <option value="enterprise">Enterprise Software</option>
+        <option value="devtools">DevTools</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Company Stage</label>
+      <select id="stageSelect" onchange="updateResults()">
+        <option value="all">All Stages (Baseline)</option>
+        <option value="series_ab">Series A–B</option>
+        <option value="series_c">Series C+</option>
+        <option value="pe">PE-Backed / Private</option>
+        <option value="public">Public Company</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="adjNote" class="adj-note" style="display:none"></div>
+
+  <div class="results-header">
+    <span class="results-title" id="resultsTitle">VP Sales — All Industries — All Stages</span>
+    <span class="note">Adjusted estimates disclosed where applied</span>
+  </div>
+
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-label">Market Median Days to Close</div>
+      <div class="metric-value" id="m1">—</div>
+      <div class="metric-context" id="m1c">—</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Stall Rate Past Week 10</div>
+      <div class="metric-value" id="m2">—</div>
+      <div class="metric-context" id="m2c">—</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Outreach Reply Rate (Market Avg)</div>
+      <div class="metric-value" id="m3">—</div>
+      <div class="metric-context" id="m3c">—</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Offer Acceptance — Contingency</div>
+      <div class="metric-value" id="m4">—</div>
+      <div class="metric-context" id="m4c">—</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Offer Acceptance — Retained</div>
+      <div class="metric-value" id="m5">—</div>
+      <div class="metric-context" id="m5c">—</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Median Days — Retained Search</div>
+      <div class="metric-value" id="m6">—</div>
+      <div class="metric-context" id="m6c">—</div>
+    </div>
+  </div>
+
+  <div class="comparison-strip">
+    <h3>Majhi OS Performance vs. Market Median</h3>
+    <div class="comparison-row">
+      <div class="comp-col"><div class="comp-label">Market Median Close</div><div class="comp-val" id="c1">—</div></div>
+      <div class="comp-col"><div class="comp-label">Majhi OS Avg Close</div><div class="comp-val gold" id="c2">30–45 days</div></div>
+      <div class="comp-col"><div class="comp-label">Time Saved</div><div class="comp-val gold" id="c3">—</div></div>
+      <div class="comp-col"><div class="comp-label">Reply Rate (DNS/MX Verified)</div><div class="comp-val gold">35%</div></div>
+      <div class="comp-col"><div class="comp-label">Offer Acceptance (Retained)</div><div class="comp-val gold">90%+</div></div>
+    </div>
+  </div>
+
+  <h2>How to Read These Benchmarks</h2>
+  <p>Market median figures represent the industry average for active searches on the open market — contingency firms, internal TA teams, and general LinkedIn sourcing. They reflect what the typical search looks like, not what is achievable with operational infrastructure.</p>
+  <p>The stall rate measures searches that have not produced a placed candidate by week 10. This is not the same as searches that fail — many stalled searches eventually close, but they do so with additional cost, team friction, and compounding delay. The 68% baseline for VP searches reflects patterns from Majhi OS mandate analysis and published executive search research.</p>
+  <p>Offer acceptance rates diverge sharply between contingency and retained models because the vetting process and hiring manager alignment are structurally different. Contingency firms present volume; retained firms present fit.</p>
+  <p>Industry and stage adjustments are applied as published modifiers based on talent supply and demand dynamics in each segment. They are disclosed in the adjustment note when active.</p>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><h3>What is the average time to fill a VP Sales role?</h3><p>The market median for a VP Sales search is 94 days in 2026. Searches that use a retained model with operational monitoring close in 30–45 days on average.</p></div>
+    <div class="faq-item"><h3>Why do so many executive searches stall past week 10?</h3><p>68% of VP searches stall past week 10 because no system is monitoring mandate health in real time. By the time a recruiter flags a problem, the candidate pipeline has already decayed and the hiring manager has disengaged.</p></div>
+    <div class="faq-item"><h3>What is the difference in offer acceptance between contingency and retained search?</h3><p>Contingency searches average 59–70% offer acceptance depending on role type. Retained searches achieve 88–93% acceptance. The difference is candidate vetting depth and hiring manager alignment.</p></div>
+    <div class="faq-item"><h3>How do these benchmarks vary by industry?</h3><p>AI/ML and Cybersecurity roles run 10–15% longer than the baseline due to severe candidate supply constraints. SaaS and Fintech are near baseline. The adjusted estimates in this tool apply published industry research to baseline role benchmarks.</p></div>
+    <div class="faq-item"><h3>What does Majhi OS do with benchmark data?</h3><p>Majhi OS monitors live search performance against these benchmarks in real time via the Hiring Health Score. When a mandate deviates from its expected trajectory, the system flags it before it stalls.</p></div>
+  </div>
+
+  <div class="cta-box">
+    <h3>See Where Your Active Mandate Sits Against These Benchmarks</h3>
+    <p>Every Majhi OS engagement starts with a Mission Walkthrough using your actual mandate — not a generic demo.</p>
+    <a href="/#contact" class="cta-btn">Request Mission Walkthrough</a>
+  </div>
+</div>
+<footer>&copy; 2026 Majhi OS. Autonomous hiring operations infrastructure.</footer>
+
+<script>
+const roles = {
+  vp_sales:    {label:'VP Sales',          median:94, stall:74, reply:14, cont_accept:59, ret_accept:91, ret_close:38},
+  vp_engineering:{label:'VP Engineering',  median:78, stall:68, reply:16, cont_accept:67, ret_accept:92, ret_close:34},
+  cto:         {label:'CTO',              median:82, stall:70, reply:15, cont_accept:65, ret_accept:91, ret_close:36},
+  cmo:         {label:'CMO',              median:88, stall:72, reply:13, cont_accept:61, ret_accept:89, ret_close:38},
+  cfo:         {label:'CFO',              median:80, stall:68, reply:15, cont_accept:70, ret_accept:93, ret_close:35},
+  cpo:         {label:'Chief People Officer', median:73, stall:63, reply:17, cont_accept:64, ret_accept:90, ret_close:32},
+  dir_eng:     {label:'Director of Engineering', median:67, stall:60, reply:19, cont_accept:68, ret_accept:91, ret_close:30},
+  dir_sales:   {label:'Director of Sales', median:63, stall:57, reply:18, cont_accept:65, ret_accept:89, ret_close:28}
+};
+
+// Industry day-multipliers (applied to median only; noted as adjustment)
+const industryMod = {
+  all:{label:'All Industries',mod:1.00,note:null},
+  saas:{label:'SaaS',mod:1.03,note:'SaaS talent pools are competitive but deep — median adjusted +3% vs baseline based on sector search data.'},
+  fintech:{label:'Fintech',mod:1.06,note:'Fintech regulatory complexity extends searches — median adjusted +6% vs baseline.'},
+  aiml:{label:'AI / ML',mod:1.14,note:'AI/ML candidate supply is severely constrained — median adjusted +14% vs baseline. Stall rate also elevated.'},
+  cybersecurity:{label:'Cybersecurity',mod:1.11,note:'Cybersecurity leadership supply is tight — median adjusted +11% vs baseline.'},
+  enterprise:{label:'Enterprise Software',mod:1.05,note:'Enterprise software searches run slightly longer due to specialization requirements — median adjusted +5% vs baseline.'},
+  devtools:{label:'DevTools',mod:1.04,note:'DevTools markets are competitive for engineering leaders — median adjusted +4% vs baseline.'}
+};
+
+// Stage day-multipliers
+const stageMod = {
+  all:{label:'All Stages',mod:1.00,note:null},
+  series_ab:{label:'Series A–B',mod:0.95,note:'Series A–B companies often move faster on decisions. Median adjusted -5% vs baseline; offer acceptance may be lower due to risk perception.'},
+  series_c:{label:'Series C+',mod:1.00,note:null},
+  pe:{label:'PE-Backed / Private',mod:1.07,note:'PE-backed searches involve more stakeholder layers — median adjusted +7% vs baseline.'},
+  public:{label:'Public Company';mod:1.10,note:'Public company executive searches involve board approval and disclosure requirements — median adjusted +10% vs baseline.'}
+};
+
+function round(n){return Math.round(n);}
+
+function updateResults(){
+  const role = roles[document.getElementById('roleSelect').value];
+  const ind = industryMod[document.getElementById('industrySelect').value];
+  const stage = stageMod[document.getElementById('stageSelect').value];
+
+  const adjMod = ind.mod * stage.mod;
+  const adjMedian = round(role.median * adjMod);
+  const adjRetClose = round(role.ret_close * adjMod);
+  const adjStall = ind.label === 'AI / ML' ? Math.min(role.stall + 6, 95) : role.stall;
+
+  // Build adjustment note
+  const notes = [ind.note, stage.note].filter(Boolean);
+  const adjEl = document.getElementById('adjNote');
+  if(notes.length){
+    adjEl.style.display = 'block';
+    adjEl.innerHTML = '<strong>Adjustment applied:</strong> ' + notes.join(' ');
+  } else {
+    adjEl.style.display = 'none';
+  }
+
+  // Title
+  document.getElementById('resultsTitle').textContent = role.label + ' — ' + ind.label + ' — ' + stage.label;
+
+  // Metrics
+  document.getElementById('m1').textContent = adjMedian + ' days';
+  document.getElementById('m1c').textContent = 'Market median. Baseline: ' + role.median + ' days (all industries/stages).';
+
+  document.getElementById('m2').textContent = adjStall + '%';
+  document.getElementById('m2c').textContent = 'Searches not placed by week 10. ' + (adjStall >= 70 ? 'Elevated risk — operational monitoring critical.' : 'Monitoring recommended from week 6 onward.');
+
+  document.getElementById('m3').textContent = role.reply + '%';
+  document.getElementById('m3c').textContent = 'Average outreach reply rate without DNS/MX verification. With verified delivery: 35%.';
+
+  document.getElementById('m4').textContent = role.cont_accept + '%';
+  document.getElementById('m4c').textContent = 'Offer acceptance via contingency/non-retained search. Volume-driven process.';
+
+  document.getElementById('m5').textContent = role.ret_accept + '%';
+  document.getElementById('m5c').textContent = 'Offer acceptance via retained search with deep candidate vetting. Higher alignment.';
+
+  document.getElementById('m6').textContent = adjRetClose + ' days';
+  document.getElementById('m6c').textContent = 'Majhi estimated close time with operational monitoring. Market median: ' + adjMedian + ' days.';
+
+  // Comparison strip
+  document.getElementById('c1').textContent = adjMedian + ' days';
+  const saved = adjMedian - 38; // 38-day midpoint of 30-45 range
+  document.getElementById('c3').textContent = '~' + Math.max(0,saved) + ' days';
+}
+
+updateResults();
+</script>
+</body>
+</html>
