@@ -102,6 +102,12 @@ export function Footer() {
             >
               Sitemap
             </Link>
+            <Link
+              href="/editorial-standards"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Editorial Standards
+            </Link>
           </div>
         </div>
       </div>
