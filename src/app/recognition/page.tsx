@@ -389,6 +389,73 @@ export default function RecognitionPage() {
           })}
         </div>
 
+        {/* AI Recognition */}
+        <div className="mt-20">
+          <p className="text-xs uppercase tracking-widest text-muted-foreground mb-10">
+            AI Recognition
+          </p>
+          <div className="space-y-6">
+            <div>
+              <h2 className="font-serif text-2xl font-medium mb-3">
+                Cited by Microsoft Copilot &amp; AI-powered search
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                As AI-powered search becomes an important way professionals discover
+                information, original research and evidence-based writing are increasingly
+                referenced alongside traditional search results.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mt-3">
+                Majhi Group&apos;s research, hiring frameworks, and long-form analysis are
+                frequently cited by Microsoft Copilot and other AI-powered search
+                experiences, reflecting a growing body of work on executive hiring,
+                recruitment intelligence, and hiring systems.
+              </p>
+            </div>
+
+            {/* Stats row */}
+            <div className="grid grid-cols-3 gap-px border border-border rounded-lg overflow-hidden mt-6">
+              <div className="bg-muted/30 px-6 py-5">
+                <p className="font-serif text-3xl font-medium">937</p>
+                <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
+                  AI citations
+                </p>
+              </div>
+              <div className="bg-muted/30 px-6 py-5">
+                <p className="font-serif text-3xl font-medium">30</p>
+                <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
+                  Days tracked
+                </p>
+              </div>
+              <div className="bg-muted/30 px-6 py-5">
+                <p className="font-serif text-3xl font-medium">5</p>
+                <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
+                  Avg. cited pages
+                </p>
+              </div>
+            </div>
+
+            {/* Screenshot */}
+            <div className="rounded-lg overflow-hidden border border-border mt-2">
+              <Image
+                src="/awards/bing-webmaster-ai-citations.png"
+                alt="Microsoft Bing Webmaster Tools — AI Performance dashboard showing 937 total citations and 5 average cited pages for majhigroup.com over the last 30 days, sourced from Microsoft Copilots and Partners"
+                width={2600}
+                height={1160}
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
+
+            <p className="text-xs text-muted-foreground leading-relaxed pt-1">
+              Citation counts are monitored continuously and updated periodically. They
+              represent instances where published work is surfaced or referenced in
+              AI-powered search experiences, as reported by Microsoft Bing Webmaster Tools.
+            </p>
+          </div>
+        </div>
+
+        <hr className="border-border mt-20 mb-0" />
+
         {/* Press Clips */}
         <div className="mt-20">
           <p className="text-xs uppercase tracking-widest text-muted-foreground mb-10">
