@@ -123,7 +123,7 @@ export default async function EssayPage({ params }: Props) {
     headline: essay.title,
     description: essay.excerpt,
     image: essay.coverImage || ogImage,
-    inLanguage: "en",
+    inLanguage: essay.category === "odia" ? "or" : "en",
     keywords: essay.tags.join(", "),
     genre: "Opinion",
     articleSection: CATEGORY_LABELS[essay.category],
