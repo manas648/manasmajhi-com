@@ -454,6 +454,43 @@ export default function RecognitionPage() {
           </div>
         </div>
 
+        {/* Interviews */}
+        <div className="mt-20">
+          <p className="text-xs uppercase tracking-widest text-muted-foreground mb-10">
+            Interviews
+          </p>
+          <a
+            href="https://www.candidately.com/blog/interview-with-manas-majhi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block"
+          >
+            <div className="rounded-lg overflow-hidden border border-border group-hover:border-foreground/20 transition-colors">
+              <Image
+                src="/awards/manas-majhi-world-staffing-summit-interview.jpg"
+                alt="Manas Majhi interview card — World Staffing Summit by Candidately: 'Prioritizing client experience and investing in meeting their expectations is crucial for success in the staffing industry.'"
+                width={981}
+                height={525}
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
+            <div className="mt-4 flex items-center justify-between">
+              <div>
+                <p className="font-serif text-lg font-medium group-hover:text-muted-foreground transition-colors">
+                  World Staffing Summit — Candidately
+                </p>
+                <p className="text-sm text-muted-foreground mt-0.5">
+                  Interview · Executive Director, Majhi Group
+                </p>
+              </div>
+              <span className="text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all duration-150">
+                →
+              </span>
+            </div>
+          </a>
+        </div>
+
         <hr className="border-border mt-20 mb-0" />
 
         {/* Press Clips */}
