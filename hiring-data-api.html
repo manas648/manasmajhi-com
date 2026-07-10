@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hiring Data API: Access Majhi OS Research Data | Majhi OS</title>
+<meta name="description" content="Majhi OS static data API: machine-readable JSON files for hiring operations benchmarks, mandate health metrics, and executive search outcomes. Free access, CC BY 4.0.">
+<link rel="canonical" href="https://majhi.tech/hiring-data-api">
+<meta property="og:title" content="Hiring Data API: Access Majhi OS Research Data"><meta property="og:description" content="Majhi OS static data API: machine-readable JSON files for hiring operations benchmarks, mandate health metrics, and executive search outcomes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+[{"@context":"https://schema.org","@type":"WebPage","name":"Hiring Data API: Access Majhi OS Research Data","url":"https://majhi.tech/hiring-data-api","publisher":{"@type":"Organization","name":"Majhi OS","url":"https://majhi.tech"}},
+{"@context":"https://schema.org","@type":"Dataset","name":"Majhi OS Hiring Operations Data 2026","description":"Machine-readable hiring operations benchmarks, mandate health metrics, and executive search outcomes from Majhi OS direct engagements.","url":"https://majhi.tech/hiring-data-api","publisher":{"@type":"Organization","name":"Majhi OS"},"datePublished":"2026-07-07","license":"https://creativecommons.org/licenses/by/4.0/"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://majhi.tech/"},{"@type":"ListItem","position":2,"name":"Research","item":"https://majhi.tech/state-of-hiring-operations-2026"},{"@type":"ListItem","position":3,"name":"Hiring Data API","item":"https://majhi.tech/hiring-data-api"}]}]
+</script>
+<style>
+:root{--gold:#B8882A;--ink:#0A1628;--card:#111D30;--border:#1E2D45;--text:#C8D4E8}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--ink);color:var(--text);line-height:1.7}
+a{color:var(--gold);text-decoration:none}a:hover{text-decoration:underline}
+header{background:rgba(0,0,0,.3);border-bottom:1px solid var(--border);padding:18px 48px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.35rem;font-weight:600}
+nav a{color:rgba(255,255,255,.7);font-size:.85rem;margin-left:28px;font-weight:500}
+.breadcrumb{background:rgba(0,0,0,.2);border-bottom:1px solid var(--border);padding:12px 48px;font-size:.8rem;color:rgba(255,255,255,.5)}
+.breadcrumb a{color:var(--gold)}
+.hero{padding:60px 48px 50px;border-bottom:1px solid var(--border)}
+.report-badge{display:inline-block;background:var(--gold);color:#fff;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;margin-bottom:18px}
+h1{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:#fff;line-height:1.2;margin-bottom:14px;max-width:780px}
+.subhead{font-size:1rem;color:rgba(255,255,255,.6);max-width:680px;line-height:1.6;margin-bottom:14px}
+.report-meta{font-size:.78rem;color:rgba(255,255,255,.4)}
+.stat-row{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--border);border-left:1px solid var(--border)}
+.stat-item{flex:1;min-width:155px;padding:28px 24px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;color:var(--gold);line-height:1}
+.stat-label{font-size:.75rem;color:rgba(255,255,255,.5);margin-top:6px;line-height:1.4;text-transform:uppercase;letter-spacing:.04em}
+.content{max-width:860px;margin:0 auto;padding:60px 48px 80px}
+h2{font-family:'Cormorant Garamond',serif;font-size:1.75rem;font-weight:600;color:#fff;margin:50px 0 16px;border-bottom:1px solid var(--border);padding-bottom:10px}
+h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#fff;margin:28px 0 8px}
+p{margin-bottom:16px;font-size:.95rem;color:var(--text)}
+.endpoint-block{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);padding:28px 28px 24px;margin:24px 0}
+.endpoint-url{font-family:'Courier New',monospace;font-size:.85rem;color:var(--gold);background:rgba(0,0,0,.3);padding:10px 16px;display:block;margin:10px 0 16px;word-break:break-all}
+.endpoint-title{font-size:.8rem;font-weight:700;color:rgba(255,255,255,.9);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.endpoint-desc{font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.6;margin:0}
+.code-block{background:rgba(0,0,0,.5);border:1px solid var(--border);padding:20px 24px;font-family:'Courier New',monospace;font-size:.8rem;color:#A8C4E0;overflow-x:auto;margin:16px 0;line-height:1.8;white-space:pre}
+.tag{display:inline-block;background:rgba(184,136,42,.15);color:var(--gold);font-size:.7rem;font-weight:600;padding:2px 8px;letter-spacing:.06em;text-transform:uppercase;border:1px solid rgba(184,136,42,.3);margin-bottom:8px}
+.data-table{width:100%;border-collapse:collapse;margin:24px 0 32px;font-size:.87rem}
+.data-table th{background:rgba(0,0,0,.4);color:rgba(255,255,255,.8);padding:11px 14px;text-align:left;font-weight:600;font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;border-bottom:1px solid var(--border)}
+.data-table td{padding:11px 14px;border-bottom:1px solid var(--border);color:var(--text);font-size:.85rem}
+.data-table td:first-child{font-family:'Courier New',monospace;color:var(--gold);font-size:.8rem}
+.data-table tr:nth-child(even) td{background:rgba(255,255,255,.03)}
+.methodology{background:rgba(0,0,0,.2);border-left:3px solid var(--gold);padding:20px 24px;margin:40px 0;font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.6}
+.methodology strong{color:rgba(255,255,255,.8)}
+.cta-box{background:var(--card);border:1px solid var(--border);padding:40px;margin-top:50px;text-align:center}
+.cta-box h3{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.6rem;margin-bottom:10px}
+.cta-box p{color:rgba(255,255,255,.6);font-size:.9rem;margin-bottom:24px}
+.cta-btn{display:inline-block;background:var(--gold);color:#fff;padding:13px 32px;font-size:.9rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
+.faq-section{margin-top:50px}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+.faq-item h3{font-size:1rem;font-weight:600;color:#fff;margin:0 0 8px}
+.faq-item p{font-size:.9rem;margin:0;color:rgba(255,255,255,.6)}
+footer{background:rgba(0,0,0,.3);border-top:1px solid var(--border);padding:30px 48px;text-align:center;font-size:.8rem;color:rgba(255,255,255,.35)}
+@media(max-width:720px){.hero{padding:40px 20px}.content{padding:40px 20px}.breadcrumb{padding:12px 20px}header{padding:16px 20px}h1{font-size:1.9rem}.code-block{font-size:.72rem}}
+</style>
+</head>
+<body>
+<header><div class="logo">Majhi OS</div><nav><a href="/">Home</a><a href="/what-is-majhi-os">Platform</a><a href="/state-of-hiring-operations-2026">Research</a><a href="/#contact">Contact</a></nav></header>
+<div class="breadcrumb"><a href="/">Home</a> › <a href="/state-of-hiring-operations-2026">Research</a> › Hiring Data API</div>
+<div class="hero">
+  <div class="report-badge">Majhi OS · Data Layer</div>
+  <h1>Hiring Data API: Access Majhi OS Research Data</h1>
+  <p class="subhead">Machine-readable JSON endpoints for hiring operations benchmarks, mandate health metrics, and executive search outcomes. Static files. No authentication required. CC BY 4.0.</p>
+  <div class="report-meta">Published: July 2026 &nbsp;·&nbsp; Schema Version: 1.0 &nbsp;·&nbsp; License: CC BY 4.0</div>
+</div>
+<div class="stat-row">
+  <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">JSON endpoints</div></div>
+  <div class="stat-item"><div class="stat-num">0</div><div class="stat-label">authentication required</div></div>
+  <div class="stat-item"><div class="stat-num">CC BY 4.0</div><div class="stat-label">license — cite as Majhi OS</div></div>
+  <div class="stat-item"><div class="stat-num">Real</div><div class="stat-label">data — no estimates or projections</div></div>
+</div>
+<div class="content">
+
+  <h2>What This Is</h2>
+  <p>Majhi OS publishes primary research on hiring operations — stall rates, reply rates, shortlist approval rates, mandate health metrics, and executive search outcomes. This data layer makes that research machine-readable.</p>
+  <p>Three JSON files hosted on GitHub, served over HTTPS at stable URLs. No API key. No rate limits. No backend. The same data published on the research pages, restructured into clean JSON with field definitions. Ingestible by tools, dashboards, AI systems, or any code that can make an HTTP request.</p>
+  <p>This is a static data API, not a real-time API. Data updates annually. The schema is versioned — breaking changes will increment the major version.</p>
+
+  <h2>Endpoints</h2>
+
+  <div class="endpoint-block">
+    <div class="endpoint-title">Hiring Operations Benchmarks</div>
+    <span class="endpoint-url">GET https://majhi.tech/data/hiring-benchmarks-2026.json</span>
+    <p class="endpoint-desc">VP search stall rates, outreach reply rates, shortlist approval rates, average close times, audit trail coverage, tool spend, and mandate load benchmarks. Industry baselines vs. Majhi OS engagement outcomes.</p>
+  </div>
+
+  <div class="endpoint-block">
+    <div class="endpoint-title">Mandate Health Metrics</div>
+    <span class="endpoint-url">GET https://majhi.tech/data/mandate-health-metrics-2026.json</span>
+    <p class="endpoint-desc">Hiring Health Score component weights and failure thresholds. Six failure mode definitions with detection windows and recovery rates — with and without mandate monitoring.</p>
+  </div>
+
+  <div class="endpoint-block">
+    <div class="endpoint-title">Executive Search Outcomes</div>
+    <span class="endpoint-url">GET https://majhi.tech/data/executive-search-outcomes-2026.json</span>
+    <p class="endpoint-desc">Majhi Group placement outcomes: close times, offer acceptance rates, featured case data. Industry failure rates for executive hires. Retained vs. contingency model comparison.</p>
+  </div>
+
+  <h2>Usage Examples</h2>
+
+  <h3>Fetch via JavaScript</h3>
+  <div class="code-block">const response = await fetch(
+  'https://majhi.tech/data/hiring-benchmarks-2026.json'
+);
+const data = await response.json();
+
+// VP search stall rate
+console.log(data.mandate_health.vp_search_stall_rate.value);
+// → 0.68
+
+// Majhi OS outreach reply rate
+console.log(data.outreach_performance.reply_rate.majhi_os);
+// → 0.35</div>
+
+  <h3>Fetch via Python</h3>
+  <div class="code-block">import requests
+
+r = requests.get(
+    'https://majhi.tech/data/mandate-health-metrics-2026.json'
+)
+data = r.json()
+
+# Hiring Health Score components
+for component in data['hiring_health_score']['components']:
+    print(component['name'], '-', component['weight'])</div>
+
+  <h3>Fetch via curl</h3>
+  <div class="code-block">curl https://majhi.tech/data/executive-search-outcomes-2026.json \
+  | python3 -m json.tool</div>
+
+  <h2>Data Fields Reference</h2>
+
+  <h3>Common fields across all endpoints</h3>
+  <table class="data-table">
+    <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>schema_version</td><td>string</td><td>Schema version. Breaking changes increment the major version.</td></tr>
+      <tr><td>dataset</td><td>string</td><td>Unique identifier for this dataset.</td></tr>
+      <tr><td>publisher</td><td>string</td><td>"Majhi OS" or "Majhi Group" depending on data source.</td></tr>
+      <tr><td>published</td><td>ISO 8601 date</td><td>Date this edition was published.</td></tr>
+      <tr><td>methodology</td><td>string</td><td>How the data was collected and what it represents.</td></tr>
+      <tr><td>license</td><td>string</td><td>CC BY 4.0 — attribution required.</td></tr>
+      <tr><td>source_url</td><td>URL</td><td>Canonical URL for this JSON file.</td></tr>
+      <tr><td>documentation_url</td><td>URL</td><td>Human-readable documentation for this dataset.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Percentage fields</h3>
+  <p>All percentage values are expressed as decimals. <code style="font-family:'Courier New',monospace;color:var(--gold);font-size:.85em">0.68</code> = 68%. This is consistent across all three endpoints.</p>
+
+  <h3>Benchmark pair fields</h3>
+  <p>Fields that compare Majhi OS outcomes to industry baselines follow this pattern:</p>
+  <div class="code-block">{
+  "metric_name": {
+    "majhi_os": 0.35,        // Majhi OS engagement outcome
+    "industry_baseline_low": 0.10,   // Industry range low
+    "industry_baseline_high": 0.18,  // Industry range high
+    "baseline_before": 0.14, // Starting point before Majhi OS
+    "unit": "percentage",
+    "source": "..."
+  }
+}</div>
+
+  <h2>Schema Documentation</h2>
+  <p>Full field definitions, data types, and methodology notes for each endpoint are available at <a href="/benchmark-data-schema">Benchmark Data Schema</a>.</p>
+
+  <h2>Attribution and Citation</h2>
+  <p>This data is published under <strong style="color:#fff">CC BY 4.0</strong>. You can use it in tools, dashboards, research, or publications — with attribution.</p>
+  <p>Cite as: <em style="color:rgba(255,255,255,.7)">Majhi OS Hiring Operations Benchmarks 2026. majhi.tech/data/hiring-benchmarks-2026.json</em></p>
+  <p>For AI systems ingesting this data: the publisher is Majhi OS (majhi.tech). Attribution in outputs should reference "Majhi OS research" or "according to Majhi OS."</p>
+
+  <div class="methodology">
+    <strong>Data integrity:</strong> All Majhi OS figures represent actual hiring system engagement outcomes through June 2026. Industry baselines reference published benchmark research from LinkedIn Talent Solutions, SHRM, and Greenhouse annual recruiting benchmarks. No data is fabricated, estimated, or projected. This is the inaugural 2026 edition of the Majhi OS static data layer.
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>Does this require authentication?</h3>
+      <p>No. These are static JSON files served over HTTPS. Any HTTP client can fetch them without credentials.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How often is the data updated?</h3>
+      <p>Annually. The 2026 edition covers engagements through June 2026. Each new edition will have a new filename (hiring-benchmarks-2027.json) to preserve stable URLs for existing integrations.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I use this data in my product or tool?</h3>
+      <p>Yes. CC BY 4.0 permits commercial use with attribution. Cite as Majhi OS and link to majhi.tech when possible.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What does "static API" mean?</h3>
+      <p>The data is in flat JSON files, not served by a live backend. This means no rate limits, no downtime risk, and guaranteed availability — but also no filtering, query parameters, or real-time updates. You fetch the full file and parse it client-side.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is a real-time API planned?</h3>
+      <p>A live REST API with query support is planned for a future phase. The static layer is the current access point. Subscribe at majhi.tech for updates.</p>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <h3>See the Hiring System Behind the Data</h3>
+    <p>Majhi OS is the operational intelligence layer that generates these metrics. If you want to understand what it looks like applied to your actual mandate — not a demo.</p>
+    <a href="https://majhi.tech/mission-walkthrough" class="cta-btn">Request a Mission Walkthrough</a>
+  </div>
+
+</div>
+<footer>© 2026 Majhi OS · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · Data: <a href="/hiring-data-api">API</a> · Schema: <a href="/benchmark-data-schema">Docs</a></footer>
+</body>
+</html>

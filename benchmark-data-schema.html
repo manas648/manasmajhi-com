@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Benchmark Data Schema: How Majhi OS Structures Hiring Operations Data | Majhi OS</title>
+<meta name="description" content="Complete field definitions, data types, and methodology notes for the Majhi OS hiring operations JSON schema — hiring benchmarks, mandate health metrics, and executive search outcomes.">
+<link rel="canonical" href="https://majhi.tech/benchmark-data-schema">
+<meta property="og:title" content="Benchmark Data Schema: How Majhi OS Structures Hiring Operations Data"><meta property="og:description" content="Complete field definitions, data types, and methodology notes for the Majhi OS hiring operations JSON schema.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+[{"@context":"https://schema.org","@type":"WebPage","name":"Benchmark Data Schema: How Majhi OS Structures Hiring Operations Data","url":"https://majhi.tech/benchmark-data-schema","publisher":{"@type":"Organization","name":"Majhi OS","url":"https://majhi.tech"}},
+{"@context":"https://schema.org","@type":"TechArticle","headline":"Benchmark Data Schema: How Majhi OS Structures Hiring Operations Data","url":"https://majhi.tech/benchmark-data-schema","author":{"@type":"Organization","name":"Majhi OS"},"datePublished":"2026-07-07"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://majhi.tech/"},{"@type":"ListItem","position":2,"name":"Data API","item":"https://majhi.tech/hiring-data-api"},{"@type":"ListItem","position":3,"name":"Benchmark Data Schema","item":"https://majhi.tech/benchmark-data-schema"}]}]
+</script>
+<style>
+:root{--gold:#B8882A;--ink:#0A1628;--card:#111D30;--border:#1E2D45;--text:#C8D4E8}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--ink);color:var(--text);line-height:1.7}
+a{color:var(--gold);text-decoration:none}a:hover{text-decoration:underline}
+header{background:rgba(0,0,0,.3);border-bottom:1px solid var(--border);padding:18px 48px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.35rem;font-weight:600}
+nav a{color:rgba(255,255,255,.7);font-size:.85rem;margin-left:28px;font-weight:500}
+.breadcrumb{background:rgba(0,0,0,.2);border-bottom:1px solid var(--border);padding:12px 48px;font-size:.8rem;color:rgba(255,255,255,.5)}
+.breadcrumb a{color:var(--gold)}
+.hero{padding:60px 48px 50px;border-bottom:1px solid var(--border)}
+.report-badge{display:inline-block;background:var(--gold);color:#fff;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;margin-bottom:18px}
+h1{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:#fff;line-height:1.2;margin-bottom:14px;max-width:780px}
+.subhead{font-size:1rem;color:rgba(255,255,255,.6);max-width:680px;line-height:1.6;margin-bottom:14px}
+.report-meta{font-size:.78rem;color:rgba(255,255,255,.4)}
+.content{max-width:860px;margin:0 auto;padding:60px 48px 80px}
+h2{font-family:'Cormorant Garamond',serif;font-size:1.75rem;font-weight:600;color:#fff;margin:50px 0 16px;border-bottom:1px solid var(--border);padding-bottom:10px}
+h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#fff;margin:28px 0 8px}
+p{margin-bottom:16px;font-size:.95rem;color:var(--text)}
+.schema-block{background:var(--card);border:1px solid var(--border);padding:0;margin:24px 0}
+.schema-header{background:rgba(0,0,0,.3);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
+.schema-title{font-size:.8rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.08em}
+.schema-url{font-family:'Courier New',monospace;font-size:.75rem;color:var(--gold)}
+.schema-body{padding:20px 24px}
+.code-block{background:rgba(0,0,0,.5);border:1px solid var(--border);padding:20px 24px;font-family:'Courier New',monospace;font-size:.8rem;color:#A8C4E0;overflow-x:auto;margin:16px 0;line-height:1.8;white-space:pre}
+.field-table{width:100%;border-collapse:collapse;margin:16px 0 0;font-size:.84rem}
+.field-table th{background:rgba(0,0,0,.4);color:rgba(255,255,255,.7);padding:10px 14px;text-align:left;font-weight:600;font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;border-bottom:1px solid var(--border)}
+.field-table td{padding:10px 14px;border-bottom:1px solid rgba(30,45,69,.6);color:var(--text);vertical-align:top}
+.field-table td:first-child{font-family:'Courier New',monospace;color:var(--gold);font-size:.78rem;white-space:nowrap}
+.field-table td:nth-child(2){color:rgba(184,136,42,.8);font-size:.8rem;white-space:nowrap}
+.field-table tr:last-child td{border-bottom:none}
+.note{background:rgba(184,136,42,.07);border-left:3px solid var(--gold);padding:16px 20px;margin:20px 0;font-size:.85rem;color:rgba(255,255,255,.65);line-height:1.6}
+.note strong{color:rgba(255,255,255,.85)}
+.methodology{background:rgba(0,0,0,.2);border-left:3px solid var(--gold);padding:20px 24px;margin:40px 0;font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.6}
+.methodology strong{color:rgba(255,255,255,.8)}
+.cta-box{background:var(--card);border:1px solid var(--border);padding:40px;margin-top:50px;text-align:center}
+.cta-box h3{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.6rem;margin-bottom:10px}
+.cta-box p{color:rgba(255,255,255,.6);font-size:.9rem;margin-bottom:24px}
+.cta-btn{display:inline-block;background:var(--gold);color:#fff;padding:13px 32px;font-size:.9rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
+footer{background:rgba(0,0,0,.3);border-top:1px solid var(--border);padding:30px 48px;text-align:center;font-size:.8rem;color:rgba(255,255,255,.35)}
+@media(max-width:720px){.hero{padding:40px 20px}.content{padding:40px 20px}.breadcrumb{padding:12px 20px}header{padding:16px 20px}h1{font-size:1.9rem}.code-block{font-size:.72rem}.schema-header{flex-direction:column;align-items:flex-start;gap:6px}}
+</style>
+</head>
+<body>
+<header><div class="logo">Majhi OS</div><nav><a href="/">Home</a><a href="/what-is-majhi-os">Platform</a><a href="/state-of-hiring-operations-2026">Research</a><a href="/#contact">Contact</a></nav></header>
+<div class="breadcrumb"><a href="/">Home</a> › <a href="/hiring-data-api">Data API</a> › Benchmark Data Schema</div>
+<div class="hero">
+  <div class="report-badge">Majhi OS · Schema Documentation</div>
+  <h1>Benchmark Data Schema: How Majhi OS Structures Hiring Operations Data</h1>
+  <p class="subhead">Complete field definitions, data types, units, and methodology notes for the three Majhi OS hiring operations JSON endpoints.</p>
+  <div class="report-meta">Schema Version: 1.0 &nbsp;·&nbsp; Published: July 2026 &nbsp;·&nbsp; See also: <a href="/hiring-data-api">API Docs</a></div>
+</div>
+<div class="content">
+
+  <h2>Schema Design Principles</h2>
+  <p>Every field has a <code style="font-family:'Courier New',monospace;color:var(--gold);font-size:.85em">source</code> key that explains where the data comes from. Percentage values are decimals (0.68, not 68). Industry ranges use <code style="font-family:'Courier New',monospace;color:var(--gold);font-size:.85em">_low</code> and <code style="font-family:'Courier New',monospace;color:var(--gold);font-size:.85em">_high</code> suffixes. Majhi OS outcomes use the <code style="font-family:'Courier New',monospace;color:var(--gold);font-size:.85em">majhi_os</code> key. Baseline-before values use <code style="font-family:'Courier New',monospace;color:var(--gold);font-size:.85em">baseline_before</code>. This pattern is consistent across all three endpoints.</p>
+
+  <div class="note"><strong>Versioning:</strong> Breaking schema changes increment the major version in <code style="font-family:'Courier New',monospace;font-size:.85em">schema_version</code> (1.0 → 2.0). New fields may be added without incrementing the major version. Stable URLs are maintained — new annual editions use new filenames (hiring-benchmarks-2027.json).</div>
+
+  <h2>Endpoint 1: Hiring Benchmarks</h2>
+  <div class="schema-block">
+    <div class="schema-header">
+      <span class="schema-title">hiring-benchmarks-2026.json</span>
+      <span class="schema-url">https://majhi.tech/data/hiring-benchmarks-2026.json</span>
+    </div>
+    <div class="schema-body">
+      <p style="font-size:.87rem;color:rgba(255,255,255,.6);margin-bottom:16px">VP search stall rates, outreach reply rates, shortlist approval rates, close times, audit coverage, and tool spend. Industry baselines vs. Majhi OS engagement outcomes.</p>
+
+      <h3>Top-level structure</h3>
+      <div class="code-block">{
+  "schema_version": "1.0",
+  "dataset": "hiring-benchmarks-2026",
+  "mandate_health": { ... },
+  "outreach_performance": { ... },
+  "shortlist_performance": { ... },
+  "operational_coverage": { ... },
+  "mandate_load": { ... }
+}</div>
+
+      <h3>mandate_health fields</h3>
+      <table class="field-table">
+        <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>vp_search_stall_rate.value</td><td>decimal</td><td>68% of VP searches stall past week 10 (expressed as 0.68)</td></tr>
+          <tr><td>average_close_time_days.majhi_os</td><td>integer</td><td>Majhi OS average close time in days (50)</td></tr>
+          <tr><td>average_close_time_days.industry_median</td><td>integer</td><td>14-week industry median in days (98)</td></tr>
+          <tr><td>average_close_time_days.improvement_pct</td><td>integer</td><td>Percentage improvement vs. industry median</td></tr>
+          <tr><td>failure_detection_window.value</td><td>string</td><td>Window in which failure modes are detectable ("weeks 2–6")</td></tr>
+          <tr><td>failure_detection_window.failure_point</td><td>string</td><td>Industry stall point ("week 10")</td></tr>
+        </tbody>
+      </table>
+
+      <h3>outreach_performance fields</h3>
+      <table class="field-table">
+        <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>reply_rate.majhi_os</td><td>decimal</td><td>Majhi OS outreach reply rate (0.35 = 35%)</td></tr>
+          <tr><td>reply_rate.industry_baseline_low</td><td>decimal</td><td>Industry range low (0.10 = 10%)</td></tr>
+          <tr><td>reply_rate.industry_baseline_high</td><td>decimal</td><td>Industry range high (0.18 = 18%)</td></tr>
+          <tr><td>reply_rate.baseline_before</td><td>decimal</td><td>Starting point before Majhi OS (0.14 = 14%)</td></tr>
+          <tr><td>reply_rate.improvement_vs_baseline</td><td>decimal</td><td>Multiplier improvement (1.50 = 150% improvement)</td></tr>
+        </tbody>
+      </table>
+
+      <h3>shortlist_performance fields</h3>
+      <table class="field-table">
+        <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>approval_rate.majhi_os</td><td>decimal</td><td>Majhi OS shortlist approval rate (0.82 = 82%)</td></tr>
+          <tr><td>approval_rate.industry_baseline_low</td><td>decimal</td><td>Industry range low (0.35 = 35%)</td></tr>
+          <tr><td>approval_rate.industry_baseline_high</td><td>decimal</td><td>Industry range high (0.45 = 45%)</td></tr>
+          <tr><td>approval_rate.baseline_before</td><td>decimal</td><td>Starting point before Majhi OS (0.38 = 38%)</td></tr>
+          <tr><td>approval_rate.improvement_pct</td><td>integer</td><td>Percentage improvement vs. baseline (116)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h2>Endpoint 2: Mandate Health Metrics</h2>
+  <div class="schema-block">
+    <div class="schema-header">
+      <span class="schema-title">mandate-health-metrics-2026.json</span>
+      <span class="schema-url">https://majhi.tech/data/mandate-health-metrics-2026.json</span>
+    </div>
+    <div class="schema-body">
+      <p style="font-size:.87rem;color:rgba(255,255,255,.6);margin-bottom:16px">Hiring Health Score structure and component weights. Six failure mode definitions with detection windows and recovery rates — with and without mandate monitoring active.</p>
+
+      <h3>Top-level structure</h3>
+      <div class="code-block">{
+  "schema_version": "1.0",
+  "dataset": "mandate-health-metrics-2026",
+  "hiring_health_score": {
+    "description": "...",
+    "components": [ ... ]  // array of 6 components
+  },
+  "failure_modes": [ ... ],  // array of 6 failure modes
+  "audit_coverage": { ... }
+}</div>
+
+      <h3>hiring_health_score.components array</h3>
+      <table class="field-table">
+        <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>[n].name</td><td>string</td><td>Machine-readable component name (e.g. "outreach_response_rate")</td></tr>
+          <tr><td>[n].label</td><td>string</td><td>Human-readable label (e.g. "Outreach Response Rate")</td></tr>
+          <tr><td>[n].weight</td><td>decimal</td><td>Component weight in the Health Score (0.00–1.00, sum = 1.00)</td></tr>
+          <tr><td>[n].description</td><td>string</td><td>What this component measures</td></tr>
+          <tr><td>[n].failure_threshold</td><td>string</td><td>The threshold that triggers a failure flag for this component</td></tr>
+        </tbody>
+      </table>
+
+      <h3>failure_modes array</h3>
+      <table class="field-table">
+        <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>[n].name</td><td>string</td><td>Machine-readable failure mode name (e.g. "outreach_decay")</td></tr>
+          <tr><td>[n].label</td><td>string</td><td>Human-readable label (e.g. "Outreach Decay")</td></tr>
+          <tr><td>[n].detection_window</td><td>string</td><td>When this mode is detectable (e.g. "Weeks 3–6")</td></tr>
+          <tr><td>[n].recovery_rate_with_monitoring</td><td>decimal</td><td>Recovery rate when Majhi OS monitoring is active</td></tr>
+          <tr><td>[n].recovery_rate_without_monitoring</td><td>decimal</td><td>Industry recovery rate without systematic monitoring</td></tr>
+          <tr><td>[n].description</td><td>string</td><td>Operational description of this failure mode and how it manifests</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h2>Endpoint 3: Executive Search Outcomes</h2>
+  <div class="schema-block">
+    <div class="schema-header">
+      <span class="schema-title">executive-search-outcomes-2026.json</span>
+      <span class="schema-url">https://majhi.tech/data/executive-search-outcomes-2026.json</span>
+    </div>
+    <div class="schema-body">
+      <p style="font-size:.87rem;color:rgba(255,255,255,.6);margin-bottom:16px">Majhi Group placement outcomes and industry executive search failure rate data.</p>
+
+      <h3>Top-level structure</h3>
+      <div class="code-block">{
+  "schema_version": "1.0",
+  "dataset": "executive-search-outcomes-2026",
+  "majhi_group_outcomes": { ... },
+  "featured_case": { ... },
+  "industry_context": { ... },
+  "hiring_system_benchmarks": { ... }
+}</div>
+
+      <h3>majhi_group_outcomes fields</h3>
+      <table class="field-table">
+        <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>placements_completed.value</td><td>string</td><td>Number of completed C-suite and VP placements ("25+")</td></tr>
+          <tr><td>average_close_time.majhi_group_days_low</td><td>integer</td><td>Low end of Majhi Group average close time range (30 days)</td></tr>
+          <tr><td>average_close_time.majhi_group_days_high</td><td>integer</td><td>High end of Majhi Group average close time range (45 days)</td></tr>
+          <tr><td>average_close_time.industry_median_days_low</td><td>integer</td><td>Industry median range low (65 days)</td></tr>
+          <tr><td>average_close_time.industry_median_days_high</td><td>integer</td><td>Industry median range high (90 days)</td></tr>
+          <tr><td>offer_acceptance_rate.value</td><td>decimal</td><td>Offer acceptance rate (0.90 = 90%+)</td></tr>
+          <tr><td>replacement_guarantee.duration_days</td><td>integer</td><td>Replacement guarantee period in days (90)</td></tr>
+        </tbody>
+      </table>
+
+      <h3>featured_case fields</h3>
+      <table class="field-table">
+        <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>close_time_days</td><td>integer</td><td>Actual close time for this search (41 days)</td></tr>
+          <tr><td>prior_firm_attempts</td><td>integer</td><td>Number of prior search firms engaged (2)</td></tr>
+          <tr><td>prior_firm_duration_days</td><td>string</td><td>Duration of prior firm attempts ("60+")</td></tr>
+          <tr><td>search_value_usd</td><td>integer</td><td>Total compensation value of the role in USD (275000)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h2>Methodology</h2>
+
+  <h3>Majhi OS data</h3>
+  <p>Operational metrics — reply rates, shortlist approval rates, audit trail coverage, tool spend, close times — are drawn from direct hiring system engagements through June 2026. Each metric reflects actual system output, not projections or estimates.</p>
+
+  <h3>Industry baselines</h3>
+  <p>Industry ranges reference published benchmark research from LinkedIn Talent Solutions annual reports, SHRM recruiting benchmarks, and Greenhouse annual recruiting benchmarks. Where industry data presents ranges, both bounds are captured in <code style="font-family:'Courier New',monospace;color:var(--gold);font-size:.85em">_low</code> and <code style="font-family:'Courier New',monospace;color:var(--gold);font-size:.85em">_high</code> fields.</p>
+
+  <h3>VP search stall rate</h3>
+  <p>The 68% VP search stall rate past week 10 reflects patterns from Majhi OS mandate analysis combined with industry research. It is not a Majhi-only statistic — it describes the industry condition that Majhi OS is built to solve.</p>
+
+  <h3>Failure mode recovery rates</h3>
+  <p>Recovery rates with monitoring are from Majhi OS engagements where failure modes were detected within their detection window and recovery actions were executed. Recovery rates without monitoring are observed from industry patterns where the same failure modes were identified only after the mandate had already collapsed.</p>
+
+  <div class="methodology">
+    <strong>Data integrity guarantee:</strong> No data in the Majhi OS JSON schema is fabricated, estimated from incomplete data, or projected forward from a small sample without disclosure. Every figure is either (1) directly from documented Majhi OS engagements or (2) sourced from named published industry research. Source attribution is embedded in each data object.
+  </div>
+
+  <div class="cta-box">
+    <h3>Build Something With This Data</h3>
+    <p>The JSON endpoints are free to use. If you build a tool, dashboard, or integration using Majhi OS data, we want to see it.</p>
+    <a href="https://majhi.tech/mission-walkthrough" class="cta-btn">Contact Majhi OS</a>
+  </div>
+
+</div>
+<footer>© 2026 Majhi OS · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/hiring-data-api">API Access</a> · Schema v1.0</footer>
+</body>
+</html>
