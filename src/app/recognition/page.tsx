@@ -466,6 +466,7 @@ export default function RecognitionPage() {
               Citation counts are monitored continuously and updated periodically. They
               represent instances where published work is surfaced or referenced in
               AI-powered search experiences, as reported by Microsoft Bing Webmaster Tools.
+              Last updated: July 10, 2026.
             </p>
           </div>
         </div>
@@ -515,8 +516,8 @@ export default function RecognitionPage() {
             In the press
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {pressClips.map((clip) => (
-              <div key={clip.publication} className="space-y-3">
+            {pressClips.map((clip, i) => (
+              <div key={`${clip.publication}-${i}`} className="space-y-3">
                 <div>
                   <p className="font-serif text-base font-medium">{clip.publication}</p>
                   <p className="text-xs text-muted-foreground uppercase tracking-widest mt-0.5">
