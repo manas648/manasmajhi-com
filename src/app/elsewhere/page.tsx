@@ -207,6 +207,13 @@ const photos = [
     width: 1170,
     height: 1161,
   },
+  {
+    src: "/elsewhere/manas-majhi-motorcycle-goa.jpg",
+    alt: "Manas Majhi on a motorcycle on a palm-lined road in Goa",
+    caption: "Nobody schedules clarity. It finds you.",
+    width: 720,
+    height: 1280,
+  },
 ];
 
 // ---------------------------------------------------------------------------
