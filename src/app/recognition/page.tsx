@@ -236,6 +236,10 @@ const media = [
     name: "Dainik Bhaskar",
     href: null,
   },
+  {
+    name: "Medium",
+    href: "https://link.medium.com/kxrbjlv20qb",
+  },
 ];
 
 const pressClips = [
