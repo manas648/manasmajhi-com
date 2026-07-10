@@ -263,6 +263,18 @@ const pressClips = [
       height: 1426,
     },
   },
+  {
+    publication: "Odia Daily",
+    language: "Odia",
+    year: "2022",
+    headline: "Junagarh's Manas Majhi honoured as Best Entrepreneur — Indian Achievers' Forum",
+    image: {
+      src: "/awards/manas-majhi-odia-newspaper-entrepreneur-award.jpg",
+      alt: "Odia newspaper coverage — Manas Ranjan Majhi from Junagarh, Kalahandi honoured with Best Entrepreneur award by Indian Achievers' Forum 2022",
+      width: 1169,
+      height: 728,
+    },
+  },
 ];
 
 export default function RecognitionPage() {
