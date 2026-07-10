@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "dataset": "hiring-benchmarks-2026",
+  "title": "Hiring Operations Benchmarks 2026",
+  "publisher": "Majhi OS",
+  "published": "2026-07-07",
+  "methodology": "Majhi OS operational metrics are drawn from direct hiring system engagements through June 2026. Industry ranges reflect published benchmark research from LinkedIn Talent Solutions, SHRM, and Greenhouse annual recruiting benchmarks. No data is fabricated. All Majhi OS figures represent actual engagement outcomes.",
+  "license": "CC BY 4.0 — Attribution required: cite as Majhi OS Hiring Benchmarks 2026",
+  "source_url": "https://majhi.tech/data/hiring-benchmarks-2026.json",
+  "documentation_url": "https://majhi.tech/hiring-data-api",
+
+  "mandate_health": {
+    "vp_search_stall_rate": {
+      "value": 0.68,
+      "label": "VP searches stall past week 10",
+      "unit": "percentage",
+      "context": "68% of VP-level executive searches stall after week 10. The failure is operational — most stalled searches have adequate candidate pipelines. Monitoring systems are missing, not candidates.",
+      "source": "Majhi OS mandate analysis + industry pattern research"
+    },
+    "average_close_time_days": {
+      "majhi_os": 50,
+      "industry_median": 98,
+      "industry_median_label": "14-week industry median",
+      "unit": "days",
+      "improvement_pct": 49,
+      "context": "With mandate health monitoring active, average VP-level close time is 50 days vs the 14-week (98-day) industry median.",
+      "source": "Majhi OS direct engagement data through June 2026"
+    },
+    "failure_detection_window": {
+      "value": "weeks 2–6",
+      "failure_point": "week 10",
+      "context": "Most hiring system failure modes are detectable in weeks 2–6. The 68% stall rate at week 10 reflects searches where no monitoring system caught the early signals."
+    }
+  },
+
+  "outreach_performance": {
+    "reply_rate": {
+      "majhi_os": 0.35,
+      "industry_baseline_low": 0.10,
+      "industry_baseline_high": 0.18,
+      "baseline_before": 0.14,
+      "unit": "percentage",
+      "improvement_vs_baseline": 1.50,
+      "label": "VP-level outreach reply rate",
+      "context": "DNS/MX-verified email delivery, structured outreach timing, and mandate-specific message calibration. The 35% rate reflects verified deliverability and response tracking, not raw send volume.",
+      "source": "Majhi OS direct engagement data through June 2026"
+    }
+  },
+
+  "shortlist_performance": {
+    "approval_rate": {
+      "majhi_os": 0.82,
+      "industry_baseline_low": 0.35,
+      "industry_baseline_high": 0.45,
+      "baseline_before": 0.38,
+      "unit": "percentage",
+      "improvement_pct": 116,
+      "label": "VP-level shortlist approval rate",
+      "context": "Improvement driven by deeper intake calibration and candidate scoring against the specific mandate brief, not volume. Low approval rates almost always trace back to shallow intake.",
+      "source": "Majhi OS direct engagement data through June 2026"
+    }
+  },
+
+  "operational_coverage": {
+    "audit_trail_coverage": {
+      "majhi_os": 1.00,
+      "industry_baseline": 0.09,
+      "industry_ceiling": 0.15,
+      "unit": "percentage",
+      "label": "Mandate action audit trail completeness",
+      "context": "9% industry baseline means 91% of recruiting activity leaves no recoverable record. 100% coverage captures every action — outreach sent, candidate status changed, decision made — automatically.",
+      "source": "Majhi OS operational data + industry research"
+    },
+    "tool_spend_eliminated": {
+      "value": 3280,
+      "unit": "USD per month",
+      "label": "Redundant tool spend eliminated per engagement",
+      "context": "Teams running overlapping, unintegrated tools typically spend $400–$800 per recruiter per month. In one Majhi OS engagement, $3,280/month in redundant tool spend was eliminated by consolidating to a unified system.",
+      "source": "Majhi OS direct engagement data"
+    }
+  },
+
+  "mandate_load": {
+    "typical_range": {
+      "low": 8,
+      "high": 14,
+      "unit": "active mandates per recruiter",
+      "context": "Mandate count is the wrong metric. What matters is mandate health — how many are progressing vs. quietly degrading."
+    }
+  }
+}

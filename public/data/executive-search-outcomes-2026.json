@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "dataset": "executive-search-outcomes-2026",
+  "title": "Executive Search Outcomes 2026",
+  "publisher": "Majhi Group",
+  "published": "2026-07-07",
+  "methodology": "All Majhi Group figures represent actual completed search engagements documented through June 2026. Industry medians reference published data from retained search industry research. No data is fabricated or estimated.",
+  "license": "CC BY 4.0 — Attribution required: cite as Majhi Group Executive Search Outcomes 2026",
+  "source_url": "https://majhi.tech/data/executive-search-outcomes-2026.json",
+  "documentation_url": "https://majhi.tech/hiring-data-api",
+
+  "majhi_group_outcomes": {
+    "placements_completed": {
+      "value": "25+",
+      "scope": "C-suite and VP-level placements",
+      "period": "through June 2026",
+      "source": "Majhi Group completed engagement records"
+    },
+    "average_close_time": {
+      "majhi_group_days_low": 30,
+      "majhi_group_days_high": 45,
+      "industry_median_days_low": 65,
+      "industry_median_days_high": 90,
+      "unit": "days from engagement start to offer acceptance",
+      "improvement_vs_median": "42–54% faster than industry median",
+      "source": "Majhi Group engagement data vs. published retained search industry benchmarks"
+    },
+    "offer_acceptance_rate": {
+      "value": 0.90,
+      "label": "90%+ offer acceptance rate",
+      "unit": "percentage",
+      "context": "Offer acceptance rate reflects quality of fit, not speed. High acceptance correlates with deeper intake and candidate calibration against the actual hiring bar.",
+      "source": "Majhi Group completed engagement records"
+    },
+    "replacement_guarantee": {
+      "duration_days": 90,
+      "label": "90-day replacement guarantee at no charge",
+      "context": "If a placed candidate leaves within 90 days, Majhi Group restarts the search at no additional fee."
+    }
+  },
+
+  "featured_case": {
+    "description": "$275K CTC executive search completed in 41 days. Two prior search firms had been engaged for 60+ days each without a successful placement.",
+    "close_time_days": 41,
+    "prior_firm_attempts": 2,
+    "prior_firm_duration_days": "60+",
+    "search_value_usd": 275000,
+    "unit": "total compensation (CTC)",
+    "source": "Majhi Group completed engagement records"
+  },
+
+  "industry_context": {
+    "executive_search_failure_rate": {
+      "value": 0.40,
+      "label": "40% of executive hires fail within 18 months",
+      "context": "The dominant cause is process: roles filled with contingency speed, not retained-search rigor. Candidate-job fit is evaluated against activity metrics rather than actual hiring bar.",
+      "source": "Published executive search industry research"
+    },
+    "contingency_vs_retained": {
+      "contingency_model": "Pay-on-placement. Incentivised toward speed, not quality. No exclusivity, no accountability for fit.",
+      "retained_model": "Upfront commitment. Exclusivity. Fee structure aligned with quality outcomes, not placement speed.",
+      "majhi_group_model": "Retained. 20–25% of total CTC. One-third at signing, one-third after candidate submission, one-third after placement. 90-day replacement guarantee."
+    }
+  },
+
+  "hiring_system_benchmarks": {
+    "vp_search_stall_rate_week_10": {
+      "value": 0.68,
+      "label": "68% of VP searches stall past week 10",
+      "source": "Majhi OS mandate analysis + industry pattern research"
+    },
+    "average_close_with_os_monitoring": {
+      "value": 50,
+      "unit": "days",
+      "industry_median_days": 98,
+      "label": "50-day average with Majhi OS monitoring vs 14-week (98-day) industry median",
+      "source": "Majhi OS direct engagement data through June 2026"
+    }
+  }
+}

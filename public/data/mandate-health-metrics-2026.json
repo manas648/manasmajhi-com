@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "dataset": "mandate-health-metrics-2026",
+  "title": "Mandate Health Metrics 2026",
+  "publisher": "Majhi OS",
+  "published": "2026-07-07",
+  "methodology": "Mandate health scores and failure mode recovery rates are derived from Majhi OS direct engagement data through June 2026. Industry baselines reference published recruiting research. Detection thresholds are calibrated to trigger in the recovery window, not after it closes.",
+  "license": "CC BY 4.0 — Attribution required: cite as Majhi OS Mandate Health Metrics 2026",
+  "source_url": "https://majhi.tech/data/mandate-health-metrics-2026.json",
+  "documentation_url": "https://majhi.tech/benchmark-data-schema",
+
+  "hiring_health_score": {
+    "description": "The Hiring Health Score is a real-time composite operational score for every active executive search mandate. It moves before a mandate stalls.",
+    "components": [
+      {
+        "name": "outreach_response_rate",
+        "label": "Outreach Response Rate",
+        "weight": 0.20,
+        "description": "Reply rate on active candidate outreach",
+        "failure_threshold": "Below 12%"
+      },
+      {
+        "name": "pipeline_velocity",
+        "label": "Pipeline Velocity",
+        "weight": 0.20,
+        "description": "Days between stage transitions in the candidate pipeline",
+        "failure_threshold": "Stall greater than 5 business days"
+      },
+      {
+        "name": "shortlist_approval_rate",
+        "label": "Shortlist Approval Rate",
+        "weight": 0.20,
+        "description": "Hiring manager approval rate on submitted candidates",
+        "failure_threshold": "Below 40%"
+      },
+      {
+        "name": "recruiter_load_index",
+        "label": "Recruiter Load Index",
+        "weight": 0.15,
+        "description": "Active mandates vs. recruiter bandwidth threshold",
+        "failure_threshold": "Over 12 active mandates"
+      },
+      {
+        "name": "hiring_manager_engagement",
+        "label": "Hiring Manager Engagement",
+        "weight": 0.15,
+        "description": "Response time and feedback quality from hiring managers",
+        "failure_threshold": "No response greater than 3 days"
+      },
+      {
+        "name": "audit_trail_completeness",
+        "label": "Audit Trail Completeness",
+        "weight": 0.10,
+        "description": "Percentage of mandate-level actions captured and attributed",
+        "failure_threshold": "Below 80%"
+      }
+    ]
+  },
+
+  "failure_modes": [
+    {
+      "name": "outreach_decay",
+      "label": "Outreach Decay",
+      "detection_window": "Weeks 3–6",
+      "recovery_rate_with_monitoring": 0.78,
+      "recovery_rate_without_monitoring": 0.35,
+      "description": "Reply rates drop progressively as candidates are over-messaged or targeting is misaligned. Detectable via outreach response rate component."
+    },
+    {
+      "name": "shortlist_rejection_loop",
+      "label": "Shortlist Rejection Loop",
+      "detection_window": "After 2nd rejection",
+      "recovery_rate_with_monitoring": 0.71,
+      "recovery_rate_without_monitoring": 0.45,
+      "description": "Hiring manager repeatedly rejects shortlisted candidates without updated criteria. Root cause is shallow intake. Detectable via shortlist approval rate trend."
+    },
+    {
+      "name": "recruiter_overload",
+      "label": "Recruiter Overload",
+      "detection_window": "Weeks 2–4",
+      "recovery_rate_with_monitoring": 0.85,
+      "recovery_rate_without_monitoring": 0.50,
+      "description": "Recruiter carrying too many active mandates for the role complexity. Highest recovery rate of all failure modes when caught early. Detectable via recruiter load index."
+    },
+    {
+      "name": "hiring_manager_disengagement",
+      "label": "Hiring Manager Disengagement",
+      "detection_window": "Day 4–7 of no response",
+      "recovery_rate_with_monitoring": 0.65,
+      "recovery_rate_without_monitoring": 0.30,
+      "description": "Hiring manager stops providing feedback or goes dark on submissions. Detectable via hiring manager engagement component of health score."
+    },
+    {
+      "name": "pipeline_collapse",
+      "label": "Pipeline Collapse",
+      "detection_window": "Stage velocity alert",
+      "recovery_rate_with_monitoring": 0.58,
+      "recovery_rate_without_monitoring": 0.20,
+      "description": "Candidates stop progressing between stages without clear rejection. Lowest recovery rate — typically requires full pipeline restart. Detectable via pipeline velocity component."
+    },
+    {
+      "name": "scope_drift",
+      "label": "Scope Drift",
+      "detection_window": "Brief version check",
+      "recovery_rate_with_monitoring": 0.82,
+      "recovery_rate_without_monitoring": 0.40,
+      "description": "Role requirements shift without updating the mandate brief or candidate criteria. High recovery when caught early. Detectable via brief version comparison."
+    }
+  ],
+
+  "audit_coverage": {
+    "industry_baseline": 0.09,
+    "industry_ceiling": 0.15,
+    "majhi_os_coverage": 1.00,
+    "unit": "percentage of mandate-level actions captured",
+    "description": "Industry baseline is under 15%. 9% coverage means 91% of recruiting activity leaves no recoverable record when a mandate fails. 100% coverage means every action is automatically captured and attributed.",
+    "source": "Majhi OS operational data + industry research"
+  }
+}
