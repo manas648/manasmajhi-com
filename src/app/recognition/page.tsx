@@ -264,7 +264,7 @@ const pressClips = [
     },
   },
   {
-    publication: "Odia Daily",
+    publication: "The Prameya",
     language: "Odia",
     year: "2022",
     headline: "Junagarh's Manas Majhi honoured as Best Entrepreneur — Indian Achievers' Forum",
