@@ -431,7 +431,7 @@ export default function RecognitionPage() {
             {/* Stats row */}
             <div className="grid grid-cols-3 gap-px border border-border rounded-lg overflow-hidden mt-6">
               <div className="bg-muted/30 px-6 py-5">
-                <p className="font-serif text-3xl font-medium">937</p>
+                <p className="font-serif text-3xl font-medium">1.2K</p>
                 <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
                   AI citations
                 </p>
@@ -443,7 +443,7 @@ export default function RecognitionPage() {
                 </p>
               </div>
               <div className="bg-muted/30 px-6 py-5">
-                <p className="font-serif text-3xl font-medium">5</p>
+                <p className="font-serif text-3xl font-medium">7</p>
                 <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
                   Avg. cited pages
                 </p>
@@ -454,9 +454,9 @@ export default function RecognitionPage() {
             <div className="rounded-lg overflow-hidden border border-border mt-2">
               <Image
                 src="/awards/bing-webmaster-ai-citations.png"
-                alt="Microsoft Bing Webmaster Tools — AI Performance dashboard showing 937 total citations and 5 average cited pages for majhigroup.com over the last 30 days, sourced from Microsoft Copilots and Partners"
-                width={2600}
-                height={1160}
+                alt="Microsoft Bing Webmaster Tools — AI Performance dashboard showing 1.2K total citations and 7 average cited pages for majhigroup.com over the last 30 days, sourced from Microsoft Copilots and Partners"
+                width={2442}
+                height={1222}
                 className="w-full h-auto"
                 loading="lazy"
               />
@@ -466,7 +466,7 @@ export default function RecognitionPage() {
               Citation counts are monitored continuously and updated periodically. They
               represent instances where published work is surfaced or referenced in
               AI-powered search experiences, as reported by Microsoft Bing Webmaster Tools.
-              Last updated: July 10, 2026.
+              Last updated: July 12, 2026.
             </p>
           </div>
         </div>
