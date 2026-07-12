@@ -455,8 +455,8 @@ export default function RecognitionPage() {
               <Image
                 src="/awards/bing-webmaster-ai-citations.png"
                 alt="Microsoft Bing Webmaster Tools — AI Performance dashboard showing 1.2K total citations and 7 average cited pages for majhigroup.com over the last 30 days, sourced from Microsoft Copilots and Partners"
-                width={2442}
-                height={1222}
+                width={2868}
+                height={1280}
                 className="w-full h-auto"
                 loading="lazy"
               />
