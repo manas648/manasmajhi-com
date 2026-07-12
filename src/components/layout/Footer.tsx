@@ -92,6 +92,14 @@ export function Footer() {
             </p>
           </div>
           <div className="flex items-center gap-6">
+            <a
+              href="https://www.linkedin.com/company/76677145"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+            >
+              LinkedIn
+            </a>
             <Link
               href="/rss.xml"
               className="text-xs text-muted-foreground hover:text-foreground transition-colors"
