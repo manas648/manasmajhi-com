@@ -148,10 +148,10 @@ export default function AboutPage() {
         />
       ))}
       <div className="min-h-screen px-6 lg:px-8 py-20">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Header */}
           <div className="mb-16">
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-16">
               <div className="flex-1">
                 <p className="section-label mb-4">About</p>
                 <h1 className="font-serif text-5xl md:text-6xl font-medium tracking-tight mb-4">
@@ -232,6 +232,7 @@ export default function AboutPage() {
           </div>
 
         {/* Story */}
+        <div className="max-w-3xl">
         <div className="prose-essay space-y-8 font-sans text-base leading-relaxed">
           <p className="text-xl text-muted-foreground leading-relaxed">
             I grew up in Kalahandi, in the southwestern corner of Odisha —
@@ -361,8 +362,10 @@ export default function AboutPage() {
 
         </div>
 
+        </div>{/* end max-w-3xl story wrapper */}
+
           {/* Links */}
-          <div className="mt-16 flex flex-wrap gap-6">
+          <div className="mt-16 flex flex-wrap gap-6 max-w-3xl">
             <Link
               href="/start-here"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-foreground text-background font-medium hover:bg-foreground/90 transition-colors"
