@@ -167,14 +167,28 @@ export default function AboutPage() {
                   Also known as Maanas Ranjan Majhi.
                 </p>
               </div>
-              <div className="relative w-48 h-56 md:w-56 md:h-64 rounded-2xl overflow-hidden flex-shrink-0">
-                <Image
-                  src="/Essay Pictures/ChatGPT Image May 16, 2026, 11_51_20 AM.png"
-                  alt="Manas Majhi"
-                  fill
-                  className="object-cover object-top"
-                  priority
+              <div className="relative flex items-center justify-center flex-shrink-0">
+                <div
+                  className="absolute bg-amber-300/50 dark:bg-amber-600/30 blur-3xl"
+                  style={{ width: "240px", height: "320px" }}
                 />
+                <div className="relative w-[200px] h-[280px] lg:w-[280px] lg:h-[400px]">
+                  <Image
+                    src="/manas-majhi-3.png"
+                    alt="Manas Majhi"
+                    width={376}
+                    height={550}
+                    className="w-full h-full object-cover"
+                    style={{
+                      objectPosition: "center top",
+                      WebkitMaskImage:
+                        "radial-gradient(ellipse 85% 88% at 50% 38%, black 48%, transparent 76%)",
+                      maskImage:
+                        "radial-gradient(ellipse 85% 88% at 50% 38%, black 48%, transparent 76%)",
+                    }}
+                    priority
+                  />
+                </div>
               </div>
             </div>
           </div>

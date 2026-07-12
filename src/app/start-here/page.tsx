@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { getAllEssayMeta } from "@/lib/essays";
@@ -126,15 +127,42 @@ export default function StartHerePage() {
     <div className="min-h-screen px-6 lg:px-8 py-20">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="max-w-2xl mb-20">
-          <p className="section-label mb-4">Welcome</p>
-          <h1 className="font-serif text-5xl md:text-6xl font-medium tracking-tight mb-6">
-            Start Here
-          </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            A curated reading experience. The articles below are the best place
-            to begin — the ones that define this work and why it exists.
-          </p>
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr,auto] gap-12 lg:gap-20 items-center mb-20">
+          <div className="max-w-2xl">
+            <p className="section-label mb-4">Welcome</p>
+            <h1 className="font-serif text-5xl md:text-6xl font-medium tracking-tight mb-6">
+              Start Here
+            </h1>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              A curated reading experience. The articles below are the best place
+              to begin — the ones that define this work and why it exists.
+            </p>
+          </div>
+          <div className="flex justify-center lg:justify-end shrink-0">
+            <div className="relative flex items-center justify-center">
+              <div
+                className="absolute bg-amber-300/50 dark:bg-amber-600/30 blur-3xl"
+                style={{ width: "240px", height: "320px" }}
+              />
+              <div className="relative w-[200px] h-[280px] lg:w-[280px] lg:h-[400px]">
+                <Image
+                  src="/manas-majhi-2.png"
+                  alt="Manas Majhi"
+                  width={376}
+                  height={550}
+                  className="w-full h-full object-cover"
+                  style={{
+                    objectPosition: "center top",
+                    WebkitMaskImage:
+                      "radial-gradient(ellipse 85% 88% at 50% 38%, black 48%, transparent 76%)",
+                    maskImage:
+                      "radial-gradient(ellipse 85% 88% at 50% 38%, black 48%, transparent 76%)",
+                  }}
+                  priority
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Core belief */}

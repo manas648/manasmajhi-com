@@ -207,7 +207,7 @@ export default function HomePage() {
                 {/* Portrait — fades into page background */}
                 <div className="relative w-[200px] h-[280px] lg:w-[280px] lg:h-[400px]">
                   <Image
-                    src="/headshot.jpg"
+                    src="/manas-majhi-1.jpg"
                     alt="Manas Majhi"
                     width={376}
                     height={550}
