@@ -94,7 +94,7 @@ export default function WhitepaperPage() {
 
         {/* Header */}
         <div className="mb-16">
-          <p className="section-label mb-4">Infrastructure Research · Majhi OS · 2025</p>
+          <p className="section-label mb-4">Infrastructure Research · Majhi OS · 2026</p>
           <h1 className="font-serif text-5xl md:text-6xl font-medium tracking-tight mb-6 leading-tight">
             The Operational<br />Visibility Gap
           </h1>
@@ -204,7 +204,7 @@ export default function WhitepaperPage() {
         {/* Footer note */}
         <p className="mt-12 text-xs text-muted-foreground">
           All benchmark data is derived from Majhi OS internal mandate observations
-          (2024–25) and publicly available research on executive recruiting timelines.
+          (2024–26) and publicly available research on executive recruiting timelines.
           VP-level is defined as VP, SVP, EVP, and C-suite. Funnel data is illustrative,
           based on median search patterns. Results vary by role, market, and
           configuration.

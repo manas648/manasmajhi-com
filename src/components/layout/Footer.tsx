@@ -27,6 +27,8 @@ const footerLinks = {
     { href: "/elsewhere", label: "Elsewhere" },
     { href: "/recognition", label: "Recognition" },
     { href: "/timeline", label: "Timeline" },
+    { href: "/always-learning", label: "Always Learning" },
+    { href: "/beyond-work", label: "Beyond Work" },
   ],
 };
 

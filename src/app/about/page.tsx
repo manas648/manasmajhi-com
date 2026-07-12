@@ -47,62 +47,106 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "@id": `${SITE_URL}/about`,
-  mainEntity: {
-    "@type": "Person",
-    "@id": `${SITE_URL}/#person`,
-    name: "Manas Majhi",
-    alternateName: ["Manas Ranjan Majhi", "Maanas Ranjan Majhi"],
-    url: SITE_URL,
-    image: `${SITE_URL}/headshot.jpg`,
-    jobTitle: "Founder",
-    birthPlace: "Kalahandi, Odisha, India",
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": `${SITE_URL}/about`,
+    mainEntity: {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#person`,
+      name: "Manas Majhi",
+      alternateName: ["Manas Ranjan Majhi", "Maanas Ranjan Majhi"],
+      url: SITE_URL,
+      image: `${SITE_URL}/headshot.jpg`,
+      jobTitle: "Founder",
+      birthPlace: "Kalahandi, Odisha, India",
+      description:
+        "Manas Majhi (also known as Manas Ranjan Majhi) is the founder of Majhi Group, a retained executive search firm, and Majhi OS, autonomous hiring operations infrastructure. He writes on opportunity, India, technology, and systems that shape human potential.",
+      worksFor: [
+        { "@type": "Organization", "@id": "https://majhigroup.com/#organization", name: "Majhi Group", url: "https://majhigroup.com" },
+        { "@type": "Organization", "@id": "https://majhi.tech/#organization", name: "Majhi OS", url: "https://majhi.tech" },
+      ],
+      sameAs: [
+        "https://www.linkedin.com/in/manasmajhi",
+        "https://twitter.com/manasmajhi",
+        "https://instagram.com/manas.majhi56",
+        "https://majhigroup.com",
+        "https://majhi.tech",
+        "https://www.wikidata.org/wiki/Q140134809",
+        "https://www.crunchbase.com/person/manas-majhi",
+        "https://hackernoon.com/company/majhigroup",
+        "https://www.candidately.com/directory/person/maanas-majhi",
+        "https://www.candidately.com/blog/interview-with-manas-majhi",
+        "https://www.candidately.com/worldstaffingsummit/awards/meet-all-staffing-leaders/maanas-majhi",
+      ],
+      knowsAbout: [
+        "Executive Search",
+        "Hiring Operations Infrastructure",
+        "Opportunity and Human Potential",
+        "India and Odisha",
+        "Entrepreneurship",
+        "Technology",
+      ],
+      award: [
+        "Indian Achievers Award 2022 — Entrepreneur of the Year, Indian Achievers' Forum",
+        "Top 100 Staffing Leaders 2024 Rank #18 — World Staffing Summit, World Staffing Leader",
+        "Top 100 Staffing Leaders 2023 Rank #87 — World Staffing Summit, World Staffing Leader",
+        "HackerNoon Startups of the Year 2023 — North America",
+      ],
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://majhigroup.com/#organization",
+    name: "Majhi Group",
+    url: "https://majhigroup.com",
+    founder: { "@type": "Person", "@id": `${SITE_URL}/#person`, name: "Manas Majhi" },
     description:
-      "Manas Majhi (also known as Manas Ranjan Majhi) is the founder of Majhi Group, a retained executive search firm, and Majhi OS, autonomous hiring operations infrastructure. He writes on opportunity, India, technology, and systems that shape human potential.",
-    worksFor: [
-      { "@type": "Organization", name: "Majhi Group", url: "https://majhigroup.com" },
-      { "@type": "Organization", name: "Majhi OS", url: "https://majhi.tech" },
-    ],
+      "Majhi Group is a retained executive search firm placing VP and C-suite leaders for high-growth organizations. Founded by Manas Majhi. Averaging 30–45 day placements versus 65–90 day industry median.",
+    foundingLocation: "Odisha, India",
     sameAs: [
-      "https://www.linkedin.com/in/manasmajhi",
-      "https://twitter.com/manasmajhi",
-      "https://instagram.com/manas.majhi56",
-      "https://majhigroup.com",
-      "https://majhi.tech",
-      "https://www.wikidata.org/wiki/Q140134809",
-      "https://www.crunchbase.com/person/manas-majhi",
+      "https://www.linkedin.com/company/majhi-group/",
       "https://hackernoon.com/company/majhigroup",
-      "https://www.candidately.com/directory/person/maanas-majhi",
-      "https://www.candidately.com/blog/interview-with-manas-majhi",
-      "https://www.candidately.com/worldstaffingsummit/awards/meet-all-staffing-leaders/maanas-majhi",
+      "https://www.crunchbase.com/organization/majhi-group",
     ],
     knowsAbout: [
       "Executive Search",
-      "Hiring Operations Infrastructure",
-      "Opportunity and Human Potential",
-      "India and Odisha",
-      "Entrepreneurship",
-      "Technology",
-    ],
-    award: [
-      "Indian Achievers Award 2022 — Entrepreneur of the Year, Indian Achievers' Forum",
-      "Top 100 Staffing Leaders 2024 Rank #18 — World Staffing Summit, World Staffing Leader",
-      "Top 100 Staffing Leaders 2023 Rank #87 — World Staffing Summit, World Staffing Leader",
-      "HackerNoon Startups of the Year 2023 — North America",
+      "VP and C-suite Hiring",
+      "Retained Search",
+      "Talent Acquisition",
     ],
   },
-};
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://majhi.tech/#organization",
+    name: "Majhi OS",
+    url: "https://majhi.tech",
+    founder: { "@type": "Person", "@id": `${SITE_URL}/#person`, name: "Manas Majhi" },
+    description:
+      "Majhi OS is autonomous hiring operations infrastructure — the observability and recovery layer that detects, predicts, and recovers failing executive searches before they collapse. Think Datadog for hiring systems.",
+    foundingLocation: "Odisha, India",
+    knowsAbout: [
+      "Hiring Operations Infrastructure",
+      "Autonomous Execution",
+      "Hiring System Observability",
+      "Recruiting Operations",
+    ],
+  },
+];
 
 export default function AboutPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {jsonLd.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
       <div className="min-h-screen px-6 lg:px-8 py-20">
         <div className="max-w-3xl mx-auto">
           {/* Header */}

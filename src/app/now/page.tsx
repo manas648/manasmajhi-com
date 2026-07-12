@@ -39,7 +39,7 @@ export default function NowPage() {
             What I&apos;m focused on
           </h1>
           <p className="text-sm text-muted-foreground">
-            Updated June 2026 · from Odisha, India
+            Updated July 2026 · from Odisha, India
           </p>
         </div>
 
