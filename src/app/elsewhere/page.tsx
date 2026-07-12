@@ -214,6 +214,20 @@ const photos = [
     width: 720,
     height: 1280,
   },
+  {
+    src: "/elsewhere/manas-majhi-kazakhstan-forest.png",
+    alt: "Manas Majhi in a forest in Kazakhstan next to a UNDP Land Cruiser",
+    caption: "The only agenda was the horizon.",
+    width: 1484,
+    height: 1060,
+  },
+  {
+    src: "/elsewhere/manas-majhi-ferry-islands.png",
+    alt: "Manas Majhi on a ferry deck looking out at islands",
+    caption: "Between islands. Between thoughts.",
+    width: 1402,
+    height: 1122,
+  },
 ];
 
 // ---------------------------------------------------------------------------
