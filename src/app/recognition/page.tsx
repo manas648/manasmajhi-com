@@ -431,7 +431,7 @@ export default function RecognitionPage() {
             {/* Stats row */}
             <div className="grid grid-cols-3 gap-px border border-border rounded-lg overflow-hidden mt-6">
               <div className="bg-muted/30 px-6 py-5">
-                <p className="font-serif text-3xl font-medium">1.2K</p>
+                <p className="font-serif text-3xl font-medium">1.4K</p>
                 <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
                   AI citations
                 </p>
@@ -454,9 +454,9 @@ export default function RecognitionPage() {
             <div className="rounded-lg overflow-hidden border border-border mt-2">
               <Image
                 src="/awards/bing-webmaster-ai-citations.png"
-                alt="Microsoft Bing Webmaster Tools — AI Performance dashboard showing 1.2K total citations and 7 average cited pages for majhigroup.com over the last 30 days, sourced from Microsoft Copilots and Partners"
-                width={2868}
-                height={1280}
+                alt="Microsoft Bing Webmaster Tools — AI Performance dashboard showing 1.4K total citations and 7 average cited pages for majhigroup.com over the last 30 days, sourced from Microsoft Copilots and Partners"
+                width={2880}
+                height={1276}
                 className="w-full h-auto"
                 loading="lazy"
               />
