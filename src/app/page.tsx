@@ -326,7 +326,7 @@ export default function HomePage() {
                   {[
                     { stat: "64K+", label: "Majhi Group followers" },
                     { stat: "19K+", label: "Newsletter subscribers" },
-                    { stat: "220", label: "Articles published" },
+                    { stat: `${allEssays.length}`, label: "Articles published" },
                   ].map((item) => (
                     <div key={item.label} className="flex items-baseline gap-2">
                       <span className="font-serif text-xl font-medium">{item.stat}</span>
