@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, BookOpen, Award } from "lucide-react";
 import { getAllEssayMeta, getFeaturedEssays, getLatestEssays } from "@/lib/essays";
 import { EssayCard } from "@/components/essay/EssayCard";
-import { NewsletterForm } from "@/components/ui/NewsletterForm";
+
 import { CATEGORY_LABELS, EssayCategory, CATEGORY_DESCRIPTIONS, CATEGORY_IMAGES } from "@/types";
 import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
@@ -562,28 +562,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Newsletter CTA */}
-      <section className="px-6 lg:px-8 pb-32">
-        <div className="max-w-7xl mx-auto">
-          <div className="max-w-xl">
-            <p className="section-label mb-4">Newsletter</p>
-            <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">
-              Articles in your inbox.
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              New articles on opportunity, India, technology, and human potential.
-              Written when there's something worth saying.
-            </p>
-            <blockquote className="border-l-2 border-accent/40 pl-4 mb-8">
-              <p className="text-muted-foreground leading-relaxed italic">
-                "The man in my neighbourhood who repaired electrical equipment was genuinely skilled — people came from across town when the regular shops gave up. His shop was the size of a large wardrobe. He worked out of it his entire life."
-              </p>
-              <p className="text-xs text-muted-foreground/60 mt-2">— from a recent issue</p>
-            </blockquote>
-            <NewsletterForm variant="inline" />
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 }
