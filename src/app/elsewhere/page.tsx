@@ -224,7 +224,7 @@ const photos = [
   {
     src: "/elsewhere/manas-majhi-ferry-islands.png",
     alt: "Manas Majhi on a ferry deck looking out at islands",
-    caption: "Between islands. Between thoughts.",
+    caption: "The kind of quiet that restores things.",
     width: 1402,
     height: 1122,
   },
