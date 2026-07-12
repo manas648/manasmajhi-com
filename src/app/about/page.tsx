@@ -301,96 +301,6 @@ export default function AboutPage() {
             confirm: where you come from does not determine where you get to go.
           </p>
 
-          <hr className="border-border my-10" />
-
-          <h2 className="font-serif text-3xl font-medium">Beyond work.</h2>
-
-          <p>
-            Most of what I care about professionally — hiring systems,
-            opportunity, institution building — comes from watching what happens
-            when people show up consistently over a long time. The things I do
-            outside of work aren't separate from that. They're where I practice
-            it.
-          </p>
-
-          <h3 className="font-serif text-xl font-medium mt-8">Outdoor Pursuits</h3>
-
-          <p>
-            I run long distances, hike, camp, kayak, and snorkel. These
-            activities demand attention, preparation, and patience. Unlike many
-            decisions in business, the feedback is immediate. You either adapt,
-            or you don't.
-          </p>
-
-          <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Marathon &amp; Distance Running</li>
-            <li>Walkathons</li>
-            <li>Hiking &amp; Trekking</li>
-            <li>Camping</li>
-            <li>Kayaking</li>
-            <li>Snorkeling</li>
-          </ul>
-
-          <h3 className="font-serif text-xl font-medium mt-8">Travel</h3>
-
-          <p>
-            I grew up in Kalahandi, Odisha. That experience shaped how I think
-            about places, opportunity, and development.
-          </p>
-
-          <p>
-            When I travel, I pay attention to why some regions thrive while
-            others struggle, what geography demands of people, and how culture
-            shapes institutions over generations.
-          </p>
-
-          <p>
-            Kazakhstan, Thailand, Malaysia, Central Europe, and the Himalayas
-            have each offered a different answer to that question.
-          </p>
-
-          <h3 className="font-serif text-xl font-medium mt-8">Music</h3>
-
-          <p>
-            Retro Bollywood, ghazals, instrumental compositions. They create the
-            kind of quiet that makes deep thinking possible.
-          </p>
-
-          <h3 className="font-serif text-xl font-medium mt-8">Languages</h3>
-
-          <p>
-            I think in Odia. I work in English and Hindi. I'm learning German
-            and Spanish — both early, both slower than I'd like.
-          </p>
-
-          <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Odia (Native)</li>
-            <li>English (Professional)</li>
-            <li>Hindi (Professional)</li>
-            <li>German (Early)</li>
-            <li>Spanish (Early)</li>
-          </ul>
-
-          <h3 className="font-serif text-xl font-medium mt-8">Causes I Care About</h3>
-
-          <p>
-            Talent is evenly distributed. Opportunity is not. That single
-            observation drives most of what I build and most of what I write.
-          </p>
-
-          <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Expanding access to quality opportunities</li>
-            <li>Education and lifelong learning</li>
-            <li>Technology for public good</li>
-            <li>Leadership and institution building</li>
-            <li>Elderly care and well-being</li>
-            <li>Odisha&apos;s long-term development</li>
-          </ul>
-
-          <p className="mt-8">
-            Beyond work, I&apos;m curious about how people, places, and
-            institutions shape one another over time.
-          </p>
         </div>
 
           {/* Links */}
@@ -424,6 +334,12 @@ export default function AboutPage() {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
             >
               Always Learning
+            </Link>
+            <Link
+              href="/beyond-work"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+            >
+              Beyond Work
             </Link>
           </div>
         </div>
