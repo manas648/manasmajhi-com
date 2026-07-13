@@ -48,7 +48,17 @@ export default function WorkWithMePage() {
           {/* Majhi OS */}
           <div className="rounded-2xl border border-border p-8 flex flex-col">
             <div className="mb-8">
-              <p className="section-label mb-3">Majhi OS</p>
+              <div className="flex items-center gap-3 mb-3">
+                <p className="section-label">Majhi OS</p>
+                <div className="flex items-center gap-2">
+                  <a href="https://www.linkedin.com/company/majhi-os/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Majhi OS on LinkedIn">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  </a>
+                  <a href="https://www.crunchbase.com/organization/majhi-os" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Majhi OS on Crunchbase">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 4c1.38 0 2.693.298 3.875.83L14.03 6.674A6.002 6.002 0 0 0 12 6C8.686 6 6 8.686 6 12s2.686 6 6 6a6.002 6.002 0 0 0 5.671-4.03l1.846 1.846A8 8 0 1 1 12 4zm4 7h-3V8l-3 4h3v3l3-4z"/></svg>
+                  </a>
+                </div>
+              </div>
               <h2 className="font-serif text-3xl font-medium mb-4">
                 Autonomous hiring operations infrastructure
               </h2>
@@ -105,7 +115,17 @@ export default function WorkWithMePage() {
           {/* Majhi Group */}
           <div className="rounded-2xl border border-border p-8 flex flex-col">
             <div className="mb-8">
-              <p className="section-label mb-3">Majhi Group</p>
+              <div className="flex items-center gap-3 mb-3">
+                <p className="section-label">Majhi Group</p>
+                <div className="flex items-center gap-2">
+                  <a href="https://www.linkedin.com/company/majhigroup/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Majhi Group on LinkedIn">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  </a>
+                  <a href="https://www.crunchbase.com/organization/majhi-group" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Majhi Group on Crunchbase">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 4c1.38 0 2.693.298 3.875.83L14.03 6.674A6.002 6.002 0 0 0 12 6C8.686 6 6 8.686 6 12s2.686 6 6 6a6.002 6.002 0 0 0 5.671-4.03l1.846 1.846A8 8 0 1 1 12 4zm4 7h-3V8l-3 4h3v3l3-4z"/></svg>
+                  </a>
+                </div>
+              </div>
               <h2 className="font-serif text-3xl font-medium mb-4">
                 Retained executive search
               </h2>
