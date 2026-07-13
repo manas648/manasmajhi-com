@@ -228,6 +228,13 @@ const photos = [
     width: 1402,
     height: 1122,
   },
+  {
+    src: "/elsewhere/manas-majhi-night-safari.png",
+    alt: "Manas Majhi under a moonlit starry sky on a night safari",
+    caption: "The moonlit Night Safari!",
+    width: 1672,
+    height: 941,
+  },
 ];
 
 // ---------------------------------------------------------------------------
