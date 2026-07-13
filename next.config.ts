@@ -25,6 +25,11 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // 301 redirects: phantom URLs that 404 → closest real content
+      { source: "/odisha/berhampur", destination: "/odisha/bhubaneswar", permanent: true },
+      { source: "/odisha/odisha-vs-karnataka", destination: "/odisha/odishas-untapped-potential", permanent: true },
+      { source: "/hiring/what-does-executive-search-cost", destination: "/hiring/the-cost-of-a-failed-executive-hire", permanent: true },
+
       // 301 redirects: /essays/[slug] → /[category]/[slug]
       { source: "/essays/a-love-letter-to-odisha", destination: "/odisha/a-love-letter-to-odisha", permanent: true },
       { source: "/essays/active-waiting", destination: "/philosophy/active-waiting", permanent: true },

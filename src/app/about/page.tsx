@@ -5,9 +5,9 @@ import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: { absolute: "Manas Majhi — Founder, Majhi Group & Majhi OS" },
   description:
-    "Manas Majhi (Manas Ranjan Majhi) — founder of Majhi Group and Majhi OS. From Kalahandi, Odisha to executive search and autonomous hiring infrastructure.",
+    "Founder of Majhi Group (retained executive search) and Majhi OS (autonomous hiring infrastructure). From Kalahandi, Odisha. 25+ C-suite placements. Recognized as World Staffing Leader.",
   keywords: [
     "Manas Majhi",
     "Manas Ranjan Majhi",

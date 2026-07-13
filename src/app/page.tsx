@@ -11,7 +11,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: { absolute: "Manas Majhi" },
   description:
-    "Articles on opportunity, human potential, India, technology, and the systems that shape lives. By Manas Majhi.",
+    "Essays on opportunity, hiring, India, and the systems that shape lives — by Manas Majhi, founder of Majhi Group and Majhi OS.",
 };
 
 const collections = [

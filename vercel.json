@@ -30,6 +30,33 @@
           "value": "public, max-age=3600, stale-while-revalidate=86400"
         }
       ]
+    },
+    {
+      "source": "/(odisha|india|kalahandi|opportunity|future-of-work|entrepreneurship|philosophy|hiring|frameworks|travel|odia)/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, s-maxage=3600, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(about|work-with-me|whitepaper|writing|start-here|elsewhere|now|recognition|timeline|work|library|frameworks|the-map|all)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, s-maxage=3600, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/public/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
     }
   ],
   "crons": [
