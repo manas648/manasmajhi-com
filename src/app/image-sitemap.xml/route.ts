@@ -142,6 +142,26 @@ const elsewherePhotos = [
     title: "Manas Majhi walking along the rocky Goa coastline in a white shirt",
     caption: "The ocean has never once asked for a deliverable.",
   },
+  {
+    url: `${SITE_URL}/elsewhere/manas-majhi-motorcycle-goa.jpg`,
+    title: "Manas Majhi on a motorcycle on a palm-lined road in Goa",
+    caption: "Nobody schedules clarity. It finds you.",
+  },
+  {
+    url: `${SITE_URL}/elsewhere/manas-majhi-kazakhstan-forest.png`,
+    title: "Manas Majhi in a forest in Kazakhstan next to a UNDP Land Cruiser",
+    caption: "The only agenda was the horizon.",
+  },
+  {
+    url: `${SITE_URL}/elsewhere/manas-majhi-ferry-islands.png`,
+    title: "Manas Majhi on a ferry deck looking out at islands",
+    caption: "The kind of quiet that restores things.",
+  },
+  {
+    url: `${SITE_URL}/elsewhere/manas-majhi-night-safari.png`,
+    title: "Manas Majhi under a moonlit starry sky on a night safari",
+    caption: "The moonlit Night Safari.",
+  },
 ];
 
 export function GET() {
@@ -155,7 +175,27 @@ export function GET() {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Elsewhere photo gallery — 25 photos of Manas Majhi -->
+  <!-- Headshots — About page -->
+  <url>
+    <loc>${SITE_URL}/about</loc>
+    <image:image>
+      <image:loc>${SITE_URL}/manas-majhi-3.png</image:loc>
+      <image:title>Manas Majhi — Founder, Majhi Group &amp; Majhi OS</image:title>
+      <image:caption>Manas Majhi. From Kalahandi, Odisha.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>${SITE_URL}/headshot.jpg</image:loc>
+      <image:title>Manas Majhi headshot</image:title>
+      <image:caption>Manas Majhi, Founder of Majhi Group and Majhi OS.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>${SITE_URL}/headshot-2026.png</image:loc>
+      <image:title>Manas Majhi — 2026 headshot</image:title>
+      <image:caption>Manas Majhi, 2026.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Elsewhere photo gallery — 30 photos of Manas Majhi -->
   <url>
     <loc>${SITE_URL}/elsewhere</loc>
     ${elsewherePhotos
