@@ -167,7 +167,9 @@ export default function WorkWithMePage() {
             {/* CTA */}
             <div className="mt-auto">
               <a
-                href="mailto:manas@majhigroup.com?subject=Search%20Assessment"
+                href="https://majhigroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-foreground text-background text-sm font-medium hover:opacity-90 transition-opacity w-full justify-center"
               >
                 Request a Search Assessment →
