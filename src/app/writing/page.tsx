@@ -71,9 +71,15 @@ export default function EssaysPage() {
       <div className="px-6 lg:px-8 pt-24 pb-16 border-b border-border">
         <div className="max-w-3xl mx-auto">
           <p className="section-label mb-4">Why I Write</p>
-          <h1 className="font-serif text-5xl md:text-6xl font-medium tracking-tight mb-8">
+          <h1 className="font-serif text-5xl md:text-6xl font-medium tracking-tight mb-6">
             Writing
           </h1>
+          <a
+            href="#collections"
+            className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-accent transition-colors"
+          >
+            Browse collections <ArrowRight className="w-3.5 h-3.5 rotate-90" />
+          </a>
         </div>
       </div>
 
@@ -209,7 +215,7 @@ export default function EssaysPage() {
           </div>
 
           {/* What I Write About */}
-          <div className="mb-20">
+          <div id="collections" className="mb-20">
             <p className="section-label mb-4">What I Write About</p>
             <p className="text-muted-foreground leading-relaxed mb-10">
               Everything on this website connects back to a single question:{" "}
