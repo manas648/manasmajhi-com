@@ -22,8 +22,9 @@ export function VisitorCounter() {
 
   return (
     <div className="text-center py-10 px-6">
-      <p className="text-xs text-muted-foreground/60 tabular-nums">
-        {count.toLocaleString()} visitors
+      <p className="text-xs font-bold tabular-nums">
+        <span style={{ color: "#E97316" }}>{count.toLocaleString()}</span>
+        <span className="text-muted-foreground/60"> visitors</span>
       </p>
     </div>
   );
