@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, BookOpen, Award } from "lucide-react";
 import { getAllEssayMeta, getFeaturedEssays, getLatestEssays } from "@/lib/essays";
 import { EssayCard } from "@/components/essay/EssayCard";
+import { VisitorCounter } from "@/components/VisitorCounter";
 
 import { CATEGORY_LABELS, EssayCategory, CATEGORY_DESCRIPTIONS, CATEGORY_IMAGES } from "@/types";
 import { formatDate } from "@/lib/utils";
@@ -563,6 +564,7 @@ export default function HomePage() {
       </section>
 
 
+      <VisitorCounter />
     </div>
   );
 }
