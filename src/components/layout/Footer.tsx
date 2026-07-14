@@ -87,7 +87,7 @@ export function Footer() {
             <p className="text-xs text-muted-foreground">
               © {new Date().getFullYear()} Manas Majhi. All rights reserved.
             </p>
-            <p className="text-xs text-muted-foreground mt-1">
+            <p className="text-[10px] text-muted-foreground/20 mt-1">
               Also known as Manas Ranjan Majhi and Maanas Ranjan Majhi.
             </p>
           </div>
