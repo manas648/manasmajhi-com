@@ -2,17 +2,15 @@
 
 import { useEffect, useState } from "react";
 
-const SEED = 11111;
-
 export function VisitorCounter() {
   const [count, setCount] = useState<number | null>(null);
 
   useEffect(() => {
-    fetch("https://api.counterapi.dev/v1/manasmajhi/site-visits/up")
+    fetch("/api/visit")
       .then((r) => r.json())
       .then((data) => {
         if (typeof data.count === "number") {
-          setCount(data.count + SEED);
+          setCount(data.count);
         }
       })
       .catch(() => {
@@ -24,7 +22,7 @@ export function VisitorCounter() {
 
   return (
     <div className="text-center py-10 px-6">
-      <p className="text-xs text-muted-foreground/40 tabular-nums">
+      <p className="text-xs text-muted-foreground/60 tabular-nums">
         {count.toLocaleString()} visitors
       </p>
     </div>
