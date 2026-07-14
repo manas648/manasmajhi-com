@@ -52,6 +52,10 @@ const jsonLd = [
     "@context": "https://schema.org",
     "@type": "ProfilePage",
     "@id": `${SITE_URL}/about`,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h1 ~ p"],
+    },
     mainEntity: {
       "@type": "Person",
       "@id": `${SITE_URL}/#person`,

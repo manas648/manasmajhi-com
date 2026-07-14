@@ -6,7 +6,7 @@ import { EssayCard } from "@/components/essay/EssayCard";
 import { VisitorCounter } from "@/components/VisitorCounter";
 
 import { CATEGORY_LABELS, EssayCategory, CATEGORY_DESCRIPTIONS, CATEGORY_IMAGES } from "@/types";
-import { formatDate } from "@/lib/utils";
+import { formatDate, SITE_URL } from "@/lib/utils";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -149,6 +149,22 @@ const socialProof = [
   { label: "Startup of the Year", org: "HackerNoon 2023", href: "/entrepreneurship/hackernoon-startup-of-the-year-2023" },
 ];
 
+const homepageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${SITE_URL}/#homepage`,
+  url: SITE_URL,
+  name: "Manas Majhi — Opportunity Shapes Outcomes",
+  description:
+    "Essays on opportunity, hiring, India, and the systems that shape lives — by Manas Majhi, founder of Majhi Group and Majhi OS.",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", ".font-serif.italic"],
+  },
+  author: { "@type": "Person", "@id": `${SITE_URL}/#person` },
+  isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}/#website` },
+};
+
 export default function HomePage() {
   const featured = getFeaturedEssays();
   const latest = getLatestEssays(6);
@@ -159,6 +175,10 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageJsonLd) }}
+      />
       {/* Hero */}
       <section className="pt-24 pb-20 md:pt-32 md:pb-28 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

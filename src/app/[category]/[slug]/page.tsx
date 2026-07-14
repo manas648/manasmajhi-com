@@ -150,6 +150,10 @@ export default async function EssayPage({ params }: Props) {
       name: "Manas Majhi",
       url: SITE_URL,
     },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["article h1", "article header p"],
+    },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${SITE_URL}/${essay.category}/${slug}`,

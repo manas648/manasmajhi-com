@@ -141,9 +141,98 @@ const frameworks: Framework[] = [
   },
 ];
 
+const frameworksJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": `${SITE_URL}/frameworks#termset`,
+  name: "Manas Majhi — Operational Frameworks",
+  description:
+    "Named operational frameworks developed through practice in executive search, hiring operations, and opportunity research.",
+  url: `${SITE_URL}/frameworks`,
+  creator: { "@type": "Person", "@id": `${SITE_URL}/#person` },
+  hasDefinedTerm: [
+    {
+      "@type": "DefinedTerm",
+      "@id": `${SITE_URL}/frameworks#opportunity`,
+      name: "Opportunity Framework™",
+      description:
+        "Opportunity is not a single event. It is a chain. Each link enables the next — Talent, Access, Opportunity, Mobility, Prosperity. Understanding where this chain breaks is how you design systems that close the gap between talent and potential.",
+      inDefinedTermSet: `${SITE_URL}/frameworks#termset`,
+      url: `${SITE_URL}/frameworks`,
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": `${SITE_URL}/frameworks#intelligence-hiring`,
+      name: "Intelligence Hiring System™",
+      description:
+        "Most hiring fails not because of bad candidates, but because of bad intelligence. The right hire requires three layers working in sequence: Market Intelligence, Talent Intelligence, and Decision Intelligence.",
+      inDefinedTermSet: `${SITE_URL}/frameworks#termset`,
+      url: `${SITE_URL}/frameworks`,
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": `${SITE_URL}/frameworks#hiring-health`,
+      name: "Hiring System Health™",
+      description:
+        "A hiring mandate is a system with health metrics across three dimensions: Pipeline Health (is the funnel filling?), Process Health (are stages moving?), and Decision Health (are evaluations calibrated?).",
+      inDefinedTermSet: `${SITE_URL}/frameworks#termset`,
+      url: `${SITE_URL}/frameworks`,
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": `${SITE_URL}/frameworks#opportunity-mobility`,
+      name: "Opportunity Mobility Framework™",
+      description:
+        "Opportunity alone is not enough. Individuals must convert opportunity into actual mobility through four stages: Opportunity (the door exists), Capability (the person can walk through), Participation (no structural barriers), and Mobility (the outcome materialises).",
+      inDefinedTermSet: `${SITE_URL}/frameworks#termset`,
+      url: `${SITE_URL}/frameworks`,
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": `${SITE_URL}/frameworks#mandate-recovery`,
+      name: "Mandate Recovery Framework™",
+      description:
+        "When a VP search stalls, recovery requires a five-stage sequence — Diagnose, Audit, Reposition, Re-engage, Rebuild — not simply adding more sourcing volume to a broken mandate.",
+      inDefinedTermSet: `${SITE_URL}/frameworks#termset`,
+      url: `${SITE_URL}/frameworks`,
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": `${SITE_URL}/frameworks#failure-prediction`,
+      name: "Failure Prediction System™",
+      description:
+        "Mandate failure is telegraphed weeks in advance through five signals: Response Decay, Funnel Stall, Intake Drift, Recruiter Overload, and Decision Lag — trackable in real time before pipeline collapse.",
+      inDefinedTermSet: `${SITE_URL}/frameworks#termset`,
+      url: `${SITE_URL}/frameworks`,
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": `${SITE_URL}/frameworks#compounding-failure-loop`,
+      name: "Compounding Failure Loop™",
+      description:
+        "When a mandate fails, adding more inputs makes things worse. The loop runs: Bad Intake → Poor Dossiers → Weak Outreach → Low Replies → Pipeline Collapse → Leadership Escalation → Manual Recovery.",
+      inDefinedTermSet: `${SITE_URL}/frameworks#termset`,
+      url: `${SITE_URL}/frameworks`,
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": `${SITE_URL}/frameworks#hiring-slo`,
+      name: "Hiring SLO Framework™",
+      description:
+        "Applying service-level objective thinking to hiring operations: define mandate SLOs, monitor in real time, alert on breach, execute recovery protocols, and measure outcomes to compound institutional memory.",
+      inDefinedTermSet: `${SITE_URL}/frameworks#termset`,
+      url: `${SITE_URL}/frameworks`,
+    },
+  ],
+};
+
 export default function FrameworksPage() {
   return (
     <div className="min-h-screen px-6 lg:px-8 py-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(frameworksJsonLd) }}
+      />
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="max-w-2xl mb-20">
