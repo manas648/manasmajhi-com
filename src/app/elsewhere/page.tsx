@@ -235,6 +235,27 @@ const photos = [
     width: 1672,
     height: 941,
   },
+  {
+    src: "/elsewhere/manas-majhi-outdoor-sunglasses.png",
+    alt: "Manas Majhi in a white shirt and aviators, outdoor garden with pink bougainvillea",
+    caption: "The garden wasn't planned. The sunglasses were.",
+    width: 941,
+    height: 1672,
+  },
+  {
+    src: "/elsewhere/manas-majhi-majhi-group-backdrop.png",
+    alt: "Manas Majhi in a blue sweater in front of the Majhi Group branded backdrop",
+    caption: "The brand on the wall. The work in the room.",
+    width: 1123,
+    height: 1401,
+  },
+  {
+    src: "/elsewhere/manas-majhi-restaurant.png",
+    alt: "Manas Majhi in a black shirt at a restaurant, thoughtful pose",
+    caption: "The sign said eat dessert first. Good advice for most decisions.",
+    width: 1414,
+    height: 1112,
+  },
 ];
 
 // ---------------------------------------------------------------------------
