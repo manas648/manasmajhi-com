@@ -119,12 +119,25 @@ const personSchema = {
       url: "https://majhi.tech",
     },
   ],
+  founderOf: [
+    {
+      "@type": "Organization",
+      name: "Majhi Group",
+      url: "https://majhigroup.com",
+    },
+    {
+      "@type": "Organization",
+      name: "Majhi OS",
+      url: "https://majhi.tech",
+    },
+  ],
   sameAs: [
+    "https://manasmajhi.com",
+    "https://majhigroup.com",
+    "https://majhi.tech",
     "https://www.linkedin.com/in/manasmajhi",
     "https://twitter.com/manasmajhi",
     "https://instagram.com/manas.majhi56",
-    "https://majhigroup.com",
-    "https://majhi.tech",
     "https://www.wikidata.org/wiki/Q140134809",
     "https://www.crunchbase.com/person/manas-majhi",
     "https://hackernoon.com/company/majhigroup",
