@@ -164,7 +164,7 @@ export default function AboutPage() {
                   <span className="text-muted-foreground">Opportunity is not.</span>
                 </h1>
                 <p className="text-sm text-muted-foreground mt-4">
-                  <span className="font-medium text-foreground">Manas Ranjan Majhi</span>
+                  <span className="font-medium text-foreground">Manas Majhi</span>
                   {" "}· Founder, Majhi Group & Majhi OS · Kalahandi, Odisha
                 </p>
                 <p className="text-xs text-muted-foreground mt-1">
