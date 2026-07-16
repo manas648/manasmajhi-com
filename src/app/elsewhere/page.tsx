@@ -256,6 +256,13 @@ const photos = [
     width: 1414,
     height: 1112,
   },
+  {
+    src: "/elsewhere/manas-majhi-palm-shirt.png",
+    alt: "Manas Majhi in a palm print shirt, relaxed portrait",
+    caption: "Off the clock. The shirt had a different agenda.",
+    width: 1127,
+    height: 1395,
+  },
 ];
 
 // ---------------------------------------------------------------------------
