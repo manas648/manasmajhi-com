@@ -32,10 +32,13 @@ const categories: EssayCategory[] = [
   "future-of-work",
   "india",
   "odisha",
+  "kalahandi",
   "travel",
   "entrepreneurship",
   "philosophy",
   "hiring",
+  "frameworks",
+  "odia",
 ];
 
 export default function LibraryPage() {

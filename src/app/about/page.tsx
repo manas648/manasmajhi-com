@@ -168,7 +168,7 @@ export default function AboutPage() {
                   {" "}· Founder, Majhi Group & Majhi OS · Kalahandi, Odisha
                 </p>
                 <p className="text-xs text-muted-foreground mt-1">
-                  Also known as Maanas Ranjan Majhi.
+                  Also known as Manas Ranjan Majhi · Maanas Ranjan Majhi.
                 </p>
               </div>
               <div className="relative flex items-center justify-center flex-shrink-0">

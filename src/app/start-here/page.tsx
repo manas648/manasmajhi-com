@@ -42,8 +42,8 @@ const FLAGSHIP_SLUGS = [
   "ai-and-human-potential",
   "indias-ai-opportunity",
   "indias-greatest-asset-is-its-people",
-  "odishas-untapped-potential",
-  "the-future-of-odisha",
+  "why-is-odisha-underrated",
+  "how-odisha-has-changed",
   "what-travel-teaches-us-about-home",
 ];
 
@@ -86,7 +86,7 @@ const readingPaths = [
     title: "Odisha Path",
     description:
       "The state I come from — its potential, its people, its future.",
-    slugs: ["odishas-untapped-potential", "the-future-of-odisha"],
+    slugs: ["why-is-odisha-underrated", "how-odisha-has-changed"],
   },
   {
     id: "ai",
