@@ -162,6 +162,21 @@ const elsewherePhotos = [
     title: "Manas Majhi under a moonlit starry sky on a night safari",
     caption: "The moonlit Night Safari.",
   },
+  {
+    url: `${SITE_URL}/elsewhere/manas-majhi-outdoor-sunglasses.png`,
+    title: "Manas Majhi in a white shirt and aviators, outdoor garden",
+    caption: "The garden wasn't planned. The sunglasses were.",
+  },
+  {
+    url: `${SITE_URL}/elsewhere/manas-majhi-majhi-group-backdrop.png`,
+    title: "Manas Majhi in front of the Majhi Group branded backdrop",
+    caption: "The brand on the wall. The work in the room.",
+  },
+  {
+    url: `${SITE_URL}/elsewhere/manas-majhi-restaurant.png`,
+    title: "Manas Majhi in a black shirt at a restaurant, thoughtful pose",
+    caption: "The sign said eat dessert first. Good advice for most decisions.",
+  },
 ];
 
 export function GET() {
@@ -195,7 +210,7 @@ export function GET() {
     </image:image>
   </url>
 
-  <!-- Elsewhere photo gallery — 30 photos of Manas Majhi -->
+  <!-- Elsewhere photo gallery — 33 photos of Manas Majhi -->
   <url>
     <loc>${SITE_URL}/elsewhere</loc>
     ${elsewherePhotos
