@@ -5,10 +5,12 @@ const KV_TOKEN = process.env.KV_REST_API_TOKEN;
 const SEED = 11111;
 const KEY = "site:visits";
 
+const NO_CACHE = { "Cache-Control": "no-store, no-cache, must-revalidate" };
+
 export async function GET() {
   // If KV isn't configured, return seed so the counter still shows
   if (!KV_URL || !KV_TOKEN) {
-    return NextResponse.json({ count: SEED });
+    return NextResponse.json({ count: SEED }, { headers: NO_CACHE });
   }
 
   try {
@@ -22,8 +24,8 @@ export async function GET() {
 
     const data = await res.json();
     const count = typeof data.result === "number" ? data.result + SEED : SEED;
-    return NextResponse.json({ count });
+    return NextResponse.json({ count }, { headers: NO_CACHE });
   } catch {
-    return NextResponse.json({ count: SEED });
+    return NextResponse.json({ count: SEED }, { headers: NO_CACHE });
   }
 }

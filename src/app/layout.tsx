@@ -3,6 +3,7 @@ import { Providers } from "@/components/layout/Providers";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import { SchemaDeduplicator } from "@/components/layout/SchemaDeduplicator";
+import { VisitorTracker } from "@/components/VisitorCounter";
 import "./globals.css";
 import {
   SITE_NAME,
@@ -252,6 +253,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen antialiased">
         <SchemaDeduplicator />
+        <VisitorTracker />
         <Providers>
           <Nav />
           <main className="pt-16">{children}</main>
