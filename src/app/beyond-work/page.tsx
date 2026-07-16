@@ -123,6 +123,7 @@ export default function BeyondWorkPage() {
           <p className="text-base leading-relaxed mb-6">
             I think in Odia. I work in English and Hindi. I&apos;m learning
             German and Spanish — both early, both slower than I&apos;d like.
+            Also picking up Punjabi and Haryanvi at a basic level.
           </p>
           <ul className="space-y-0">
             {[
@@ -131,6 +132,8 @@ export default function BeyondWorkPage() {
               { lang: "Hindi", level: "Professional" },
               { lang: "German", level: "Early" },
               { lang: "Spanish", level: "Early" },
+              { lang: "Punjabi", level: "Basic" },
+              { lang: "Haryanvi", level: "Basic" },
             ].map((item) => (
               <li
                 key={item.lang}
