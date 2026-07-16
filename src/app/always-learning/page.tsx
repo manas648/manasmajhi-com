@@ -340,6 +340,8 @@ export default function AlwaysLearningPage() {
               "Odisha's Future",
               "India's Growth Story",
               "Systems Thinking",
+              "Punjabi (Basic)",
+              "Haryanvi (Basic)",
             ].map((topic) => (
               <div
                 key={topic}
