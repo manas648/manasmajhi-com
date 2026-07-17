@@ -47,7 +47,14 @@ const FLAGSHIP_SLUGS = [
   "what-travel-teaches-us-about-home",
 ];
 
-const readingPaths = [
+const readingPaths: {
+  id: string;
+  icon: string;
+  title: string;
+  description: string;
+  slugs: string[];
+  href?: string;
+}[] = [
   {
     id: "new",
     icon: "✦",
@@ -59,6 +66,19 @@ const readingPaths = [
       "talent-is-evenly-distributed",
       "why-i-build",
     ],
+  },
+  {
+    id: "featured",
+    icon: "★",
+    title: "Featured",
+    description:
+      "The fourteen essays I would hand a new reader first — across hiring, India, Odisha, opportunity, and what it means to build from the ground up.",
+    slugs: [
+      "salt-steel-and-silicon",
+      "talent-is-evenly-distributed",
+      "growing-up-in-kalahandi",
+    ],
+    href: "/featured",
   },
   {
     id: "opportunity",
@@ -226,6 +246,17 @@ export default function StartHerePage() {
                       ))
                     )}
                   </div>
+                  {path.href && (
+                    <div className="mt-4 pt-3 border-t border-border">
+                      <Link
+                        href={path.href}
+                        className="flex items-center gap-1.5 text-xs text-accent hover:underline font-medium"
+                      >
+                        View all 14 featured essays
+                        <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    </div>
+                  )}
                 </div>
               );
             })}
