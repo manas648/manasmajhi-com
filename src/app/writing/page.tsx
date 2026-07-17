@@ -224,6 +224,20 @@ export default function EssaysPage() {
               </span>
             </p>
             <div className="divide-y divide-border">
+              <Link
+                href="/featured"
+                className="group flex items-start justify-between gap-6 py-5 hover:text-foreground transition-colors"
+              >
+                <div>
+                  <p className="font-medium text-foreground mb-1 group-hover:text-accent transition-colors">
+                    Featured
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    The twelve essays I would hand a new reader first.
+                  </p>
+                </div>
+                <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-accent shrink-0 mt-1 transition-colors" />
+              </Link>
               {categories.map((cat) => (
                 <Link
                   key={cat}
