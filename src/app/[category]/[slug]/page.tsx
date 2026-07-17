@@ -428,6 +428,9 @@ export default async function EssayPage({ params }: Props) {
                     <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
                       <ArrowLeft className="w-3.5 h-3.5" />
                       Previous
+                      {prev.category === "odia" && essay.category !== "odia" && (
+                        <span className="ml-1 px-1.5 py-0.5 rounded text-[10px] bg-muted border border-border">ଓଡ଼ିଆ</span>
+                      )}
                     </div>
                     <p className="font-serif text-base font-medium group-hover:text-accent transition-colors line-clamp-2">
                       {prev.title}
@@ -443,6 +446,9 @@ export default async function EssayPage({ params }: Props) {
                   <div className="p-5 rounded-2xl border border-border hover:border-accent/40 transition-all">
                     <div className="flex items-center justify-end gap-2 text-xs text-muted-foreground mb-2">
                       Next
+                      {next.category === "odia" && essay.category !== "odia" && (
+                        <span className="px-1.5 py-0.5 rounded text-[10px] bg-muted border border-border">ଓଡ଼ିଆ</span>
+                      )}
                       <ArrowRight className="w-3.5 h-3.5" />
                     </div>
                     <p className="font-serif text-base font-medium group-hover:text-accent transition-colors line-clamp-2">

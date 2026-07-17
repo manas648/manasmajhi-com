@@ -8,6 +8,7 @@ import { ThemeToggle } from "./ThemeToggle";
 import { cn } from "@/lib/utils";
 
 const writingItems = [
+  { href: "/featured", label: "Featured" },
   { href: "/all", label: "Index" },
   { href: "/the-map", label: "The Map" },
   { href: "/frameworks", label: "Frameworks" },
@@ -51,6 +52,7 @@ export function Nav() {
   }, []);
 
   const isWritingActive =
+    pathname.startsWith("/featured") ||
     pathname.startsWith("/all") ||
     pathname.startsWith("/the-map") ||
     pathname.startsWith("/frameworks") ||

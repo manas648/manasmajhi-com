@@ -4,6 +4,7 @@ import { FooterQuote } from "./FooterQuote";
 const footerLinks = {
   Reading: [
     { href: "/start-here", label: "Start Here" },
+    { href: "/featured", label: "Featured" },
     { href: "/writing", label: "All Writing" },
     { href: "/frameworks", label: "Frameworks" },
     { href: "/search", label: "Search" },
