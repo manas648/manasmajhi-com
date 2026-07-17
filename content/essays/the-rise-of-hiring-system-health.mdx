@@ -1,6 +1,6 @@
 ---
 title: "The Rise of Hiring System Health"
-excerpt: "Recruiting teams have always tracked metrics. The shift is toward treating hiring as a system that can be monitored, diagnosed, and recovered — before it fails."
+excerpt: "Recruiting teams have always tracked metrics. The shift is toward treating hiring as a system that can be monitored, diagnosed, and recovered, before it fails."
 date: "2024-12-10"
 category: "hiring"
 coverImage: https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?w=1200&q=80&auto=format&fit=crop
@@ -9,16 +9,16 @@ featured: false
 flagship: false
 faqs:
   - question: "What is hiring system health and how is it different from traditional recruiting metrics?"
-    answer: "Traditional recruiting metrics — time-to-fill, cost-per-hire, offer acceptance rate — are retrospective. They tell you what happened after it happened. Hiring system health is a real-time concept: the ability to see whether active searches are healthy right now, which mandates are showing early signs of failure, and what specifically is causing the degradation. The distinction mirrors the difference between logging and observability in software engineering. Logging tells you what occurred. Observability tells you the current state of the system — and gives you lead time to act before failure is locked in."
+    answer: "Traditional recruiting metrics, time-to-fill, cost-per-hire, offer acceptance rate, are retrospective. They tell you what happened after it happened. Hiring system health is a real-time concept: the ability to see whether active searches are healthy right now, which mandates are showing early signs of failure, and what specifically is causing the degradation. The distinction mirrors the difference between logging and observability in software engineering. Logging tells you what occurred. Observability tells you the current state of the system, and gives you lead time to act before failure is locked in."
   - question: "How do you monitor hiring system health in practice?"
     answer: "Monitoring hiring system health requires continuous signals, not weekly reports: reply rate trends by sequence and domain, candidate stage velocity compared to historical baselines, recruiter load relative to capacity thresholds, hiring manager feedback latency, and mandate age against predicted close dates. When these signals are aggregated in real time, failure patterns become visible two to four weeks before they produce timeline impact. The weekly status meeting sees the damage; real-time monitoring sees the cause."
   - question: "What is a Hiring Health Score and how is it used?"
-    answer: "A Hiring Health Score is a composite real-time metric that rates each active mandate on operational dimensions: pipeline depth, engagement rate, stage velocity, recruiter capacity, and stall risk. It functions like an uptime metric in software: a mandate at 85 is healthy, a mandate at 42 has multiple degrading signals and needs intervention. The score makes mandate health legible to everyone involved — recruiter, hiring manager, leadership — without requiring anyone to manually synthesise data from five different tools."
+    answer: "A Hiring Health Score is a composite real-time metric that rates each active mandate on operational dimensions: pipeline depth, engagement rate, stage velocity, recruiter capacity, and stall risk. It functions like an uptime metric in software: a mandate at 85 is healthy, a mandate at 42 has multiple degrading signals and needs intervention. The score makes mandate health legible to everyone involved, recruiter, hiring manager, leadership, without requiring anyone to manually synthesise data from five different tools."
 ---
 
 The concept behind Majhi OS came from a pattern I kept running into over five years of executive search: hiring systems were failing in ways that were entirely predictable in retrospect and completely invisible in real time. A recruiter carrying six mandates when five was already too many. A pipeline thinning at a specific stage while the weekly report said everything was on track. A search quietly dying two weeks before anyone named it.
 
-The vocabulary of system health — SLOs, error budgets, incident response, observability — belongs to software engineering. It describes a way of managing technical systems that became necessary when those systems became too complex and too important to manage through reactive monitoring.
+The vocabulary of system health, SLOs, error budgets, incident response, observability, belongs to software engineering. It describes a way of managing technical systems that became necessary when those systems became too complex and too important to manage through reactive monitoring.
 
 Something analogous is happening in hiring, and the borrowing of vocabulary is not accidental. The problems are structurally similar.
 
@@ -28,9 +28,9 @@ Hiring has always had metrics. Time-to-fill, offer acceptance rate, cost-per-hir
 
 What these metrics share is their retrospective character. They tell you what happened. They do not tell you what is happening now, in the active searches, in ways that allow intervention before the outcome is determined.
 
-In software engineering, this is the distinction between logging and observability. Logging tells you what events occurred. Observability tells you the current state of the system — why it is behaving as it is, where the constraints are, what is at risk of failing.
+In software engineering, this is the distinction between logging and observability. Logging tells you what events occurred. Observability tells you the current state of the system, why it is behaving as it is, where the constraints are, what is at risk of failing.
 
-Hiring organizations with sophisticated logging know their historical averages. Hiring organizations with genuine observability know which of their current searches are healthy, which are at risk, and specifically why — with enough lead time to do something about it.
+Hiring organizations with sophisticated logging know their historical averages. Hiring organizations with genuine observability know which of their current searches are healthy, which are at risk, and specifically why, with enough lead time to do something about it.
 
 ## What hiring system health looks like in practice
 
@@ -42,21 +42,21 @@ It requires monitoring these signals continuously rather than reviewing them at 
 
 It requires the intelligence layer that identifies what is happening and why. Not just "this search is behind schedule" but "this search is behind schedule because the hiring manager's feedback latency is three times the organizational average, which correlates with mandate failure in 73% of historical cases." The specificity matters because it determines what the recovery intervention should be.
 
-And it requires the intervention capacity to act on what the intelligence reveals — not just to flag problems but to address them, through escalation paths, workflow adjustments, and the ability to apply what has worked in similar situations historically.
+And it requires the intervention capacity to act on what the intelligence reveals, not just to flag problems but to address them, through escalation paths, workflow adjustments, and the ability to apply what has worked in similar situations historically.
 
 ## Where this is coming from
 
 The concept of hiring system health is not emerging from theory. It is emerging from the operational reality of the organizations that run a high volume of concurrent searches and have learned from experience what the difference between healthy and unhealthy searches looks like.
 
-These organizations — executive search firms, VC-backed companies in rapid scaling phases, any organization where hiring is mission-critical and high-volume — have accumulated the data to see the patterns. They know that searches in a certain stage, with certain characteristics, have a predictable probability of failure. They know which interventions have the best track record. They are starting to build this knowledge into operational infrastructure rather than keeping it in the heads of experienced individuals.
+These organizations, executive search firms, VC-backed companies in rapid scaling phases, any organization where hiring is mission-critical and high-volume, have accumulated the data to see the patterns. They know that searches in a certain stage, with certain characteristics, have a predictable probability of failure. They know which interventions have the best track record. They are starting to build this knowledge into operational infrastructure rather than keeping it in the heads of experienced individuals.
 
-The infrastructure question — can you build systems that encode this intelligence and make it available to every search, not just the ones managed by your most experienced people — is the interesting design problem.
+The infrastructure question, can you build systems that encode this intelligence and make it available to every search, not just the ones managed by your most experienced people, is the interesting design problem.
 
 Hiring system health is not a new metric. It is a new way of thinking about what recruiting operations are doing and what they should be able to see. The organizations that develop this capability will run fundamentally better hiring operations than the ones that don't. And the gap will compound over time as the intelligence accumulates.
 
 >> The signals that predict mandate failure are typically visible weeks before the failure occurs. A recruiting team waiting for the weekly review is seeing problems too late to recover them efficiently. The shift is from logging — what happened — to observability: what is happening now, and why.
 
-Majhi OS was built to make hiring system health visible and actionable — across every active mandate, in real time. [Book a Mission Walkthrough](https://majhigroup.com).
+Majhi OS was built to make hiring system health visible and actionable, across every active mandate, in real time. [Book a Mission Walkthrough](https://majhigroup.com).
 
 **See also:** [Broken Hiring Systems and the Opportunity Gap](/hiring/broken-hiring-systems-and-the-opportunity-gap), [Intelligence Hiring vs. Traditional Hiring](/hiring/intelligence-hiring-vs-traditional-hiring), [The Four Ways Hiring Infrastructure Fails](/hiring/the-four-ways-hiring-infrastructure-fails)
 
@@ -64,8 +64,8 @@ Majhi OS was built to make hiring system health visible and actionable — acros
 
 **Sources**
 
-[Google SRE Book — Monitoring Distributed Systems (Beyer, Jones, Petoff, Murphy)](https://sre.google/sre-book/monitoring-distributed-systems/)
+[Google SRE Book: Monitoring Distributed Systems (Beyer, Jones, Petoff, Murphy)](https://sre.google/sre-book/monitoring-distributed-systems/)
 
-[McKinsey — The Organization Blog: Getting More from Your Recruiting Data](https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/getting-more-from-your-recruiting-data)
+[McKinsey: The Organization Blog: Getting More from Your Recruiting Data](https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/getting-more-from-your-recruiting-data)
 
-[SHRM — HR Metrics and Analytics: Use and Impact](https://www.shrm.org/topics-tools/research/hr-metrics-analytics)
+[SHRM: HR Metrics and Analytics: Use and Impact](https://www.shrm.org/topics-tools/research/hr-metrics-analytics)

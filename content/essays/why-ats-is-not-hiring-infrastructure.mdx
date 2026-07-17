@@ -1,6 +1,6 @@
 ---
 title: "Why Your ATS Is Not Hiring Infrastructure"
-excerpt: "An ATS is a candidate database with workflow automation. Hiring infrastructure is something different — the observability, recovery, and execution layer that prevents the database from becoming a graveyard. Conflating them is why most VP searches stall."
+excerpt: "An ATS is a candidate database with workflow automation. Hiring infrastructure is something different, the observability, recovery, and execution layer that prevents the database from becoming a graveyard. Conflating them is why most VP searches stall."
 date: "2026-06-29"
 category: "hiring"
 coverImage: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80&auto=format&fit=crop
@@ -9,11 +9,11 @@ featured: false
 flagship: false
 faqs:
   - question: "What is the difference between an ATS and hiring infrastructure?"
-    answer: "An ATS is a candidate database with workflow automation — it records what happened. Hiring infrastructure is the observability and recovery layer above the ATS — it monitors whether the hiring system is working in real time, detects failure before it compounds, and enables recovery without waiting for a human to notice the problem first."
+    answer: "An ATS is a candidate database with workflow automation, it records what happened. Hiring infrastructure is the observability and recovery layer above the ATS, it monitors whether the hiring system is working in real time, detects failure before it compounds, and enables recovery without waiting for a human to notice the problem first."
   - question: "What does hiring infrastructure do that an ATS cannot?"
-    answer: "Hiring infrastructure provides real-time mandate health monitoring, candidate engagement decay detection, outreach verification, recruiter load balancing, and failure prediction before outcomes fail. An ATS records candidate status. Infrastructure tells you whether the system producing those records is functioning correctly — and acts when it is not."
+    answer: "Hiring infrastructure provides real-time mandate health monitoring, candidate engagement decay detection, outreach verification, recruiter load balancing, and failure prediction before outcomes fail. An ATS records candidate status. Infrastructure tells you whether the system producing those records is functioning correctly, and acts when it is not."
   - question: "Does Majhi OS replace an existing ATS?"
-    answer: "No. Majhi OS sits above the ATS as an operational and intelligence layer. Your team keeps their existing ATS — Greenhouse, Lever, Workday, or any other. Majhi OS provides the observability, recovery, and attribution layer that the ATS was never designed to provide."
+    answer: "No. Majhi OS sits above the ATS as an operational and intelligence layer. Your team keeps their existing ATS, Greenhouse, Lever, Workday, or any other. Majhi OS provides the observability, recovery, and attribution layer that the ATS was never designed to provide."
 
 ---
 
@@ -21,7 +21,7 @@ faqs:
 
 Greenhouse is a good product. So is Lever. So is Workday Recruiting. They solve a real and important problem: tracking candidates as they move through a hiring process, managing communication, storing evaluations, generating compliance records, connecting to job boards.
 
-What they do not do — what they were not built to do and do not claim to do — is monitor whether the hiring system is working, detect failure before it compounds, or recover a stalled search autonomously.
+What they do not do, what they were not built to do and do not claim to do, is monitor whether the hiring system is working, detect failure before it compounds, or recover a stalled search autonomously.
 
 The distinction between an ATS and hiring infrastructure is not subtle. It is the difference between a database and a monitoring system. Understanding it changes what you build and what you buy.
 
@@ -49,19 +49,19 @@ A useful analogy: the relationship between an ATS and hiring infrastructure is t
 
 A database stores your application's data. It is essential. Without it, nothing works. But having a database does not tell you whether your application is healthy. It does not tell you that query latency is spiking, that a service is approaching capacity, or that an error pattern is emerging that will produce downtime in four hours if nobody acts on it.
 
-Observability tools — application performance monitoring, infrastructure health monitoring, alerting systems — exist because engineers discovered that databases plus manual checking were insufficient to keep complex systems reliable. The system had become too complex and too important to manage reactively. By the time a database-level failure was visible through application errors, users had already been affected for minutes.
+Observability tools, application performance monitoring, infrastructure health monitoring, alerting systems, exist because engineers discovered that databases plus manual checking were insufficient to keep complex systems reliable. The system had become too complex and too important to manage reactively. By the time a database-level failure was visible through application errors, users had already been affected for minutes.
 
-The engineering profession's response was to build the layer between the data and the humans who needed to act on it — the layer that converts raw system state into signals, ranks those signals by urgency, surfaces them to the right people, and closes the loop on whether interventions worked.
+The engineering profession's response was to build the layer between the data and the humans who needed to act on it, the layer that converts raw system state into signals, ranks those signals by urgency, surfaces them to the right people, and closes the loop on whether interventions worked.
 
 Hiring systems have the database. They do not have the observability stack.
 
-The ATS is the database. The monitoring layer — the system that watches the ATS data in real time, detects the patterns that precede failure, and surfaces them before the timeline impact is locked in — is what hiring infrastructure actually means.
+The ATS is the database. The monitoring layer, the system that watches the ATS data in real time, detects the patterns that precede failure, and surfaces them before the timeline impact is locked in, is what hiring infrastructure actually means.
 
 ## What the gap costs in practice
 
 A VP search that stalls does not usually stall suddenly. It stalls gradually, through a sequence of small failures that compound:
 
-Outreach response rates decline because the initial targeting was slightly off, and nobody adjusts the approach because nobody is measuring response rate at the mandate level. A strong candidate goes quiet after week three because engagement decayed before anyone noticed the signal. The hiring manager's confidence erodes over eight weeks of underwhelming pipeline, making them harder to satisfy in week nine. The recruiter, carrying five other mandates, is managing by cadence rather than by signal — following up every five days regardless of what the candidate's engagement pattern suggests.
+Outreach response rates decline because the initial targeting was slightly off, and nobody adjusts the approach because nobody is measuring response rate at the mandate level. A strong candidate goes quiet after week three because engagement decayed before anyone noticed the signal. The hiring manager's confidence erodes over eight weeks of underwhelming pipeline, making them harder to satisfy in week nine. The recruiter, carrying five other mandates, is managing by cadence rather than by signal, following up every five days regardless of what the candidate's engagement pattern suggests.
 
 Each of these failure points is preventable with visibility. None of them are visible in an ATS dashboard. The ATS sees a candidate in stage four and an activity log that shows outreach was sent. The reasons the search is failing are in the space between those records.
 
@@ -73,27 +73,27 @@ An ATS is a necessary component of hiring infrastructure. It is not sufficient.
 
 The gap between the ATS and infrastructure is filled by:
 
-**Real-time mandate health monitoring** — a system that watches every active search simultaneously and surfaces degrading signals before they become failed searches. Response rate trends, candidate engagement patterns, pipeline velocity by stage, recruiter load relative to historical performance thresholds.
+**Real-time mandate health monitoring**, a system that watches every active search simultaneously and surfaces degrading signals before they become failed searches. Response rate trends, candidate engagement patterns, pipeline velocity by stage, recruiter load relative to historical performance thresholds.
 
-**Failure detection that precedes failure** — the ability to identify a search that is going to stall at week eight from the pattern visible at week three. Not a retrospective report on why searches failed. A forward-looking signal that creates time for intervention.
+**Failure detection that precedes failure**, the ability to identify a search that is going to stall at week eight from the pattern visible at week three. Not a retrospective report on why searches failed. A forward-looking signal that creates time for intervention.
 
-**Autonomous recovery sequences** — when a mandate's health score drops below a threshold, the system launches a recovery action without waiting for a human to notice and respond. Adjust outreach approach. Reopen sourcing. Escalate to the search director. These actions happen at the speed of the signal, not the speed of the weekly status meeting.
+**Autonomous recovery sequences**, when a mandate's health score drops below a threshold, the system launches a recovery action without waiting for a human to notice and respond. Adjust outreach approach. Reopen sourcing. Escalate to the search director. These actions happen at the speed of the signal, not the speed of the weekly status meeting.
 
-**Audit and attribution** — a complete record of what happened in every search, which actions succeeded, which failed, and what the operational patterns look like across the portfolio of mandates. This turns every search into institutional learning rather than institutional amnesia.
+**Audit and attribution**, a complete record of what happened in every search, which actions succeeded, which failed, and what the operational patterns look like across the portfolio of mandates. This turns every search into institutional learning rather than institutional amnesia.
 
 An ATS manages candidates. Hiring infrastructure manages the system that manages candidates.
 
 ## The practical implication
 
-Most companies buying their third ATS are solving the same problem they solved with the first two — candidate record-keeping with better integrations. The problem that is actually costing them is in the space above the ATS: the absence of visibility into whether the system is working, the absence of early warning when it is not, and the absence of a recovery capability that does not depend on someone noticing the problem first.
+Most companies buying their third ATS are solving the same problem they solved with the first two, candidate record-keeping with better integrations. The problem that is actually costing them is in the space above the ATS: the absence of visibility into whether the system is working, the absence of early warning when it is not, and the absence of a recovery capability that does not depend on someone noticing the problem first.
 
 Building that layer on top of an ATS does not require replacing the ATS. It requires recognizing that the ATS was never supposed to provide it.
 
 ---
 
-Majhi OS sits above the ATS — it is the operational and intelligence layer that makes the system around your candidate records visible, recoverable, and attributable. If your searches are taking longer than they should and your ATS dashboard shows nothing obviously wrong, [the 45-minute Mission Walkthrough](https://majhi.tech) is built to show you what the ATS is not showing you.
+Majhi OS sits above the ATS, it is the operational and intelligence layer that makes the system around your candidate records visible, recoverable, and attributable. If your searches are taking longer than they should and your ATS dashboard shows nothing obviously wrong, [the 45-minute Mission Walkthrough](https://majhi.tech) is built to show you what the ATS is not showing you.
 
-If the problem is the search itself — a role that has been open longer than it should and an incumbent vendor who has not delivered — [Majhi Group](https://majhigroup.com) runs retained VP and C-suite searches with a 90-day replacement guarantee. Average close is 30–45 days.
+If the problem is the search itself, a role that has been open longer than it should and an incumbent vendor who has not delivered, [Majhi Group](https://majhigroup.com) runs retained VP and C-suite searches with a 90-day replacement guarantee. Average close is 30–45 days.
 
 **See also:** [Where AI Actually Improves Hiring](/hiring/where-ai-actually-improves-hiring), [The Four Ways Hiring Infrastructure Fails](/hiring/the-four-ways-hiring-infrastructure-fails), [The Rise of Hiring System Health](/hiring/the-rise-of-hiring-system-health)
 
@@ -101,8 +101,8 @@ If the problem is the search itself — a role that has been open longer than it
 
 **Sources**
 
-[LinkedIn Talent Solutions — The Future of Recruiting Report](https://business.linkedin.com/talent-solutions/global-talent-trends)
+[LinkedIn Talent Solutions: The Future of Recruiting Report](https://business.linkedin.com/talent-solutions/global-talent-trends)
 
-[Google SRE Book — Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/)
+[Google SRE Book: Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/)
 
-[Harvard Business Review — How Applicant Tracking Systems Are Ruining Recruiting](https://hbr.org/2021/09/your-approach-to-hiring-is-all-wrong)
+[Harvard Business Review: How Applicant Tracking Systems Are Ruining Recruiting](https://hbr.org/2021/09/your-approach-to-hiring-is-all-wrong)
