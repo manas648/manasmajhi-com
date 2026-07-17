@@ -9,14 +9,14 @@ featured: true
 flagship: true
 faqs:
   - question: "What is a Hiring SLO and how is it different from a standard recruiting metric?"
-    answer: "A standard recruiting metric measures outcomes after the fact — time-to-fill, offer acceptance rate, cost-per-hire. These are lagging indicators: by the time they register a problem, the problem has been accumulating for weeks. A Hiring SLO is a prospective threshold: a defined level of acceptable performance that is monitored in real time, with a specific response protocol triggered when the threshold is breached. The difference is the same as the difference between a dashboard that reports what happened last week and a monitoring system that alerts when something is about to fail. The SLO framework borrows the SLO concept from engineering operations, where it was developed to manage systems that cannot afford to fail silently."
+    answer: "A standard recruiting metric measures outcomes after the fact: time-to-fill, offer acceptance rate, cost-per-hire. These are lagging indicators: by the time they register a problem, the problem has been accumulating for weeks. A Hiring SLO is a prospective threshold: a defined level of acceptable performance that is monitored in real time, with a specific response protocol triggered when the threshold is breached. The difference is the same as the difference between a dashboard that reports what happened last week and a monitoring system that alerts when something is about to fail. The SLO framework borrows the SLO concept from engineering operations, where it was developed to manage systems that cannot afford to fail silently."
   - question: "What specific thresholds should trigger an alert in a VP or C-suite search?"
-    answer: "The framework defines four SLOs with specific numbers calibrated against well-run executive searches. Response Rate: warning at 15%, alert at 10% (target 20%+). Stage Velocity: warning when decision communication exceeds 72 hours, alert at 5 business days (target 48 hours). Shortlist Conversion: warning when initial-contact-to-interview conversion drops below 30%, alert at 20% (target 40%+). Offer Acceptance: warning at 70%, alert at any declined offer at final stage (target 80%+). These are not aspirational targets — they are the thresholds below which a search is demonstrably in trouble, even if the weekly status report doesn't show it yet."
+    answer: "The framework defines four SLOs with specific numbers calibrated against well-run executive searches. Response Rate: warning at 15%, alert at 10% (target 20%+). Stage Velocity: warning when decision communication exceeds 72 hours, alert at 5 business days (target 48 hours). Shortlist Conversion: warning when initial-contact-to-interview conversion drops below 30%, alert at 20% (target 40%+). Offer Acceptance: warning at 70%, alert at any declined offer at final stage (target 80%+). These are not aspirational targets; they are the thresholds below which a search is demonstrably in trouble, even if the weekly status report doesn't show it yet."
   - question: "How does the Hiring SLO framework compound over time?"
-    answer: "The compounding mechanism is in Stage 5: Measure. After each mandate closes — successfully or not — the SLO data from that mandate becomes input to institutional memory. Which recovery actions worked? At which threshold did they work? Which SLO breaches were most predictive of eventual mandate failure? A hiring team that has tracked SLO performance across 20 or 30 executive searches has an operational intelligence advantage that cannot be replicated by a team that ran the same searches without tracking. The tenth mandate benefits from the learning of the first nine. The system gets smarter. Most teams run searches. Infrastructure-grade teams run searches and learn from them."
+    answer: "The compounding mechanism is in Stage 5: Measure. After each mandate closes, successfully or not, the SLO data from that mandate becomes input to institutional memory. Which recovery actions worked? At which threshold did they work? Which SLO breaches were most predictive of eventual mandate failure? A hiring team that has tracked SLO performance across 20 or 30 executive searches has an operational intelligence advantage that cannot be replicated by a team that ran the same searches without tracking. The tenth mandate benefits from the learning of the first nine. The system gets smarter. Most teams run searches. Infrastructure-grade teams run searches and learn from them."
 ---
 
-Engineering teams learned, over several decades of painful outages, that you cannot manage a system by feel. You need defined thresholds — specific, measurable standards of acceptable performance — and you need automated alerts that fire when those thresholds are breached. This combination of defined standards and real-time monitoring is what separates infrastructure-grade engineering operations from teams that discover problems only when users complain.
+Engineering teams learned, over several decades of painful outages, that you cannot manage a system by feel. You need defined thresholds, specifically measurable standards of acceptable performance, and you need automated alerts that fire when those thresholds are breached. This combination of defined standards and real-time monitoring is what separates infrastructure-grade engineering operations from teams that discover problems only when users complain.
 
 The concept is a Service Level Objective: a target for system performance, defined in advance, monitored continuously, and used to trigger a response when the system degrades below the target.
 
@@ -38,7 +38,7 @@ STAGE 1: DEFINE
 STAGE 2: MONITOR
   ↓
   [Track mandate health against defined thresholds
-   continuously — not in a Friday retrospective.]
+   continuously, not in a Friday retrospective.]
 
 STAGE 3: ALERT
   ↓
@@ -82,17 +82,17 @@ An SLO for a hiring mandate has four components. Each maps to a specific observa
 - Warning threshold: 70%
 - Breach threshold: Any declined offer at final stage
 
-The specific numbers are calibrated against what the market produces for well-run executive searches. They are not aspirational targets — they are thresholds below which the search is demonstrably in trouble.
+The specific numbers are calibrated against what the market produces for well-run executive searches. They are not aspirational targets; they are thresholds below which the search is demonstrably in trouble.
 
-**The definition conversation:** Before the search begins, the SLOs should be shared with the hiring manager. Not as a technical document — as a commitment. "Here is how we will know this search is on track. Here is when we will flag that it isn't. Here is what we will do when we flag it." This converts the SLOs from an internal monitoring tool into a shared understanding of what a well-run search looks like.
+**The definition conversation:** Before the search begins, the SLOs should be shared with the hiring manager. Not as a technical document, but as a commitment. "Here is how we will know this search is on track. Here is when we will flag that it isn't. Here is what we will do when we flag it." This converts the SLOs from an internal monitoring tool into a shared understanding of what a well-run search looks like.
 
 ## Stage 2: Monitor in real time
 
 The standard model of search monitoring is a weekly status update: here is how many candidates are in the pipeline, here is where they are in the process, here is what happened this week. This is a retrospective, not a monitoring system. By the time the weekly update documents a problem, the problem has been accumulating for days.
 
-Real-time monitoring means tracking the key metrics as they change, not as they are reported. Response rate is calculated daily, not weekly — because a response rate that drops sharply on Tuesday needs a response on Wednesday, not at the Friday review. Stage velocity is tracked from the moment a candidate completes an interview, not from the moment someone gets around to updating a spreadsheet.
+Real-time monitoring means tracking the key metrics as they change, not as they are reported. Response rate is calculated daily, not weekly, because a response rate that drops sharply on Tuesday needs a response on Wednesday, not at the Friday review. Stage velocity is tracked from the moment a candidate completes an interview, not from the moment someone gets around to updating a spreadsheet.
 
-**What this requires in practice:** A system — not necessarily a sophisticated one — that records key events as they happen and makes the current state of the search visible without requiring someone to compile a report. This can be as simple as a shared document with live data entry, or as sophisticated as a purpose-built ATS with built-in SLO tracking.
+**What this requires in practice:** A system, not necessarily a sophisticated one, that records key events as they happen and makes the current state of the search visible without requiring someone to compile a report. This can be as simple as a shared document with live data entry, or as sophisticated as a purpose-built ATS with built-in SLO tracking.
 
 **What it rules out:** Managing a search from memory, from periodic check-ins, or from the hiring manager's impression of progress. These are feel-based systems. They detect failure slowly, at best.
 
@@ -100,7 +100,7 @@ Real-time monitoring means tracking the key metrics as they change, not as they 
 
 An alert is not a report. A report says: here is what happened. An alert says: something that requires a response is happening right now.
 
-The distinction matters because the appropriate response to a metric that is about to breach a threshold is different from the appropriate response to a metric that has already breached it. The warning threshold exists to trigger a lower-cost, earlier intervention — a repositioned message, a shortened process step, a conversation with the hiring manager — before the breach threshold triggers a more expensive one.
+The distinction matters because the appropriate response to a metric that is about to breach a threshold is different from the appropriate response to a metric that has already breached it. The warning threshold exists to trigger a lower-cost, earlier intervention: a repositioned message, a shortened process step, a conversation with the hiring manager, before the breach threshold triggers a more expensive one.
 
 **Alert structure:**
 - Warning: Internal flag. Search team reviews the metric and assesses whether intervention is needed.
@@ -128,11 +128,11 @@ A recovery protocol is a defined set of actions triggered by a specific breach. 
 
 The final stage is what separates a hiring SLO system from a hiring checklist. A checklist is used once. A system learns.
 
-After each mandate closes — successfully or not — the SLO data from that mandate becomes an input to the system's institutional memory. Which recovery actions worked? At which threshold did they work? Which mandates breached multiple SLOs simultaneously, and what did that pattern predict? Which SLO breaches were most strongly predictive of eventual mandate failure?
+After each mandate closes, successfully or not, the SLO data from that mandate becomes an input to the system's institutional memory. Which recovery actions worked? At which threshold did they work? Which mandates breached multiple SLOs simultaneously, and what did that pattern predict? Which SLO breaches were most strongly predictive of eventual mandate failure?
 
 Over time, this data produces a compounding advantage. The tenth mandate run through the system benefits from the learning of the first nine. The response protocols become more calibrated. The thresholds become more accurate. The alerts fire earlier, more precisely.
 
-**The long-run value:** A hiring team that has tracked SLO performance across 20 or 30 executive searches has an operational intelligence advantage that cannot be replicated by a team that has run the same number of searches without tracking. The data exists in the market — in the outcomes of those searches. The question is whether it was captured and converted into system learning.
+**The long-run value:** A hiring team that has tracked SLO performance across 20 or 30 executive searches has an operational intelligence advantage that cannot be replicated by a team that has run the same number of searches without tracking. The data exists in the market, in the outcomes of those searches. The question is whether it was captured and converted into system learning.
 
 Most teams run searches. Infrastructure-grade teams run searches and learn from them.
 
@@ -144,8 +144,8 @@ The Hiring SLO Framework is the structure that makes learning systematic rather 
 
 **Sources**
 
-[Google — Site Reliability Engineering: Service Level Objectives](https://sre.google/sre-book/service-level-objectives/)
+[Google: Site Reliability Engineering, Service Level Objectives](https://sre.google/sre-book/service-level-objectives/)
 
-[McKinsey — HR's New Operating Model (2022)](https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-organization-blog/hrs-new-operating-model)
+[McKinsey: HR's New Operating Model (2022)](https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-organization-blog/hrs-new-operating-model)
 
-[Gartner — Recruiting Technology Market Landscape](https://www.gartner.com/en/human-resources/topics/recruiting-technology)
+[Gartner: Recruiting Technology Market Landscape](https://www.gartner.com/en/human-resources/topics/recruiting-technology)
