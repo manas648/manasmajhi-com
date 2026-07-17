@@ -11,7 +11,7 @@ const _listeners: Array<(n: number) => void> = [];
 function fetchAndCache() {
   if (_count !== null || _fetching) return;
   _fetching = true;
-  fetch("/api/visit")
+  fetch("/api/visit", { method: "POST" })
     .then((r) => r.json())
     .then((data) => {
       if (typeof data.count === "number") {

@@ -1,14 +1,20 @@
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 const KV_URL = process.env.KV_REST_API_URL;
 const KV_TOKEN = process.env.KV_REST_API_TOKEN;
 const SEED = 11111;
 const KEY = "site:visits";
 
-const NO_CACHE = { "Cache-Control": "no-store, no-cache, must-revalidate" };
+const NO_CACHE = {
+  "Cache-Control": "no-store, no-cache, must-revalidate",
+  "CDN-Cache-Control": "no-store",
+  "Cloudflare-CDN-Cache-Control": "no-store",
+};
 
-export async function GET() {
-  // If KV isn't configured, return seed so the counter still shows
+// POST — never cached by Cloudflare or any CDN
+export async function POST() {
   if (!KV_URL || !KV_TOKEN) {
     return NextResponse.json({ count: SEED }, { headers: NO_CACHE });
   }
