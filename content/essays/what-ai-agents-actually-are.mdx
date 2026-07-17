@@ -8,20 +8,20 @@ featured: false
 flagship: false
 faqs:
   - question: "What is an AI agent?"
-    answer: "An AI agent is a system that perceives its environment, makes a decision, takes an action, and observes the result — then uses that observation to decide its next step. The feedback loop is what separates an agent from a tool."
+    answer: "An AI agent is a system that perceives its environment, makes a decision, takes an action, and observes the result, then uses that observation to decide its next step. The feedback loop is what separates an agent from a tool."
   - question: "Why do most AI agent deployments fail?"
     answer: "Fiddler AI found 70-95% failure rates in production. The core problem is multi-step error compounding: at 85% per-step accuracy across 8 sequential steps, overall task completion falls to just 27%. Most failures are infrastructure problems, not model capability problems."
   - question: "What is the difference between an AI tool and an AI agent?"
-    answer: "A tool produces a terminal output. An agent loops — it observes the result of its action and adjusts. Without that feedback loop, you have a capable function, not an autonomous system."
+    answer: "A tool produces a terminal output. An agent loops, it observes the result of its action and adjusts. Without that feedback loop, you have a capable function, not an autonomous system."
 ---
 
 Most people using the term "AI agent" are describing a chatbot with extra steps. I know this because I spent months building what I thought were agents before I understood what actually separates an agent from a very capable function.
 
-The distinction matters more than the vocabulary suggests — and the gap between hype and production reality is larger than most organisations realise when they start.
+The distinction matters more than the vocabulary suggests, and the gap between hype and production reality is larger than most organisations realise when they start.
 
 ## The market is moving fast. The executions are not.
 
-The global AI agents market was valued at approximately $7.6 billion in 2025 and is projected to reach $10.9 billion in 2026, growing at a compound annual rate above 40% through the decade. [Gartner projects](https://joget.com/ai-agent-adoption-in-2026-what-the-analysts-data-shows/) that 40% of enterprise applications will embed task-specific agents by end of 2026 — up from under 5% a year earlier.
+The global AI agents market was valued at approximately $7.6 billion in 2025 and is projected to reach $10.9 billion in 2026, growing at a compound annual rate above 40% through the decade. [Gartner projects](https://joget.com/ai-agent-adoption-in-2026-what-the-analysts-data-shows/) that 40% of enterprise applications will embed task-specific agents by end of 2026, up from under 5% a year earlier.
 
 >> 40% of enterprise applications will embed AI agents by end-2026. Under 5% had them a year ago.
 
@@ -31,33 +31,33 @@ That adoption curve is real. What's also real: the executions failing to match t
 
 [Gartner's 2025 research](https://joget.com/ai-agent-adoption-in-2026-what-the-analysts-data-shows/) goes further: over 40% of agentic AI projects are forecast to be cancelled by 2027, driven by unclear ROI and inadequate risk controls. [IBM's 2025 CEO study](https://paul-okhrem.com/enterprise-ai-agents-statistics-2026/) found only 25% of AI initiatives delivered expected ROI.
 
-Understanding why requires understanding what agents actually are — and where most implementations break.
+Understanding why requires understanding what agents actually are, and where most implementations break.
 
 ## The loop is the thing
 
-An AI agent perceives its environment, makes a decision, takes an action, and observes what happened — then uses that observation to decide what to do next. That four-part loop is what makes it an agent. Without the feedback loop, you have a tool. A very impressive tool, but a tool.
+An AI agent perceives its environment, makes a decision, takes an action, and observes what happened, then uses that observation to decide what to do next. That four-part loop is what makes it an agent. Without the feedback loop, you have a tool. A very impressive tool, but a tool.
 
-When I started building Majhi OS — autonomous hiring operations infrastructure — the first version was a tool pretending to be an agent. It could generate a recruiting sequence, analyse a mandate's health score, identify where a pipeline was degrading. But it couldn't observe what happened after it acted, and it couldn't adjust. Every output was a terminal state. I had built an excellent report generator and called it an autonomous system.
+When I started building Majhi OS, autonomous hiring operations infrastructure, the first version was a tool pretending to be an agent. It could generate a recruiting sequence, analyse a mandate's health score, identify where a pipeline was degrading. But it couldn't observe what happened after it acted, and it couldn't adjust. Every output was a terminal state. I had built an excellent report generator and called it an autonomous system.
 
-The moment it became an agent was when it could observe that the outreach it triggered hadn't moved response rates, form a hypothesis about why, modify the approach, and try again — without me intervening between each step. That feedback loop changed the nature of the system entirely. Not the model. Not the prompting. The loop.
+The moment it became an agent was when it could observe that the outreach it triggered hadn't moved response rates, form a hypothesis about why, modify the approach, and try again, without me intervening between each step. That feedback loop changed the nature of the system entirely. Not the model. Not the prompting. The loop.
 
 ## Why multi-step workflows collapse
 
-The mathematics of multi-step agents are unforgiving. If an agent has an 85% success rate at each individual step — which sounds reasonable — and must complete eight sequential steps to finish a task, the probability of completing the full workflow correctly is approximately 27%.
+The mathematics of multi-step agents are unforgiving. If an agent has an 85% success rate at each individual step, which sounds reasonable, and must complete eight sequential steps to finish a task, the probability of completing the full workflow correctly is approximately 27%.
 
 >> At 85% per-step accuracy across 8 steps: 27% overall task completion. That's the reliability math most agent roadmaps don't account for.
 
-This is not a model capability problem. The best GPT-4-based agents achieved a [14.41% end-to-end task success rate on the WebArena benchmark](https://arxiv.org/pdf/2601.22290) — compared to human performance of 78.24%. The gap isn't intelligence. It's error compounding across steps, and the lack of infrastructure to catch and recover from failures mid-workflow.
+This is not a model capability problem. The best GPT-4-based agents achieved a [14.41% end-to-end task success rate on the WebArena benchmark](https://arxiv.org/pdf/2601.22290), compared to human performance of 78.24%. The gap isn't intelligence. It's error compounding across steps, and the lack of infrastructure to catch and recover from failures mid-workflow.
 
-In hiring systems, this problem has real consequences. When I'm running a VP-level search through Majhi Group, a wrong intermediate action — the wrong message to a candidate, the wrong status update to a client — can damage a relationship that took weeks to build. That's not a model problem. It's a system design problem, and it's why the agentic layer in Majhi OS is built around failure recovery first, autonomy second.
+In hiring systems, this problem has real consequences. When I'm running a VP-level search through Majhi Group, a wrong intermediate action, the wrong message to a candidate, the wrong status update to a client, can damage a relationship that took weeks to build. That's not a model problem. It's a system design problem, and it's why the agentic layer in Majhi OS is built around failure recovery first, autonomy second.
 
 ## What I got wrong when I started
 
-I assumed the intelligence was the hard part. It isn't. Language models are, by now, capable enough for most business tasks. The hard part is the infrastructure around the model: state management, error handling, deciding when to proceed versus escalate, and — most underestimated — knowing when the agent is wrong.
+I assumed the intelligence was the hard part. It isn't. Language models are, by now, capable enough for most business tasks. The hard part is the infrastructure around the model: state management, error handling, deciding when to proceed versus escalate, and, most underestimated, knowing when the agent is wrong.
 
-Enterprise AI spending reached $37 billion in 2025, more than triple the 2024 figure of $11.5 billion. That acceleration is largely going into model access and tooling. The unsexy infrastructure work — observability, state persistence, failure recovery — remains the execution gap that explains the 70%+ failure rates.
+Enterprise AI spending reached $37 billion in 2025, more than triple the 2024 figure of $11.5 billion. That acceleration is largely going into model access and tooling. The unsexy infrastructure work, observability, state persistence, failure recovery, remains the execution gap that explains the 70%+ failure rates.
 
-I see the same pattern in the hiring technology companies I work with. They invest in the AI layer. They underinvest in the operational scaffolding that makes the AI layer reliable. The result is a system that performs well in demos and fails in production — exactly what the failure statistics describe.
+I see the same pattern in the hiring technology companies I work with. They invest in the AI layer. They underinvest in the operational scaffolding that makes the AI layer reliable. The result is a system that performs well in demos and fails in production, exactly what the failure statistics describe.
 
 ## The three patterns most people conflate
 
@@ -67,17 +67,17 @@ When someone tells you they're "using AI agents," they're usually describing one
 
 *Multi-agent with orchestration.* Multiple specialised models coordinated by an orchestrating layer. Each handles a narrower task. The orchestrator routes work, handles exceptions, and aggregates. This is where genuine operational value starts to appear, and where most serious enterprise deployments are heading.
 
-*Long-horizon autonomous systems.* Systems that maintain state across many steps and operate over hours or days. These exist in research and specialised deployments. They are not yet routine infrastructure — despite being the pattern most vendors are pitching.
+*Long-horizon autonomous systems.* Systems that maintain state across many steps and operate over hours or days. These exist in research and specialised deployments. They are not yet routine infrastructure, despite being the pattern most vendors are pitching.
 
-Knowing which pattern you're actually buying — or building — changes every decision that follows.
+Knowing which pattern you're actually buying, or building, changes every decision that follows.
 
 ## The infrastructure gap from the inside
 
 Building Majhi OS, I spend most of my time not on the model but on the scaffolding. Making sure the system knows what it's already tried. Making sure a failed outreach sequence doesn't orphan a mandate's state. Making sure I can tell the difference between an agent that's working correctly and an agent that's confidently wrong.
 
-That last problem — detecting confident wrongness — is harder than it sounds, and it's the one that causes most production failures. [Scope creep and data quality issues account for 61% of all AI agent failures](https://www.digitalapplied.com/blog/ai-agent-adoption-2026-enterprise-data-points) in enterprise deployments. Both are scaffolding problems, not model problems.
+That last problem, detecting confident wrongness, is harder than it sounds, and it's the one that causes most production failures. [Scope creep and data quality issues account for 61% of all AI agent failures](https://www.digitalapplied.com/blog/ai-agent-adoption-2026-enterprise-data-points) in enterprise deployments. Both are scaffolding problems, not model problems.
 
-This is visible at the regional level too. In India — where I've placed C-suite leaders across Odisha, Bengaluru, and Mumbai — the organisations building serious AI capability are not the ones with the most sophisticated models. They're the ones that have invested in clean operational data and the infrastructure to act on it reliably. The model is almost incidental. The scaffolding is everything.
+This is visible at the regional level too. In India, where I've placed C-suite leaders across Odisha, Bengaluru, and Mumbai, the organisations building serious AI capability are not the ones with the most sophisticated models. They're the ones that have invested in clean operational data and the infrastructure to act on it reliably. The model is almost incidental. The scaffolding is everything.
 
 ## The practical implication
 
@@ -89,7 +89,7 @@ That's a slower approach. It's also the one that compounds.
 
 ---
 
-*Sources: [Fiddler AI — AI Agent Failure Rate](https://www.fiddler.ai/blog/ai-agent-failure-rate) · [Digital Applied — 88% Failure Before Production](https://www.digitalapplied.com/blog/88-percent-ai-agents-never-reach-production-failure-framework) · [Gartner / Joget — AI Agent Adoption 2026](https://joget.com/ai-agent-adoption-in-2026-what-the-analysts-data-shows/) · [Paul Okhrem — Enterprise AI Statistics](https://paul-okhrem.com/enterprise-ai-agents-statistics-2026/) · [WebArena Benchmark — arxiv](https://arxiv.org/pdf/2601.22290) · [Digital Applied — 120+ Enterprise Data Points](https://www.digitalapplied.com/blog/ai-agent-adoption-2026-enterprise-data-points)*
+*Sources: [Fiddler AI: AI Agent Failure Rate](https://www.fiddler.ai/blog/ai-agent-failure-rate) · [Digital Applied: 88% Failure Before Production](https://www.digitalapplied.com/blog/88-percent-ai-agents-never-reach-production-failure-framework) · [Gartner / Joget: AI Agent Adoption 2026](https://joget.com/ai-agent-adoption-in-2026-what-the-analysts-data-shows/) · [Paul Okhrem: Enterprise AI Statistics](https://paul-okhrem.com/enterprise-ai-agents-statistics-2026/) · [WebArena Benchmark: arxiv](https://arxiv.org/pdf/2601.22290) · [Digital Applied: 120+ Enterprise Data Points](https://www.digitalapplied.com/blog/ai-agent-adoption-2026-enterprise-data-points)*
 
 **See also:** [How Companies Should Actually Think About AI Adoption](/future-of-work/how-companies-should-think-about-ai-adoption), [The Knowledge Problem in AI](/future-of-work/the-knowledge-problem-in-ai), [AI and Human Potential](/future-of-work/ai-and-human-potential)
 
@@ -97,8 +97,8 @@ That's a slower approach. It's also the one that compounds.
 
 **Sources**
 
-[Gartner — AI Agent Adoption in 2026: What the Analysts' Data Shows](https://joget.com/ai-agent-adoption-in-2026-what-the-analysts-data-shows/)
+[Gartner: AI Agent Adoption in 2026: What the Analysts' Data Shows](https://joget.com/ai-agent-adoption-in-2026-what-the-analysts-data-shows/)
 
-[Fiddler AI — AI Agent Failure Rate Analysis](https://www.fiddler.ai/blog/ai-agent-failure-rate)
+[Fiddler AI: AI Agent Failure Rate Analysis](https://www.fiddler.ai/blog/ai-agent-failure-rate)
 
-[IBM — CEO Study 2025: The Agentic AI Inflection Point](https://paul-okhrem.com/enterprise-ai-agents-statistics-2026/)
+[IBM: CEO Study 2025: The Agentic AI Inflection Point](https://paul-okhrem.com/enterprise-ai-agents-statistics-2026/)
