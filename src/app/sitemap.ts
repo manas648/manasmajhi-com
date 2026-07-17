@@ -151,12 +151,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.4,
     },
-    {
-      url: `${SITE_URL}/search`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
     ...categories.map((cat) => ({
       url: `${SITE_URL}/${cat}`,
       lastModified: new Date(),

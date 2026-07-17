@@ -41,6 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const essay = getEssayBySlug(slug);
   if (!essay) return {};
+  if (essay.hidden) return { robots: { index: false, follow: false } };
 
   const ogUrl = `${SITE_URL}/api/og?title=${encodeURIComponent(essay.title)}&category=${encodeURIComponent(CATEGORY_LABELS[essay.category])}`;
 
