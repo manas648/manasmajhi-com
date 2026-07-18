@@ -117,9 +117,17 @@ export default async function EssayPage({ params }: Props) {
 
   const ogImage = `${SITE_URL}/api/og?title=${encodeURIComponent(essay.title)}&category=${encodeURIComponent(CATEGORY_LABELS[essay.category])}`;
 
+  // Only mark as OpinionNewsArticle for pure opinion categories.
+  // Frameworks, hiring, analysis, and regional essays are reference/informational content —
+  // OpinionNewsArticle signals suppress AI citation probability on these pages.
+  const opinionCategories = new Set(["philosophy", "travel"]);
+  const articleSchemaType = opinionCategories.has(essay.category)
+    ? ["Article", "OpinionNewsArticle"]
+    : "Article";
+
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": ["Article", "OpinionNewsArticle"],
+    "@type": articleSchemaType,
     "@id": `${SITE_URL}/${essay.category}/${slug}`,
     headline: essay.title,
     description: essay.excerpt,
@@ -317,6 +325,23 @@ export default async function EssayPage({ params }: Props) {
             dangerouslySetInnerHTML={{ __html: renderContent(essay.content) }}
           />
         </div>
+
+        {/* FAQ Section — visible HTML for AI content parsers (Perplexity, ChatGPT, Google AIO) */}
+        {essay.faqs && essay.faqs.length > 0 && (
+          <div className="px-6 lg:px-8 pb-16">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="font-serif text-2xl font-medium mb-8">Frequently Asked Questions</h2>
+              <div className="space-y-0">
+                {essay.faqs.map((faq, i) => (
+                  <div key={i} className="border-b border-border py-6 first:pt-0">
+                    <h3 className="font-medium text-base mb-3">{faq.question}</h3>
+                    <p className="text-muted-foreground leading-relaxed text-[0.95rem]">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Hiring CTA */}
         {(essay.category === "hiring" ||
