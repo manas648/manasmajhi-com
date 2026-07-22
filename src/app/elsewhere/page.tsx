@@ -176,8 +176,8 @@ const photos = [
     src: "/elsewhere/manas-majhi-jaypee-greens-golf.jpg",
     alt: "Manas Majhi at Jaypee Greens Golf Club, Greater Noida",
     caption: "Jaypee Greens. The game rewards patience. The business required it first.",
-    width: 1170,
-    height: 1444,
+    width: 1023,
+    height: 1537,
   },
   {
     src: "/elsewhere/manas-majhi-langkawi-eagle.jpg",
@@ -262,6 +262,20 @@ const photos = [
     caption: "Off the clock. The shirt had a different agenda.",
     width: 1127,
     height: 1395,
+  },
+  {
+    src: "/elsewhere/manas-majhi-rooftop-christmas.jpg",
+    alt: "Manas Majhi on a rooftop terrace at night, city skyline and lit Christmas tree in the background",
+    caption: "The skyline glittered. Dinner had already come and gone.",
+    width: 1122,
+    height: 1402,
+  },
+  {
+    src: "/elsewhere/manas-majhi-garden-briefcase.jpg",
+    alt: "Manas Majhi walking through a garden path holding a laptop bag, looking off to the side",
+    caption: "Bag in hand, eyes already on the next room.",
+    width: 1122,
+    height: 1402,
   },
 ];
 
