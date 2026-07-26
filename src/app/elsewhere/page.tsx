@@ -277,6 +277,13 @@ const photos = [
     width: 1122,
     height: 1402,
   },
+  {
+    src: "/elsewhere/manas-majhi-rocky-hillside.jpg",
+    alt: "Manas Majhi standing on a rocky hillside, checking his phone",
+    caption: "Even the view waits for one more notification.",
+    width: 941,
+    height: 1672,
+  },
 ];
 
 // ---------------------------------------------------------------------------
