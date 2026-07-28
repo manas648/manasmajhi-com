@@ -284,6 +284,13 @@ const photos = [
     width: 941,
     height: 1672,
   },
+  {
+  src: "/elsewhere/manas-majhi-maldives-beach.jpg",
+  alt: "Manas Majhi standing on a white sand beach, looking off to the side",
+  caption: "White shirt's twin, different ocean.",
+  width: 995,
+  height: 964,
+},
 ];
 
 // ---------------------------------------------------------------------------
