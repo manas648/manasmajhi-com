@@ -431,7 +431,7 @@ export default function RecognitionPage() {
             {/* Stats row */}
             <div className="grid grid-cols-3 gap-px border border-border rounded-lg overflow-hidden mt-6">
               <div className="bg-muted/30 px-6 py-5">
-                <p className="font-serif text-3xl font-medium">5K</p>
+                <p className="font-serif text-3xl font-medium">6.4K</p>
                 <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
                   AI citations
                 </p>
@@ -443,7 +443,7 @@ export default function RecognitionPage() {
                 </p>
               </div>
               <div className="bg-muted/30 px-6 py-5">
-                <p className="font-serif text-3xl font-medium">25</p>
+                <p className="font-serif text-3xl font-medium">30</p>
                 <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
                   Avg. cited pages
                 </p>
@@ -454,7 +454,7 @@ export default function RecognitionPage() {
             <div className="rounded-lg overflow-hidden border border-border mt-2">
               <Image
                 src="/awards/bing-webmaster-ai-citations.png"
-                alt="Microsoft Bing Webmaster Tools — AI Performance dashboard showing 5K total citations and 25 average cited pages for majhigroup.com over the last 30 days, sourced from Microsoft Copilots and Partners"
+                alt="Microsoft Bing Webmaster Tools — AI Performance dashboard showing 6.4K total citations and 30 average cited pages for majhigroup.com over the last 30 days, sourced from Microsoft Copilots and Partners"
                 width={2880}
                 height={1276}
                 className="w-full h-auto"
@@ -466,7 +466,7 @@ export default function RecognitionPage() {
               Citation counts are monitored continuously and updated periodically. They
               represent instances where published work is surfaced or referenced in
               AI-powered search experiences, as reported by Microsoft Bing Webmaster Tools.
-              Last updated: July 25, 2026.
+              Last updated: July 30, 2026.
             </p>
           </div>
         </div>
