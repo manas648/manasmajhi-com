@@ -125,21 +125,21 @@ const placesHubs = [
     title: "India",
     description: "Why India's moment is now. Technology, talent, and what's being built.",
     href: "/india",
-    count: "26 articles",
+    category: "india" as EssayCategory,
   },
   {
     label: "State",
     title: "Odisha",
     description: "The most differentiated state in India. Economy, talent, cities, and opportunity.",
     href: "/odisha",
-    count: "38 articles",
+    category: "odisha" as EssayCategory,
   },
   {
     label: "District",
     title: "Kalahandi",
     description: "Where I come from. What a place most people haven't heard of taught me about opportunity.",
     href: "/kalahandi",
-    count: "15 articles",
+    category: "kalahandi" as EssayCategory,
   },
 ];
 
@@ -558,7 +558,9 @@ export default function HomePage() {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {placesHubs.map((place) => (
+            {placesHubs.map((place) => {
+              const placeCount = allEssays.filter((e) => e.category === place.category).length;
+              return (
               <Link key={place.href} href={place.href} className="group block">
                 <div className="rounded-2xl border border-border p-7 hover:border-accent/40 transition-all duration-200 h-full flex flex-col">
                   <div className="mb-4">
@@ -571,14 +573,15 @@ export default function HomePage() {
                     {place.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-muted-foreground">{place.count}</span>
+                    <span className="text-xs text-muted-foreground">{placeCount} articles</span>
                     <div className="inline-flex items-center gap-1 text-xs font-medium text-accent">
                       Explore <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                     </div>
                   </div>
                 </div>
               </Link>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
