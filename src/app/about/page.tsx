@@ -213,7 +213,7 @@ export default function AboutPage() {
                 href: "https://www.linkedin.com/newsletters/startup-talentscape-7091974829532180481/",
               },
               {
-                stat: "6K+",
+                stat: "7K+",
                 label: "Manas Majhi",
                 sub: "LinkedIn followers",
                 href: "https://www.linkedin.com/in/manasmajhi",
