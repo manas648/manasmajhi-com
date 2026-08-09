@@ -291,6 +291,20 @@ const photos = [
   width: 995,
   height: 964,
 },
+  {
+    src: "/elsewhere/manas-majhi-riverside-bridge.jpg",
+    alt: "Manas Majhi standing on a bridge beside a riverside landscape",
+    caption: "Somewhere between the road and the river.",
+    width: 1365,
+    height: 2048,
+  },
+  {
+    src: "/elsewhere/manas-majhi-resort-balcony.jpg",
+    alt: "Manas Majhi standing on a resort balcony in a blue shirt",
+    caption: "A little distance from the noise.",
+    width: 1536,
+    height: 2048,
+  },
 ];
 
 // ---------------------------------------------------------------------------
