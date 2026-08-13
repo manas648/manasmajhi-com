@@ -313,13 +313,12 @@ const photos = [
     height: 2048,
   },
   {
-    src: "/elsewhere/manas-majhi-indoor-event.jpeg",
-    alt: "Manas Majhi at an indoor event",
-    caption:
-      "Some rooms are built for ideas. Others are built for the people carrying them.",
-    width: 1031,
-    height: 1280,
-  },
+  src: "/elsewhere/manas-majhi-indoor-event.jpg",
+  alt: "Manas Majhi at an indoor event",
+  caption: "Some rooms are built for ideas. Others are built for the people carrying them.",
+  width: 1031,
+  height: 1062,
+},
 ];
 
 // ---------------------------------------------------------------------------
