@@ -11,7 +11,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Elsewhere",
-    description: "Dispatches from the road. Sea and sky — and wherever the work takes me next.",
+    description:
+      "Dispatches from the road. Sea and sky — and wherever the work takes me next.",
     url: `${SITE_URL}/elsewhere`,
     images: [
       {
@@ -112,7 +113,8 @@ const photos = [
   {
     src: "/elsewhere/manas-majhi-medeu-arena.jpg",
     alt: "Manas Majhi — Medeu ice skating arena, Almaty",
-    caption: "Soviet ambition carved in stone. Some ideas outlast the ideology.",
+    caption:
+      "Soviet ambition carved in stone. Some ideas outlast the ideology.",
     width: 1600,
     height: 1200,
   },
@@ -126,7 +128,8 @@ const photos = [
   {
     src: "/elsewhere/manas-majhi-goa.jpg",
     alt: "Manas Majhi on a speedboat in Goa",
-    caption: "White shirt, no agenda. Sometimes the best strategy is no strategy.",
+    caption:
+      "White shirt, no agenda. Sometimes the best strategy is no strategy.",
     width: 1170,
     height: 780,
   },
@@ -140,14 +143,16 @@ const photos = [
   {
     src: "/elsewhere/manas-majhi-whiteboard.jpg",
     alt: "Manas Majhi at a whiteboard, July 2022",
-    caption: "July '22. Five clients. One whiteboard. The whole thesis in one diagram.",
+    caption:
+      "July '22. Five clients. One whiteboard. The whole thesis in one diagram.",
     width: 960,
     height: 1280,
   },
   {
     src: "/elsewhere/manas-majhi-thailand-ferry.jpg",
     alt: "Manas Majhi on a ferry between Thai islands",
-    caption: "Somewhere between islands, watching Thailand disappear behind us.",
+    caption:
+      "Somewhere between islands, watching Thailand disappear behind us.",
     width: 1170,
     height: 920,
   },
@@ -175,7 +180,8 @@ const photos = [
   {
     src: "/elsewhere/manas-majhi-jaypee-greens-golf.jpg",
     alt: "Manas Majhi at Jaypee Greens Golf Club, Greater Noida",
-    caption: "Jaypee Greens. The game rewards patience. The business required it first.",
+    caption:
+      "Jaypee Greens. The game rewards patience. The business required it first.",
     width: 1023,
     height: 1537,
   },
@@ -252,7 +258,8 @@ const photos = [
   {
     src: "/elsewhere/manas-majhi-restaurant.png",
     alt: "Manas Majhi in a black shirt at a restaurant, thoughtful pose",
-    caption: "The sign said eat dessert first. Good advice for most decisions.",
+    caption:
+      "The sign said eat dessert first. Good advice for most decisions.",
     width: 1414,
     height: 1112,
   },
@@ -285,12 +292,12 @@ const photos = [
     height: 1672,
   },
   {
-  src: "/elsewhere/manas-majhi-maldives-beach.jpg",
-  alt: "Manas Majhi standing on a white sand beach, looking off to the side",
-  caption: "White shirt's twin, different ocean.",
-  width: 995,
-  height: 964,
-},
+    src: "/elsewhere/manas-majhi-maldives-beach.jpg",
+    alt: "Manas Majhi standing on a white sand beach, looking off to the side",
+    caption: "White shirt's twin, different ocean.",
+    width: 995,
+    height: 964,
+  },
   {
     src: "/elsewhere/manas-majhi-riverside-bridge.png",
     alt: "Manas Majhi standing on a bridge beside a riverside landscape",
@@ -305,6 +312,14 @@ const photos = [
     width: 1536,
     height: 2048,
   },
+  {
+    src: "/elsewhere/manas-majhi-indoor-event.jpg",
+    alt: "Manas Majhi at an indoor event",
+    caption:
+      "Some rooms are built for ideas. Others are built for the people carrying them.",
+    width: 1031,
+    height: 1280,
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -313,9 +328,9 @@ const photos = [
 type VideoItem = {
   type: "video";
   src: string;
-  poster?: string; // optional thumbnail shown before play
+  poster?: string;
   caption: string;
-  aspectRatio?: string; // CSS aspect-ratio value, default "9/16"
+  aspectRatio?: string;
 };
 
 // To add a new video: drop the .mp4 into public/video/, then add one entry here.
@@ -324,13 +339,15 @@ const videos: VideoItem[] = [
   {
     type: "video",
     src: "/api/video/manas-majhi-kalahandi-view.mp4",
-    caption: "Cities look like circuits from up here. Which is more or less what they are.",
+    caption:
+      "Cities look like circuits from up here. Which is more or less what they are.",
     aspectRatio: "9/16",
   },
   {
     type: "video",
     src: "/api/video/manas-majhi-almaty-tulips.mp4",
-    caption: "Every city is someone's whole world, from up here they all look the same size.",
+    caption:
+      "Every city is someone's whole world, from up here they all look the same size.",
     aspectRatio: "9/16",
   },
 ];
@@ -339,7 +356,8 @@ const imageSchema = {
   "@context": "https://schema.org",
   "@type": "ImageGallery",
   name: "Elsewhere — Manas Majhi",
-  description: "Dispatches from the road. Sea and sky — and wherever the work takes me next.",
+  description:
+    "Dispatches from the road. Sea and sky — and wherever the work takes me next.",
   url: `${SITE_URL}/elsewhere`,
   author: {
     "@type": "Person",
@@ -368,79 +386,96 @@ export default function ElsewherePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(imageSchema) }}
       />
-    <div className="min-h-screen px-6 lg:px-8 py-20">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="mb-16 max-w-2xl">
-          <p className="section-label mb-4">Travel</p>
-          <h1 className="font-serif text-5xl md:text-6xl font-medium tracking-tight mb-6">
-            Elsewhere
-          </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            Dispatches from the road. Sea and sky — and wherever the work takes me next.
-          </p>
-        </div>
 
-        {/* Masonry grid — photos + videos interleaved */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6">
-          {/* Videos first — shorts sit at the top of the grid */}
-          {videos.map((video) => (
-            <div key={video.src} className="break-inside-avoid mb-6">
+      <div className="min-h-screen px-6 lg:px-8 py-20">
+        <div className="max-w-7xl mx-auto">
+
+          {/* Header */}
+          <div className="mb-16 max-w-2xl">
+            <p className="section-label mb-4">Travel</p>
+
+            <h1 className="font-serif text-5xl md:text-6xl font-medium tracking-tight mb-6">
+              Elsewhere
+            </h1>
+
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              Dispatches from the road. Sea and sky — and wherever the work
+              takes me next.
+            </p>
+          </div>
+
+          {/* Masonry grid — photos + videos interleaved */}
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6">
+
+            {/* Videos first — shorts sit at the top of the grid */}
+            {videos.map((video) => (
               <div
-                className="overflow-hidden rounded-2xl bg-muted"
-                style={{ aspectRatio: video.aspectRatio ?? "9/16" }}
+                key={video.src}
+                className="break-inside-avoid mb-6"
               >
-                {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-                <video
-                  src={video.src}
-                  poster={video.poster}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="mt-3 px-0.5">
-                <p className="text-sm leading-snug text-muted-foreground">
-                  {video.caption}
-                </p>
-              </div>
-            </div>
-          ))}
+                <div
+                  className="overflow-hidden rounded-2xl bg-muted"
+                  style={{
+                    aspectRatio: video.aspectRatio ?? "9/16",
+                  }}
+                >
+                  {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+                  <video
+                    src={video.src}
+                    poster={video.poster}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                </div>
 
-          {/* Photos */}
-          {photos.map((photo, index) => (
-            <div key={photo.src} className="break-inside-avoid mb-6">
-              <div className="overflow-hidden rounded-2xl bg-muted group">
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  width={photo.width}
-                  height={photo.height}
-                  className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.025]"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  priority={index < 3}
-                />
+                <div className="mt-3 px-0.5">
+                  <p className="text-sm leading-snug text-muted-foreground">
+                    {video.caption}
+                  </p>
+                </div>
               </div>
-              <div className="mt-3 px-0.5">
-                <p className="text-sm leading-snug text-muted-foreground">
-                  {photo.caption}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
 
-        {/* Footer note */}
-        <div className="mt-20 pt-12 border-t border-border">
-          <p className="font-serif text-lg text-muted-foreground italic">
-            The world rewards people who show up — to the meeting, to the
-            mountain, to the unknown city with no plan. — Manas Majhi
-          </p>
+            {/* Photos */}
+            {photos.map((photo, index) => (
+              <div
+                key={photo.src}
+                className="break-inside-avoid mb-6"
+              >
+                <div className="overflow-hidden rounded-2xl bg-muted group">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    width={photo.width}
+                    height={photo.height}
+                    className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.025]"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    priority={index < 3}
+                  />
+                </div>
+
+                <div className="mt-3 px-0.5">
+                  <p className="text-sm leading-snug text-muted-foreground">
+                    {photo.caption}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Footer note */}
+          <div className="mt-20 pt-12 border-t border-border">
+            <p className="font-serif text-lg text-muted-foreground italic">
+              The world rewards people who show up — to the meeting, to the
+              mountain, to the unknown city with no plan. — Manas Majhi
+            </p>
+          </div>
+
         </div>
       </div>
-    </div>
     </>
   );
 }
