@@ -264,6 +264,13 @@ const photos = [
     height: 1112,
   },
   {
+    src: "/elsewhere/manas-majhi-cafe-blue-shirt.png",
+    alt: "Manas Majhi seated at a table in a casual indoor setting",
+    caption: "A quiet table. A little space between everything else.",
+    width: 1536,
+    height: 1152,
+  },
+  {
     src: "/elsewhere/manas-majhi-palm-shirt.png",
     alt: "Manas Majhi in a palm print shirt, relaxed portrait",
     caption: "Off the clock. The shirt had a different agenda.",
@@ -313,12 +320,13 @@ const photos = [
     height: 2048,
   },
   {
-  src: "/elsewhere/manas-majhi-indoor-event.jpg",
-  alt: "Manas Majhi at an indoor event",
-  caption: "Some rooms are built for ideas. Others are built for the people carrying them.",
-  width: 1031,
-  height: 1062,
-},
+    src: "/elsewhere/manas-majhi-indoor-event.jpg",
+    alt: "Manas Majhi at an indoor event",
+    caption:
+      "Some rooms are built for ideas. Others are built for the people carrying them.",
+    width: 1031,
+    height: 1062,
+  },
 ];
 
 // ---------------------------------------------------------------------------
