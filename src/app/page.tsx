@@ -265,7 +265,7 @@ export default function HomePage() {
                     style={{ width: "240px", height: "320px" }}
                   />
 
-                  {/* Portrait */}
+                  {/* Portrait — fades into page background */}
                   <div className="relative w-[200px] h-[280px] lg:w-[280px] lg:h-[400px]">
                     <Image
                       src="/manas-majhi-1.jpg"
@@ -287,7 +287,7 @@ export default function HomePage() {
 
                 {/* Welcome audio */}
                 <div className="mt-4 flex items-center justify-center">
-                  <div className="flex items-center gap-3 rounded-full border border-border/70 bg-background/20 px-3 py-2">
+                  <div className="inline-flex items-center gap-3 rounded-full border border-border/70 bg-background/20 px-3.5 py-2.5">
                     <span className="text-[13px] text-foreground/80 whitespace-nowrap">
                       Listen to my welcome
                     </span>
@@ -299,8 +299,9 @@ export default function HomePage() {
                     <audio
                       controls
                       preload="metadata"
-                      className="h-7 w-[42px]"
-                      aria-label="Listen to my welcome"
+                      controlsList="nodownload noplaybackrate"
+                      className="h-8 w-[58px]"
+                      aria-label="Play welcome audio"
                     >
                       <source
                         src="/manasmajhi-homepage-intro-master.mp3"
