@@ -1,7 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BookOpen, Award } from "lucide-react";
-import { getAllEssayMeta, getFeaturedEssays, getLatestEssays } from "@/lib/essays";
+import {
+  getAllEssayMeta,
+  getFeaturedEssays,
+  getLatestEssays,
+} from "@/lib/essays";
 import { EssayCard } from "@/components/essay/EssayCard";
 import { VisitorCounter } from "@/components/VisitorCounter";
 
@@ -61,7 +65,8 @@ const readingPaths = [
   },
   {
     title: "Opportunity",
-    description: "How opportunity forms, compounds, and what closes the gap.",
+    description:
+      "How opportunity forms, compounds, and what closes the gap.",
     href: "/opportunity",
     category: "opportunity" as EssayCategory,
     fixedCount: null,
@@ -105,7 +110,8 @@ const readingPaths = [
   },
   {
     title: "Hiring",
-    description: "Why executive hiring fails and what better looks like.",
+    description:
+      "Why executive hiring fails and what better looks like.",
     href: "/hiring",
     category: "hiring" as EssayCategory,
     fixedCount: null,
@@ -185,8 +191,14 @@ const homepageJsonLd = {
     "@type": "SpeakableSpecification",
     cssSelector: ["h1", ".font-serif.italic"],
   },
-  author: { "@type": "Person", "@id": `${SITE_URL}/#person` },
-  isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}/#website` },
+  author: {
+    "@type": "Person",
+    "@id": `${SITE_URL}/#person`,
+  },
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+  },
 };
 
 export default function HomePage() {
@@ -262,10 +274,13 @@ export default function HomePage() {
                   {/* Warm amber halo behind photo */}
                   <div
                     className="absolute bg-amber-300/50 dark:bg-amber-600/30 blur-3xl"
-                    style={{ width: "240px", height: "320px" }}
+                    style={{
+                      width: "240px",
+                      height: "320px",
+                    }}
                   />
 
-                  {/* Portrait — fades into page background */}
+                  {/* Portrait */}
                   <div className="relative w-[200px] h-[280px] lg:w-[280px] lg:h-[400px]">
                     <Image
                       src="/manas-majhi-1.jpg"
@@ -299,6 +314,7 @@ export default function HomePage() {
                     <audio
                       controls
                       preload="metadata"
+                      controlsList="nodownload"
                       className="h-8 w-[240px]"
                       aria-label="Welcome audio"
                     >
@@ -359,7 +375,9 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-[1fr,auto] gap-12 items-start">
               {/* Bio */}
               <div className="max-w-2xl">
-                <p className="section-label mb-5">Who is Manas Majhi</p>
+                <p className="section-label mb-5">
+                  Who is Manas Majhi
+                </p>
 
                 <h2 className="font-serif text-3xl md:text-4xl font-medium leading-tight mb-6">
                   From a government school in Kalahandi to building companies
@@ -378,14 +396,18 @@ export default function HomePage() {
                   That background became the lens through which I see
                   everything: opportunity, systems, India, hiring, and human
                   potential. I run{" "}
-                  <strong className="text-foreground">Majhi Group</strong> — a
-                  retained executive search firm that places VP and C-suite
-                  leaders in 30–45 days against a 65–90 day industry median —
-                  and{" "}
-                  <strong className="text-foreground">Majhi OS</strong>,
-                  autonomous hiring operations infrastructure. 25+ placements
-                  completed. Two global recognitions as a World Staffing
-                  Leader.
+                  <strong className="text-foreground">
+                    Majhi Group
+                  </strong>{" "}
+                  — a retained executive search firm that places VP and
+                  C-suite leaders in 30–45 days against a 65–90 day industry
+                  median — and{" "}
+                  <strong className="text-foreground">
+                    Majhi OS
+                  </strong>
+                  , autonomous hiring operations infrastructure. 25+
+                  placements completed. Two global recognitions as a World
+                  Staffing Leader.
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed mb-8">
@@ -399,7 +421,8 @@ export default function HomePage() {
                     href="/about"
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-foreground text-background text-sm font-medium hover:opacity-85 transition-opacity"
                   >
-                    Full story <ArrowRight className="w-3.5 h-3.5" />
+                    Full story
+                    <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
 
                   <Link
@@ -431,11 +454,16 @@ export default function HomePage() {
                     sub: "North America · 2023",
                   },
                 ].map((item) => (
-                  <div key={item.label} className="flex items-start gap-3">
+                  <div
+                    key={item.label}
+                    className="flex items-start gap-3"
+                  >
                     <Award className="w-4 h-4 mt-0.5 text-accent shrink-0" />
 
                     <div>
-                      <p className="text-sm font-medium">{item.label}</p>
+                      <p className="text-sm font-medium">
+                        {item.label}
+                      </p>
                       <p className="text-xs text-muted-foreground">
                         {item.sub}
                       </p>
@@ -445,8 +473,14 @@ export default function HomePage() {
 
                 <div className="pt-4 border-t border-border space-y-3">
                   {[
-                    { stat: "64K+", label: "Majhi Group followers" },
-                    { stat: "19K+", label: "Newsletter subscribers" },
+                    {
+                      stat: "64K+",
+                      label: "Majhi Group followers",
+                    },
+                    {
+                      stat: "19K+",
+                      label: "Newsletter subscribers",
+                    },
                     {
                       stat: `${allEssays.length}`,
                       label: "Articles published",
@@ -459,6 +493,7 @@ export default function HomePage() {
                       <span className="font-serif text-xl font-medium">
                         {item.stat}
                       </span>
+
                       <span className="text-xs text-muted-foreground">
                         {item.label}
                       </span>
@@ -475,7 +510,9 @@ export default function HomePage() {
       {heroEssay && (
         <section className="px-6 lg:px-8 pb-20">
           <div className="max-w-7xl mx-auto">
-            <p className="section-label mb-6">Featured Article</p>
+            <p className="section-label mb-6">
+              Featured Article
+            </p>
 
             <Link
               href={`/${heroEssay.category}/${heroEssay.slug}`}
@@ -506,7 +543,8 @@ export default function HomePage() {
                   <div className="max-w-3xl">
                     <div className="essay-meta mb-4">
                       {CATEGORY_LABELS[heroEssay.category]} ·{" "}
-                      {formatDate(heroEssay.date)} · {heroEssay.readingTime}
+                      {formatDate(heroEssay.date)} ·{" "}
+                      {heroEssay.readingTime}
                     </div>
 
                     <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-tight mb-6 group-hover:text-accent transition-colors">
@@ -534,7 +572,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-end justify-between mb-10">
             <div>
-              <p className="section-label mb-3">Collections</p>
+              <p className="section-label mb-3">
+                Collections
+              </p>
+
               <h2 className="font-serif text-3xl md:text-4xl font-medium">
                 Topics I return to.
               </h2>
@@ -544,13 +585,18 @@ export default function HomePage() {
               href="/writing"
               className="hidden md:inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              View all topics <ArrowRight className="w-3.5 h-3.5" />
+              View all topics
+              <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {collections.map((c) => (
-              <Link key={c.id} href={c.href} className="group block h-full">
+              <Link
+                key={c.id}
+                href={c.href}
+                className="group block h-full"
+              >
                 <div className="relative h-full min-h-[280px] rounded-2xl overflow-hidden border border-border hover:border-accent/40 transition-all duration-300">
                   <Image
                     src={CATEGORY_IMAGES[c.id]}
@@ -576,7 +622,7 @@ export default function HomePage() {
                     </p>
 
                     <div className="mt-3 flex items-center gap-1 text-xs font-medium text-accent">
-                      Explore{" "}
+                      Explore
                       <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                     </div>
                   </div>
@@ -590,7 +636,9 @@ export default function HomePage() {
       {/* Reading Paths */}
       <section className="px-6 lg:px-8 pb-20">
         <div className="max-w-7xl mx-auto">
-          <p className="section-label mb-3">Reading Paths</p>
+          <p className="section-label mb-3">
+            Reading Paths
+          </p>
 
           <h2 className="font-serif text-3xl md:text-4xl font-medium mb-10">
             Where to begin.
@@ -600,14 +648,23 @@ export default function HomePage() {
             {readingPaths.map((path) => {
               const count =
                 path.fixedCount ??
-                allEssays.filter((e) => e.category === path.category).length;
+                allEssays.filter(
+                  (e) => e.category === path.category
+                ).length;
 
               return (
-                <Link key={path.title} href={path.href} className="group block">
+                <Link
+                  key={path.title}
+                  href={path.href}
+                  className="group block"
+                >
                   <div className="rounded-2xl border border-border p-6 hover:border-accent/40 transition-all duration-200 h-full">
                     <div className="flex items-center gap-2 mb-4">
                       <BookOpen className="w-4 h-4 text-accent" />
-                      <p className="section-label">{path.title}</p>
+
+                      <p className="section-label">
+                        {path.title}
+                      </p>
                     </div>
 
                     <p className="text-muted-foreground text-sm leading-relaxed mb-4">
@@ -631,7 +688,9 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto">
             <div className="flex items-end justify-between mb-10">
               <div>
-                <p className="section-label mb-3">Latest</p>
+                <p className="section-label mb-3">
+                  Latest
+                </p>
 
                 <h2 className="font-serif text-3xl md:text-4xl font-medium">
                   Recent articles.
@@ -642,13 +701,17 @@ export default function HomePage() {
                 href="/writing"
                 className="hidden md:inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                All essays <ArrowRight className="w-3.5 h-3.5" />
+                All essays
+                <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {gridEssays.map((essay) => (
-                <EssayCard key={essay.slug} essay={essay} />
+                <EssayCard
+                  key={essay.slug}
+                  essay={essay}
+                />
               ))}
             </div>
 
@@ -657,31 +720,37 @@ export default function HomePage() {
                 href="/writing"
                 className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                All essays <ArrowRight className="w-3.5 h-3.5" />
+                All essays
+                <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
           </div>
         </section>
       )}
 
-      {/* Frameworks teaser — raised above collections */}
+      {/* Frameworks */}
       <section className="px-6 lg:px-8 pb-20">
         <div className="max-w-7xl mx-auto">
-          <Link href="/frameworks" className="group block">
+          <Link
+            href="/frameworks"
+            className="group block"
+          >
             <div className="rounded-3xl border border-border bg-muted/30 p-8 md:p-12 hover:border-accent/40 transition-all">
-              <p className="section-label mb-4">Frameworks</p>
+              <p className="section-label mb-4">
+                Frameworks
+              </p>
 
               <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4 group-hover:text-accent transition-colors">
                 Mental models for opportunity.
               </h2>
 
               <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed mb-6">
-                Structured frameworks for thinking about opportunity, hiring,
-                and human potential. Built from years of practice.
+                Structured frameworks for thinking about opportunity,
+                hiring, and human potential. Built from years of practice.
               </p>
 
               <div className="inline-flex items-center gap-2 text-sm font-medium text-accent">
-                Explore frameworks{" "}
+                Explore frameworks
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
@@ -694,7 +763,9 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-end justify-between mb-10">
             <div>
-              <p className="section-label mb-3">Places</p>
+              <p className="section-label mb-3">
+                Places
+              </p>
 
               <h2 className="font-serif text-3xl md:text-4xl font-medium">
                 Where I come from shapes what I see.
@@ -735,7 +806,7 @@ export default function HomePage() {
                       </span>
 
                       <div className="inline-flex items-center gap-1 text-xs font-medium text-accent">
-                        Explore{" "}
+                        Explore
                         <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                       </div>
                     </div>
