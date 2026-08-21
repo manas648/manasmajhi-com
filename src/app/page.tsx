@@ -287,7 +287,7 @@ export default function HomePage() {
 
                 {/* Welcome audio */}
                 <div className="mt-4 flex items-center justify-center">
-                  <div className="inline-flex items-center gap-3 rounded-full border border-border/70 bg-background/20 px-3.5 py-2.5">
+                  <div className="inline-flex items-center gap-3 rounded-full border border-border/70 bg-background/20 px-4 py-2.5">
                     <span className="text-[13px] text-foreground/80 whitespace-nowrap">
                       Listen to my welcome
                     </span>
@@ -299,8 +299,7 @@ export default function HomePage() {
                     <audio
                       controls
                       preload="metadata"
-                      controlsList="nodownload noplaybackrate"
-                      className="h-8 w-[58px]"
+                      className="h-8 w-[180px]"
                       aria-label="Play welcome audio"
                     >
                       <source
