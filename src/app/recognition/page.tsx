@@ -24,7 +24,14 @@ export const metadata: Metadata = {
     description:
       "Manas Majhi — Indian Achievers Award 2022 Entrepreneur of the Year, World Staffing Leader Top 100 (2023 & 2024), HackerNoon Startup of the Year North America 2023.",
     url: `${SITE_URL}/recognition`,
-    images: [{ url: `${SITE_URL}/api/og?title=Awards+%26+Recognition`, width: 1200, height: 630, alt: "Awards & Recognition — Manas Majhi" }],
+    images: [
+      {
+        url: `${SITE_URL}/api/og?title=Awards+%26+Recognition`,
+        width: 1200,
+        height: 630,
+        alt: "Awards & Recognition — Manas Majhi",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -288,265 +295,299 @@ export default function RecognitionPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(recognitionSchema) }}
       />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(awardsListSchema) }}
       />
-    <div className="min-h-screen px-6 lg:px-8 py-20">
-      <div className="max-w-3xl mx-auto">
-        {/* Header */}
-        <div className="mb-20">
-          <p className="section-label mb-4">Recognition</p>
-          <h1 className="font-serif text-5xl md:text-6xl font-medium tracking-tight mb-6">
-            Awards &amp;
-            <br />
-            <span className="text-muted-foreground">Recognition.</span>
-          </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            Selected recognition for work in executive search, hiring
-            infrastructure, and entrepreneurship.
-          </p>
-        </div>
 
-        {/* As seen on */}
-        <div className="mb-20">
-          <p className="text-xs uppercase tracking-widest text-muted-foreground mb-8">
-            As seen on
-          </p>
-          <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
-            {media.map((outlet, i) => (
-              <span key={outlet.name} className="flex items-center gap-8">
-                {outlet.href ? (
-                  <a
-                    href={outlet.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-serif text-lg font-medium text-foreground hover:text-muted-foreground transition-colors"
-                  >
-                    {outlet.name}
-                  </a>
-                ) : (
-                  <span className="font-serif text-lg font-medium text-foreground">
-                    {outlet.name}
-                  </span>
-                )}
-                {i < media.length - 1 && (
-                  <span className="text-border text-lg select-none">·</span>
-                )}
-              </span>
-            ))}
-          </div>
-        </div>
+      <div className="min-h-screen px-6 lg:px-8 py-20">
+        <div className="max-w-3xl mx-auto">
 
-        <hr className="border-border mb-20" />
+          {/* Header */}
+          <div className="mb-20">
+            <p className="section-label mb-4">Recognition</p>
 
-        {/* Awards */}
-        <div className="space-y-px">
-          {awards.map((award) => {
-            const inner = (
-              <>
-                <div className="flex items-start gap-6">
-                  {/* Year */}
-                  <span className="shrink-0 w-12 text-xs uppercase tracking-widest text-muted-foreground pt-1">
-                    {award.year}
-                  </span>
-                  {/* Content */}
-                  <div className="flex-1 min-w-0">
-                    <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">
-                      {award.rank}
-                    </p>
-                    <h2 className="font-serif text-2xl font-medium group-hover:text-muted-foreground transition-colors">
-                      {award.title}
-                    </h2>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      {award.body}
-                    </p>
-                    {/* Award image */}
-                    {award.image && (
-                      <div className="mt-6 rounded-lg overflow-hidden border border-border">
-                        <Image
-                          src={award.image.src}
-                          alt={award.image.alt}
-                          width={award.image.width}
-                          height={award.image.height}
-                          className="w-full h-auto"
-                          loading="lazy"
-                          unoptimized={award.image.src.startsWith("https://cdn.sanity.io")}
-                        />
-                      </div>
-                    )}
-                  </div>
-                </div>
-                {award.href && (
-                  <span className="shrink-0 text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all duration-150 pt-2">
-                    →
-                  </span>
-                )}
-              </>
-            );
-            return award.href ? (
-              <a
-                key={`${award.year}-${award.title}`}
-                href={award.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-start justify-between gap-6 py-8 border-b border-border hover:border-foreground/20 transition-colors"
-              >
-                {inner}
-              </a>
-            ) : (
-              <div
-                key={`${award.year}-${award.title}`}
-                className="group flex items-start justify-between gap-6 py-8 border-b border-border"
-              >
-                {inner}
-              </div>
-            );
-          })}
-        </div>
+            <h1 className="font-serif text-5xl md:text-6xl font-medium tracking-tight mb-6">
+              Awards &amp;
+              <br />
+              <span className="text-muted-foreground">Recognition.</span>
+            </h1>
 
-        {/* AI Recognition */}
-        <div className="mt-20">
-          <p className="text-xs uppercase tracking-widest text-muted-foreground mb-10">
-            AI Recognition
-          </p>
-          <div className="space-y-6">
-            <div>
-              <h2 className="font-serif text-2xl font-medium mb-3">
-                Cited by Microsoft Copilot &amp; AI-powered search
-              </h2>
-              <p className="text-muted-foreground leading-relaxed">
-                As AI-powered search becomes an important way professionals discover
-                information, original research and evidence-based writing are increasingly
-                referenced alongside traditional search results.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mt-3">
-                Majhi Group&apos;s research, hiring frameworks, and long-form analysis are
-                frequently cited by Microsoft Copilot and other AI-powered search
-                experiences, reflecting a growing body of work on executive hiring,
-                recruitment intelligence, and hiring systems.
-              </p>
-            </div>
-
-            {/* Stats row */}
-            <div className="grid grid-cols-3 gap-px border border-border rounded-lg overflow-hidden mt-6">
-              <div className="bg-muted/30 px-6 py-5">
-                <p className="font-serif text-3xl font-medium">6.4K</p>
-                <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
-                  AI citations
-                </p>
-              </div>
-              <div className="bg-muted/30 px-6 py-5">
-                <p className="font-serif text-3xl font-medium">30</p>
-                <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
-                  Days tracked
-                </p>
-              </div>
-              <div className="bg-muted/30 px-6 py-5">
-                <p className="font-serif text-3xl font-medium">30</p>
-                <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
-                  Avg. cited pages
-                </p>
-              </div>
-            </div>
-
-            {/* Screenshot */}
-            <div className="rounded-lg overflow-hidden border border-border mt-2">
-              <Image
-                src="/awards/bing-webmaster-ai-citations.png"
-                alt="Microsoft Bing Webmaster Tools — AI Performance dashboard showing 6.4K total citations and 30 average cited pages for majhigroup.com over the last 30 days, sourced from Microsoft Copilots and Partners"
-                width={2880}
-                height={1276}
-                className="w-full h-auto"
-                loading="lazy"
-              />
-            </div>
-
-            <p className="text-xs text-muted-foreground leading-relaxed pt-1">
-              Citation counts are monitored continuously and updated periodically. They
-              represent instances where published work is surfaced or referenced in
-              AI-powered search experiences, as reported by Microsoft Bing Webmaster Tools.
-              Last updated: July 30, 2026.
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              Selected recognition for work in executive search, hiring
+              infrastructure, and entrepreneurship.
             </p>
           </div>
-        </div>
 
-        {/* Interviews */}
-        <div className="mt-20">
-          <p className="text-xs uppercase tracking-widest text-muted-foreground mb-10">
-            Interviews
-          </p>
-          <a
-            href="https://www.candidately.com/blog/interview-with-manas-majhi"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block"
-          >
-            <div className="rounded-lg overflow-hidden border border-border group-hover:border-foreground/20 transition-colors">
-              <Image
-                src="/awards/manas-majhi-world-staffing-summit-interview.jpg"
-                alt="Manas Majhi interview card — World Staffing Summit by Candidately: 'Prioritizing client experience and investing in meeting their expectations is crucial for success in the staffing industry.'"
-                width={981}
-                height={525}
-                className="w-full h-auto"
-                loading="lazy"
-              />
+          {/* As seen on */}
+          <div className="mb-20">
+            <p className="text-xs uppercase tracking-widest text-muted-foreground mb-8">
+              As seen on
+            </p>
+
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
+              {media.map((outlet, i) => (
+                <span key={outlet.name} className="flex items-center gap-8">
+                  {outlet.href ? (
+                    <a
+                      href={outlet.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-serif text-lg font-medium text-foreground hover:text-muted-foreground transition-colors"
+                    >
+                      {outlet.name}
+                    </a>
+                  ) : (
+                    <span className="font-serif text-lg font-medium text-foreground">
+                      {outlet.name}
+                    </span>
+                  )}
+
+                  {i < media.length - 1 && (
+                    <span className="text-border text-lg select-none">·</span>
+                  )}
+                </span>
+              ))}
             </div>
-            <div className="mt-4 flex items-center justify-between">
+          </div>
+
+          <hr className="border-border mb-20" />
+
+          {/* Awards */}
+          <div className="space-y-px">
+            {awards.map((award) => {
+              const inner = (
+                <>
+                  <div className="flex items-start gap-6">
+
+                    {/* Year */}
+                    <span className="shrink-0 w-12 text-xs uppercase tracking-widest text-muted-foreground pt-1">
+                      {award.year}
+                    </span>
+
+                    {/* Content */}
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">
+                        {award.rank}
+                      </p>
+
+                      <h2 className="font-serif text-2xl font-medium group-hover:text-muted-foreground transition-colors">
+                        {award.title}
+                      </h2>
+
+                      <p className="text-sm text-muted-foreground mt-1">
+                        {award.body}
+                      </p>
+
+                      {/* Award image */}
+                      {award.image && (
+                        <div className="mt-6 rounded-lg overflow-hidden border border-border">
+                          <Image
+                            src={award.image.src}
+                            alt={award.image.alt}
+                            width={award.image.width}
+                            height={award.image.height}
+                            className="w-full h-auto"
+                            loading="lazy"
+                            unoptimized={award.image.src.startsWith(
+                              "https://cdn.sanity.io"
+                            )}
+                          />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {award.href && (
+                    <span className="shrink-0 text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all duration-150 pt-2">
+                      →
+                    </span>
+                  )}
+                </>
+              );
+
+              return award.href ? (
+                <a
+                  key={`${award.year}-${award.title}`}
+                  href={award.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-start justify-between gap-6 py-8 border-b border-border hover:border-foreground/20 transition-colors"
+                >
+                  {inner}
+                </a>
+              ) : (
+                <div
+                  key={`${award.year}-${award.title}`}
+                  className="group flex items-start justify-between gap-6 py-8 border-b border-border"
+                >
+                  {inner}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* AI Recognition */}
+          <div className="mt-20">
+            <p className="text-xs uppercase tracking-widest text-muted-foreground mb-10">
+              AI Recognition
+            </p>
+
+            <div className="space-y-6">
               <div>
-                <p className="font-serif text-lg font-medium group-hover:text-muted-foreground transition-colors">
-                  World Staffing Summit — Candidately
+                <h2 className="font-serif text-2xl font-medium mb-3">
+                  Cited by Microsoft Copilot &amp; AI-powered search
+                </h2>
+
+                <p className="text-muted-foreground leading-relaxed">
+                  As AI-powered search becomes an important way professionals discover
+                  information, original research and evidence-based writing are increasingly
+                  referenced alongside traditional search results.
                 </p>
-                <p className="text-sm text-muted-foreground mt-0.5">
-                  Interview · Executive Director, Majhi Group
+
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  Majhi Group&apos;s research, hiring frameworks, and long-form analysis are
+                  frequently cited by Microsoft Copilot and other AI-powered search
+                  experiences, reflecting a growing body of work on executive hiring,
+                  recruitment intelligence, and hiring systems.
                 </p>
               </div>
-              <span className="text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all duration-150">
-                →
-              </span>
-            </div>
-          </a>
-        </div>
 
-        <hr className="border-border mt-20 mb-0" />
-
-        {/* Press Clips */}
-        <div className="mt-20">
-          <p className="text-xs uppercase tracking-widest text-muted-foreground mb-10">
-            In the press
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {pressClips.map((clip, i) => (
-              <div key={`${clip.publication}-${i}`} className="space-y-3">
-                <div>
-                  <p className="font-serif text-base font-medium">{clip.publication}</p>
-                  <p className="text-xs text-muted-foreground uppercase tracking-widest mt-0.5">
-                    {clip.language} · {clip.year}
+              {/* Stats row */}
+              <div className="grid grid-cols-3 gap-px border border-border rounded-lg overflow-hidden mt-6">
+                <div className="bg-muted/30 px-6 py-5">
+                  <p className="font-serif text-3xl font-medium">7.2K</p>
+                  <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
+                    AI citations
                   </p>
                 </div>
-                <div className="rounded-lg overflow-hidden border border-border">
-                  <Image
-                    src={clip.image.src}
-                    alt={clip.image.alt}
-                    width={clip.image.width}
-                    height={clip.image.height}
-                    className="w-full h-auto"
-                    loading="lazy"
-                  />
+
+                <div className="bg-muted/30 px-6 py-5">
+                  <p className="font-serif text-3xl font-medium">30</p>
+                  <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
+                    Days tracked
+                  </p>
+                </div>
+
+                <div className="bg-muted/30 px-6 py-5">
+                  <p className="font-serif text-3xl font-medium">42</p>
+                  <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
+                    Avg. cited pages
+                  </p>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
 
-        {/* Footer note */}
-        <div className="mt-20 pt-12 border-t border-border">
-          <p className="font-serif text-lg text-muted-foreground italic">
-            "Recognition is a byproduct. The work comes first."
-          </p>
+              {/* Screenshot */}
+              <div className="rounded-lg overflow-hidden border border-border mt-2">
+                <Image
+                  src="/awards/bing-webmaster-ai-citations.png"
+                  alt="Microsoft Bing Webmaster Tools — AI Performance dashboard showing 7.2K total citations and 42 average cited pages for majhigroup.com over the last 30 days, sourced from Microsoft Copilots and Partners"
+                  width={2880}
+                  height={1276}
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
+
+              <p className="text-xs text-muted-foreground leading-relaxed pt-1">
+                Citation counts are monitored continuously and updated periodically. They
+                represent instances where published work is surfaced or referenced in
+                AI-powered search experiences, as reported by Microsoft Bing Webmaster Tools.
+                Last updated: September 5, 2026.
+              </p>
+            </div>
+          </div>
+
+          {/* Interviews */}
+          <div className="mt-20">
+            <p className="text-xs uppercase tracking-widest text-muted-foreground mb-10">
+              Interviews
+            </p>
+
+            <a
+              href="https://www.candidately.com/blog/interview-with-manas-majhi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
+            >
+              <div className="rounded-lg overflow-hidden border border-border group-hover:border-foreground/20 transition-colors">
+                <Image
+                  src="/awards/manas-majhi-world-staffing-summit-interview.jpg"
+                  alt="Manas Majhi interview card — World Staffing Summit by Candidately: 'Prioritizing client experience and investing in meeting their expectations is crucial for success in the staffing industry.'"
+                  width={981}
+                  height={525}
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
+
+              <div className="mt-4 flex items-center justify-between">
+                <div>
+                  <p className="font-serif text-lg font-medium group-hover:text-muted-foreground transition-colors">
+                    World Staffing Summit — Candidately
+                  </p>
+
+                  <p className="text-sm text-muted-foreground mt-0.5">
+                    Interview · Executive Director, Majhi Group
+                  </p>
+                </div>
+
+                <span className="text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all duration-150">
+                  →
+                </span>
+              </div>
+            </a>
+          </div>
+
+          <hr className="border-border mt-20 mb-0" />
+
+          {/* Press Clips */}
+          <div className="mt-20">
+            <p className="text-xs uppercase tracking-widest text-muted-foreground mb-10">
+              In the press
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {pressClips.map((clip, i) => (
+                <div
+                  key={`${clip.publication}-${i}`}
+                  className="space-y-3"
+                >
+                  <div>
+                    <p className="font-serif text-base font-medium">
+                      {clip.publication}
+                    </p>
+
+                    <p className="text-xs text-muted-foreground uppercase tracking-widest mt-0.5">
+                      {clip.language} · {clip.year}
+                    </p>
+                  </div>
+
+                  <div className="rounded-lg overflow-hidden border border-border">
+                    <Image
+                      src={clip.image.src}
+                      alt={clip.image.alt}
+                      width={clip.image.width}
+                      height={clip.image.height}
+                      className="w-full h-auto"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Footer note */}
+          <div className="mt-20 pt-12 border-t border-border">
+            <p className="font-serif text-lg text-muted-foreground italic">
+              "Recognition is a byproduct. The work comes first."
+            </p>
+          </div>
+
         </div>
       </div>
-    </div>
     </>
   );
 }
