@@ -288,74 +288,14 @@ const nextConfig: NextConfig = {
       { source: "/essays/why-executive-hires-fail", destination: "/hiring/why-executive-hires-fail", permanent: true },
       { source: "/essays/why-executive-searches-fail", destination: "/hiring/why-executive-searches-fail", permanent: true },
       { source: "/essays/why-food-matters-more-than-we-think", destination: "/travel/why-food-matters-more-than-we-think", permanent: true },
-      { source: "/essays/why-frequent-travelers-think-differently", destination: "/travel/why-frequent-travelers-think-differently", permanent: true },
-      { source: "/essays/why-global-companies-should-consider-odisha", destination: "/odisha/why-global-companies-should-consider-odisha", permanent: true },
-      { source: "/essays/why-global-companies-should-hire-from-india", destination: "/india/why-global-companies-should-hire-from-india", permanent: true },
-      { source: "/essays/why-hiring-is-becoming-infrastructure", destination: "/hiring/why-hiring-is-becoming-infrastructure", permanent: true },
-      { source: "/essays/why-i-build", destination: "/entrepreneurship/why-i-build", permanent: true },
-      { source: "/essays/why-i-keep-talking-about-odisha", destination: "/odisha/why-i-keep-talking-about-odisha", permanent: true },
-      { source: "/essays/why-indias-moment-is-now", destination: "/india/why-indias-moment-is-now", permanent: true },
-      { source: "/essays/why-indias-scale-matters", destination: "/india/why-indias-scale-matters", permanent: true },
-      { source: "/essays/why-infrastructure-matters-more-than-headlines", destination: "/india/why-infrastructure-matters-more-than-headlines", permanent: true },
-      { source: "/essays/why-is-odisha-underrated", destination: "/odisha/why-is-odisha-underrated", permanent: true },
-      { source: "/essays/why-most-founders-quit-too-early", destination: "/entrepreneurship", permanent: true },
-      { source: "/essays/why-odisha-matters", destination: "/odisha/why-odisha-matters", permanent: true },
-      { source: "/essays/why-places-like-kalahandi-produce-determined-people", destination: "/kalahandi/why-places-like-kalahandi-produce-determined-people", permanent: true },
-      { source: "/essays/why-should-companies-hire-from-odisha", destination: "/odisha/why-should-companies-hire-from-odisha", permanent: true },
-      { source: "/essays/why-talented-people-stay-unnoticed", destination: "/future-of-work/why-talented-people-stay-unnoticed", permanent: true },
-      { source: "/essays/why-your-vp-search-stalled-at-week-ten", destination: "/hiring/why-your-vp-search-stalled-at-week-ten", permanent: true },
-      { source: "/essays/world-staffing-leader", destination: "/hiring/world-staffing-leader", permanent: true },
-      // /thinking → /the-map
-      { source: "/thinking", destination: "/the-map", permanent: true },
-    ];
-  },
+      { source: "/essays/why-i-stopped-counting-success", destination: "/philosophy/why-i-stopped-counting-success", permanent: true },
+      { source: "/essays/why-odisha", destination: "/odisha/why-odisha", permanent: true },
+      { source: "/essays/why-the-best-hire-still-fails", destination: "/hiring/why-the-best-hire-still-fails", permanent: true },
+      { source: "/essays/why-the-middle-is-disappearing", destination: "/future-of-work/why-the-middle-is-disappearing", permanent: true },
+      { source: "/essays/why-we-keep-building-the-wrong-hiring-system", destination: "/hiring/why-we-keep-building-the-wrong-hiring-system", permanent: true },
+      { source: "/essays/why-you-shouldnt-hire-a-recruiter", destination: "/hiring/why-you-shouldnt-hire-a-recruiter", permanent: true },
 
-  async rewrites() {
-    return [
-      { source: "/index", destination: "/all" },
-    ];
-  },
-
-  async headers() {
-    const csp = [
-      "default-src 'self'",
-      // Next.js needs unsafe-inline for hydration scripts; JSON-LD scripts also require it
-      "script-src 'self' 'unsafe-inline'",
-      // Tailwind inline styles + Google Fonts CSS
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      // Unsplash (essays), Sanity CDN (recognition page), Google Fonts files, data URIs
-      "img-src 'self' https://images.unsplash.com https://cdn.sanity.io https://upload.wikimedia.org data: blob:",
-      // Google Fonts files
-      "font-src 'self' https://fonts.gstatic.com data:",
-      // API routes only
-      "connect-src 'self'",
-      // No iframes
-      "frame-src 'none'",
-      "frame-ancestors 'none'",
-      // Prevent base tag hijacking
-      "base-uri 'self'",
-      // Forms only post to same origin
-      "form-action 'self'",
-      // Upgrade HTTP to HTTPS
-      "upgrade-insecure-requests",
-    ].join("; ");
-
-    return [
-      {
-        source: "/(.*)",
-        headers: [
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "X-Frame-Options", value: "DENY" },
-          { key: "X-XSS-Protection", value: "1; mode=block" },
-          { key: "Content-Security-Policy", value: csp },
-          // 1-year HSTS, include subdomains
-          { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains" },
-          // Send full URL for same-origin, origin only for cross-origin
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-          // Disable browser features not used by the site
-          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), browsing-topics=()" },
-        ],
-      },
+      // New essays are linked directly at /{category}/{slug}; no redirect needed.
     ];
   },
 };
