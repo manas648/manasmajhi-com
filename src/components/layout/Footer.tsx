@@ -7,6 +7,7 @@ const footerLinks = {
     { href: "/featured", label: "Featured" },
     { href: "/writing", label: "All Writing" },
     { href: "/frameworks", label: "Frameworks" },
+    { href: "/lexicon", label: "Lexicon" },
     { href: "/search", label: "Search" },
   ],
   Topics: [
