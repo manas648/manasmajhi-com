@@ -506,6 +506,37 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* How I Think — Manas Lexicon */}
+      <section className="px-6 lg:px-8 pb-20">
+        <div className="max-w-7xl mx-auto">
+          <Link
+            href="/lexicon"
+            className="group block rounded-3xl border border-border px-8 py-10 md:px-12 md:py-12 hover:bg-muted/30 transition-colors"
+          >
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+              <div className="max-w-2xl">
+                <p className="section-label mb-4">How I Think</p>
+
+                <h2 className="font-serif text-3xl md:text-4xl font-medium tracking-tight leading-tight mb-4">
+                  Manas Lexicon
+                </h2>
+
+                <p className="text-muted-foreground leading-relaxed max-w-xl">
+                  Ideas, observations, contradictions and rules for thinking —
+                  a personal collection of principles that shape how I see
+                  people, ambition, opportunity and the world around me.
+                </p>
+              </div>
+
+              <span className="inline-flex items-center gap-2 shrink-0 font-medium text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                Explore the Lexicon
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </span>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* Featured Essay */}
       {heroEssay && (
         <section className="px-6 lg:px-8 pb-20">
