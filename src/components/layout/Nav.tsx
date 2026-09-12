@@ -19,6 +19,7 @@ const writingItems = [
 ];
 
 const navLinks = [
+  { href: "/lexicon", label: "Lexicon" },
   { href: "/elsewhere", label: "Elsewhere" },
   { href: "/about", label: "About" },
   { href: "/work-with-me", label: "Work With Me" },
@@ -274,7 +275,7 @@ export function Nav() {
                   "block px-4 py-3 rounded-xl text-sm font-medium transition-all",
                   pathname === link.href
                     ? "text-foreground bg-ink-100 dark:bg-ink-300"
-                    : "text-muted-foreground hover:text-foreground"
+                    : "text-muted-foreground"
                 )}
               >
                 {link.label}
