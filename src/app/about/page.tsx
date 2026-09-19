@@ -207,13 +207,13 @@ export default function AboutPage() {
                 href: "https://www.linkedin.com/company/majhi-group/",
               },
               {
-                stat: "19K+",
+                stat: "20K+",
                 label: "Startup Talentscape",
                 sub: "Newsletter subscribers",
                 href: "https://www.linkedin.com/newsletters/startup-talentscape-7091974829532180481/",
               },
               {
-                stat: "7K+",
+                stat: "8K+",
                 label: "Manas Majhi",
                 sub: "LinkedIn followers",
                 href: "https://www.linkedin.com/in/manasmajhi",
