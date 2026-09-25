@@ -320,6 +320,13 @@ const photos = [
     height: 2048,
   },
   {
+    src: "/elsewhere/manas-majhi-airport.png",
+    alt: "Manas Majhi at an airport overlooking the runway",
+    caption: "Between departures and destinations.",
+    width: 901,
+    height: 852,
+  },
+  {
     src: "/elsewhere/manas-majhi-indoor-event.jpg",
     alt: "Manas Majhi at an indoor event",
     caption:
