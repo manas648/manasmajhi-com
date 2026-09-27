@@ -386,7 +386,7 @@ export default function HomePage() {
               <p className="text-sm text-muted-foreground mt-2">Countries Reached</p>
             </div>
             <div className="py-5 sm:py-0 sm:px-8 last:sm:pr-0">
-              <p className="font-serif text-4xl md:text-5xl font-medium">{allEssays.length}</p>
+              <p className="font-serif text-4xl md:text-5xl font-medium">212</p>
               <p className="text-sm text-muted-foreground mt-2">Articles Published</p>
             </div>
           </div>
