@@ -245,8 +245,7 @@ export default function HomePage() {
               </p>
 
               <p className="text-sm text-muted-foreground mb-10">
-                A growing community of thousands of readers across India and
-                beyond.
+                A growing readership across 112 countries worldwide.
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
@@ -368,6 +367,32 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Reach */}
+      <section className="px-6 lg:px-8 pb-20">
+        <div className="max-w-7xl mx-auto rounded-3xl border border-border px-8 py-10 md:px-12 md:py-12">
+          <div className="mb-8">
+            <p className="section-label mb-3">Ideas That Travel</p>
+            <h2 className="font-serif text-3xl md:text-4xl font-medium tracking-tight">
+              A growing body of work with a global readership.
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-border">
+            <div className="py-5 sm:py-0 sm:px-8 first:sm:pl-0">
+              <p className="font-serif text-4xl md:text-5xl font-medium">50K+</p>
+              <p className="text-sm text-muted-foreground mt-2">Monthly Article Views</p>
+            </div>
+            <div className="py-5 sm:py-0 sm:px-8">
+              <p className="font-serif text-4xl md:text-5xl font-medium">112</p>
+              <p className="text-sm text-muted-foreground mt-2">Countries Reached</p>
+            </div>
+            <div className="py-5 sm:py-0 sm:px-8 last:sm:pr-0">
+              <p className="font-serif text-4xl md:text-5xl font-medium">{allEssays.length}</p>
+              <p className="text-sm text-muted-foreground mt-2">Articles Published</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Who is Manas Majhi */}
       <section className="px-6 lg:px-8 pb-20">
         <div className="max-w-7xl mx-auto">
@@ -471,39 +496,6 @@ export default function HomePage() {
                   </div>
                 ))}
 
-                <div className="pt-4 border-t border-border space-y-3">
-                  {[
-                    {
-                      stat: "64K+",
-                      label: "Majhi Group followers",
-                    },
-                    {
-                      stat: "19K+",
-                      label: "Newsletter subscribers",
-                    },
-                    {
-                      stat: `${allEssays.length}`,
-                      label: "Articles published",
-                    },
-                    {
-                      stat: "49K+",
-                      label: "Article views · last 30 days",
-                    },
-                  ].map((item) => (
-                    <div
-                      key={item.label}
-                      className="flex items-baseline gap-2"
-                    >
-                      <span className="font-serif text-xl font-medium">
-                        {item.stat}
-                      </span>
-
-                      <span className="text-xs text-muted-foreground">
-                        {item.label}
-                      </span>
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
           </div>
