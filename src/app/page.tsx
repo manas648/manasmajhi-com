@@ -485,6 +485,10 @@ export default function HomePage() {
                       stat: `${allEssays.length}`,
                       label: "Articles published",
                     },
+                    {
+                      stat: "49K+",
+                      label: "Article views · last 30 days",
+                    },
                   ].map((item) => (
                     <div
                       key={item.label}
