@@ -62,6 +62,24 @@ export default function WorkPage() {
             </p>
           </div>
 
+          {/* Market visibility */}
+          <div className="rounded-2xl border border-border bg-card p-6 md:p-7 mb-5">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+              <div>
+                <p className="section-label mb-3">Market Visibility</p>
+                <div className="font-serif text-4xl md:text-5xl font-medium tracking-tight mb-2">
+                  348,947+
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  LinkedIn search appearances · this week
+                </p>
+              </div>
+              <p className="text-xs text-muted-foreground md:max-w-[220px] md:text-right leading-relaxed">
+                LinkedIn reported that Majhi Group appeared in 348,947 searches this week.
+              </p>
+            </div>
+          </div>
+
           {/* Proof points */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             {[
