@@ -475,6 +475,10 @@ export default function HomePage() {
                     sub: "Global Top 100 · 2023",
                   },
                   {
+                    label: "Nominated for Advisory Board Member",
+                    sub: "Customer Experience Certificate Program Advisory Board · Ithaca College · Zschool · 2022",
+                  },
+                  {
                     label: "HackerNoon Startup of the Year",
                     sub: "North America · 2023",
                   },
