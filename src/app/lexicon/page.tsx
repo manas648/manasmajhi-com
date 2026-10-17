@@ -74,6 +74,10 @@ const sections = [
 
 const odishaPrinciples = [
   {
+    lead: "Odisha was never poor.",
+    body: "It was aspirationally poor: rich in everything except the belief that it deserved more.",
+  },
+  {
     lead: "Odisha was never a “best kept secret”.",
     body: "It was just under-told. I’m not here to beg for attention; I’m here to demand visibility.",
   },
