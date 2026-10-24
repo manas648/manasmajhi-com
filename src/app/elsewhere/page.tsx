@@ -242,6 +242,13 @@ const photos = [
     height: 941,
   },
   {
+    src: "/elsewhere/manas-majhi-formal-portrait.png",
+    alt: "Manas Majhi in a formal portrait",
+    caption: "Dressed for the occasion.",
+    width: 1200,
+    height: 1600,
+  },
+  {
     src: "/elsewhere/manas-majhi-outdoor-sunglasses.png",
     alt: "Manas Majhi in a white shirt and aviators, outdoor garden with pink bougainvillea",
     caption: "The garden wasn't planned. The sunglasses were.",
@@ -249,6 +256,19 @@ const photos = [
     height: 1672,
   },
   {
+    src: "/elsewhere/manas-majhi-outdoor-sunglasses-new.png",
+    alt: "Manas Majhi outdoors wearing sunglasses",
+    caption: "No agenda. Just a little distance from the day.",
+    width: 941,
+    height: 1672,
+  },
+  {
+    src: "/elsewhere/manas-majhi-reservoir-spillway.png",
+    alt: "Manas Majhi beside a reservoir spillway",
+    caption: "The best seats don't always come with a reservation.",
+    width: 1536,
+    height: 2048,
+  },  {
     src: "/elsewhere/manas-majhi-majhi-group-backdrop.png",
     alt: "Manas Majhi in a blue sweater in front of the Majhi Group branded backdrop",
     caption: "The brand on the wall. The work in the room.",
