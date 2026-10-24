@@ -268,7 +268,8 @@ const photos = [
     caption: "The best seats don't always come with a reservation.",
     width: 1536,
     height: 2048,
-  },  {
+  },
+  {
     src: "/elsewhere/manas-majhi-majhi-group-backdrop.png",
     alt: "Manas Majhi in a blue sweater in front of the Majhi Group branded backdrop",
     caption: "The brand on the wall. The work in the room.",
@@ -436,6 +437,25 @@ export default function ElsewherePage() {
               Dispatches from the road. Sea and sky — and wherever the work
               takes me next.
             </p>
+
+            <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4 border-y border-border py-5">
+              <div>
+                <p className="font-serif text-2xl">{photos.length}</p>
+                <p className="text-xs text-muted-foreground">Photos</p>
+              </div>
+              <div>
+                <p className="font-serif text-2xl">{videos.length}</p>
+                <p className="text-xs text-muted-foreground">Videos</p>
+              </div>
+              <div>
+                <p className="font-serif text-2xl">3</p>
+                <p className="text-xs text-muted-foreground">Photos added</p>
+              </div>
+              <div className="sm:ml-auto">
+                <p className="text-xs text-muted-foreground">Last updated</p>
+                <p className="text-sm">24 October 2026</p>
+              </div>
+            </div>
           </div>
 
           {/* Masonry grid — photos + videos interleaved */}
