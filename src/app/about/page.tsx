@@ -62,7 +62,7 @@ const jsonLd = [
       name: "Manas Majhi",
       alternateName: ["Manas Ranjan Majhi", "Maanas Ranjan Majhi"],
       url: SITE_URL,
-      image: `${SITE_URL}/headshot.jpg`,
+      image: `${SITE_URL}/elsewhere/manas-majhi-in-flight-portrait.jpg`,
       jobTitle: "Founder",
       birthPlace: "Kalahandi, Odisha, India",
       description:
@@ -178,7 +178,7 @@ export default function AboutPage() {
                 />
                 <div className="relative w-[200px] h-[280px] lg:w-[280px] lg:h-[400px]">
                   <Image
-                    src="/manas-majhi-3.png"
+                    src="/elsewhere/manas-majhi-in-flight-portrait.jpg"
                     alt="Manas Majhi"
                     width={376}
                     height={550}
