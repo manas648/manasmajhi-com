@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1120" viewBox="0 0 800 1120" role="img" aria-labelledby="title desc">
+  <title id="title">How to Design a Highly Converting Sales Funnel &amp; Ads — Manas Majhi</title>
+  <desc id="desc">Orange book cover with case studies label, a money-tree illustration, and author credit Manas Majhi.</desc>
+  <defs>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff8508"/>
+      <stop offset="1" stop-color="#ff7000"/>
+    </linearGradient>
+    <linearGradient id="brown" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#351b18"/>
+      <stop offset="1" stop-color="#241310"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1120" fill="url(#orange)"/>
+  <rect width="800" height="125" fill="url(#brown)"/>
+  <rect y="1010" width="800" height="110" fill="url(#brown)"/>
+  <text x="78" y="77" fill="#f5e9df" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" letter-spacing="6">WITH CASE STUDIES</text>
+  <g fill="#160d0b" font-family="Arial, Helvetica, sans-serif" font-weight="900" text-anchor="middle" letter-spacing="-1.5">
+    <text x="400" y="246" font-size="55">HOW TO DESIGN A</text>
+    <text x="400" y="318" font-size="55">HIGHLY CONVERTING</text>
+    <text x="400" y="390" font-size="55">SALES FUNNEL &amp; ADS</text>
+  </g>
+  <text x="400" y="445" fill="#fff6ea" font-family="Georgia, serif" font-size="25" font-style="italic" text-anchor="middle">Real-life lessons for entrepreneurs and start-ups</text>
+  <g stroke="#321916" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M400 790 V598"/>
+    <path d="M400 730 L312 664"/>
+    <path d="M400 695 L488 652"/>
+    <circle cx="400" cy="548" r="66"/>
+    <circle cx="294" cy="635" r="57"/>
+    <circle cx="506" cy="622" r="57"/>
+  </g>
+  <g fill="#321916" font-family="Arial, Helvetica, sans-serif" font-weight="900" text-anchor="middle">
+    <text x="400" y="571" font-size="70">$</text>
+    <text x="294" y="654" font-size="58">$</text>
+    <text x="506" y="641" font-size="58">$</text>
+  </g>
+  <path d="M245 798 H555 V831 H245 Z" fill="#321916"/>
+  <path d="M263 831 H537 L500 967 H300 Z" fill="url(#brown)"/>
+  <text x="742" y="1072" fill="#f5eee7" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" letter-spacing="2" text-anchor="end">MANAS MAJHI</text>
+</svg>

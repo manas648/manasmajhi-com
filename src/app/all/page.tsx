@@ -127,6 +127,39 @@ export default function IndexPage() {
             </section>
           )}
 
+          {/* Book publication */}
+          <section aria-labelledby="book-publication-heading">
+            <div className="mb-6">
+              <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2">Books</p>
+              <h2 id="book-publication-heading" className="font-serif text-2xl font-medium">Paperback publication</h2>
+            </div>
+            <Link
+              href="/books"
+              className="group grid grid-cols-1 sm:grid-cols-[120px_1fr] gap-5 p-5 rounded-2xl border border-border hover:border-foreground/30 transition-all"
+            >
+              <div className="relative w-28 sm:w-full mx-auto sm:mx-0 overflow-hidden rounded-sm bg-[#ff7900]">
+                <Image
+                  src="/covers/high-converting-sales-funnel-ads.svg"
+                  alt="Cover of How to Design a Highly Converting Sales Funnel & Ads by Manas Majhi"
+                  width={800}
+                  height={1120}
+                  className="w-full h-auto"
+                  sizes="(max-width: 640px) 112px, 120px"
+                />
+              </div>
+              <div className="self-center">
+                <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2">Manas Majhi · Paperback</p>
+                <h3 className="font-serif text-xl md:text-2xl font-medium mb-2 group-hover:text-accent transition-colors">
+                  How to Design a Highly Converting Sales Funnel &amp; Ads
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Real-life lessons for entrepreneurs and start-ups, with real-world campaigns and case studies.
+                </p>
+                <p className="mt-4 text-xs text-muted-foreground">Price available on enquiry · Orders by email →</p>
+              </div>
+            </Link>
+          </section>
+
           {/* Long-form documents */}
           <section id="long-form">
             <p className="text-xs uppercase tracking-widest text-muted-foreground mb-6">
