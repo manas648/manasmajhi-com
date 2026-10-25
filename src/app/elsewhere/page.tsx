@@ -27,6 +27,13 @@ export const metadata: Metadata = {
 
 const photos = [
   {
+    src: "/elsewhere/manas-majhi-in-flight-portrait.jpg",
+    alt: "Manas Majhi in an airplane, looking out from his seat",
+    caption: "A journey shaped by people, opportunity, and lifelong learning.",
+    width: 1200,
+    height: 1600,
+  },
+  {
     src: "/elsewhere/manas-majhi-odisha-lion.jpg",
     alt: "Manas Majhi — gold lion statue overlooking Bhubaneswar, Odisha",
     caption: "Bhubaneswar, from above.",
