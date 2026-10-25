@@ -5,6 +5,7 @@ const footerLinks = {
   Reading: [
     { href: "/start-here", label: "Start Here" },
     { href: "/featured", label: "Featured" },
+    { href: "/books", label: "Books" },
     { href: "/writing", label: "All Writing" },
     { href: "/frameworks", label: "Frameworks" },
     { href: "/lexicon", label: "Lexicon" },
