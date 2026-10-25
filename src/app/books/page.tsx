@@ -40,8 +40,29 @@ export const metadata: Metadata = {
 };
 
 export default function BooksPage() {
+  const bookSchema = {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    name: bookTitle,
+    author: {
+      "@type": "Person",
+      name: "Manas Majhi",
+      url: SITE_URL,
+    },
+    bookFormat: "https://schema.org/Paperback",
+    inLanguage: "en",
+    url: `${SITE_URL}/books`,
+    image: `${SITE_URL}/covers/high-converting-sales-funnel-ads.svg`,
+    description:
+      "Real-life lessons for entrepreneurs and start-ups, featuring real-world campaigns and case studies.",
+  };
+
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(bookSchema) }}
+      />
       <section className="px-6 lg:px-8 pt-16 md:pt-24 pb-10 md:pb-14 border-b border-border">
         <div className="max-w-7xl mx-auto">
           <p className="section-label mb-4">Books</p>
