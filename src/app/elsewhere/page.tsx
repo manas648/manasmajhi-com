@@ -292,6 +292,13 @@ const photos = [
     height: 1112,
   },
   {
+    src: "/elsewhere/manas-majhi-smoke-factory-portrait.png",
+    alt: "Manas Majhi seated at a restaurant table in a pink shirt",
+    caption: "A quiet moment, away from the usual rush.",
+    width: 1024,
+    height: 1024,
+  },
+  {
     src: "/elsewhere/manas-majhi-cafe-blue-shirt.png",
     alt: "Manas Majhi seated at a table in a casual indoor setting",
     caption: "A quiet table. A little space between everything else.",
