@@ -105,7 +105,7 @@ export default async function EssayPage({ params }: Props) {
   if (!VALID_CATEGORIES.has(category)) notFound();
 
   const essay = getEssayBySlug(slug);
-  if (!essay) notFound();
+  if (!essay || essay.hidden) notFound();
 
   // If category in URL doesn't match essay's actual category, redirect to correct URL
   if (essay.category !== category) {
