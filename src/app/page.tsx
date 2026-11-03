@@ -556,6 +556,7 @@ export default function HomePage() {
                       src={heroEssay.coverImage}
                       alt={heroEssay.title}
                       fill
+                      unoptimized
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 1280px) 100vw, 1280px"
                     />
