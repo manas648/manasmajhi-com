@@ -165,9 +165,9 @@
   }
 
   .prose-essay blockquote {
-    @apply border-l-4 pl-6 my-8 italic;
-    border-color: hsl(var(--accent));
-    color: hsl(var(--muted-foreground));
+    @apply border-l-2 pl-6 my-8 italic;
+    border-color: hsl(var(--border));
+    color: hsl(var(--foreground));
     font-size: 1.15rem;
   }
 
